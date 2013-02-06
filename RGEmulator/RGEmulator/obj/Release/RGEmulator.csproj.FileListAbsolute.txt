@@ -1,0 +1,10 @@
+C:\Users\Kyle\Documents\Visual Studio 2008\Projects\RGEmulator\RGEmulator\bin\Release\RGEmulator.exe
+C:\Users\Kyle\Documents\Visual Studio 2008\Projects\RGEmulator\RGEmulator\bin\Release\RGEmulator.pdb
+C:\Users\Kyle\Documents\Visual Studio 2008\Projects\RGEmulator\RGEmulator\bin\Release\InTheHand.Net.Personal.dll
+C:\Users\Kyle\Documents\Visual Studio 2008\Projects\RGEmulator\RGEmulator\bin\Release\InTheHand.Net.Personal.xml
+C:\Users\Kyle\Documents\Visual Studio 2008\Projects\RGEmulator\RGEmulator\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Kyle\Documents\Visual Studio 2008\Projects\RGEmulator\RGEmulator\obj\Release\RGEmulator.Form1.resources
+C:\Users\Kyle\Documents\Visual Studio 2008\Projects\RGEmulator\RGEmulator\obj\Release\RGEmulator.Properties.Resources.resources
+C:\Users\Kyle\Documents\Visual Studio 2008\Projects\RGEmulator\RGEmulator\obj\Release\RGEmulator.csproj.GenerateResource.Cache
+C:\Users\Kyle\Documents\Visual Studio 2008\Projects\RGEmulator\RGEmulator\obj\Release\RGEmulator.exe
+C:\Users\Kyle\Documents\Visual Studio 2008\Projects\RGEmulator\RGEmulator\obj\Release\RGEmulator.pdb
