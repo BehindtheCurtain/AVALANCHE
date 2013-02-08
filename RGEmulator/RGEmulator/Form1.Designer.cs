@@ -57,6 +57,8 @@
             this.psi1 = new System.Windows.Forms.Label();
             this.speed2 = new System.Windows.Forms.Label();
             this.speed1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // searchDevices
@@ -322,6 +324,20 @@
             this.speed1.TabIndex = 23;
             this.speed1.Text = "label25";
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(12, 37);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(634, 59);
+            this.panel1.TabIndex = 29;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(12, 183);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(634, 59);
+            this.panel2.TabIndex = 30;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,8 +372,11 @@
             this.Controls.Add(this.devicesFound);
             this.Controls.Add(this.connectDevices);
             this.Controls.Add(this.searchDevices);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Name = "Form1";
             this.Text = "Redline Guages Emulator";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -394,6 +413,8 @@
         private System.Windows.Forms.Label psi1;
         private System.Windows.Forms.Label speed2;
         private System.Windows.Forms.Label speed1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 

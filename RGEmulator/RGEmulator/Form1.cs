@@ -18,6 +18,7 @@ namespace RGEmulator
         BluetoothDeviceInfo[] devices = null;
         int[] sensors = new int[12];
         Random random = new Random();
+        Thread doWork;
 
         public Form1()
         {
@@ -57,6 +58,12 @@ namespace RGEmulator
 
         private void startEmulator_Click(object sender, EventArgs e)
         {
+            doWork = new Thread(backgroundWorker);
+            doWork.Start();
+        }
+
+        private void backgroundWorker()
+        {
             initSensors();
             updateDisplay();
             System.Threading.Thread.Sleep(125);
@@ -83,19 +90,24 @@ namespace RGEmulator
         }
         private void updateDisplay()
         {
-            egt1.Text = sensors[0].ToString();
-            egt2.Text = sensors[1].ToString();
-            egt3.Text = sensors[2].ToString();
-            egt4.Text = sensors[3].ToString();
-            afr.Text = sensors[4].ToString();
-            tach.Text = sensors[5].ToString();
-            speed1.Text = sensors[6].ToString();
-            speed2.Text = sensors[7].ToString();
-            psi1.Text = sensors[8].ToString();
-            psi2.Text = sensors[9].ToString();
-            psi3.Text = sensors[10].ToString();
-            voltage.Text = sensors[11].ToString();
+
+            this.Invoke(new MethodInvoker(delegate
+            {
+                // Execute the following code on the GUI thread.
+                egt1.Text = sensors[0].ToString();
+                egt2.Text = sensors[1].ToString();
+                egt3.Text = sensors[2].ToString();
+                egt4.Text = sensors[3].ToString();
+                afr.Text = sensors[4].ToString();
+                tach.Text = sensors[5].ToString();
+                speed1.Text = sensors[6].ToString();
+                speed2.Text = sensors[7].ToString();
+                psi1.Text = sensors[8].ToString();
+                psi2.Text = sensors[9].ToString();
+                psi3.Text = sensors[10].ToString();
+                voltage.Text = sensors[11].ToString();
             this.Refresh();
+            }));
         }
         private void getNewValues()
         {
@@ -104,7 +116,7 @@ namespace RGEmulator
                 int sensorValue = sensors[i];
 
                 double offsetPercentage = random.Next(-20,20);
-                double offset = number * (offsetPercentage / 100);
+                double offset = sensorValue * (offsetPercentage / 100);
                 sensorValue = sensorValue + Convert.ToInt16(offset);
 
                 if (i < 8) //sensors 0-9
@@ -139,6 +151,14 @@ namespace RGEmulator
                     case 11: number = random.Next(1, 5); break;
                 }
                 sensors[i] = number;
+            }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (doWork.IsAlive)
+            {
+                doWork.Abort();
             }
         }
     }
