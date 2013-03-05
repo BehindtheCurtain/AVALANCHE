@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08089F3116E6A90C00EBA435 /* CustomPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08089F2D16E6A90C00EBA435 /* CustomPagerViewController.m */; };
+		08089F3216E6A90C00EBA435 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08089F2E16E6A90C00EBA435 /* MainStoryboard.storyboard */; };
+		08089F3316E6A90C00EBA435 /* PagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08089F3016E6A90C00EBA435 /* PagerViewController.m */; };
+		08A2AF2116E69C6B00065D0C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A2AF2016E69C6A00065D0C /* Default-568h@2x.png */; };
 		27407EEC14D8787E0035FD7F /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27407EEB14D8787E0035FD7F /* iPad.storyboard */; };
 		27498DCE14E96C75005C043E /* NavigationTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27498DCD14E96C75005C043E /* NavigationTopViewController.m */; };
 		27498DD514E96EEF005C043E /* SampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27498DD414E96EEF005C043E /* SampleTableViewController.m */; };
@@ -29,6 +33,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08089F2C16E6A90C00EBA435 /* CustomPagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPagerViewController.h; sourceTree = "<group>"; };
+		08089F2D16E6A90C00EBA435 /* CustomPagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPagerViewController.m; sourceTree = "<group>"; };
+		08089F2E16E6A90C00EBA435 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		08089F2F16E6A90C00EBA435 /* PagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagerViewController.h; sourceTree = "<group>"; };
+		08089F3016E6A90C00EBA435 /* PagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagerViewController.m; sourceTree = "<group>"; };
+		08A2AF2016E69C6A00065D0C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		27407EEB14D8787E0035FD7F /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
 		27498DCC14E96C75005C043E /* NavigationTopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationTopViewController.h; sourceTree = "<group>"; };
 		27498DCD14E96C75005C043E /* NavigationTopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationTopViewController.m; sourceTree = "<group>"; };
@@ -82,6 +92,7 @@
 		2750E76114CDB0DF007727A0 = {
 			isa = PBXGroup;
 			children = (
+				08A2AF2016E69C6A00065D0C /* Default-568h@2x.png */,
 				2750E77614CDB0DF007727A0 /* ECSlidingViewController */,
 				2750E76F14CDB0DF007727A0 /* Frameworks */,
 				2750E76D14CDB0DF007727A0 /* Products */,
@@ -117,6 +128,7 @@
 				2750E77714CDB0DF007727A0 /* Supporting Files */,
 				2750E78714CDB114007727A0 /* iPhone.storyboard */,
 				27407EEB14D8787E0035FD7F /* iPad.storyboard */,
+				08089F2E16E6A90C00EBA435 /* MainStoryboard.storyboard */,
 			);
 			path = ECSlidingViewController;
 			sourceTree = "<group>";
@@ -143,6 +155,10 @@
 		2750E78A14CDB1CF007727A0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				08089F2C16E6A90C00EBA435 /* CustomPagerViewController.h */,
+				08089F2D16E6A90C00EBA435 /* CustomPagerViewController.m */,
+				08089F2F16E6A90C00EBA435 /* PagerViewController.h */,
+				08089F3016E6A90C00EBA435 /* PagerViewController.m */,
 				2750E79514CDB959007727A0 /* FirstTopViewController.h */,
 				2750E79614CDB959007727A0 /* FirstTopViewController.m */,
 				27FC94DE14D0C14E0000B18C /* InitialSlidingViewController.h */,
@@ -228,6 +244,8 @@
 				2750E77B14CDB0DF007727A0 /* InfoPlist.strings in Resources */,
 				2750E78814CDB114007727A0 /* iPhone.storyboard in Resources */,
 				27407EEC14D8787E0035FD7F /* iPad.storyboard in Resources */,
+				08A2AF2116E69C6B00065D0C /* Default-568h@2x.png in Resources */,
+				08089F3216E6A90C00EBA435 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +268,8 @@
 				27FC94E014D0C14E0000B18C /* InitialSlidingViewController.m in Sources */,
 				27498DCE14E96C75005C043E /* NavigationTopViewController.m in Sources */,
 				27498DD514E96EEF005C043E /* SampleTableViewController.m in Sources */,
+				08089F3116E6A90C00EBA435 /* CustomPagerViewController.m in Sources */,
+				08089F3316E6A90C00EBA435 /* PagerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +307,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -305,7 +325,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -318,9 +338,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ECSlidingViewController/ECSlidingViewController-Prefix.pch";
 				INFOPLIST_FILE = "ECSlidingViewController/ECSlidingViewController-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -331,9 +351,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ECSlidingViewController/ECSlidingViewController-Prefix.pch";
 				INFOPLIST_FILE = "ECSlidingViewController/ECSlidingViewController-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
