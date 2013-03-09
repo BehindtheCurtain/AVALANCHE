@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		08089F3116E6A90C00EBA435 /* CustomPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08089F2D16E6A90C00EBA435 /* CustomPagerViewController.m */; };
-		08089F3216E6A90C00EBA435 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08089F2E16E6A90C00EBA435 /* MainStoryboard.storyboard */; };
 		08089F3316E6A90C00EBA435 /* PagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08089F3016E6A90C00EBA435 /* PagerViewController.m */; };
 		08A2AF2116E69C6B00065D0C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A2AF2016E69C6A00065D0C /* Default-568h@2x.png */; };
 		27407EEC14D8787E0035FD7F /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27407EEB14D8787E0035FD7F /* iPad.storyboard */; };
@@ -30,12 +29,17 @@
 		2750E7AF14CF1306007727A0 /* UIImage+ImageWithUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2750E7AD14CF1306007727A0 /* UIImage+ImageWithUIView.m */; };
 		27FC94E014D0C14E0000B18C /* InitialSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FC94DF14D0C14E0000B18C /* InitialSlidingViewController.m */; };
 		27FC94E314D105C60000B18C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FC94E214D105C60000B18C /* QuartzCore.framework */; };
+		746178E616EBCDF80007FE56 /* ConfigurationModelMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178DF16EBCDF70007FE56 /* ConfigurationModelMap.m */; };
+		746178E716EBCDF80007FE56 /* RealTimeBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178E116EBCDF70007FE56 /* RealTimeBuilder.m */; };
+		746178E816EBCDF80007FE56 /* SensorAggregateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178E316EBCDF70007FE56 /* SensorAggregateModel.m */; };
+		746178E916EBCDF80007FE56 /* SensorSnapshotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178E516EBCDF80007FE56 /* SensorSnapshotModel.m */; };
+		746178ED16EBCFC00007FE56 /* GaugeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178EC16EBCFC00007FE56 /* GaugeModel.m */; };
+		746178F016EBE5720007FE56 /* ConfigurationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178EF16EBE5720007FE56 /* ConfigurationModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		08089F2C16E6A90C00EBA435 /* CustomPagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPagerViewController.h; sourceTree = "<group>"; };
 		08089F2D16E6A90C00EBA435 /* CustomPagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPagerViewController.m; sourceTree = "<group>"; };
-		08089F2E16E6A90C00EBA435 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		08089F2F16E6A90C00EBA435 /* PagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagerViewController.h; sourceTree = "<group>"; };
 		08089F3016E6A90C00EBA435 /* PagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagerViewController.m; sourceTree = "<group>"; };
 		08A2AF2016E69C6A00065D0C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -72,6 +76,18 @@
 		27FC94DE14D0C14E0000B18C /* InitialSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialSlidingViewController.h; sourceTree = "<group>"; };
 		27FC94DF14D0C14E0000B18C /* InitialSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialSlidingViewController.m; sourceTree = "<group>"; };
 		27FC94E214D105C60000B18C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		746178DE16EBCDF70007FE56 /* ConfigurationModelMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationModelMap.h; sourceTree = "<group>"; };
+		746178DF16EBCDF70007FE56 /* ConfigurationModelMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationModelMap.m; sourceTree = "<group>"; };
+		746178E016EBCDF70007FE56 /* RealTimeBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealTimeBuilder.h; sourceTree = "<group>"; };
+		746178E116EBCDF70007FE56 /* RealTimeBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealTimeBuilder.m; sourceTree = "<group>"; };
+		746178E216EBCDF70007FE56 /* SensorAggregateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorAggregateModel.h; sourceTree = "<group>"; };
+		746178E316EBCDF70007FE56 /* SensorAggregateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorAggregateModel.m; sourceTree = "<group>"; };
+		746178E416EBCDF70007FE56 /* SensorSnapshotModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorSnapshotModel.h; sourceTree = "<group>"; };
+		746178E516EBCDF80007FE56 /* SensorSnapshotModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorSnapshotModel.m; sourceTree = "<group>"; };
+		746178EB16EBCFC00007FE56 /* GaugeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaugeModel.h; sourceTree = "<group>"; };
+		746178EC16EBCFC00007FE56 /* GaugeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaugeModel.m; sourceTree = "<group>"; };
+		746178EE16EBE5710007FE56 /* ConfigurationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationModel.h; sourceTree = "<group>"; };
+		746178EF16EBE5720007FE56 /* ConfigurationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +137,7 @@
 		2750E77614CDB0DF007727A0 /* ECSlidingViewController */ = {
 			isa = PBXGroup;
 			children = (
+				746178EA16EBCE0E0007FE56 /* Models */,
 				2750E78A14CDB1CF007727A0 /* Controllers */,
 				2750E78914CDB1C7007727A0 /* Vendor */,
 				2750E77F14CDB0DF007727A0 /* AppDelegate.h */,
@@ -128,7 +145,6 @@
 				2750E77714CDB0DF007727A0 /* Supporting Files */,
 				2750E78714CDB114007727A0 /* iPhone.storyboard */,
 				27407EEB14D8787E0035FD7F /* iPad.storyboard */,
-				08089F2E16E6A90C00EBA435 /* MainStoryboard.storyboard */,
 			);
 			path = ECSlidingViewController;
 			sourceTree = "<group>";
@@ -191,6 +207,49 @@
 			path = Vendor/ECSlidingViewController;
 			sourceTree = "<group>";
 		};
+		746178EA16EBCE0E0007FE56 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				746178F316EBE6E50007FE56 /* Configuration */,
+				746178F216EBE6DD0007FE56 /* Post */,
+				746178F116EBE6CA0007FE56 /* Real Time */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		746178F116EBE6CA0007FE56 /* Real Time */ = {
+			isa = PBXGroup;
+			children = (
+				746178E016EBCDF70007FE56 /* RealTimeBuilder.h */,
+				746178E116EBCDF70007FE56 /* RealTimeBuilder.m */,
+				746178E216EBCDF70007FE56 /* SensorAggregateModel.h */,
+				746178E316EBCDF70007FE56 /* SensorAggregateModel.m */,
+				746178E416EBCDF70007FE56 /* SensorSnapshotModel.h */,
+				746178E516EBCDF80007FE56 /* SensorSnapshotModel.m */,
+				746178EB16EBCFC00007FE56 /* GaugeModel.h */,
+				746178EC16EBCFC00007FE56 /* GaugeModel.m */,
+			);
+			name = "Real Time";
+			sourceTree = "<group>";
+		};
+		746178F216EBE6DD0007FE56 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Post;
+			sourceTree = "<group>";
+		};
+		746178F316EBE6E50007FE56 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				746178DE16EBCDF70007FE56 /* ConfigurationModelMap.h */,
+				746178DF16EBCDF70007FE56 /* ConfigurationModelMap.m */,
+				746178EE16EBE5710007FE56 /* ConfigurationModel.h */,
+				746178EF16EBE5720007FE56 /* ConfigurationModel.m */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -245,7 +304,6 @@
 				2750E78814CDB114007727A0 /* iPhone.storyboard in Resources */,
 				27407EEC14D8787E0035FD7F /* iPad.storyboard in Resources */,
 				08A2AF2116E69C6B00065D0C /* Default-568h@2x.png in Resources */,
-				08089F3216E6A90C00EBA435 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +328,12 @@
 				27498DD514E96EEF005C043E /* SampleTableViewController.m in Sources */,
 				08089F3116E6A90C00EBA435 /* CustomPagerViewController.m in Sources */,
 				08089F3316E6A90C00EBA435 /* PagerViewController.m in Sources */,
+				746178E616EBCDF80007FE56 /* ConfigurationModelMap.m in Sources */,
+				746178E716EBCDF80007FE56 /* RealTimeBuilder.m in Sources */,
+				746178E816EBCDF80007FE56 /* SensorAggregateModel.m in Sources */,
+				746178E916EBCDF80007FE56 /* SensorSnapshotModel.m in Sources */,
+				746178ED16EBCFC00007FE56 /* GaugeModel.m in Sources */,
+				746178F016EBE5720007FE56 /* ConfigurationModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

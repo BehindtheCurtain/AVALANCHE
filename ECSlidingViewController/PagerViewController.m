@@ -14,6 +14,8 @@
 - (void)loadScrollViewWithPage:(int)page;
 @end
 
+int currentPage = 0;
+
 @implementation PagerViewController
 
 @synthesize scrollView;
@@ -76,15 +78,17 @@
 	[viewController didRotateFromInterfaceOrientation:fromInterfaceOrientation];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated
+{
+    
 	[super viewWillAppear:animated];
 	
 	for (NSUInteger i =0; i < [self.childViewControllers count]; i++) {
 		[self loadScrollViewWithPage:i];
 	}
 	
-	self.pageControl.currentPage = 0;
-	_page = 0;
+	self.pageControl.currentPage = currentPage;
+	_page = currentPage;
 	[self.pageControl setNumberOfPages:[self.childViewControllers count]];
 	
 	UIViewController *viewController = [self.childViewControllers objectAtIndex:self.pageControl.currentPage];
@@ -93,6 +97,7 @@
 	}
 	
 	self.scrollView.contentSize = CGSizeMake(scrollView.frame.size.width * [self.childViewControllers count], scrollView.frame.size.height);
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {

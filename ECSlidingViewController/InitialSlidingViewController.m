@@ -21,7 +21,7 @@
     storyboard = [UIStoryboard storyboardWithName:@"iPad" bundle:nil];
   }
   
-  self.topViewController = [storyboard instantiateViewControllerWithIdentifier:@"Live RunTop"];
+  self.topViewController = [storyboard instantiateViewControllerWithIdentifier:@"HelpTop"];
 }
 
 
