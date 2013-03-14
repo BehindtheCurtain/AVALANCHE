@@ -9,6 +9,7 @@
 #import "SensorAggregateModel.h"
 
 static const int DEFAULT_NUM_SENSORS = 12;
+static const NSString* DELIM = @"\n";
 
 @implementation SensorAggregateModel
 
@@ -18,7 +19,6 @@ static const int DEFAULT_NUM_SENSORS = 12;
 @synthesize sensorType;
 @synthesize sensorID;
 @synthesize isActive;
-@synthesize snapshotsFile;
 
 // Init with metadata.
 -(id) initWithName: (NSString*) name
@@ -36,7 +36,58 @@ static const int DEFAULT_NUM_SENSORS = 12;
 	return self;
 }
 
+-(void) serialize:(NSString*)file
+{
+    NSMutableString* serialString = [[NSMutableString alloc] init];
+    [serialString appendString:self.sensorName];
+    [serialString appendString:DELIM];
+    [serialString appendString:self.sensorType];
+    [serialString appendString:DELIM];
+    [serialString appendString:[NSString stringWithFormat:@"%d", self.sensorID]];
+    [serialString appendString:DELIM];
+    [serialString appendString:[NSString stringWithFormat:@"%d", self.isActive]];
+    [serialString appendString:DELIM];
+    
+    for(SensorSnapshotModel* snapshot in snapshots)
+    {
+        [serialString appendString:[snapshot serialize]];
+        [serialString appendString:DELIM];
+    }
+    
+    NSFileHandle* fileHandle = [NSFileHandle fileHandleForWritingAtPath:file];
+    [fileHandle writeData:[[NSString stringWithString:serialString] dataUsingEncoding:NSUTF16StringEncoding]];
+}
 
+
+
+-(id) initFromFile:(NSString*)file
+{
+    if(self = [super init])
+    {
+        NSString* fileContents = [NSString stringWithContentsOfFile:file encoding:NSUTF16StringEncoding error:nil];
+        
+        NSArray* fileByLine = [fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:DELIM]];
+        
+        self.sensorName = [fileByLine objectAtIndex:0];
+        self.sensorType = [fileByLine objectAtIndex:1];
+        self.sensorID = [[fileByLine objectAtIndex:2] intValue];
+        self.isActive = [[fileByLine objectAtIndex:3] boolValue];
+        
+        for(int i = 4; i < [fileByLine count]; i++)
+        {
+            NSString* line = [fileByLine objectAtIndex:i];
+            
+            SensorSnapshotModel* snapshot = [[SensorSnapshotModel alloc] initFromDataString:line withSensorName:self.sensorName withSensorType:self.sensorType withSensorID:self.sensorID];
+            
+            [snapshots setObject:snapshot atIndexedSubscript:(i-4)];
+        }
+    }
+    
+    return self;
+}
+
+
+/*
 -(void) encodeWithCoder:(NSCoder *)aCoder
 {
     // Get current time stamp.
@@ -82,5 +133,6 @@ static const int DEFAULT_NUM_SENSORS = 12;
     
     return self;
 }
+ */
 
 @end

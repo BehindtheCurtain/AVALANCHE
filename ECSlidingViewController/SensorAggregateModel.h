@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SensorSnapshotModel.h";
 
 /*
  * SensorAggregateModel contains an array of SensorSnapshotModels as well as the associated metadata; name of sensor,
@@ -26,7 +27,6 @@
 @property NSString* sensorType;
 @property int sensorID;
 @property BOOL isActive;
-@property NSString* snapshotsFile;
 
 //Initialize SensorAggregateModel with inputted metadata.
 -(id) initWithName: 	(NSString*) name

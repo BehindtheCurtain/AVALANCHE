@@ -18,10 +18,18 @@
 @property int sensorData;
 
 // Public instance methods.
--(id) initWithTimeStamp: (NSDate*) timeStamp
-               withName: (NSString *)sensorName
-               withType: (NSString *)sensorType
-           withSensorID: (int)sensorID
-               withData: (int)sensorData;
+-(id) initWithTimeStamp:(NSDate*) timeStamp
+               withName:(NSString *)sensorName
+               withType:(NSString *)sensorType
+           withSensorID:(int)sensorID
+               withData:(int)sensorData;
+
+-(NSString*) serialize;
+
+-(id) initFromDataString:(NSString*)data
+          withSensorName:(NSString*)sensorName
+          withSensorType:(NSString*)sensorType
+            withSensorID:(int)sensorID;
+
 
 @end

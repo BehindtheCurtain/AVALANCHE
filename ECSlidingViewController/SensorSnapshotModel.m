@@ -18,23 +18,62 @@
 @synthesize sensorData;
 
 // Constructor method that sets all of the snapshots data.
--(id) initWithTimeStamp: 	(NSDate*) timeStamp
-               withName: 				(NSString *)sensorName
-               withType: 				(NSString *)sensorType
-           withSensorID: 			(int)sensorID
-               withData:			 	(int)sensorData;
+-(id) initWithTimeStamp: 	(NSDate*)_timeStamp
+               withName: 				(NSString *)_sensorName
+               withType: 				(NSString *)_sensorType
+           withSensorID: 			(int)_sensorID
+               withData:			 	(int)_sensorData;
 {
 	self = [super init];
 	
-	self.timeStamp = timeStamp;
-	self.sensorName = sensorName;
-	self.sensorType = sensorType;
-	self.sensorID = sensorID;
-	self.sensorData = sensorData;
+	self.timeStamp = _timeStamp;
+	self.sensorName = _sensorName;
+	self.sensorType = _sensorType;
+	self.sensorID = _sensorID;
+	self.sensorData = _sensorData;
 	
 	return self;
 }
 
+-(NSString*) serialize
+{
+    NSDateFormatter* df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"yyyy-MM-dd hh:mm:ss a"];
+    NSString* time = [df stringFromDate:self.timeStamp];
+    
+    NSMutableString* data = [[NSMutableString alloc] init];
+    [data appendString:time];
+    [data appendString:@","];
+    [data appendString:[NSString stringWithFormat:@"%d", self.sensorData]];
+    
+    return [NSString stringWithString:data];
+}
+
+-(id) initFromDataString:(NSString*)data
+          withSensorName:(NSString*)sensorName
+          withSensorType:(NSString*)sensorType
+            withSensorID:(int)sensorID
+{
+    if(self = [super init])
+    {
+        NSString* delimiters = @",";
+        NSArray* snapshotData = [data componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:delimiters]];
+        
+        NSDateFormatter* df = [[NSDateFormatter alloc] init];
+        [df setDateFormat:@"yyyy-MM-dd hh:mm:ss a"];
+        NSDate* time = [df dateFromString:[snapshotData objectAtIndex:0]];
+        
+        self.timeStamp = time;
+        self.sensorName = sensorName;
+        self.sensorType = sensorType;
+        self.sensorID = sensorID;
+        self.sensorData = [snapshotData objectAtIndex:1];
+     }
+     
+    return self;
+}
+
+/*
 -(void) encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeObject:self.timeStamp forKey:@"timeStamp"];
@@ -57,6 +96,7 @@
     
     return self;
 }
+ */
 
 
 @end
