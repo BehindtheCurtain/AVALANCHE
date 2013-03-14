@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		08089F3116E6A90C00EBA435 /* CustomPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08089F2D16E6A90C00EBA435 /* CustomPagerViewController.m */; };
 		08089F3316E6A90C00EBA435 /* PagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08089F3016E6A90C00EBA435 /* PagerViewController.m */; };
+		086E77FB16F23E5200EA221D /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 086E77F416F23E5200EA221D /* ViewController.xib */; };
+		086E77FC16F23E5200EA221D /* PercentageChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 086E77F616F23E5200EA221D /* PercentageChart.m */; };
+		086E77FD16F23E5200EA221D /* PercentageChartLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 086E77F816F23E5200EA221D /* PercentageChartLayer.m */; };
+		086E77FE16F23E5200EA221D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086E77FA16F23E5200EA221D /* ViewController.m */; };
 		08A2AF2116E69C6B00065D0C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A2AF2016E69C6A00065D0C /* Default-568h@2x.png */; };
 		27407EEC14D8787E0035FD7F /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27407EEB14D8787E0035FD7F /* iPad.storyboard */; };
 		27498DCE14E96C75005C043E /* NavigationTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27498DCD14E96C75005C043E /* NavigationTopViewController.m */; };
@@ -42,6 +46,13 @@
 		08089F2D16E6A90C00EBA435 /* CustomPagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPagerViewController.m; sourceTree = "<group>"; };
 		08089F2F16E6A90C00EBA435 /* PagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagerViewController.h; sourceTree = "<group>"; };
 		08089F3016E6A90C00EBA435 /* PagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagerViewController.m; sourceTree = "<group>"; };
+		086E77F416F23E5200EA221D /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		086E77F516F23E5200EA221D /* PercentageChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PercentageChart.h; sourceTree = "<group>"; };
+		086E77F616F23E5200EA221D /* PercentageChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PercentageChart.m; sourceTree = "<group>"; };
+		086E77F716F23E5200EA221D /* PercentageChartLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PercentageChartLayer.h; sourceTree = "<group>"; };
+		086E77F816F23E5200EA221D /* PercentageChartLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PercentageChartLayer.m; sourceTree = "<group>"; };
+		086E77F916F23E5200EA221D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		086E77FA16F23E5200EA221D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		08A2AF2016E69C6A00065D0C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		27407EEB14D8787E0035FD7F /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
 		27498DCC14E96C75005C043E /* NavigationTopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationTopViewController.h; sourceTree = "<group>"; };
@@ -171,6 +182,13 @@
 		2750E78A14CDB1CF007727A0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				086E77F416F23E5200EA221D /* ViewController.xib */,
+				086E77F516F23E5200EA221D /* PercentageChart.h */,
+				086E77F616F23E5200EA221D /* PercentageChart.m */,
+				086E77F716F23E5200EA221D /* PercentageChartLayer.h */,
+				086E77F816F23E5200EA221D /* PercentageChartLayer.m */,
+				086E77F916F23E5200EA221D /* ViewController.h */,
+				086E77FA16F23E5200EA221D /* ViewController.m */,
 				08089F2C16E6A90C00EBA435 /* CustomPagerViewController.h */,
 				08089F2D16E6A90C00EBA435 /* CustomPagerViewController.m */,
 				08089F2F16E6A90C00EBA435 /* PagerViewController.h */,
@@ -304,6 +322,11 @@
 				2750E78814CDB114007727A0 /* iPhone.storyboard in Resources */,
 				27407EEC14D8787E0035FD7F /* iPad.storyboard in Resources */,
 				08A2AF2116E69C6B00065D0C /* Default-568h@2x.png in Resources */,
+<<<<<<< HEAD
+=======
+				08089F3216E6A90C00EBA435 /* MainStoryboard.storyboard in Resources */,
+				086E77FB16F23E5200EA221D /* ViewController.xib in Resources */,
+>>>>>>> Added files for sample gauge
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,12 +351,18 @@
 				27498DD514E96EEF005C043E /* SampleTableViewController.m in Sources */,
 				08089F3116E6A90C00EBA435 /* CustomPagerViewController.m in Sources */,
 				08089F3316E6A90C00EBA435 /* PagerViewController.m in Sources */,
+<<<<<<< HEAD
 				746178E616EBCDF80007FE56 /* ConfigurationModelMap.m in Sources */,
 				746178E716EBCDF80007FE56 /* RealTimeBuilder.m in Sources */,
 				746178E816EBCDF80007FE56 /* SensorAggregateModel.m in Sources */,
 				746178E916EBCDF80007FE56 /* SensorSnapshotModel.m in Sources */,
 				746178ED16EBCFC00007FE56 /* GaugeModel.m in Sources */,
 				746178F016EBE5720007FE56 /* ConfigurationModel.m in Sources */,
+=======
+				086E77FC16F23E5200EA221D /* PercentageChart.m in Sources */,
+				086E77FD16F23E5200EA221D /* PercentageChartLayer.m in Sources */,
+				086E77FE16F23E5200EA221D /* ViewController.m in Sources */,
+>>>>>>> Added files for sample gauge
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
