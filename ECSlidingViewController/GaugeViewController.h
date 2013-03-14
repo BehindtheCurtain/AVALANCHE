@@ -16,7 +16,7 @@
 #define MAIN_GREEN [UIColor colorWithRed:0.47 green:0.7 blue:0.0 alpha:1.0]
 #define LINE_GREEN [UIColor colorWithRed:0.0 green:0.7 blue:0.0 alpha:1.0]
 
-@interface ViewController : UIViewController
+@interface GaugeViewController : UIViewController
 {
     IBOutlet PercentageChart *chart;
 }

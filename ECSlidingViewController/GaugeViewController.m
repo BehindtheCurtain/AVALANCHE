@@ -6,29 +6,29 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "GaugeViewController.h"
 
-@interface ViewController ()
+@interface GaugeViewController ()
 {
     CGFloat _percentage;
 }
 
 @end
 
-@implementation ViewController
+@implementation GaugeViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     _percentage = 10.0;
     
-    [chart setMainColor:MAIN_ORANGE];
-    [chart setLineColor:LINE_ORANGE];
+    [chart setMainColor:MAIN_GREEN];
+    [chart setLineColor:LINE_GREEN];
     [chart setSecondaryColor:[UIColor darkGrayColor]];
     [chart setFontName:@"Helvetica-Bold"];
-    [chart setFontSize:40.0];
+    [chart setFontSize:20.0];
 
-    [chart setPercentage:73.5];
+    [chart setPercentage:0.0];
 }
 
 - (void)viewDidUnload
