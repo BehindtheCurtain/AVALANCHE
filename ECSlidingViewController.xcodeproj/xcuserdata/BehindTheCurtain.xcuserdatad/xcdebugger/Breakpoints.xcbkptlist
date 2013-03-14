@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "ECSlidingViewController/SensorAggregateModel.m"
-         timestampString = "384557984.53707"
+         timestampString = "384974601.399587"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "84"
-         endingLineNumber = "84"
+         startingLineNumber = "86"
+         endingLineNumber = "86"
          landmarkName = "@implementation SensorAggregateModel"
          landmarkType = "3">
       </FileBreakpoint>

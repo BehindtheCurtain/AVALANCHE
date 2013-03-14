@@ -6,7 +6,7 @@
 //
 //
 
-
+#import "RealTimeBuilder.h"
 
 
 // Class variables
@@ -45,8 +45,9 @@ static BOOL processing = NO;
 +(void) gaugeModelFactory
 {
 	// Make a map with a capacity for all sensors.
-	NSMutableArray* SensorAggregateModelMap = [NSMutableArray arrayWithCapacity: DEFAULT_NUM_SENSORS];
+	NSMutableArray* sensorAggregateModelMap = [NSMutableArray arrayWithCapacity: DEFAULT_NUM_SENSORS];
 	
+    /*
 	// Use configuration data to set up SensorAggregateModels
 	for(ConfigurationModel* configuration in [[[GaugeModel getInstance] getConfigurationModelMap] getMap])
 	{
@@ -62,14 +63,16 @@ static BOOL processing = NO;
 			[SensorAggregateModelMap insertObject: SensorAggregateModel atIndex: sensorID];
 		}
 	}
+     
 	
 	// If there is an instance reset the instance
-	if([GaugeModel isNotNill])
+	if([GaugeModel != nill])
 	{
 		[GaugeModel resetInstance];
 	}
 	
-	[[GaugeModel getInstance] setSensorAggregateModels];
+	[[GaugeModel getInstance] setSensorAggregateModelMap];
+     */
 }
 
 // Set configuration map.
@@ -87,9 +90,11 @@ static BOOL processing = NO;
 // Called when user ends run. Serializes the GaugeModel, saving the run in local storage, and turns off processing.
 +(void) endProcessing
 {
+    /*
 	[GaugeModel serialize];
 	
 	processing = NO;
+     */
 }
 
 // Creates a SensorSnapshotModel for each active sensor and adds each snapshot to their related SensorAggregateModel.
@@ -97,6 +102,7 @@ static BOOL processing = NO;
 {
 	if(processing)
 	{
+        /*
 		long timeStamp = [getTimeStamp];
 		for(int i = 0; i < [data size]; i++)
 		{
@@ -112,6 +118,7 @@ static BOOL processing = NO;
 				[aggregate addObject: snapShotModel];
 			}
 		}
+         */
 	}
 }
 
@@ -124,11 +131,13 @@ static BOOL processing = NO;
                                       withSensorID:	(int) sensorID
                                           withData:	(int) sensorData
 {
+    /*
 	Validate parameters
 	
 	sensorData = [self transformSensorData: sensorData ofType: sensorType withID: sensorID];
 	
-	return([SensorSnapshotModel initWithTimeStamp: timeStamp withName: sensorName withType: sensorType withSensorID: sensorID withData: sensordata]);
+	return([SensorSnapshotModel initWithTimeStamp: timeStamp withName: sensorName withType: sensorType withSensorID: sensorID withData: sensorData]);
+     */
 }
 
 // Transform the raw sensor data into formatted readable sensor data.
@@ -136,6 +145,7 @@ static BOOL processing = NO;
                     ofType: (NSString*) sensorType
                     withID: (int) sensorID;
 {
+    /*
 	int transformConstant = [[configurationMap objectAtIndex: sensorID] getTransformConstant];
 	
 	switch(sensorType)
@@ -172,7 +182,9 @@ static BOOL processing = NO;
 		{
 			return sensorData;
 		}
+     
 	}
+     */
 }
 
 // Validates SensorAggregateModel parameters and then creates and returns that object.
@@ -181,9 +193,11 @@ static BOOL processing = NO;
                                         withSensorID:	(int) sensorID
                                             isActive:	(BOOL) active;
 {
+    /*
 	Validate parameters
 	
 	return([SensorAggregateModel initWithName: sensorName withType: sensorType withSensorID: sensorID isActive: active];
+     */
 }
            
            

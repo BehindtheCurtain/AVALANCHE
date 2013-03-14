@@ -12,6 +12,7 @@
 #import "SensorSnapshotModel.h"
 #import "SensorAggregateModel.h"
 #import "ConfigurationModel.h"
+#import "GaugeModel.h"
 
 @interface RealTimeBuilder: NSObject
 {
