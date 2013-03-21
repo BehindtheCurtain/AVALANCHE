@@ -23,14 +23,18 @@
 @property NSMutableArray* snapshots;
 
 // Instance properties.
-@property NSString* sensorName;
-@property NSString* sensorType;
-@property int sensorID;
-@property BOOL isActive;
+@property (copy) NSString* sensorName;
+@property (copy) NSString* sensorType;
+@property (assign) int sensorID;
+@property (assign) BOOL isActive;
 
 //Initialize SensorAggregateModel with inputted metadata.
--(id) initWithName: 	(NSString*) name
-          withType: 		(NSString*) type
-      withSensorID: 	(int) ID
-          isActive: 		(BOOL) active;
+-(id) initWithName:(NSString*) name
+          withType:(NSString*) type
+      withSensorID:(int) ID
+          isActive:(BOOL) active;
+
+-(void) serialize:(NSString*) file;
+
+-(id) initFromFile:(NSString*) file;
 @end

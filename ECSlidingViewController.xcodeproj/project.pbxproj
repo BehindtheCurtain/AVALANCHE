@@ -39,6 +39,7 @@
 		746178E916EBCDF80007FE56 /* SensorSnapshotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178E516EBCDF80007FE56 /* SensorSnapshotModel.m */; };
 		746178ED16EBCFC00007FE56 /* GaugeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178EC16EBCFC00007FE56 /* GaugeModel.m */; };
 		746178F016EBE5720007FE56 /* ConfigurationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178EF16EBE5720007FE56 /* ConfigurationModel.m */; };
+		7461790016F8E67B0007FE56 /* Brsp.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178FF16F8E67B0007FE56 /* Brsp.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +100,8 @@
 		746178EC16EBCFC00007FE56 /* GaugeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaugeModel.m; sourceTree = "<group>"; };
 		746178EE16EBE5710007FE56 /* ConfigurationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationModel.h; sourceTree = "<group>"; };
 		746178EF16EBE5720007FE56 /* ConfigurationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationModel.m; sourceTree = "<group>"; };
+		746178FE16F8E67B0007FE56 /* Brsp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Brsp.h; sourceTree = "<group>"; };
+		746178FF16F8E67B0007FE56 /* Brsp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Brsp.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +153,7 @@
 		2750E77614CDB0DF007727A0 /* ECSlidingViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7461790216F8EE820007FE56 /* Utilities */,
 				746178EA16EBCE0E0007FE56 /* Models */,
 				2750E78A14CDB1CF007727A0 /* Controllers */,
 				2750E78914CDB1C7007727A0 /* Vendor */,
@@ -229,6 +233,7 @@
 		746178EA16EBCE0E0007FE56 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7461790116F8E6860007FE56 /* Sync */,
 				746178F316EBE6E50007FE56 /* Configuration */,
 				746178F216EBE6DD0007FE56 /* Post */,
 				746178F116EBE6CA0007FE56 /* Real Time */,
@@ -267,6 +272,22 @@
 				746178EF16EBE5720007FE56 /* ConfigurationModel.m */,
 			);
 			name = Configuration;
+			sourceTree = "<group>";
+		};
+		7461790116F8E6860007FE56 /* Sync */ = {
+			isa = PBXGroup;
+			children = (
+				746178FF16F8E67B0007FE56 /* Brsp.m */,
+				746178FE16F8E67B0007FE56 /* Brsp.h */,
+			);
+			name = Sync;
+			sourceTree = "<group>";
+		};
+		7461790216F8EE820007FE56 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,6 +377,7 @@
 				086E780616F2428200EA221D /* PercentageChart.m in Sources */,
 				086E780716F2428200EA221D /* PercentageChartLayer.m in Sources */,
 				086E780816F2428200EA221D /* GaugeViewController.m in Sources */,
+				7461790016F8E67B0007FE56 /* Brsp.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

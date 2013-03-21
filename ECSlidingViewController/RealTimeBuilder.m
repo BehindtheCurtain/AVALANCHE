@@ -19,22 +19,22 @@ static BOOL processing = NO;
 // Private class methods.
 
 // Creates SensorSnapshotModel objects.
-+(SensorSnapshotModel*) sensorSnapshotModelFactory: (long) timeStamp
-                                          withName: (NSString*) sensorName
-                                          withType: (NSString*) sensorType
-                                      withSensorID: (int) sensorID
-                                          withData: (int) sensorData;
++(SensorSnapshotModel*) sensorSnapshotModelFactory:(long) timeStamp
+                                          withName:(NSString*) sensorName
+                                          withType:(NSString*) sensorType
+                                      withSensorID:(int) sensorID
+                                          withData:(int) sensorData;
 
 // Creates SensorAggregateModel objects.
-+(SensorAggregateModel*) sensorAggregateModelFactory: (NSString*) sensorName
-                                            withType: (NSString*) sensorType
-                                        withSensorID: (int) sensorID
-                                            isActive: (BOOL) active;
++(SensorAggregateModel*) sensorAggregateModelFactory:(NSString*) sensorName
+                                            withType:(NSString*) sensorType
+                                        withSensorID:(int) sensorID
+                                            isActive:(BOOL) active;
 
 // Transform sensor data into readable form.
-+(int) transformSensorData: (int) sensorID
-              ofSensorType: (NSString*) sensorType
-                    withID:	(int) sensorID;
++(int) transformSensorData:(int) sensorID
+              ofSensorType:(NSString*) sensorType
+                    withID:(int) sensorID;
 
 @end
 

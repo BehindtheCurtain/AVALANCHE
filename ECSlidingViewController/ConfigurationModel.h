@@ -10,4 +10,6 @@
 
 @interface ConfigurationModel : NSObject
 
+ 
+
 @end

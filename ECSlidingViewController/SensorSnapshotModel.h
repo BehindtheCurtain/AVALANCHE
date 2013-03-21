@@ -11,11 +11,11 @@
 @interface SensorSnapshotModel : NSObject <NSCoding>
 
 // SensorSnapshotModel properties.
-@property NSDate* timeStamp;
-@property NSString* sensorName;
-@property NSString* sensorType;
-@property int sensorID;
-@property int sensorData;
+@property (copy) NSDate* timeStamp;
+@property (copy) NSString* sensorName;
+@property (copy) NSString* sensorType;
+@property (assign) int sensorID;
+@property (assign) int sensorData;
 
 // Public instance methods.
 -(id) initWithTimeStamp:(NSDate*) timeStamp

@@ -9,7 +9,7 @@
 #import "SensorAggregateModel.h"
 
 static const int DEFAULT_NUM_SENSORS = 12;
-static const NSString* DELIM = @"\n";
+static NSString* DELIM = @"\n";
 
 @implementation SensorAggregateModel
 
@@ -134,5 +134,6 @@ static const NSString* DELIM = @"\n";
     return self;
 }
  */
+
 
 @end

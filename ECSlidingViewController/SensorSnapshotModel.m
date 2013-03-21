@@ -50,9 +50,9 @@
 }
 
 -(id) initFromDataString:(NSString*)data
-          withSensorName:(NSString*)sensorName
-          withSensorType:(NSString*)sensorType
-            withSensorID:(int)sensorID
+          withSensorName:(NSString*)name
+          withSensorType:(NSString*)type
+            withSensorID:(int)ID
 {
     if(self = [super init])
     {
@@ -64,16 +64,16 @@
         NSDate* time = [df dateFromString:[snapshotData objectAtIndex:0]];
         
         self.timeStamp = time;
-        self.sensorName = sensorName;
-        self.sensorType = sensorType;
-        self.sensorID = sensorID;
+        self.sensorName = name;
+        self.sensorType = type;
+        self.sensorID = ID;
         self.sensorData = [snapshotData objectAtIndex:1];
      }
      
     return self;
 }
 
-/*
+
 -(void) encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeObject:self.timeStamp forKey:@"timeStamp"];
@@ -96,7 +96,7 @@
     
     return self;
 }
- */
+
 
 
 @end
