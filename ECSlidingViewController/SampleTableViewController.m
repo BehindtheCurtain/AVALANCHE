@@ -17,7 +17,8 @@
 
 - (void)awakeFromNib
 {
-  self.sampleItems = [NSArray arrayWithObjects:@"One", @"Two", @"Three", nil];
+  self.sampleItems = [NSArray arrayWithObjects:@"One"
+                      , @"Bluetooth", nil];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
@@ -47,5 +48,15 @@
 {
   return YES;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *identifier = [self.sampleItems objectAtIndex:indexPath.row];
+    
+    UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
+    
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
 
 @end

@@ -11,6 +11,8 @@
 @implementation AppDelegate
 
 @synthesize window = _window;
+@synthesize cbCentral;
+@synthesize activePeripheral;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -54,6 +56,10 @@
    Save data if appropriate.
    See also applicationDidEnterBackground:.
    */
+}
+
++(AppDelegate*)app {
+    return (AppDelegate*)[[UIApplication sharedApplication] delegate];
 }
 
 @end

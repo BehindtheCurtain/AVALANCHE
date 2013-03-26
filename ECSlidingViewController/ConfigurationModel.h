@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ConfigurationModel : NSObject
+@interface ConfigurationModel : NSObject <NSCoding>
 
- 
+@property (copy) NSString* name;
+@property (assign) int sensorID;
+@property (assign) BOOL active;
+@property (assign) int transformConstant;
 
 @end

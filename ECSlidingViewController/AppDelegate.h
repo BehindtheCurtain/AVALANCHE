@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreBluetooth/CoreBluetooth.h>
 #import "ECSlidingViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) CBCentralManager *cbCentral;
+@property (strong, nonatomic) CBPeripheral *activePeripheral;
+
++(AppDelegate*)app;
 
 @end
