@@ -39,11 +39,6 @@
 		746178E916EBCDF80007FE56 /* SensorSnapshotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178E516EBCDF80007FE56 /* SensorSnapshotModel.m */; };
 		746178ED16EBCFC00007FE56 /* GaugeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178EC16EBCFC00007FE56 /* GaugeModel.m */; };
 		746178F016EBE5720007FE56 /* ConfigurationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178EF16EBE5720007FE56 /* ConfigurationModel.m */; };
-		7461790016F8E67B0007FE56 /* Brsp.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178FF16F8E67B0007FE56 /* Brsp.m */; };
-		7461790E17021F830007FE56 /* BluetoothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461790D17021F830007FE56 /* BluetoothViewController.m */; };
-		7461791117021FBB0007FE56 /* ScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461791017021FBB0007FE56 /* ScanController.m */; };
-		74B6EBBF170222C600316AC8 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B6EBBE170222C600316AC8 /* CoreBluetooth.framework */; };
-		74D650E117023B9800E58615 /* SensorConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D650E017023B9800E58615 /* SensorConfigViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,15 +99,6 @@
 		746178EC16EBCFC00007FE56 /* GaugeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaugeModel.m; sourceTree = "<group>"; };
 		746178EE16EBE5710007FE56 /* ConfigurationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationModel.h; sourceTree = "<group>"; };
 		746178EF16EBE5720007FE56 /* ConfigurationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationModel.m; sourceTree = "<group>"; };
-		746178FE16F8E67B0007FE56 /* Brsp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Brsp.h; sourceTree = "<group>"; };
-		746178FF16F8E67B0007FE56 /* Brsp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Brsp.m; sourceTree = "<group>"; };
-		7461790C17021F830007FE56 /* BluetoothViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothViewController.h; sourceTree = "<group>"; };
-		7461790D17021F830007FE56 /* BluetoothViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothViewController.m; sourceTree = "<group>"; };
-		7461790F17021FBB0007FE56 /* ScanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanController.h; sourceTree = "<group>"; };
-		7461791017021FBB0007FE56 /* ScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanController.m; sourceTree = "<group>"; };
-		74B6EBBE170222C600316AC8 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		74D650DF17023B9700E58615 /* SensorConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorConfigViewController.h; sourceTree = "<group>"; };
-		74D650E017023B9800E58615 /* SensorConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorConfigViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +106,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74B6EBBF170222C600316AC8 /* CoreBluetooth.framework in Frameworks */,
 				27FC94E314D105C60000B18C /* QuartzCore.framework in Frameworks */,
 				2750E77114CDB0DF007727A0 /* UIKit.framework in Frameworks */,
 				2750E77314CDB0DF007727A0 /* Foundation.framework in Frameworks */,
@@ -153,7 +138,6 @@
 		2750E76F14CDB0DF007727A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				74B6EBBE170222C600316AC8 /* CoreBluetooth.framework */,
 				086E780A16F253D800EA221D /* CoreText.framework */,
 				2750E77414CDB0DF007727A0 /* CoreGraphics.framework */,
 				2750E77214CDB0DF007727A0 /* Foundation.framework */,
@@ -166,15 +150,14 @@
 		2750E77614CDB0DF007727A0 /* ECSlidingViewController */ = {
 			isa = PBXGroup;
 			children = (
-				7461790216F8EE820007FE56 /* Utilities */,
 				746178EA16EBCE0E0007FE56 /* Models */,
 				2750E78A14CDB1CF007727A0 /* Controllers */,
 				2750E78914CDB1C7007727A0 /* Vendor */,
 				2750E77F14CDB0DF007727A0 /* AppDelegate.h */,
 				2750E78014CDB0DF007727A0 /* AppDelegate.m */,
 				2750E77714CDB0DF007727A0 /* Supporting Files */,
-				27407EEB14D8787E0035FD7F /* iPad.storyboard */,
 				2750E78714CDB114007727A0 /* iPhone.storyboard */,
+				27407EEB14D8787E0035FD7F /* iPad.storyboard */,
 			);
 			path = ECSlidingViewController;
 			sourceTree = "<group>";
@@ -201,14 +184,14 @@
 		2750E78A14CDB1CF007727A0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				086E780416F2428200EA221D /* GaugeViewController.m */,
-				086E780316F2428200EA221D /* GaugeViewController.h */,
-				08089F2C16E6A90C00EBA435 /* CustomPagerViewController.h */,
-				08089F2D16E6A90C00EBA435 /* CustomPagerViewController.m */,
 				086E77FF16F2428200EA221D /* PercentageChart.h */,
 				086E780016F2428200EA221D /* PercentageChart.m */,
 				086E780116F2428200EA221D /* PercentageChartLayer.h */,
 				086E780216F2428200EA221D /* PercentageChartLayer.m */,
+				086E780316F2428200EA221D /* GaugeViewController.h */,
+				086E780416F2428200EA221D /* GaugeViewController.m */,
+				08089F2C16E6A90C00EBA435 /* CustomPagerViewController.h */,
+				08089F2D16E6A90C00EBA435 /* CustomPagerViewController.m */,
 				08089F2F16E6A90C00EBA435 /* PagerViewController.h */,
 				08089F3016E6A90C00EBA435 /* PagerViewController.m */,
 				2750E79514CDB959007727A0 /* FirstTopViewController.h */,
@@ -227,8 +210,6 @@
 				2750E79C14CDBA48007727A0 /* ThirdTopViewController.m */,
 				2750E79E14CDBC32007727A0 /* UnderRightViewController.h */,
 				2750E79F14CDBC32007727A0 /* UnderRightViewController.m */,
-				74D650DF17023B9700E58615 /* SensorConfigViewController.h */,
-				74D650E017023B9800E58615 /* SensorConfigViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -248,7 +229,6 @@
 		746178EA16EBCE0E0007FE56 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7461790116F8E6860007FE56 /* Sync */,
 				746178F316EBE6E50007FE56 /* Configuration */,
 				746178F216EBE6DD0007FE56 /* Post */,
 				746178F116EBE6CA0007FE56 /* Real Time */,
@@ -287,26 +267,6 @@
 				746178EF16EBE5720007FE56 /* ConfigurationModel.m */,
 			);
 			name = Configuration;
-			sourceTree = "<group>";
-		};
-		7461790116F8E6860007FE56 /* Sync */ = {
-			isa = PBXGroup;
-			children = (
-				7461790F17021FBB0007FE56 /* ScanController.h */,
-				7461791017021FBB0007FE56 /* ScanController.m */,
-				7461790C17021F830007FE56 /* BluetoothViewController.h */,
-				7461790D17021F830007FE56 /* BluetoothViewController.m */,
-				746178FF16F8E67B0007FE56 /* Brsp.m */,
-				746178FE16F8E67B0007FE56 /* Brsp.h */,
-			);
-			name = Sync;
-			sourceTree = "<group>";
-		};
-		7461790216F8EE820007FE56 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,14 +355,7 @@
 				086E780616F2428200EA221D /* PercentageChart.m in Sources */,
 				086E780716F2428200EA221D /* PercentageChartLayer.m in Sources */,
 				086E780816F2428200EA221D /* GaugeViewController.m in Sources */,
-<<<<<<< HEAD
-				7461790016F8E67B0007FE56 /* Brsp.m in Sources */,
-				7461790E17021F830007FE56 /* BluetoothViewController.m in Sources */,
-				7461791117021FBB0007FE56 /* ScanController.m in Sources */,
-				74D650E117023B9800E58615 /* SensorConfigViewController.m in Sources */,
-=======
 				0866AF9816F8E0760097F624 /* RealTimeBuilder.m in Sources */,
->>>>>>> Move Sample Gauges into Real Time View
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
