@@ -248,7 +248,6 @@
                     <navigationItem key="navigationItem" id="P9D-cP-lso"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="_deviceTableView" destination="EXJ-ZY-Ffs" id="HFq-g3-d0V"/>
                         <outlet property="_scanButton" destination="XTQ-ag-ct1" id="U2W-Gs-WJR"/>
                     </connections>
                 </viewController>
