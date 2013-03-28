@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="H2v-Ob-DhD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="H2v-Ob-DhD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -174,22 +174,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <containerView contentMode="center" id="DMF-hE-jdV">
-                                <rect key="frame" x="0.0" y="44" width="270" height="125"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="QFR-oP-YCX" kind="embed" id="IUu-cx-TSU"/>
-                                </connections>
-                            </containerView>
-                            <containerView contentMode="center" id="N98-dD-Jpy">
-                                <rect key="frame" x="0.0" y="175" width="270" height="125"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="QFR-oP-YCX" kind="embed" id="QCN-pg-Oim"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.83163265310000001" blue="0.68719590809999997" alpha="1" colorSpace="calibratedRGB"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -311,7 +295,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyp-sj-yeT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1004" y="-741"/>
+            <point key="canvasLocation" x="216" y="1003"/>
         </scene>
         <!--First Top View Controller-->
         <scene sceneID="FCi-rO-pkm">
@@ -439,7 +423,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RyC-4Z-a6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1162" y="-1568"/>
+            <point key="canvasLocation" x="216" y="168"/>
         </scene>
         <!--View Controller - View 2-->
         <scene sceneID="lj7-MJ-sKe">
@@ -455,7 +439,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R5c-hW-gQc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1162" y="-2030"/>
+            <point key="canvasLocation" x="217" y="542"/>
         </scene>
         <!--Initial Sliding View Controller-->
         <scene sceneID="OC6-i3-9aC">
@@ -487,7 +471,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lkT-Gk-kiG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-517" y="-2030"/>
+            <point key="canvasLocation" x="862" y="542"/>
         </scene>
         <!--View Controller - View 1-->
         <scene sceneID="AAk-3D-V7G">
@@ -496,14 +480,32 @@
                     <view key="view" contentMode="scaleToFill" id="h1b-dI-m3z">
                         <rect key="frame" x="0.0" y="20" width="568" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <containerView contentMode="center" id="DMF-hE-jdV">
+                                <rect key="frame" x="11" y="10" width="270" height="125"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="QFR-oP-YCX" kind="embed" id="IUu-cx-TSU"/>
+                                </connections>
+                            </containerView>
+                            <containerView contentMode="center" id="N98-dD-Jpy">
+                                <rect key="frame" x="289" y="10" width="270" height="125"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="QFR-oP-YCX" kind="embed" id="QCN-pg-Oim"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93132213900000005" green="0.35317595569999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MOY-9Y-5TI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1808" y="-2030"/>
+            <point key="canvasLocation" x="-437" y="542"/>
         </scene>
     </scenes>
     <classes>
