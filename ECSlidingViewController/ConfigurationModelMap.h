@@ -7,9 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ConfigurationModel.h"
 
-@interface ConfigurationModelMap : NSMutableArray
+@interface ConfigurationModelMap : NSObject
 
--(NSMutableArray*) getMap;
+@property (retain) NSMutableArray* configurationMap;
+
+
++ (ConfigurationModelMap*)instance;
++ (void)archive;
+- (NSArray*)sensorNames;
+- (void)save;
+
 
 @end

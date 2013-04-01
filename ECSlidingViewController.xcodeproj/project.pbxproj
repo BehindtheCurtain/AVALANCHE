@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		08089F3116E6A90C00EBA435 /* CustomPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08089F2D16E6A90C00EBA435 /* CustomPagerViewController.m */; };
 		08089F3316E6A90C00EBA435 /* PagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08089F3016E6A90C00EBA435 /* PagerViewController.m */; };
-		08549433170288830007566F /* Brsp.m in Sources */ = {isa = PBXBuildFile; fileRef = 0854942C170288830007566F /* Brsp.m */; };
 		08549435170288830007566F /* ScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0854942F170288830007566F /* ScanController.m */; };
 		08549436170288830007566F /* SensorConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08549431170288830007566F /* SensorConfigViewController.m */; };
 		085DFE911709EB86004B3524 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 085DFE901709EB86004B3524 /* Icon@2x.png */; };
@@ -40,6 +39,10 @@
 		27FC94E014D0C14E0000B18C /* InitialSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FC94DF14D0C14E0000B18C /* InitialSlidingViewController.m */; };
 		27FC94E314D105C60000B18C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FC94E214D105C60000B18C /* QuartzCore.framework */; };
 		7428C4491704C5AA0013A04E /* ConnectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7428C4481704C5AA0013A04E /* ConnectionController.m */; };
+		7428C44F1704CCBC0013A04E /* SensorTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7428C44E1704CCBC0013A04E /* SensorTableController.m */; };
+		7428C4611705057C0013A04E /* libios_brsp_device_1_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7428C4601705057B0013A04E /* libios_brsp_device_1_0.a */; };
+		7428C46A1709C14D0013A04E /* libios_brsp_simulator_1_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7428C4691709C14C0013A04E /* libios_brsp_simulator_1_0.a */; };
+		7428C46D170A118D0013A04E /* AddSensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7428C46C170A118C0013A04E /* AddSensorController.m */; };
 		746178E616EBCDF80007FE56 /* ConfigurationModelMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178DF16EBCDF70007FE56 /* ConfigurationModelMap.m */; };
 		746178E816EBCDF80007FE56 /* SensorAggregateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178E316EBCDF70007FE56 /* SensorAggregateModel.m */; };
 		746178E916EBCDF80007FE56 /* SensorSnapshotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178E516EBCDF80007FE56 /* SensorSnapshotModel.m */; };
@@ -53,7 +56,6 @@
 		08089F2F16E6A90C00EBA435 /* PagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagerViewController.h; sourceTree = "<group>"; };
 		08089F3016E6A90C00EBA435 /* PagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagerViewController.m; sourceTree = "<group>"; };
 		0854942B170288830007566F /* Brsp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Brsp.h; sourceTree = "<group>"; };
-		0854942C170288830007566F /* Brsp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Brsp.m; sourceTree = "<group>"; };
 		0854942E170288830007566F /* ScanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanController.h; sourceTree = "<group>"; };
 		0854942F170288830007566F /* ScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanController.m; sourceTree = "<group>"; };
 		08549430170288830007566F /* SensorConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorConfigViewController.h; sourceTree = "<group>"; };
@@ -104,6 +106,12 @@
 		27FC94E214D105C60000B18C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		7428C4471704C5AA0013A04E /* ConnectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionController.h; sourceTree = "<group>"; };
 		7428C4481704C5AA0013A04E /* ConnectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionController.m; sourceTree = "<group>"; };
+		7428C44D1704CCBB0013A04E /* SensorTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorTableController.h; sourceTree = "<group>"; };
+		7428C44E1704CCBC0013A04E /* SensorTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorTableController.m; sourceTree = "<group>"; };
+		7428C4601705057B0013A04E /* libios_brsp_device_1_0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libios_brsp_device_1_0.a; path = ECSlidingViewController/libios_brsp_device_1_0.a; sourceTree = "<group>"; };
+		7428C4691709C14C0013A04E /* libios_brsp_simulator_1_0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libios_brsp_simulator_1_0.a; path = ECSlidingViewController/libios_brsp_simulator_1_0.a; sourceTree = "<group>"; };
+		7428C46B170A11890013A04E /* AddSensorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSensorController.h; sourceTree = "<group>"; };
+		7428C46C170A118C0013A04E /* AddSensorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSensorController.m; sourceTree = "<group>"; };
 		746178DE16EBCDF70007FE56 /* ConfigurationModelMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationModelMap.h; sourceTree = "<group>"; };
 		746178DF16EBCDF70007FE56 /* ConfigurationModelMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationModelMap.m; sourceTree = "<group>"; };
 		746178E016EBCDF70007FE56 /* RealTimeBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealTimeBuilder.h; sourceTree = "<group>"; };
@@ -122,6 +130,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7428C46A1709C14D0013A04E /* libios_brsp_simulator_1_0.a in Frameworks */,
+				7428C4611705057C0013A04E /* libios_brsp_device_1_0.a in Frameworks */,
 				27FC94E314D105C60000B18C /* QuartzCore.framework in Frameworks */,
 				2750E77114CDB0DF007727A0 /* UIKit.framework in Frameworks */,
 				2750E77314CDB0DF007727A0 /* Foundation.framework in Frameworks */,
@@ -137,9 +147,12 @@
 		2750E76114CDB0DF007727A0 = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				085DFE921709EB8A004B3524 /* Icon.png */,
 				085DFE901709EB86004B3524 /* Icon@2x.png */,
 				089FFEC117034FB40088D528 /* CoreBluetooth.framework */,
+=======
+>>>>>>> Scan working, sensor configuration save.
 				08A2AF2016E69C6A00065D0C /* Default-568h@2x.png */,
 				2750E77614CDB0DF007727A0 /* ECSlidingViewController */,
 				2750E76F14CDB0DF007727A0 /* Frameworks */,
@@ -158,6 +171,9 @@
 		2750E76F14CDB0DF007727A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7428C4601705057B0013A04E /* libios_brsp_device_1_0.a */,
+				7428C4691709C14C0013A04E /* libios_brsp_simulator_1_0.a */,
+				089FFEC117034FB40088D528 /* CoreBluetooth.framework */,
 				086E780A16F253D800EA221D /* CoreText.framework */,
 				2750E77414CDB0DF007727A0 /* CoreGraphics.framework */,
 				2750E77214CDB0DF007727A0 /* Foundation.framework */,
@@ -176,7 +192,6 @@
 				2750E77F14CDB0DF007727A0 /* AppDelegate.h */,
 				2750E78014CDB0DF007727A0 /* AppDelegate.m */,
 				0854942B170288830007566F /* Brsp.h */,
-				0854942C170288830007566F /* Brsp.m */,
 				2750E77714CDB0DF007727A0 /* Supporting Files */,
 				089FFEBF17034F800088D528 /* iPhone.storyboard */,
 			);
@@ -208,8 +223,6 @@
 				74D650E41704B93900E58615 /* Post */,
 				74D650E31704B93100E58615 /* Real Time */,
 				74D650E21704B91400E58615 /* Configurations */,
-				08549430170288830007566F /* SensorConfigViewController.h */,
-				08549431170288830007566F /* SensorConfigViewController.m */,
 				086E77FF16F2428200EA221D /* PercentageChart.h */,
 				086E780016F2428200EA221D /* PercentageChart.m */,
 				086E780116F2428200EA221D /* PercentageChartLayer.h */,
@@ -302,6 +315,12 @@
 				7428C4481704C5AA0013A04E /* ConnectionController.m */,
 				0854942E170288830007566F /* ScanController.h */,
 				0854942F170288830007566F /* ScanController.m */,
+				7428C44D1704CCBB0013A04E /* SensorTableController.h */,
+				7428C44E1704CCBC0013A04E /* SensorTableController.m */,
+				08549430170288830007566F /* SensorConfigViewController.h */,
+				08549431170288830007566F /* SensorConfigViewController.m */,
+				7428C46B170A11890013A04E /* AddSensorController.h */,
+				7428C46C170A118C0013A04E /* AddSensorController.m */,
 			);
 			name = Configurations;
 			sourceTree = "<group>";
@@ -408,10 +427,11 @@
 				086E780716F2428200EA221D /* PercentageChartLayer.m in Sources */,
 				086E780816F2428200EA221D /* GaugeViewController.m in Sources */,
 				0866AF9816F8E0760097F624 /* RealTimeBuilder.m in Sources */,
-				08549433170288830007566F /* Brsp.m in Sources */,
 				08549435170288830007566F /* ScanController.m in Sources */,
 				08549436170288830007566F /* SensorConfigViewController.m in Sources */,
 				7428C4491704C5AA0013A04E /* ConnectionController.m in Sources */,
+				7428C44F1704CCBC0013A04E /* SensorTableController.m in Sources */,
+				7428C46D170A118D0013A04E /* AddSensorController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +501,10 @@
 				GCC_PREFIX_HEADER = "ECSlidingViewController/ECSlidingViewController-Prefix.pch";
 				INFOPLIST_FILE = "ECSlidingViewController/ECSlidingViewController-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ECSlidingViewController\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -494,6 +518,10 @@
 				GCC_PREFIX_HEADER = "ECSlidingViewController/ECSlidingViewController-Prefix.pch";
 				INFOPLIST_FILE = "ECSlidingViewController/ECSlidingViewController-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ECSlidingViewController\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

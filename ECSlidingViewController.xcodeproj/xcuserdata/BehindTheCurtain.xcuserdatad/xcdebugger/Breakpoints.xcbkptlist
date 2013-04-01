@@ -7,14 +7,14 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "ECSlidingViewController/SensorAggregateModel.m"
-         timestampString = "384974601.399587"
+         filePath = "ECSlidingViewController/ScanController.m"
+         timestampString = "386270706.407136"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "86"
-         endingLineNumber = "86"
-         landmarkName = "@implementation SensorAggregateModel"
-         landmarkType = "3">
+         startingLineNumber = "88"
+         endingLineNumber = "88"
+         landmarkName = "-tableView:didSelectRowAtIndexPath:"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

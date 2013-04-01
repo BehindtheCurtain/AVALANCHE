@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreBluetooth/CoreBluetooth.h>
 #import "AppDelegate.h"
-#import "BluetoothViewController.h"
+#import "ConnectionController.h"
 #import "Brsp.h"
 
 @interface ScanController : UIViewController <UITableViewDelegate, UITableViewDataSource, CBCentralManagerDelegate> {

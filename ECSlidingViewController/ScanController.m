@@ -107,7 +107,7 @@
     [_peripherals removeAllObjects];
     [self.deviceTableView reloadData];
     [self disableButton:_scanButton];
-    [[AppDelegate app].cbCentral scanForPeripheralsWithServices: [NSArray arrayWithObject:[Brsp brspServiceUUID]] options:nil];
+    [[AppDelegate app].cbCentral scanForPeripheralsWithServices:[NSArray arrayWithObject:[Brsp brspServiceUUID]] options:nil];
 }
 
 - (void) stopScanButton:(id)sender {
