@@ -11,8 +11,6 @@
 		08089F3316E6A90C00EBA435 /* PagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08089F3016E6A90C00EBA435 /* PagerViewController.m */; };
 		08549435170288830007566F /* ScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0854942F170288830007566F /* ScanController.m */; };
 		08549436170288830007566F /* SensorConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08549431170288830007566F /* SensorConfigViewController.m */; };
-		085DFE911709EB86004B3524 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 085DFE901709EB86004B3524 /* Icon@2x.png */; };
-		085DFE931709EB8A004B3524 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 085DFE921709EB8A004B3524 /* Icon.png */; };
 		0866AF9816F8E0760097F624 /* RealTimeBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0866AF9716F8E0760097F624 /* RealTimeBuilder.m */; };
 		086E780616F2428200EA221D /* PercentageChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 086E780016F2428200EA221D /* PercentageChart.m */; };
 		086E780716F2428200EA221D /* PercentageChartLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 086E780216F2428200EA221D /* PercentageChartLayer.m */; };
@@ -60,8 +58,6 @@
 		0854942F170288830007566F /* ScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanController.m; sourceTree = "<group>"; };
 		08549430170288830007566F /* SensorConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorConfigViewController.h; sourceTree = "<group>"; };
 		08549431170288830007566F /* SensorConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorConfigViewController.m; sourceTree = "<group>"; };
-		085DFE901709EB86004B3524 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		085DFE921709EB8A004B3524 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		0866AF9716F8E0760097F624 /* RealTimeBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealTimeBuilder.m; sourceTree = "<group>"; };
 		086E77FF16F2428200EA221D /* PercentageChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PercentageChart.h; sourceTree = "<group>"; };
 		086E780016F2428200EA221D /* PercentageChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PercentageChart.m; sourceTree = "<group>"; };
@@ -147,12 +143,6 @@
 		2750E76114CDB0DF007727A0 = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-				085DFE921709EB8A004B3524 /* Icon.png */,
-				085DFE901709EB86004B3524 /* Icon@2x.png */,
-				089FFEC117034FB40088D528 /* CoreBluetooth.framework */,
-=======
->>>>>>> Scan working, sensor configuration save.
 				08A2AF2016E69C6A00065D0C /* Default-568h@2x.png */,
 				2750E77614CDB0DF007727A0 /* ECSlidingViewController */,
 				2750E76F14CDB0DF007727A0 /* Frameworks */,
@@ -392,8 +382,6 @@
 				2750E77B14CDB0DF007727A0 /* InfoPlist.strings in Resources */,
 				08A2AF2116E69C6B00065D0C /* Default-568h@2x.png in Resources */,
 				089FFEC017034F800088D528 /* iPhone.storyboard in Resources */,
-				085DFE911709EB86004B3524 /* Icon@2x.png in Resources */,
-				085DFE931709EB8A004B3524 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

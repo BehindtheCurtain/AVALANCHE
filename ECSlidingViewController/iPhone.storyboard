@@ -838,11 +838,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
         <segue reference="ved-cf-b4k"/>
         <segue reference="QCN-pg-Oim"/>
-=======
         <segue reference="IUu-cx-TSU"/>
->>>>>>> Scan working, sensor configuration save.
     </inferredMetricsTieBreakers>
 </document>
