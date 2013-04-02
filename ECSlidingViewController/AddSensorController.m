@@ -8,7 +8,7 @@
 
 #import "AddSensorController.h"
 
-@interface AddSensorController ()
+@interface AddSensorController () <UITextFieldDelegate, UIActionSheetDelegate>
 
 @end
 
@@ -35,6 +35,45 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if(textField == self.sensorNameField && [self.sensorNameField isFirstResponder])
+    {
+        [self.sensorNameField resignFirstResponder];
+    }
+    else if(textField == self.transformConstantField && [self.transformConstantField isFirstResponder])
+    {
+        [self.transformConstantField resignFirstResponder];
+    }
+    
+    return NO;
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [textField selectAll:nil];
+}
+
+- (IBAction)save:(id)sender
+{
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Create Sensor Configuration" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Create" otherButtonTitles:nil, nil];
+    
+    [actionSheet showFromRect:[self.view bounds] inView:self.view  animated:NO];
+    
+    [super viewDidLoad];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    // Delete button clicked.
+    if(buttonIndex == 0)
+    {
+        NSMutableArray* configMap = [[ConfigurationModelMap instance] configurationMap];
+        [configMap removeObjectAtIndex:[configMap indexOfObject:self.configuration]];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 @end
