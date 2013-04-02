@@ -67,11 +67,39 @@
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    // Delete button clicked.
+    // Create button clicked.
     if(buttonIndex == 0)
     {
-        NSMutableArray* configMap = [[ConfigurationModelMap instance] configurationMap];
-        [configMap removeObjectAtIndex:[configMap indexOfObject:self.configuration]];
+        ConfigurationModel* configuration = [[ConfigurationModel alloc] init];
+        
+        // If the text field has a value set the configuration to that, otherwise use a default value.
+        if([self.sensorNameField.text length] != 0)
+        {
+            [configuration setName:self.sensorNameField.text];
+        }
+        else
+        {
+            [configuration setName:@"New Sensor"];
+        }
+        
+        if([self.transformConstantField.text length] != 0)
+        {
+            [configuration setTransformConstant:[self.transformConstantField.text intValue]];
+        }
+        else
+        {
+            [configuration setTransformConstant:0];
+        }
+        
+        [configuration setActive:self.activeSwitch.isOn];
+        
+        // Placeholder replace when sensorType and sensorID picker are finished.
+        [configuration setSensorType:Tachometer];
+        
+        [configuration setSensorID:15];
+        
+        [[[ConfigurationModelMap instance] configurationMap] addObject:configuration];
+        
         [self.navigationController popViewControllerAnimated:YES];
     }
 }

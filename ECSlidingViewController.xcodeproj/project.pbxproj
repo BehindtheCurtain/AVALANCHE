@@ -40,9 +40,9 @@
 		7428C44F1704CCBC0013A04E /* SensorTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7428C44E1704CCBC0013A04E /* SensorTableController.m */; };
 		7428C4611705057C0013A04E /* libios_brsp_device_1_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7428C4601705057B0013A04E /* libios_brsp_device_1_0.a */; };
 		7428C46A1709C14D0013A04E /* libios_brsp_simulator_1_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7428C4691709C14C0013A04E /* libios_brsp_simulator_1_0.a */; };
-		7428C46D170A118D0013A04E /* AddSensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7428C46C170A118C0013A04E /* AddSensorController.m */; };
 		7428C46F170A26DA0013A04E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7428C46E170A26DA0013A04E /* Icon.png */; };
 		7428C471170A26E70013A04E /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7428C470170A26E70013A04E /* Icon@2x.png */; };
+		7428C473170B8D150013A04E /* AddSensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7428C472170B8D150013A04E /* AddSensorController.m */; };
 		746178E616EBCDF80007FE56 /* ConfigurationModelMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178DF16EBCDF70007FE56 /* ConfigurationModelMap.m */; };
 		746178E816EBCDF80007FE56 /* SensorAggregateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178E316EBCDF70007FE56 /* SensorAggregateModel.m */; };
 		746178E916EBCDF80007FE56 /* SensorSnapshotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178E516EBCDF80007FE56 /* SensorSnapshotModel.m */; };
@@ -109,9 +109,9 @@
 		7428C4601705057B0013A04E /* libios_brsp_device_1_0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libios_brsp_device_1_0.a; path = ECSlidingViewController/libios_brsp_device_1_0.a; sourceTree = "<group>"; };
 		7428C4691709C14C0013A04E /* libios_brsp_simulator_1_0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libios_brsp_simulator_1_0.a; path = ECSlidingViewController/libios_brsp_simulator_1_0.a; sourceTree = "<group>"; };
 		7428C46B170A11890013A04E /* AddSensorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSensorController.h; sourceTree = "<group>"; };
-		7428C46C170A118C0013A04E /* AddSensorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSensorController.m; sourceTree = "<group>"; };
 		7428C46E170A26DA0013A04E /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		7428C470170A26E70013A04E /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		7428C472170B8D150013A04E /* AddSensorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSensorController.m; sourceTree = "<group>"; };
 		746178DE16EBCDF70007FE56 /* ConfigurationModelMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationModelMap.h; sourceTree = "<group>"; };
 		746178DF16EBCDF70007FE56 /* ConfigurationModelMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationModelMap.m; sourceTree = "<group>"; };
 		746178E016EBCDF70007FE56 /* RealTimeBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealTimeBuilder.h; sourceTree = "<group>"; };
@@ -316,7 +316,7 @@
 				08549430170288830007566F /* SensorConfigViewController.h */,
 				08549431170288830007566F /* SensorConfigViewController.m */,
 				7428C46B170A11890013A04E /* AddSensorController.h */,
-				7428C46C170A118C0013A04E /* AddSensorController.m */,
+				7428C472170B8D150013A04E /* AddSensorController.m */,
 			);
 			name = Configurations;
 			sourceTree = "<group>";
@@ -427,7 +427,7 @@
 				08549436170288830007566F /* SensorConfigViewController.m in Sources */,
 				7428C4491704C5AA0013A04E /* ConnectionController.m in Sources */,
 				7428C44F1704CCBC0013A04E /* SensorTableController.m in Sources */,
-				7428C46D170A118D0013A04E /* AddSensorController.m in Sources */,
+				7428C473170B8D150013A04E /* AddSensorController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
