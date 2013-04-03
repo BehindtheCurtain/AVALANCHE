@@ -18,7 +18,7 @@
 - (void)awakeFromNib
 {
   self.sampleItems = [NSArray arrayWithObjects:@"One"
-                      , @"Bluetooth", @"Sensor Configuration", nil];
+                      , @"Bluetooth", @"Sensor Configuration", @"ftpTest", nil];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex

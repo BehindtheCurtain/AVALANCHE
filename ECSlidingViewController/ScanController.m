@@ -85,19 +85,19 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:@"cellSegue" sender:self];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self stopScanButton:nil];
+    
+    [AppDelegate app].activePeripheral = [_peripherals objectAtIndex:indexPath.row];
+    [self.deviceTableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    ConnectionController* connection = [self.storyboard instantiateViewControllerWithIdentifier:@"connection"];
+    
+    [self.navigationController pushViewController:connection animated:YES];
+    
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([[segue identifier] isEqualToString:@"cellSegue"]) {
-        [self stopScanButton:nil];
-        NSIndexPath *indexPath = [self.deviceTableView indexPathForSelectedRow];
-        
-        [AppDelegate app].activePeripheral = [_peripherals objectAtIndex:indexPath.row];      
-        [self.deviceTableView deselectRowAtIndexPath:indexPath animated:YES];
-    }
-}
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {return NO;}
 
 #pragma mark - UI 

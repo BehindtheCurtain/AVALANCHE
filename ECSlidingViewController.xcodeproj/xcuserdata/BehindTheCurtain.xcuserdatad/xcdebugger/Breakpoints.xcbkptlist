@@ -7,13 +7,26 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "ECSlidingViewController/ScanController.m"
-         timestampString = "386270706.407136"
+         filePath = "ECSlidingViewController/FtpTestController.m"
+         timestampString = "386693854.388556"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "88"
-         endingLineNumber = "88"
-         landmarkName = "-tableView:didSelectRowAtIndexPath:"
+         startingLineNumber = "79"
+         endingLineNumber = "79"
+         landmarkName = "-stream:handleEvent:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "ECSlidingViewController/FtpTestController.m"
+         timestampString = "386693854.388556"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "50"
+         endingLineNumber = "50"
+         landmarkName = "-send:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
