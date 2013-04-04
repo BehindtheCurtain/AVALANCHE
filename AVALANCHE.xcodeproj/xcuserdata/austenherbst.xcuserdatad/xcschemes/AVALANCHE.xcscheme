@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2750E76B14CDB0DF007727A0"
                BuildableName = "ECSlidingViewController.app"
-               BlueprintName = "ECSlidingViewController"
-               ReferencedContainer = "container:ECSlidingViewController.xcodeproj">
+               BlueprintName = "AVALANCHE"
+               ReferencedContainer = "container:AVALANCHE.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2750E76B14CDB0DF007727A0"
             BuildableName = "ECSlidingViewController.app"
-            BlueprintName = "ECSlidingViewController"
-            ReferencedContainer = "container:ECSlidingViewController.xcodeproj">
+            BlueprintName = "AVALANCHE"
+            ReferencedContainer = "container:AVALANCHE.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -53,8 +53,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2750E76B14CDB0DF007727A0"
             BuildableName = "ECSlidingViewController.app"
-            BlueprintName = "ECSlidingViewController"
-            ReferencedContainer = "container:ECSlidingViewController.xcodeproj">
+            BlueprintName = "AVALANCHE"
+            ReferencedContainer = "container:AVALANCHE.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -71,8 +71,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2750E76B14CDB0DF007727A0"
             BuildableName = "ECSlidingViewController.app"
-            BlueprintName = "ECSlidingViewController"
-            ReferencedContainer = "container:ECSlidingViewController.xcodeproj">
+            BlueprintName = "AVALANCHE"
+            ReferencedContainer = "container:AVALANCHE.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
