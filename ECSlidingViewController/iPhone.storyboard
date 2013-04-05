@@ -283,7 +283,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Configuration" id="1VF-ZY-yv5">
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="Sjw-pZ-w2V">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Sjw-pZ-w2V">
                             <connections>
                                 <segue destination="faj-DO-tu6" kind="push" id="nCw-da-R5s"/>
                             </connections>
