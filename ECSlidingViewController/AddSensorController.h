@@ -14,10 +14,10 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *sensorNameField;
 @property (weak, nonatomic) IBOutlet UITextField *transformConstantField;
+@property (weak, nonatomic) IBOutlet UITextField *sensorIDField;
 @property (weak, nonatomic) IBOutlet UISwitch *activeSwitch;
 
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
-@property (weak, nonatomic) IBOutlet UIButton *sensorIDButton;
 @property (weak, nonatomic) IBOutlet UIButton *sensorTypeButton;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sensorDismissButton;

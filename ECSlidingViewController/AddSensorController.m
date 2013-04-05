@@ -7,6 +7,7 @@
 //
 
 #import "AddSensorController.h"
+#import "ConfigurationModel.h"
 
 @interface AddSensorController () <UITextFieldDelegate, UIActionSheetDelegate>
 
@@ -47,6 +48,10 @@
     {
         [self.transformConstantField resignFirstResponder];
     }
+    else if(textField == self.sensorIDField && [self.sensorIDField isFirstResponder])
+    {
+        [self.sensorIDField resignFirstResponder];
+    }
     
     return NO;
 }
@@ -82,6 +87,7 @@
             [configuration setName:@"New Sensor"];
         }
         
+        // If the text field has a value set the configuration to that, otherwise use a default value.
         if([self.transformConstantField.text length] != 0)
         {
             [configuration setTransformConstant:[self.transformConstantField.text intValue]];
@@ -91,12 +97,20 @@
             [configuration setTransformConstant:0];
         }
         
+        // If the text field has a value set the configuration to that, otherwise use a default value.
+        if([self.sensorIDField.text length] != 0)
+        {
+            [configuration setSensorID:[self.sensorIDField.text intValue]];
+        }
+        else
+        {
+            [configuration setSensorID:1];
+        }
+        
         [configuration setActive:self.activeSwitch.isOn];
         
-        // Placeholder replace when sensorType and sensorID picker are finished.
+        // Placeholder replace when sensorType picker is finished.
         [configuration setSensorType:Tachometer];
-        
-        [configuration setSensorID:15];
         
         [[[ConfigurationModelMap instance] configurationMap] addObject:configuration];
         
@@ -104,11 +118,13 @@
     }
 }
 
+//Show sensor type picker
 -(IBAction)showPicker:(id)sender{
     self.sensorTypePicker.hidden = NO;
     self.sensorPickerNavBar.hidden = NO;
 }
 
+//Hide sensor type picker
 -(IBAction)hidePicker:(id)sender{
     self.sensorTypePicker.hidden = YES;
     self.sensorPickerNavBar.hidden = YES;
