@@ -104,4 +104,14 @@
     }
 }
 
+-(IBAction)showPicker:(id)sender{
+    self.sensorTypePicker.hidden = NO;
+    self.sensorPickerNavBar.hidden = NO;
+}
+
+-(IBAction)hidePicker:(id)sender{
+    self.sensorTypePicker.hidden = YES;
+    self.sensorPickerNavBar.hidden = YES;
+}
+
 @end

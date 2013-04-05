@@ -20,5 +20,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *sensorIDButton;
 @property (weak, nonatomic) IBOutlet UIButton *sensorTypeButton;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sensorDismissButton;
+@property (weak, nonatomic) IBOutlet UIToolbar *sensorPickerNavBar;
+@property (weak, nonatomic) IBOutlet UIPickerView *sensorTypePicker;
+
+- (IBAction)showPicker:(id)sender;
+- (IBAction)hidePicker:(id)sender;
+
 - (IBAction)save:(id)sender;
 @end
