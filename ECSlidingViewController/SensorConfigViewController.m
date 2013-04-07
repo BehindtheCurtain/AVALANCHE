@@ -9,7 +9,7 @@
 #import "SensorConfigViewController.h"
 #define NUMBERS @"1234567890"
 
-@interface SensorConfigViewController () <UITextFieldDelegate, UIActionSheetDelegate>
+@interface SensorConfigViewController () <UITextFieldDelegate>
 
 @end
 
@@ -70,24 +70,4 @@
     [textField selectAll:nil];
 }
 
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    // Delete button clicked.
-    if(buttonIndex == 0)
-    {
-        NSMutableArray* configMap = [[ConfigurationModelMap instance] configurationMap];
-        [configMap removeObjectAtIndex:[configMap indexOfObject:self.configuration]];
-        [self.navigationController popViewControllerAnimated:YES];
-        
-    }
-}
-
-- (IBAction)deleteConfig:(id)sender
-{
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Confirm Deletion" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Delete" otherButtonTitles:nil, nil];
-    
-    [actionSheet showFromRect:[self.view bounds] inView:self.view  animated:NO];
-    
-    [super viewDidLoad];
-}
 @end

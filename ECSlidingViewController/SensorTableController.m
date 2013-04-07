@@ -87,4 +87,20 @@
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
+//Necessary for swipe to delete
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+//Swipe to delete
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSMutableArray* configMap = [[ConfigurationModelMap instance] configurationMap];
+        ConfigurationModel* configuration = [[[ConfigurationModelMap instance] configurationMap] objectAtIndex:indexPath.row];
+        [configMap removeObjectAtIndex:[configMap indexOfObject:configuration]];
+        [self.tableView reloadData];
+        [[ConfigurationModelMap instance] archive];
+    }
+}
+
 @end

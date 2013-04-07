@@ -10,15 +10,12 @@
 #import "ConfigurationModel.h"
 #import "ConfigurationModelMap.h"
 
-@interface SensorConfigViewController : UIViewController <UITextFieldDelegate, UIActionSheetDelegate>
+@interface SensorConfigViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *sensorNameField;
 @property (weak, nonatomic) IBOutlet UITextField *transformConstantField;
 @property (weak, nonatomic) IBOutlet UISwitch *activeSwitch;
 
 @property (retain) ConfigurationModel* configuration;
-
-@property (weak, nonatomic) IBOutlet UIButton *deleteButton;
-- (IBAction)deleteConfig:(id)sender;
 
 @end
