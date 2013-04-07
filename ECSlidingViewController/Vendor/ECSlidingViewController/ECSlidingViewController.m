@@ -138,7 +138,7 @@ NSString *const ECSlidingViewTopDidReset             = @"ECSlidingViewTopDidRese
   [_underRightViewController willMoveToParentViewController:nil];
   [_underRightViewController removeFromParentViewController];
   
-  _underRightViewController = theUnderRightViewController;
+  _underRightViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"UnderRight"];
   
   if (_underRightViewController) {
     [self addChildViewController:self.underRightViewController];

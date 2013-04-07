@@ -18,16 +18,16 @@
 @synthesize sensorData;
 
 // Constructor method that sets all of the snapshots data.
--(id) initWithTimeStamp: 	(NSDate*)_timeStamp
-               withName: 				(NSString *)_sensorName
-               withType: 				(NSString *)_sensorType
-           withSensorID: 			(int)_sensorID
-               withData:			 	(int)_sensorData;
+-(id) initWithTimeStamp:(long)_timeStamp
+               withType:(NSString *)_sensorType
+           withSensorID:(int)_sensorID
+               withData:(int)_sensorData;
 {
 	self = [super init];
+    
+    NSDate* date = [NSDate dateWithTimeIntervalSince1970:(NSTimeInterval)_timeStamp];
 	
-	self.timeStamp = _timeStamp;
-	self.sensorName = _sensorName;
+	self.timeStamp = date;
 	self.sensorType = _sensorType;
 	self.sensorID = _sensorID;
 	self.sensorData = _sensorData;
@@ -39,6 +39,7 @@
 {
     NSDateFormatter* df = [[NSDateFormatter alloc] init];
     [df setDateFormat:@"yyyy-MM-dd hh:mm:ss a"];
+    
     NSString* time = [df stringFromDate:self.timeStamp];
     
     NSMutableString* data = [[NSMutableString alloc] init];
@@ -50,7 +51,6 @@
 }
 
 -(id) initFromDataString:(NSString*)data
-          withSensorName:(NSString*)name
           withSensorType:(NSString*)type
             withSensorID:(int)ID
 {
@@ -64,7 +64,6 @@
         NSDate* time = [df dateFromString:[snapshotData objectAtIndex:0]];
         
         self.timeStamp = time;
-        self.sensorName = name;
         self.sensorType = type;
         self.sensorID = ID;
         self.sensorData = [snapshotData objectAtIndex:1];

@@ -16,7 +16,10 @@ typedef enum
     Tempature,
     Oxygen,
     Pressure,
-    Voltage
+    Voltage,
+    PulseRate,
+    PulseCount,
+    AirFuel
 } SensorTypes;
 
 @property (copy) NSString* name;

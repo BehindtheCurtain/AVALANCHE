@@ -44,12 +44,19 @@
 		7428C471170A26E70013A04E /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7428C470170A26E70013A04E /* Icon@2x.png */; };
 		7428C473170B8D150013A04E /* AddSensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7428C472170B8D150013A04E /* AddSensorController.m */; };
 		7428C478170BA2FF0013A04E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7428C477170BA2FF0013A04E /* CFNetwork.framework */; };
-		7428C47B170BA4ED0013A04E /* FtpTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7428C47A170BA4EB0013A04E /* FtpTestController.m */; };
+		74308132171092E000FEBEB8 /* CreateDirController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74308129171092E000FEBEB8 /* CreateDirController.m */; };
+		74308133171092E000FEBEB8 /* GetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7430812B171092E000FEBEB8 /* GetController.m */; };
+		74308134171092E000FEBEB8 /* ListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7430812D171092E000FEBEB8 /* ListController.m */; };
+		74308135171092E000FEBEB8 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7430812F171092E000FEBEB8 /* NetworkManager.m */; };
+		74308136171092E000FEBEB8 /* PutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74308131171092E000FEBEB8 /* PutController.m */; };
+		74308139171092EF00FEBEB8 /* RealTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74308138171092EF00FEBEB8 /* RealTimeViewController.m */; };
+		7430813F171097D300FEBEB8 /* FtpTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7430813E171097D300FEBEB8 /* FtpTestController.m */; };
 		746178E616EBCDF80007FE56 /* ConfigurationModelMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178DF16EBCDF70007FE56 /* ConfigurationModelMap.m */; };
 		746178E816EBCDF80007FE56 /* SensorAggregateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178E316EBCDF70007FE56 /* SensorAggregateModel.m */; };
 		746178E916EBCDF80007FE56 /* SensorSnapshotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178E516EBCDF80007FE56 /* SensorSnapshotModel.m */; };
 		746178ED16EBCFC00007FE56 /* GaugeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178EC16EBCFC00007FE56 /* GaugeModel.m */; };
 		746178F016EBE5720007FE56 /* ConfigurationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178EF16EBE5720007FE56 /* ConfigurationModel.m */; };
+		74D85A11170F24B90059B791 /* BLEGaugeAlarmService.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D85A10170F24B90059B791 /* BLEGaugeAlarmService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,8 +122,20 @@
 		7428C470170A26E70013A04E /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		7428C472170B8D150013A04E /* AddSensorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSensorController.m; sourceTree = "<group>"; };
 		7428C477170BA2FF0013A04E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		7428C479170BA4EA0013A04E /* FtpTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FtpTestController.h; sourceTree = "<group>"; };
-		7428C47A170BA4EB0013A04E /* FtpTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FtpTestController.m; sourceTree = "<group>"; };
+		74308128171092E000FEBEB8 /* CreateDirController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateDirController.h; sourceTree = "<group>"; };
+		74308129171092E000FEBEB8 /* CreateDirController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateDirController.m; sourceTree = "<group>"; };
+		7430812A171092E000FEBEB8 /* GetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetController.h; sourceTree = "<group>"; };
+		7430812B171092E000FEBEB8 /* GetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetController.m; sourceTree = "<group>"; };
+		7430812C171092E000FEBEB8 /* ListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListController.h; sourceTree = "<group>"; };
+		7430812D171092E000FEBEB8 /* ListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListController.m; sourceTree = "<group>"; };
+		7430812E171092E000FEBEB8 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		7430812F171092E000FEBEB8 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		74308130171092E000FEBEB8 /* PutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PutController.h; sourceTree = "<group>"; };
+		74308131171092E000FEBEB8 /* PutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PutController.m; sourceTree = "<group>"; };
+		74308137171092EF00FEBEB8 /* RealTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealTimeViewController.h; sourceTree = "<group>"; };
+		74308138171092EF00FEBEB8 /* RealTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealTimeViewController.m; sourceTree = "<group>"; };
+		7430813D171097D300FEBEB8 /* FtpTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FtpTestController.h; sourceTree = "<group>"; };
+		7430813E171097D300FEBEB8 /* FtpTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FtpTestController.m; sourceTree = "<group>"; };
 		746178DE16EBCDF70007FE56 /* ConfigurationModelMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationModelMap.h; sourceTree = "<group>"; };
 		746178DF16EBCDF70007FE56 /* ConfigurationModelMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationModelMap.m; sourceTree = "<group>"; };
 		746178E016EBCDF70007FE56 /* RealTimeBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealTimeBuilder.h; sourceTree = "<group>"; };
@@ -128,6 +147,8 @@
 		746178EC16EBCFC00007FE56 /* GaugeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaugeModel.m; sourceTree = "<group>"; };
 		746178EE16EBE5710007FE56 /* ConfigurationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationModel.h; sourceTree = "<group>"; };
 		746178EF16EBE5720007FE56 /* ConfigurationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationModel.m; sourceTree = "<group>"; };
+		74D85A0F170F24B90059B791 /* BLEGaugeAlarmService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEGaugeAlarmService.h; sourceTree = "<group>"; };
+		74D85A10170F24B90059B791 /* BLEGaugeAlarmService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEGaugeAlarmService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,35 +244,11 @@
 		2750E78A14CDB1CF007727A0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				74308127171092BE00FEBEB8 /* Networking */,
+				74D650E21704B91400E58615 /* Configurations */,
+				74D85A12170F26500059B791 /* Navigation */,
 				74D650E41704B93900E58615 /* Post */,
 				74D650E31704B93100E58615 /* Real Time */,
-				74D650E21704B91400E58615 /* Configurations */,
-				086E77FF16F2428200EA221D /* PercentageChart.h */,
-				086E780016F2428200EA221D /* PercentageChart.m */,
-				086E780116F2428200EA221D /* PercentageChartLayer.h */,
-				086E780216F2428200EA221D /* PercentageChartLayer.m */,
-				086E780316F2428200EA221D /* GaugeViewController.h */,
-				086E780416F2428200EA221D /* GaugeViewController.m */,
-				08089F2C16E6A90C00EBA435 /* CustomPagerViewController.h */,
-				08089F2D16E6A90C00EBA435 /* CustomPagerViewController.m */,
-				08089F2F16E6A90C00EBA435 /* PagerViewController.h */,
-				08089F3016E6A90C00EBA435 /* PagerViewController.m */,
-				2750E79514CDB959007727A0 /* FirstTopViewController.h */,
-				2750E79614CDB959007727A0 /* FirstTopViewController.m */,
-				27FC94DE14D0C14E0000B18C /* InitialSlidingViewController.h */,
-				27FC94DF14D0C14E0000B18C /* InitialSlidingViewController.m */,
-				2750E79214CDB93A007727A0 /* MenuViewController.h */,
-				2750E79314CDB93A007727A0 /* MenuViewController.m */,
-				27498DCC14E96C75005C043E /* NavigationTopViewController.h */,
-				27498DCD14E96C75005C043E /* NavigationTopViewController.m */,
-				27498DD314E96EEF005C043E /* SampleTableViewController.h */,
-				27498DD414E96EEF005C043E /* SampleTableViewController.m */,
-				2750E79814CDB99A007727A0 /* SecondTopViewController.h */,
-				2750E79914CDB99A007727A0 /* SecondTopViewController.m */,
-				2750E79B14CDBA48007727A0 /* ThirdTopViewController.h */,
-				2750E79C14CDBA48007727A0 /* ThirdTopViewController.m */,
-				2750E79E14CDBC32007727A0 /* UnderRightViewController.h */,
-				2750E79F14CDBC32007727A0 /* UnderRightViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -268,9 +265,29 @@
 			path = Vendor/ECSlidingViewController;
 			sourceTree = "<group>";
 		};
+		74308127171092BE00FEBEB8 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7430813D171097D300FEBEB8 /* FtpTestController.h */,
+				7430813E171097D300FEBEB8 /* FtpTestController.m */,
+				74308128171092E000FEBEB8 /* CreateDirController.h */,
+				74308129171092E000FEBEB8 /* CreateDirController.m */,
+				7430812A171092E000FEBEB8 /* GetController.h */,
+				7430812B171092E000FEBEB8 /* GetController.m */,
+				7430812C171092E000FEBEB8 /* ListController.h */,
+				7430812D171092E000FEBEB8 /* ListController.m */,
+				7430812E171092E000FEBEB8 /* NetworkManager.h */,
+				7430812F171092E000FEBEB8 /* NetworkManager.m */,
+				74308130171092E000FEBEB8 /* PutController.h */,
+				74308131171092E000FEBEB8 /* PutController.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
 		746178EA16EBCE0E0007FE56 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				74D85A0E170F24A50059B791 /* Sync */,
 				746178F316EBE6E50007FE56 /* Configuration */,
 				746178F216EBE6DD0007FE56 /* Post */,
 				746178F116EBE6CA0007FE56 /* Real Time */,
@@ -281,14 +298,14 @@
 		746178F116EBE6CA0007FE56 /* Real Time */ = {
 			isa = PBXGroup;
 			children = (
-				0866AF9716F8E0760097F624 /* RealTimeBuilder.m */,
+				746178EB16EBCFC00007FE56 /* GaugeModel.h */,
+				746178EC16EBCFC00007FE56 /* GaugeModel.m */,
 				746178E016EBCDF70007FE56 /* RealTimeBuilder.h */,
+				0866AF9716F8E0760097F624 /* RealTimeBuilder.m */,
 				746178E216EBCDF70007FE56 /* SensorAggregateModel.h */,
 				746178E316EBCDF70007FE56 /* SensorAggregateModel.m */,
 				746178E416EBCDF70007FE56 /* SensorSnapshotModel.h */,
 				746178E516EBCDF80007FE56 /* SensorSnapshotModel.m */,
-				746178EB16EBCFC00007FE56 /* GaugeModel.h */,
-				746178EC16EBCFC00007FE56 /* GaugeModel.m */,
 			);
 			name = "Real Time";
 			sourceTree = "<group>";
@@ -314,18 +331,16 @@
 		74D650E21704B91400E58615 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
+				7428C46B170A11890013A04E /* AddSensorController.h */,
+				7428C472170B8D150013A04E /* AddSensorController.m */,
 				7428C4471704C5AA0013A04E /* ConnectionController.h */,
 				7428C4481704C5AA0013A04E /* ConnectionController.m */,
 				0854942E170288830007566F /* ScanController.h */,
 				0854942F170288830007566F /* ScanController.m */,
-				7428C44D1704CCBB0013A04E /* SensorTableController.h */,
-				7428C44E1704CCBC0013A04E /* SensorTableController.m */,
 				08549430170288830007566F /* SensorConfigViewController.h */,
 				08549431170288830007566F /* SensorConfigViewController.m */,
-				7428C46B170A11890013A04E /* AddSensorController.h */,
-				7428C472170B8D150013A04E /* AddSensorController.m */,
-				7428C479170BA4EA0013A04E /* FtpTestController.h */,
-				7428C47A170BA4EB0013A04E /* FtpTestController.m */,
+				7428C44D1704CCBB0013A04E /* SensorTableController.h */,
+				7428C44E1704CCBC0013A04E /* SensorTableController.m */,
 			);
 			name = Configurations;
 			sourceTree = "<group>";
@@ -333,6 +348,8 @@
 		74D650E31704B93100E58615 /* Real Time */ = {
 			isa = PBXGroup;
 			children = (
+				74308137171092EF00FEBEB8 /* RealTimeViewController.h */,
+				74308138171092EF00FEBEB8 /* RealTimeViewController.m */,
 			);
 			name = "Real Time";
 			sourceTree = "<group>";
@@ -342,6 +359,48 @@
 			children = (
 			);
 			name = Post;
+			sourceTree = "<group>";
+		};
+		74D85A0E170F24A50059B791 /* Sync */ = {
+			isa = PBXGroup;
+			children = (
+				74D85A0F170F24B90059B791 /* BLEGaugeAlarmService.h */,
+				74D85A10170F24B90059B791 /* BLEGaugeAlarmService.m */,
+			);
+			name = Sync;
+			sourceTree = "<group>";
+		};
+		74D85A12170F26500059B791 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				08089F2C16E6A90C00EBA435 /* CustomPagerViewController.h */,
+				08089F2D16E6A90C00EBA435 /* CustomPagerViewController.m */,
+				2750E79514CDB959007727A0 /* FirstTopViewController.h */,
+				2750E79614CDB959007727A0 /* FirstTopViewController.m */,
+				086E780316F2428200EA221D /* GaugeViewController.h */,
+				086E780416F2428200EA221D /* GaugeViewController.m */,
+				27FC94DE14D0C14E0000B18C /* InitialSlidingViewController.h */,
+				27FC94DF14D0C14E0000B18C /* InitialSlidingViewController.m */,
+				2750E79214CDB93A007727A0 /* MenuViewController.h */,
+				2750E79314CDB93A007727A0 /* MenuViewController.m */,
+				27498DCC14E96C75005C043E /* NavigationTopViewController.h */,
+				27498DCD14E96C75005C043E /* NavigationTopViewController.m */,
+				08089F2F16E6A90C00EBA435 /* PagerViewController.h */,
+				08089F3016E6A90C00EBA435 /* PagerViewController.m */,
+				086E77FF16F2428200EA221D /* PercentageChart.h */,
+				086E780016F2428200EA221D /* PercentageChart.m */,
+				086E780116F2428200EA221D /* PercentageChartLayer.h */,
+				086E780216F2428200EA221D /* PercentageChartLayer.m */,
+				27498DD314E96EEF005C043E /* SampleTableViewController.h */,
+				27498DD414E96EEF005C043E /* SampleTableViewController.m */,
+				2750E79814CDB99A007727A0 /* SecondTopViewController.h */,
+				2750E79914CDB99A007727A0 /* SecondTopViewController.m */,
+				2750E79B14CDBA48007727A0 /* ThirdTopViewController.h */,
+				2750E79C14CDBA48007727A0 /* ThirdTopViewController.m */,
+				2750E79E14CDBC32007727A0 /* UnderRightViewController.h */,
+				2750E79F14CDBC32007727A0 /* UnderRightViewController.m */,
+			);
+			name = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,7 +496,14 @@
 				7428C4491704C5AA0013A04E /* ConnectionController.m in Sources */,
 				7428C44F1704CCBC0013A04E /* SensorTableController.m in Sources */,
 				7428C473170B8D150013A04E /* AddSensorController.m in Sources */,
-				7428C47B170BA4ED0013A04E /* FtpTestController.m in Sources */,
+				74D85A11170F24B90059B791 /* BLEGaugeAlarmService.m in Sources */,
+				74308132171092E000FEBEB8 /* CreateDirController.m in Sources */,
+				74308133171092E000FEBEB8 /* GetController.m in Sources */,
+				74308134171092E000FEBEB8 /* ListController.m in Sources */,
+				74308135171092E000FEBEB8 /* NetworkManager.m in Sources */,
+				74308136171092E000FEBEB8 /* PutController.m in Sources */,
+				74308139171092EF00FEBEB8 /* RealTimeViewController.m in Sources */,
+				7430813F171097D300FEBEB8 /* FtpTestController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

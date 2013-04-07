@@ -51,7 +51,7 @@ const int DEFAULT_SENSORS = 14;
                     [[instance configurationMap] addObject:config];
                 }
                 
-                [ConfigurationModelMap archive];
+                [[ConfigurationModelMap instance] archive];
             }
             
         }
@@ -60,11 +60,11 @@ const int DEFAULT_SENSORS = 14;
     }
 }
 
-+ (void)archive
+- (void)archive
 {
     
     NSUserDefaults* currentDefaults = [NSUserDefaults standardUserDefaults];;
-    NSData* data = [NSKeyedArchiver archivedDataWithRootObject:[[ConfigurationModelMap instance] configurationMap]];
+    NSData* data = [NSKeyedArchiver archivedDataWithRootObject:self.configurationMap];
     [currentDefaults setObject:data forKey:@"sensorConfig"];
 }
 

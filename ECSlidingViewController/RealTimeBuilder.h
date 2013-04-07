@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "ConfigurationModelMap.h"
-#import "RealTimeBuilder.h"
 #import "SensorSnapshotModel.h"
 #import "SensorAggregateModel.h"
 #import "ConfigurationModel.h"
@@ -18,21 +17,30 @@
 {
 }
 
-// Public class methods.
+#pragma mark Class variable accessors
++ (BOOL)processing;
+
+
+#pragma mark Public class methods.
 
 // Create a new GaugeModel singleton instance.
-+(void) gaugeModelFactory;
-
-// Set configuration map.
-+(void) setConfigurationMap: (ConfigurationModelMap*) configurationMap;
++ (void)gaugeModelFactory;
 
 // Turn on processing.
-+(void) beginProcessing;
++ (void)beginProcessing;
 
 // Turn off processing.
-+(void) endProcessing;
++ (void)endProcessing;
 
 // Create all snapshots for all active sensors.
-+(void) snapshotCreation: (Byte[]) data;
++ (void)snapshotCreation:(NSMutableArray*)data
+           withMessageType:(unsigned int)messageType
+           withTimeStamp:(unsigned long)timestamp;
+
+// Transform sensor data into readable form.
++ (int)transformSensorData:(int)sensorData
+              ofSensorType:(NSString*)sensorType
+                    withID:(int)sensorID
+             withTransform:(int)transformConstant;
 
 @end;

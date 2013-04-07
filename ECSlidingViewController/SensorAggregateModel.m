@@ -8,8 +8,9 @@
 
 #import "SensorAggregateModel.h"
 
+#define DELIM @"\n"
+
 static const int DEFAULT_NUM_SENSORS = 12;
-static NSString* DELIM = @"\n";
 
 @implementation SensorAggregateModel
 
@@ -17,14 +18,17 @@ static NSString* DELIM = @"\n";
 @synthesize snapshots;
 @synthesize sensorName;
 @synthesize sensorType;
+@synthesize initialTimeStamp;
+@synthesize transformConstant;
 @synthesize sensorID;
 @synthesize isActive;
 
 // Init with metadata.
--(id) initWithName: (NSString*) name
-          withType: (NSString*) type
-      withSensorID: (int)ID
-          isActive: (BOOL) active;
+-(id) initWithName:(NSString*) name
+          withType:(NSString*) type
+     withTransform:(int)transform
+      withSensorID:(int)ID
+          isActive:(BOOL) active;
 {
 	self = [super init];
 	
@@ -42,6 +46,8 @@ static NSString* DELIM = @"\n";
     [serialString appendString:self.sensorName];
     [serialString appendString:DELIM];
     [serialString appendString:self.sensorType];
+    [serialString appendString:DELIM];
+    [serialString appendString:[NSString stringWithFormat:@"%d", self.transformConstant]];
     [serialString appendString:DELIM];
     [serialString appendString:[NSString stringWithFormat:@"%d", self.sensorID]];
     [serialString appendString:DELIM];
@@ -70,16 +76,17 @@ static NSString* DELIM = @"\n";
         
         self.sensorName = [fileByLine objectAtIndex:0];
         self.sensorType = [fileByLine objectAtIndex:1];
-        self.sensorID = [[fileByLine objectAtIndex:2] intValue];
-        self.isActive = [[fileByLine objectAtIndex:3] boolValue];
+        self.transformConstant = [[fileByLine objectAtIndex:2] intValue];
+        self.sensorID = [[fileByLine objectAtIndex:3] intValue];
+        self.isActive = [[fileByLine objectAtIndex:4] boolValue];
         
-        for(int i = 4; i < [fileByLine count]; i++)
+        for(int i = 5; i < [fileByLine count]; i++)
         {
             NSString* line = [fileByLine objectAtIndex:i];
             
-            SensorSnapshotModel* snapshot = [[SensorSnapshotModel alloc] initFromDataString:line withSensorName:self.sensorName withSensorType:self.sensorType withSensorID:self.sensorID];
+            SensorSnapshotModel* snapshot = [[SensorSnapshotModel alloc] initFromDataString:line withSensorType:self.sensorType withSensorID:self.sensorID];
             
-            [snapshots setObject:snapshot atIndexedSubscript:(i-4)];
+            [snapshots addObject:snapshot];
         }
     }
     

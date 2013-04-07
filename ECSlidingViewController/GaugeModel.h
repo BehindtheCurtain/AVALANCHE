@@ -10,21 +10,19 @@
 #import "SensorAggregateModel.h"
 #import "SensorSnapshotModel.h"
 
-@interface GaugeModel : NSObject <NSCoding>
+@interface GaugeModel : NSObject
 
 // Instance properties.
 @property NSDate* startTimeStamp;
 @property NSDate* endTimeStamp;
-@property NSMutableArray* sensorAggregateModelMap;
+@property NSMutableDictionary* sensorAggregateModelMap;
 @property NSString* runName;
 
 // Public class methods.
-+(GaugeModel*) getInstance;
-+(void) resetInstance;
++ (GaugeModel*)instance:(BOOL)reset;
 
 // Public instance methods.
--(SensorAggregateModel*) getAggregateAtIndex:(int) index;
--(void) serialize:(NSString*) path;
--(id) initFromFile:(NSString*) file;
+- (void)serialize:(NSString*)path;
+- (id)initFromFile:(NSString*)file;
 
 @end

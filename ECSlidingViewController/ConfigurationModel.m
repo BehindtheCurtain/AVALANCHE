@@ -18,29 +18,45 @@
 
 - (NSString*)getType
 {
+    NSString* type;
+    
     switch(sensorType)
     {
         case Tachometer:
         {
-            return @"Tachometer";
+            type = @"Tachometer";
         }
         case Tempature:
         {
-            return @"Tempature";
+            type = @"Tempature";
         }
         case Oxygen:
         {
-            return @"Oxygen";
+            type = @"Oxygen";
         }
         case Pressure:
         {
-            return @"Pressure";
+            type = @"Pressure";
         }
         case Voltage:
         {
-            return @"Pressure";
+            type = @"Pressure";
+        }
+        case PulseCount:
+        {
+            type = @"PulseCount";
+        }
+        case PulseRate:
+        {
+            type = @"PulseRate";
+        }
+        case AirFuel:
+        {
+            type = @"AirFuel";
         }
     }
+    
+    return type;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder

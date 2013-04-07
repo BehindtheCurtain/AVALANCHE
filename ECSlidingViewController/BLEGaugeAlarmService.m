@@ -60,8 +60,6 @@
     // Flush "NEW".
     [[self brsp] flushInputBuffer:3];
     
-    int metaDataSize;
-    
     // Stall until the timestamp and message id are on the buffer.
     while([[self brsp] inputBufferCount] < 5);
     
@@ -71,7 +69,7 @@
     NSMutableArray* sensorData = [[NSMutableArray alloc]initWithCapacity:4];
     
     // Read the buffer until the start of the next message.
-    while(![[[self brsp] peekString:3] isEqualToString:@"NEW"])
+    while(![[[self brsp] peekString:3] isEqualToString:@"END"])
     {
         // Make sure atleast one message is on the buffer.
         if([[self brsp] inputBufferCount] >=2)
@@ -82,8 +80,7 @@
         }
     }
     
-    
-    [RealTimeBuilder snapshotCreation:sensorData withMessageID:messageID withTimeStamp:timestamp];
+    [RealTimeBuilder snapshotCreation:sensorData withMessageType:messageID withTimeStamp:timestamp];
 }
 
 #pragma mark CBCentralManagerDelegate

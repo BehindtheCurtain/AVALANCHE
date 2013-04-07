@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "ECSlidingViewController.h"
+#import "NetworkManager.h"
+#import <sys/socket.h>
+#import <sys/dirent.h>
 
-@interface UnderRightViewController : UITableViewController <UISearchBarDelegate>
+#import <CFNetwork/CFNetwork.h>
+
+@interface UnderRightViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, NSStreamDelegate, UISearchBarDelegate>
 
 @end

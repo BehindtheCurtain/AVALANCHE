@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SensorSnapshotModel.h";
+#import "SensorSnapshotModel.h"
 
 /*
  * SensorAggregateModel contains an array of SensorSnapshotModels as well as the associated metadata; name of sensor,
  * type of sensor, sensorID, and whether the sensor is actively being processed; for that sensor.
  */
-@interface SensorAggregateModel: NSObject <NSCoding>
+@interface SensorAggregateModel: NSObject
 {
 }
 
@@ -25,12 +25,16 @@
 // Instance properties.
 @property (copy) NSString* sensorName;
 @property (copy) NSString* sensorType;
+@property (assign) long initialTimeStamp;
+@property (assign) int transformConstant;
 @property (assign) int sensorID;
 @property (assign) BOOL isActive;
+
 
 //Initialize SensorAggregateModel with inputted metadata.
 -(id) initWithName:(NSString*) name
           withType:(NSString*) type
+     withTransform:(int)transform
       withSensorID:(int) ID
           isActive:(BOOL) active;
 

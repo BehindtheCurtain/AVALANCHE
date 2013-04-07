@@ -14,7 +14,7 @@
 
 @end
 
-static GaugeModel* gaugeModelInstance;
+
 static const int DEFUALT_NUM_SENSORS = 12;
 
 static NSString* DELIM = @"\n";
@@ -26,9 +26,11 @@ static NSString* DELIM = @"\n";
 @synthesize sensorAggregateModelMap;
 @synthesize runName;
 
-+(GaugeModel*) getInstance
++ (GaugeModel*)instance:(BOOL)reset
 {
-	if(gaugeModelInstance == nil)
+    static GaugeModel* gaugeModelInstance;
+    
+	if(gaugeModelInstance == nil && reset)
 	{
 		gaugeModelInstance = [[GaugeModel alloc] init];
 	}
@@ -36,12 +38,7 @@ static NSString* DELIM = @"\n";
 	return(gaugeModelInstance);
 }
 
-+(void) resetInstance
-{
-	gaugeModelInstance = nil;
-}
-
--(SensorAggregateModel*) getAggregateAtIndex:(int) index
+-(SensorAggregateModel*) getAggregateWithKey:(NSString*)key;
 {
 	if(sensorAggregateModelMap == nil)
 	{
@@ -49,7 +46,7 @@ static NSString* DELIM = @"\n";
 	}
 	else
 	{
-		return([sensorAggregateModelMap objectAtIndex: index]);
+		return([sensorAggregateModelMap objectForKey:key]);
 	}
 }
 
@@ -96,7 +93,7 @@ static NSString* DELIM = @"\n";
     NSFileHandle* fileHandle = [NSFileHandle fileHandleForWritingAtPath:filePath];
     [fileHandle writeData:[[NSString stringWithString:propertyList] dataUsingEncoding:NSUTF16StringEncoding]];
     
-    [GaugeModel resetInstance];
+    [GaugeModel instance:YES];
 }
 
 -(id) initFromFile:(NSString *)file
@@ -118,9 +115,11 @@ static NSString* DELIM = @"\n";
         {
             NSString* line = [fileByLine objectAtIndex:i];
             SensorAggregateModel* sensorAggregate = [[SensorAggregateModel alloc] initFromFile:line];
-            [sensorAggregateModelMap setObject:sensorAggregate atIndexedSubscript:(i - 3)];
+            [self.sensorAggregateModelMap setObject:sensorAggregate forKey:[[sensorAggregate sensorName] stringByAppendingFormat:@"%d", [sensorAggregate sensorID]]];
         }
     }
+    
+    return self;
 }
 
 -(id) init

@@ -99,6 +99,7 @@
         [configuration setSensorID:15];
         
         [[[ConfigurationModelMap instance] configurationMap] addObject:configuration];
+        [[ConfigurationModelMap instance] archive];
         
         [self.navigationController popViewControllerAnimated:YES];
     }

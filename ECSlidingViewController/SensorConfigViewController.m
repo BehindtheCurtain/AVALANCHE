@@ -47,7 +47,7 @@
     [self.configuration setTransformConstant: [[self.transformConstantField text] intValue]];
     [self.configuration setActive:[self.activeSwitch isOn]];
     
-    [ConfigurationModelMap archive];
+    [[ConfigurationModelMap instance] archive];
     
 }
 
@@ -78,6 +78,7 @@
         NSMutableArray* configMap = [[ConfigurationModelMap instance] configurationMap];
         [configMap removeObjectAtIndex:[configMap indexOfObject:self.configuration]];
         [self.navigationController popViewControllerAnimated:YES];
+        
     }
 }
 

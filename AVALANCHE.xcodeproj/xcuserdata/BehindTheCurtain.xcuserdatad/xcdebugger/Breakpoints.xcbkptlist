@@ -4,29 +4,16 @@
    version = "1.0">
    <FileBreakpoints>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "ECSlidingViewController/FtpTestController.m"
-         timestampString = "386693854.388556"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "79"
-         endingLineNumber = "79"
-         landmarkName = "-stream:handleEvent:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "ECSlidingViewController/FtpTestController.m"
-         timestampString = "386693854.388556"
+         filePath = "ECSlidingViewController/PutController.m"
+         timestampString = "386963788.50094"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "50"
-         endingLineNumber = "50"
-         landmarkName = "-send:"
+         startingLineNumber = "166"
+         endingLineNumber = "166"
+         landmarkName = "-startSend:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

@@ -15,9 +15,8 @@
 
 
 + (ConfigurationModelMap*)instance;
-+ (void)archive;
+- (void)archive;
 - (NSArray*)sensorNames;
-- (void)save;
 
 
 @end

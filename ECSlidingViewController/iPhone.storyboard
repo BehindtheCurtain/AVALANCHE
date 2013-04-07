@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="H2v-Ob-DhD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="H2v-Ob-DhD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -77,8 +77,10 @@
         <scene sceneID="SXt-FO-RZE">
             <objects>
                 <navigationController storyboardIdentifier="ConfigTop" definesPresentationContext="YES" id="4Nc-hH-D1X" customClass="NavigationTopViewController" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Qnn-YF-QtH">
+                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -126,6 +128,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l3b-ql-eKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="914" y="-1786"/>
+        </scene>
+        <!--Get Controller-->
+        <scene sceneID="6EE-Pl-YKI">
+            <objects>
+                <viewController storyboardIdentifier="FTP Get" id="zzV-hx-YFq" customClass="GetController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DRg-Dx-exd">
+                        <rect key="frame" x="0.0" y="64" width="568" height="256"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="faX-hV-aJR">
+                                <rect key="frame" x="32" y="193" width="50" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Get">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getAction:" destination="zzV-hx-YFq" eventType="touchUpInside" id="o4U-3f-31A"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Ak0-XO-OhB">
+                                <rect key="frame" x="20" y="20" width="528" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="getButton" destination="faX-hV-aJR" id="IQ4-95-qd4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ja8-da-KLb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="914" y="-2869"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cSZ-Fj-saR">
@@ -184,6 +230,59 @@
             </objects>
             <point key="canvasLocation" x="216" y="-794"/>
         </scene>
+        <!--Put Controller-->
+        <scene sceneID="0l5-Wo-55w">
+            <objects>
+                <viewController storyboardIdentifier="FTP Put" id="Nha-yt-AYg" customClass="PutController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1x9-Fv-J48">
+                        <rect key="frame" x="0.0" y="64" width="568" height="256"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oUG-IN-o5h">
+                                <rect key="frame" x="20" y="20" width="91" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Send File">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="Nha-yt-AYg" eventType="touchUpInside" id="9oN-Qb-8ET"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="D2r-jd-hz6">
+                                <rect key="frame" x="474" y="20" width="74" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelAction:" destination="Nha-yt-AYg" eventType="touchUpInside" id="CWV-KP-hWi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="D2r-jd-hz6" id="cBr-Ki-KSv"/>
+                        <outlet property="sendButton" destination="oUG-IN-o5h" id="tYf-h6-SSQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vBS-a1-lOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1606" y="-2869"/>
+        </scene>
         <!--Scan Controller-->
         <scene sceneID="0Mp-Is-LLS">
             <objects>
@@ -197,7 +296,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" id="7sN-X5-GWw">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="bluetoothCell" id="7sN-X5-GWw">
                                         <rect key="frame" x="0.0" y="22" width="568" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -262,7 +361,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="Sensor Configuration" id="tZO-YW-aPn" customClass="SensorTableController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Z7f-dL-sUL">
-                        <rect key="frame" x="0.0" y="20" width="568" height="300"/>
+                        <rect key="frame" x="0.0" y="64" width="568" height="256"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -282,7 +381,7 @@
                             </connections>
                         </button>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bhY-wF-qEk">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sensorCell" id="bhY-wF-qEk">
                                 <rect key="frame" x="0.0" y="22" width="568" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -297,6 +396,7 @@
                             <outlet property="delegate" destination="tZO-YW-aPn" id="A8i-RX-zhY"/>
                         </connections>
                     </tableView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="tableView" destination="Z7f-dL-sUL" id="mbB-hE-KEd"/>
@@ -311,7 +411,7 @@
             <objects>
                 <viewController id="faj-DO-tu6" customClass="AddSensorController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hfH-TK-UbU">
-                        <rect key="frame" x="0.0" y="20" width="568" height="300"/>
+                        <rect key="frame" x="0.0" y="64" width="568" height="256"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="OBm-UN-UhO">
@@ -428,42 +528,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yWB-us-Cgu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1612" y="-1312"/>
-        </scene>
-        <!--Ftp Test Controller-->
-        <scene sceneID="iYT-Bx-z2j">
-            <objects>
-                <viewController storyboardIdentifier="ftpTest" id="yMP-FR-buI" customClass="FtpTestController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="him-eV-d81">
-                        <rect key="frame" x="0.0" y="20" width="568" height="300"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="idX-CD-gVM">
-                                <rect key="frame" x="239" y="128" width="91" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Send File">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="send:" destination="yMP-FR-buI" eventType="touchUpInside" id="qr4-bF-Hnb"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <connections>
-                        <outlet property="sendButton" destination="idX-CD-gVM" id="iSP-LD-gMH"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v6E-LO-XRu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="914" y="-1296"/>
         </scene>
         <!--Connection Controller-->
         <scene sceneID="CkF-LC-AmB">
@@ -768,9 +832,13 @@
                             <outlet property="delegate" destination="Ig4-5y-QXh" id="QPl-aj-WaV"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="0Cl-l4-MCF"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="pGs-mS-Bfe" id="4P8-CS-6r5"/>
+                        <outlet property="tableView" destination="st9-09-gdI" id="oYh-86-mmK"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wZR-cS-BX4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1009,18 +1077,18 @@
                 <relationship kind="action" name="revealUnderRight:"/>
             </relationships>
         </class>
-        <class className="FtpTestController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FtpTestController.h"/>
-            <relationships>
-                <relationship kind="action" name="send:"/>
-                <relationship kind="outlet" name="sendButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
         <class className="GaugeViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GaugeViewController.h"/>
             <relationships>
                 <relationship kind="action" name="onGo:"/>
                 <relationship kind="outlet" name="chart" candidateClass="PercentageChart"/>
+            </relationships>
+        </class>
+        <class className="GetController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GetController.h"/>
+            <relationships>
+                <relationship kind="action" name="getAction:"/>
+                <relationship kind="outlet" name="getButton" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="InitialSlidingViewController" superclassName="ECSlidingViewController">
@@ -1042,6 +1110,15 @@
         </class>
         <class className="PercentageChart" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PercentageChart.h"/>
+        </class>
+        <class className="PutController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PutController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelAction:"/>
+                <relationship kind="action" name="sendAction:" candidateClass="UIView"/>
+                <relationship kind="outlet" name="cancelButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="sendButton" candidateClass="UIButton"/>
+            </relationships>
         </class>
         <class className="SampleTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SampleTableViewController.h"/>
@@ -1088,6 +1165,9 @@
         </class>
         <class className="UnderRightViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UnderRightViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
