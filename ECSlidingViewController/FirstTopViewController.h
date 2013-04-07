@@ -15,6 +15,5 @@
 @interface FirstTopViewController : UIViewController
 
 - (IBAction)revealMenu:(id)sender;
-- (IBAction)revealUnderRight:(id)sender;
 
 @end

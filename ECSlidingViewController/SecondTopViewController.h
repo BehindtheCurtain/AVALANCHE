@@ -11,5 +11,7 @@
 #import "MenuViewController.h"
 
 @interface SecondTopViewController : UIViewController
+
 - (IBAction)revealMenu:(id)sender;
+
 @end

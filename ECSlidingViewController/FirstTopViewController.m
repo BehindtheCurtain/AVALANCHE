@@ -23,22 +23,17 @@
   if (![self.slidingViewController.underLeftViewController isKindOfClass:[MenuViewController class]]) {
     self.slidingViewController.underLeftViewController  = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
   }
-  
-  if (![self.slidingViewController.underRightViewController isKindOfClass:[UnderRightViewController class]]) {
-    self.slidingViewController.underRightViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"UnderRight"];
-  }
-  
+   
+    //Allow a 2 finger swipe to reveal the menu
+    self.slidingViewController.panGesture.minimumNumberOfTouches = 2;
+    self.slidingViewController.panGesture.maximumNumberOfTouches = 2;
+    
   [self.view addGestureRecognizer:self.slidingViewController.panGesture];
 }
 
 - (IBAction)revealMenu:(id)sender
 {
   [self.slidingViewController anchorTopViewTo:ECRight];
-}
-
-- (IBAction)revealUnderRight:(id)sender
-{
-  [self.slidingViewController anchorTopViewTo:ECLeft];
 }
 
 @end

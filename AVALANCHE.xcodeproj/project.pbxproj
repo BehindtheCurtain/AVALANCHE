@@ -31,7 +31,6 @@
 		2750E79714CDB959007727A0 /* FirstTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2750E79614CDB959007727A0 /* FirstTopViewController.m */; };
 		2750E79A14CDB99A007727A0 /* SecondTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2750E79914CDB99A007727A0 /* SecondTopViewController.m */; };
 		2750E79D14CDBA48007727A0 /* ThirdTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2750E79C14CDBA48007727A0 /* ThirdTopViewController.m */; };
-		2750E7A014CDBC32007727A0 /* UnderRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2750E79F14CDBC32007727A0 /* UnderRightViewController.m */; };
 		2750E7AE14CF1306007727A0 /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2750E7AB14CF1306007727A0 /* ECSlidingViewController.m */; };
 		2750E7AF14CF1306007727A0 /* UIImage+ImageWithUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2750E7AD14CF1306007727A0 /* UIImage+ImageWithUIView.m */; };
 		27FC94E014D0C14E0000B18C /* InitialSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FC94DF14D0C14E0000B18C /* InitialSlidingViewController.m */; };
@@ -102,8 +101,6 @@
 		2750E79914CDB99A007727A0 /* SecondTopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondTopViewController.m; sourceTree = "<group>"; };
 		2750E79B14CDBA48007727A0 /* ThirdTopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdTopViewController.h; sourceTree = "<group>"; };
 		2750E79C14CDBA48007727A0 /* ThirdTopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdTopViewController.m; sourceTree = "<group>"; };
-		2750E79E14CDBC32007727A0 /* UnderRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnderRightViewController.h; sourceTree = "<group>"; };
-		2750E79F14CDBC32007727A0 /* UnderRightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnderRightViewController.m; sourceTree = "<group>"; };
 		2750E7AA14CF1306007727A0 /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingViewController.h; sourceTree = "<group>"; };
 		2750E7AB14CF1306007727A0 /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingViewController.m; sourceTree = "<group>"; };
 		2750E7AD14CF1306007727A0 /* UIImage+ImageWithUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithUIView.m"; sourceTree = "<group>"; };
@@ -397,8 +394,6 @@
 				2750E79914CDB99A007727A0 /* SecondTopViewController.m */,
 				2750E79B14CDBA48007727A0 /* ThirdTopViewController.h */,
 				2750E79C14CDBA48007727A0 /* ThirdTopViewController.m */,
-				2750E79E14CDBC32007727A0 /* UnderRightViewController.h */,
-				2750E79F14CDBC32007727A0 /* UnderRightViewController.m */,
 			);
 			name = Navigation;
 			sourceTree = "<group>";
@@ -474,7 +469,6 @@
 				2750E79714CDB959007727A0 /* FirstTopViewController.m in Sources */,
 				2750E79A14CDB99A007727A0 /* SecondTopViewController.m in Sources */,
 				2750E79D14CDBA48007727A0 /* ThirdTopViewController.m in Sources */,
-				2750E7A014CDBC32007727A0 /* UnderRightViewController.m in Sources */,
 				2750E7AE14CF1306007727A0 /* ECSlidingViewController.m in Sources */,
 				2750E7AF14CF1306007727A0 /* UIImage+ImageWithUIView.m in Sources */,
 				27FC94E014D0C14E0000B18C /* InitialSlidingViewController.m in Sources */,

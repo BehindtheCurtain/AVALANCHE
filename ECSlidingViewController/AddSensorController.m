@@ -196,7 +196,6 @@
 -(IBAction)hidePicker:(id)sender{
     self.sensorTypePicker.hidden = YES;
     self.sensorPickerNavBar.hidden = YES;
-    NSLog(@"test: %d", [self.sensorTypePicker selectedRowInComponent:0]);
 }
 
 @end
