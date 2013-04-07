@@ -25,34 +25,42 @@
         case Tachometer:
         {
             type = @"Tachometer";
+            break;
         }
         case Tempature:
         {
             type = @"Tempature";
+            break;
         }
         case Oxygen:
         {
             type = @"Oxygen";
+            break;
         }
         case Pressure:
         {
             type = @"Pressure";
+            break;
         }
         case Voltage:
         {
-            type = @"Pressure";
+            type = @"Voltage";
+            break;
         }
         case PulseCount:
         {
             type = @"PulseCount";
+            break;
         }
         case PulseRate:
         {
             type = @"PulseRate";
+            break;
         }
         case AirFuel:
         {
             type = @"AirFuel";
+            break;
         }
     }
     
