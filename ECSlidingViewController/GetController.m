@@ -63,6 +63,7 @@
 
 // things for IB
 @property (weak, nonatomic) IBOutlet UIButton *getButton;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 - (IBAction)getAction:(id)sender;
 
@@ -95,7 +96,9 @@
 - (void)receiveDidStopWithStatus:(NSString *)statusString
 {
     if (statusString == nil) {
-        assert(self.filePath != nil);
+        
+        
+        
         statusString = @"GET succeeded";
     }
     
@@ -120,7 +123,7 @@
 
     // First get and check the URL.
     
-    url = [[NetworkManager sharedInstance] smartURLForString:@"ftp://129.107.132.24:21/webalizer/btcserver/"];
+    url = [[NetworkManager sharedInstance] smartURLForString:[FTPURL stringByAppendingString:@"test2.txt"]];
     success = (url != nil);
 
     // If the URL is bogus, let the user know.  Otherwise kick off the connection.
@@ -129,12 +132,13 @@
     {
 
         // Open a stream for the file we're going to receive into.
-
-        self.filePath = [[NetworkManager sharedInstance] pathForTemporaryFileWithPrefix:@"Get"];
-        assert(self.filePath != nil);
         
-        self.fileStream = [NSOutputStream outputStreamToFileAtPath:self.filePath append:NO];
-        assert(self.fileStream != nil);
+        NSString *applicationDocumentsDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+        
+        NSString* path = [applicationDocumentsDir stringByAppendingPathComponent:@"test2.txt"];
+        
+        
+        self.fileStream = [NSOutputStream outputStreamToFileAtPath:path append:NO];
         
         [self.fileStream open];
 
@@ -145,8 +149,8 @@
         );
         assert(self.networkStream != nil);
         
-        success = [self.networkStream setProperty:@"kyle" forKey:(id)kCFStreamPropertyFTPUserName];
-        success = [self.networkStream setProperty:@"strawhatuffy87" forKey:(id)kCFStreamPropertyFTPPassword];
+        success = [self.networkStream setProperty:FTPUSER forKey:(id)kCFStreamPropertyFTPUserName];
+        success = [self.networkStream setProperty:FTPPASSWORD forKey:(id)kCFStreamPropertyFTPPassword];
         
         self.networkStream.delegate = self;
         [self.networkStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
@@ -172,6 +176,15 @@
         [self.fileStream close];
         self.fileStream = nil;
     }
+    
+    NSString *applicationDocumentsDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    
+    NSString* path = [applicationDocumentsDir stringByAppendingPathComponent:@"test2.txt"];
+    
+    NSString* fileContents = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    
+    self.textView.text = fileContents;
+    
     [self receiveDidStopWithStatus:statusString];
     self.filePath = nil;
 }
@@ -223,8 +236,15 @@
         case NSStreamEventErrorOccurred: {
             [self stopReceiveWithStatus:@"Stream open error"];
         } break;
-        case NSStreamEventEndEncountered: {
-            // ignore
+        case NSStreamEventEndEncountered:
+        {
+            NSString *applicationDocumentsDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+            
+            NSString* path = [applicationDocumentsDir stringByAppendingPathComponent:@"test2.txt"];
+            
+            NSString* fileContents = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+            
+            self.textView.text = fileContents;
         } break;
         default: {
             assert(NO);

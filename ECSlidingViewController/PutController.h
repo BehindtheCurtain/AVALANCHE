@@ -52,6 +52,7 @@
 */
 
 #import <UIKit/UIKit.h>
+#import "FTPConstants.h"
 
 @interface PutController : UIViewController
 

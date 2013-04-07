@@ -147,7 +147,7 @@ enum {
     
     [[NSFileManager defaultManager] createFileAtPath:path contents:[testContents dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
     
-    url = [[NetworkManager sharedInstance] smartURLForString:@"ftp://129.107.132.24:21/webalizer/btcserver/"];
+    url = [[NetworkManager sharedInstance] smartURLForString:[FTPURL stringByAppendingString:@"test/"]];
     success = (url != nil);
     
     if (success)
@@ -182,9 +182,9 @@ enum {
         assert(self.networkStream != nil);
 
 
-        success = [self.networkStream setProperty:@"kyle" forKey:(id)kCFStreamPropertyFTPUserName];
+        success = [self.networkStream setProperty:FTPUSER forKey:(id)kCFStreamPropertyFTPUserName];
         assert(success);
-        success = [self.networkStream setProperty:@"strawhatuffy87" forKey:(id)kCFStreamPropertyFTPPassword];
+        success = [self.networkStream setProperty:FTPPASSWORD forKey:(id)kCFStreamPropertyFTPPassword];
         assert(success);
 
         self.networkStream.delegate = self;
