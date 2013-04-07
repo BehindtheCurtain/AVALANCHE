@@ -886,6 +886,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="pageControl" destination="IVO-eq-dyM" id="cmx-ih-DTr"/>
                         <outlet property="scrollView" destination="2Qw-HH-TYq" id="Gmn-1L-jvP"/>
