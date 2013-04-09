@@ -66,10 +66,8 @@
 
 // thinsg for IB
 
-@property (nonatomic, strong, readwrite) IBOutlet UITextField *               urlText;
-@property (nonatomic, strong, readwrite) IBOutlet UIActivityIndicatorView *   activityIndicator;
 @property (nonatomic, strong, readwrite) IBOutlet UITableView *               tableView;
-@property (nonatomic, strong, readwrite) IBOutlet UIBarButtonItem *           listOrCancelButton;
+@property (weak, nonatomic) IBOutlet UIButton *listButton;
 
 - (IBAction)listOrCancelAction:(id)sender;
 
@@ -87,10 +85,7 @@
 
 @implementation ListController
 
-@synthesize urlText            = _urlText;
-@synthesize activityIndicator  = _activityIndicator;
-@synthesize tableView          = _tableView;
-@synthesize listOrCancelButton = _listOrCancelButton;
+@synthesize listButton;
 
 @synthesize status             = _status;
 
@@ -108,8 +103,6 @@
     [self.listEntries removeAllObjects];
     [self.tableView reloadData];
     [self updateStatus:@"Receiving"];
-    self.listOrCancelButton.title = @"Cancel";
-    [self.activityIndicator startAnimating];
     [[NetworkManager sharedInstance] didStartNetworkOperation];
 }
 
@@ -134,8 +127,6 @@
         statusString = @"List succeeded";
     }
     [self updateStatus:statusString];
-    self.listOrCancelButton.title = @"List";
-    [self.activityIndicator stopAnimating];
     [[NetworkManager sharedInstance] didStopNetworkOperation];
 }
 
@@ -158,7 +149,7 @@
 
     // First get and check the URL.
     
-    url = [[NetworkManager sharedInstance] smartURLForString:self.urlText.text];
+    url = [[NetworkManager sharedInstance] smartURLForString:FTPURL];
     success = (url != nil);
 
     // If the URL is bogus, let the user know.  Otherwise kick off the connection.
@@ -178,6 +169,9 @@
             CFReadStreamCreateWithFTPURL(NULL, (__bridge CFURLRef) url)
         );
         assert(self.networkStream != nil);
+        
+        [self.networkStream setProperty:FTPUSER forKey:(id)kCFStreamPropertyFTPUserName];
+        [self.networkStream setProperty:FTPPASSWORD forKey:(id)kCFStreamPropertyFTPPassword];
         
         self.networkStream.delegate = self;
         [self.networkStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
@@ -386,46 +380,9 @@
 
 - (IBAction)listOrCancelAction:(id)sender
 {
-    #pragma unused(sender)
-    if (self.isReceiving) {
-        [self stopReceiveWithStatus:@"Cancelled"];
-    } else {
         [self startReceive];
-    }
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)textField
-    // A delegate method called by the URL text field when the editing is complete. 
-    // We save the current value of the field in our settings.
-{
-    #pragma unused(textField)
-    NSString *  newValue;
-    NSString *  oldValue;
-    
-    assert(textField == self.urlText);
-
-    newValue = self.urlText.text;
-    oldValue = [[NSUserDefaults standardUserDefaults] stringForKey:@"ListURLText"];
-
-    // Save the URL text if it's changed.
-    
-    assert(newValue != nil);        // what is UITextField thinking!?!
-    assert(oldValue != nil);        // because we registered a default
-    
-    if ( ! [newValue isEqual:oldValue] ) {
-        [[NSUserDefaults standardUserDefaults] setObject:newValue forKey:@"ListURLText"];
-    }
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-    // A delegate method called by the URL text field when the user taps the Return 
-    // key.  We just dismiss the keyboard.
-{
-    #pragma unused(textField)
-    assert(textField == self.urlText);
-    [self.urlText resignFirstResponder];
-    return NO;
-}
 
 #pragma mark * Table view data source and delegate
 
@@ -504,7 +461,6 @@ static NSDateFormatter *    sDateFormatter;
         
         cell.textLabel.text = self.status;
         cell.textLabel.font = [UIFont systemFontOfSize:17.0f];
-        cell.textLabel.textAlignment = UITextAlignmentCenter;
     } else {
         cell = [self.tableView dequeueReusableCellWithIdentifier:@"ListCell"];
         if (cell == nil) {
@@ -576,12 +532,12 @@ static NSDateFormatter *    sDateFormatter;
 - (void)viewDidLoad
 {    
     [super viewDidLoad];
+    
 
     if (self.listEntries == nil) {
         self.listEntries = [NSMutableArray array];
         assert(self.listEntries != nil);
     }
-    
     [self updateStatus:@"Tap a picture to start listing"];
 }
 
@@ -589,10 +545,6 @@ static NSDateFormatter *    sDateFormatter;
 {
     [super viewDidUnload];
 
-    self.urlText = nil;
-    self.activityIndicator = nil;
-    self.tableView = nil;
-    self.listOrCancelButton = nil;
 }
 
 - (void)dealloc

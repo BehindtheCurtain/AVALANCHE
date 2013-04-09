@@ -35,6 +35,7 @@
 		2750E7AF14CF1306007727A0 /* UIImage+ImageWithUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2750E7AD14CF1306007727A0 /* UIImage+ImageWithUIView.m */; };
 		27FC94E014D0C14E0000B18C /* InitialSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FC94DF14D0C14E0000B18C /* InitialSlidingViewController.m */; };
 		27FC94E314D105C60000B18C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FC94E214D105C60000B18C /* QuartzCore.framework */; };
+		7424EDB51713083000994D06 /* HTTPTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7424EDB41713083000994D06 /* HTTPTestController.m */; };
 		7428C4491704C5AA0013A04E /* ConnectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7428C4481704C5AA0013A04E /* ConnectionController.m */; };
 		7428C44F1704CCBC0013A04E /* SensorTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7428C44E1704CCBC0013A04E /* SensorTableController.m */; };
 		7428C4611705057C0013A04E /* libios_brsp_device_1_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7428C4601705057B0013A04E /* libios_brsp_device_1_0.a */; };
@@ -108,6 +109,8 @@
 		27FC94DE14D0C14E0000B18C /* InitialSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialSlidingViewController.h; sourceTree = "<group>"; };
 		27FC94DF14D0C14E0000B18C /* InitialSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialSlidingViewController.m; sourceTree = "<group>"; };
 		27FC94E214D105C60000B18C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		7424EDB31713083000994D06 /* HTTPTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPTestController.h; sourceTree = "<group>"; };
+		7424EDB41713083000994D06 /* HTTPTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPTestController.m; sourceTree = "<group>"; };
 		7428C4471704C5AA0013A04E /* ConnectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionController.h; sourceTree = "<group>"; };
 		7428C4481704C5AA0013A04E /* ConnectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionController.m; sourceTree = "<group>"; };
 		7428C44D1704CCBB0013A04E /* SensorTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorTableController.h; sourceTree = "<group>"; };
@@ -277,6 +280,8 @@
 				7430812F171092E000FEBEB8 /* NetworkManager.m */,
 				74308130171092E000FEBEB8 /* PutController.h */,
 				74308131171092E000FEBEB8 /* PutController.m */,
+				7424EDB31713083000994D06 /* HTTPTestController.h */,
+				7424EDB41713083000994D06 /* HTTPTestController.m */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -498,6 +503,7 @@
 				74308136171092E000FEBEB8 /* PutController.m in Sources */,
 				74308139171092EF00FEBEB8 /* RealTimeViewController.m in Sources */,
 				7430813F171097D300FEBEB8 /* FtpTestController.m in Sources */,
+				7424EDB51713083000994D06 /* HTTPTestController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
