@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		080805451717430A007D6996 /* data.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 080805441717430A007D6996 /* data.tsv */; };
+		0808054717174454007D6996 /* d3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 0808054617174454007D6996 /* d3.min.js */; };
 		08089F3116E6A90C00EBA435 /* CustomPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08089F2D16E6A90C00EBA435 /* CustomPagerViewController.m */; };
 		08089F3316E6A90C00EBA435 /* PagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08089F3016E6A90C00EBA435 /* PagerViewController.m */; };
 		08549435170288830007566F /* ScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0854942F170288830007566F /* ScanController.m */; };
@@ -16,6 +18,8 @@
 		086E780716F2428200EA221D /* PercentageChartLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 086E780216F2428200EA221D /* PercentageChartLayer.m */; };
 		086E780816F2428200EA221D /* GaugeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086E780416F2428200EA221D /* GaugeViewController.m */; };
 		086E780B16F253D800EA221D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 086E780A16F253D800EA221D /* CoreText.framework */; };
+		088BA65217172E1B002F0831 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 088BA65117172E1B002F0831 /* GraphViewController.m */; };
+		088BA65B17173AA6002F0831 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 088BA65A17173AA6002F0831 /* index.html */; };
 		089FFEC017034F800088D528 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089FFEBF17034F800088D528 /* iPhone.storyboard */; };
 		089FFEC217034FB40088D528 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089FFEC117034FB40088D528 /* CoreBluetooth.framework */; };
 		08A2AF2116E69C6B00065D0C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A2AF2016E69C6A00065D0C /* Default-568h@2x.png */; };
@@ -60,6 +64,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		080805441717430A007D6996 /* data.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.tsv; sourceTree = "<group>"; };
+		0808054617174454007D6996 /* d3.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.min.js; sourceTree = "<group>"; };
 		08089F2C16E6A90C00EBA435 /* CustomPagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPagerViewController.h; sourceTree = "<group>"; };
 		08089F2D16E6A90C00EBA435 /* CustomPagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPagerViewController.m; sourceTree = "<group>"; };
 		08089F2F16E6A90C00EBA435 /* PagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagerViewController.h; sourceTree = "<group>"; };
@@ -77,6 +83,9 @@
 		086E780316F2428200EA221D /* GaugeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaugeViewController.h; sourceTree = "<group>"; };
 		086E780416F2428200EA221D /* GaugeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaugeViewController.m; sourceTree = "<group>"; };
 		086E780A16F253D800EA221D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		088BA65017172E1B002F0831 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
+		088BA65117172E1B002F0831 /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
+		088BA65A17173AA6002F0831 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		089FFEBF17034F800088D528 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 		089FFEC117034FB40088D528 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		08A2AF2016E69C6A00065D0C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -171,6 +180,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		088BA65317172F46002F0831 /* public_html */ = {
+			isa = PBXGroup;
+			children = (
+				0808054617174454007D6996 /* d3.min.js */,
+				080805441717430A007D6996 /* data.tsv */,
+				088BA65A17173AA6002F0831 /* index.html */,
+			);
+			name = public_html;
+			sourceTree = "<group>";
+		};
 		2750E76114CDB0DF007727A0 = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +378,9 @@
 		74D650E41704B93900E58615 /* Post */ = {
 			isa = PBXGroup;
 			children = (
+				088BA65317172F46002F0831 /* public_html */,
+				088BA65017172E1B002F0831 /* GraphViewController.h */,
+				088BA65117172E1B002F0831 /* GraphViewController.m */,
 			);
 			name = Post;
 			sourceTree = "<group>";
@@ -453,11 +475,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0808054717174454007D6996 /* d3.min.js in Resources */,
 				2750E77B14CDB0DF007727A0 /* InfoPlist.strings in Resources */,
 				08A2AF2116E69C6B00065D0C /* Default-568h@2x.png in Resources */,
 				089FFEC017034F800088D528 /* iPhone.storyboard in Resources */,
 				7428C46F170A26DA0013A04E /* Icon.png in Resources */,
 				7428C471170A26E70013A04E /* Icon@2x.png in Resources */,
+				088BA65B17173AA6002F0831 /* index.html in Resources */,
+				080805451717430A007D6996 /* data.tsv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +529,7 @@
 				74308139171092EF00FEBEB8 /* RealTimeViewController.m in Sources */,
 				7430813F171097D300FEBEB8 /* FtpTestController.m in Sources */,
 				7424EDB51713083000994D06 /* HTTPTestController.m in Sources */,
+				088BA65217172E1B002F0831 /* GraphViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
