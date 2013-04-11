@@ -535,7 +535,10 @@
 				7430813F171097D300FEBEB8 /* FtpTestController.m in Sources */,
 				7424EDB51713083000994D06 /* HTTPTestController.m in Sources */,
 				088BA65217172E1B002F0831 /* GraphViewController.m in Sources */,
+<<<<<<< HEAD
 				749FE1F21715C564005511D7 /* RealTimeController.m in Sources */,
+=======
+>>>>>>> f29f57c86929bbaef69857ff57ff21f66613c5b9
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
