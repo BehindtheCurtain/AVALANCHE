@@ -1269,7 +1269,6 @@
             <point key="canvasLocation" x="903" y="-730"/>
         </scene>
     </scenes>
-<<<<<<< HEAD
     <classes>
         <class className="AddSensorController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddSensorController.h"/>
@@ -1440,8 +1439,6 @@
             </relationships>
         </class>
     </classes>
-=======
->>>>>>> f29f57c86929bbaef69857ff57ff21f66613c5b9
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
