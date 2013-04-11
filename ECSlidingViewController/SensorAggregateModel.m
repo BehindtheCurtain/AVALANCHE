@@ -30,6 +30,7 @@ static const int DEFAULT_NUM_SENSORS = 12;
       withSensorID:(int)ID
           isActive:(BOOL) active;
 {
+    self.snapshots = [[NSMutableArray alloc] init];
 	self = [super init];
 	
 	self.sensorName = name;
@@ -60,8 +61,7 @@ static const int DEFAULT_NUM_SENSORS = 12;
         [serialString appendString:DELIM];
     }
     
-    NSFileHandle* fileHandle = [NSFileHandle fileHandleForWritingAtPath:file];
-    [fileHandle writeData:[[NSString stringWithString:serialString] dataUsingEncoding:NSUTF16StringEncoding]];
+    [[NSFileManager defaultManager] createFileAtPath:file contents:[serialString dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
 }
 
 
@@ -70,6 +70,8 @@ static const int DEFAULT_NUM_SENSORS = 12;
 {
     if(self = [super init])
     {
+        self.snapshots = [[NSMutableArray alloc] init];
+        
         NSString* fileContents = [NSString stringWithContentsOfFile:file encoding:NSUTF16StringEncoding error:nil];
         
         NSArray* fileByLine = [fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:DELIM]];
@@ -91,6 +93,14 @@ static const int DEFAULT_NUM_SENSORS = 12;
     }
     
     return self;
+}
+
+- (void)addSnapshot:(SensorSnapshotModel*)snapshot
+{
+    NSIndexSet* set = [[NSIndexSet alloc] initWithIndex:[self.snapshots count]];
+    [self willChange:NSKeyValueChangeInsertion valuesAtIndexes:set forKey:@"snapshots"];
+    [self.snapshots addObject:snapshot];
+    [self didChange:NSKeyValueChangeInsertion valuesAtIndexes:set forKey:@"snapshots"];
 }
 
 

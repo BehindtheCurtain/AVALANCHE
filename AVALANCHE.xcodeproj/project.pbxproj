@@ -38,8 +38,6 @@
 		7424EDB51713083000994D06 /* HTTPTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7424EDB41713083000994D06 /* HTTPTestController.m */; };
 		7428C4491704C5AA0013A04E /* ConnectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7428C4481704C5AA0013A04E /* ConnectionController.m */; };
 		7428C44F1704CCBC0013A04E /* SensorTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7428C44E1704CCBC0013A04E /* SensorTableController.m */; };
-		7428C4611705057C0013A04E /* libios_brsp_device_1_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7428C4601705057B0013A04E /* libios_brsp_device_1_0.a */; };
-		7428C46A1709C14D0013A04E /* libios_brsp_simulator_1_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7428C4691709C14C0013A04E /* libios_brsp_simulator_1_0.a */; };
 		7428C46F170A26DA0013A04E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7428C46E170A26DA0013A04E /* Icon.png */; };
 		7428C471170A26E70013A04E /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7428C470170A26E70013A04E /* Icon@2x.png */; };
 		7428C473170B8D150013A04E /* AddSensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7428C472170B8D150013A04E /* AddSensorController.m */; };
@@ -49,13 +47,16 @@
 		74308134171092E000FEBEB8 /* ListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7430812D171092E000FEBEB8 /* ListController.m */; };
 		74308135171092E000FEBEB8 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7430812F171092E000FEBEB8 /* NetworkManager.m */; };
 		74308136171092E000FEBEB8 /* PutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74308131171092E000FEBEB8 /* PutController.m */; };
-		74308139171092EF00FEBEB8 /* RealTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74308138171092EF00FEBEB8 /* RealTimeViewController.m */; };
+		74308139171092EF00FEBEB8 /* RealTimeViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74308138171092EF00FEBEB8 /* RealTimeViewControllerTest.m */; };
 		7430813F171097D300FEBEB8 /* FtpTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7430813E171097D300FEBEB8 /* FtpTestController.m */; };
 		746178E616EBCDF80007FE56 /* ConfigurationModelMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178DF16EBCDF70007FE56 /* ConfigurationModelMap.m */; };
 		746178E816EBCDF80007FE56 /* SensorAggregateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178E316EBCDF70007FE56 /* SensorAggregateModel.m */; };
 		746178E916EBCDF80007FE56 /* SensorSnapshotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178E516EBCDF80007FE56 /* SensorSnapshotModel.m */; };
 		746178ED16EBCFC00007FE56 /* GaugeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178EC16EBCFC00007FE56 /* GaugeModel.m */; };
 		746178F016EBE5720007FE56 /* ConfigurationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178EF16EBE5720007FE56 /* ConfigurationModel.m */; };
+		749FE1EE1715BADD005511D7 /* libios_brsp_device_1_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 749FE1EC1715BADD005511D7 /* libios_brsp_device_1_0.a */; };
+		749FE1EF1715BADD005511D7 /* libios_brsp_simulator_1_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 749FE1ED1715BADD005511D7 /* libios_brsp_simulator_1_0.a */; };
+		749FE1F21715C564005511D7 /* RealTimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 749FE1F11715C564005511D7 /* RealTimeController.m */; };
 		74D85A11170F24B90059B791 /* BLEGaugeAlarmService.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D85A10170F24B90059B791 /* BLEGaugeAlarmService.m */; };
 /* End PBXBuildFile section */
 
@@ -115,8 +116,6 @@
 		7428C4481704C5AA0013A04E /* ConnectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionController.m; sourceTree = "<group>"; };
 		7428C44D1704CCBB0013A04E /* SensorTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorTableController.h; sourceTree = "<group>"; };
 		7428C44E1704CCBC0013A04E /* SensorTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorTableController.m; sourceTree = "<group>"; };
-		7428C4601705057B0013A04E /* libios_brsp_device_1_0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libios_brsp_device_1_0.a; path = ECSlidingViewController/libios_brsp_device_1_0.a; sourceTree = "<group>"; };
-		7428C4691709C14C0013A04E /* libios_brsp_simulator_1_0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libios_brsp_simulator_1_0.a; path = ECSlidingViewController/libios_brsp_simulator_1_0.a; sourceTree = "<group>"; };
 		7428C46B170A11890013A04E /* AddSensorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSensorController.h; sourceTree = "<group>"; };
 		7428C46E170A26DA0013A04E /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		7428C470170A26E70013A04E /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
@@ -132,8 +131,8 @@
 		7430812F171092E000FEBEB8 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		74308130171092E000FEBEB8 /* PutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PutController.h; sourceTree = "<group>"; };
 		74308131171092E000FEBEB8 /* PutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PutController.m; sourceTree = "<group>"; };
-		74308137171092EF00FEBEB8 /* RealTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealTimeViewController.h; sourceTree = "<group>"; };
-		74308138171092EF00FEBEB8 /* RealTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealTimeViewController.m; sourceTree = "<group>"; };
+		74308137171092EF00FEBEB8 /* RealTimeViewControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealTimeViewControllerTest.h; sourceTree = "<group>"; };
+		74308138171092EF00FEBEB8 /* RealTimeViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealTimeViewControllerTest.m; sourceTree = "<group>"; };
 		7430813D171097D300FEBEB8 /* FtpTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FtpTestController.h; sourceTree = "<group>"; };
 		7430813E171097D300FEBEB8 /* FtpTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FtpTestController.m; sourceTree = "<group>"; };
 		746178DE16EBCDF70007FE56 /* ConfigurationModelMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationModelMap.h; sourceTree = "<group>"; };
@@ -147,6 +146,10 @@
 		746178EC16EBCFC00007FE56 /* GaugeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaugeModel.m; sourceTree = "<group>"; };
 		746178EE16EBE5710007FE56 /* ConfigurationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationModel.h; sourceTree = "<group>"; };
 		746178EF16EBE5720007FE56 /* ConfigurationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationModel.m; sourceTree = "<group>"; };
+		749FE1EC1715BADD005511D7 /* libios_brsp_device_1_0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libios_brsp_device_1_0.a; path = ECSlidingViewController/libios_brsp_device_1_0.a; sourceTree = "<group>"; };
+		749FE1ED1715BADD005511D7 /* libios_brsp_simulator_1_0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libios_brsp_simulator_1_0.a; path = ECSlidingViewController/libios_brsp_simulator_1_0.a; sourceTree = "<group>"; };
+		749FE1F01715C564005511D7 /* RealTimeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealTimeController.h; sourceTree = "<group>"; };
+		749FE1F11715C564005511D7 /* RealTimeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealTimeController.m; sourceTree = "<group>"; };
 		74D85A0F170F24B90059B791 /* BLEGaugeAlarmService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEGaugeAlarmService.h; sourceTree = "<group>"; };
 		74D85A10170F24B90059B791 /* BLEGaugeAlarmService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEGaugeAlarmService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,8 +159,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7428C46A1709C14D0013A04E /* libios_brsp_simulator_1_0.a in Frameworks */,
-				7428C4611705057C0013A04E /* libios_brsp_device_1_0.a in Frameworks */,
+				749FE1EE1715BADD005511D7 /* libios_brsp_device_1_0.a in Frameworks */,
+				749FE1EF1715BADD005511D7 /* libios_brsp_simulator_1_0.a in Frameworks */,
 				27FC94E314D105C60000B18C /* QuartzCore.framework in Frameworks */,
 				2750E77114CDB0DF007727A0 /* UIKit.framework in Frameworks */,
 				2750E77314CDB0DF007727A0 /* Foundation.framework in Frameworks */,
@@ -194,8 +197,8 @@
 		2750E76F14CDB0DF007727A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7428C4601705057B0013A04E /* libios_brsp_device_1_0.a */,
-				7428C4691709C14C0013A04E /* libios_brsp_simulator_1_0.a */,
+				749FE1EC1715BADD005511D7 /* libios_brsp_device_1_0.a */,
+				749FE1ED1715BADD005511D7 /* libios_brsp_simulator_1_0.a */,
 				7428C477170BA2FF0013A04E /* CFNetwork.framework */,
 				089FFEC117034FB40088D528 /* CoreBluetooth.framework */,
 				086E780A16F253D800EA221D /* CoreText.framework */,
@@ -350,8 +353,10 @@
 		74D650E31704B93100E58615 /* Real Time */ = {
 			isa = PBXGroup;
 			children = (
-				74308137171092EF00FEBEB8 /* RealTimeViewController.h */,
-				74308138171092EF00FEBEB8 /* RealTimeViewController.m */,
+				74308137171092EF00FEBEB8 /* RealTimeViewControllerTest.h */,
+				74308138171092EF00FEBEB8 /* RealTimeViewControllerTest.m */,
+				749FE1F01715C564005511D7 /* RealTimeController.h */,
+				749FE1F11715C564005511D7 /* RealTimeController.m */,
 			);
 			name = "Real Time";
 			sourceTree = "<group>";
@@ -429,7 +434,7 @@
 		2750E76314CDB0DF007727A0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = 2750E76614CDB0DF007727A0 /* Build configuration list for PBXProject "AVALANCHE" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -501,9 +506,10 @@
 				74308134171092E000FEBEB8 /* ListController.m in Sources */,
 				74308135171092E000FEBEB8 /* NetworkManager.m in Sources */,
 				74308136171092E000FEBEB8 /* PutController.m in Sources */,
-				74308139171092EF00FEBEB8 /* RealTimeViewController.m in Sources */,
+				74308139171092EF00FEBEB8 /* RealTimeViewControllerTest.m in Sources */,
 				7430813F171097D300FEBEB8 /* FtpTestController.m in Sources */,
 				7424EDB51713083000994D06 /* HTTPTestController.m in Sources */,
+				749FE1F21715C564005511D7 /* RealTimeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +533,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -540,6 +550,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				SDKROOT = iphoneos;
@@ -552,12 +563,17 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -577,6 +593,8 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/ECSlidingViewController\"",
 				);
+				"OTHER_LDFLAGS[arch=armv7]" = "\"$(SRCROOT)/ECSlidingViewController/libios_brsp_device_1_0.a\"";
+				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = "\"$(SRCROOT)/ECSlidingViewController/libios_brsp_simulator_1_0.a\"";
 				PRODUCT_NAME = AVALANCHE;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -594,6 +612,8 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/ECSlidingViewController\"",
 				);
+				"OTHER_LDFLAGS[arch=armv7]" = "\"$(SRCROOT)/ECSlidingViewController/libios_brsp_device_1_0.a\"";
+				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = "\"$(SRCROOT)/ECSlidingViewController/libios_brsp_simulator_1_0.a\"";
 				PRODUCT_NAME = AVALANCHE;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

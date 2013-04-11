@@ -138,6 +138,7 @@ enum {
     assert(self.fileStream == nil);         // ditto
 
     // First get and check the URL.
+    /*
     
     NSString *applicationDocumentsDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     
@@ -146,8 +147,13 @@ enum {
     NSString* testContents = @"Test";
     
     [[NSFileManager defaultManager] createFileAtPath:path contents:[testContents dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
+     */
     
-    url = [[NetworkManager sharedInstance] smartURLForString:[FTPURL stringByAppendingString:@"test/"]];
+    NSString* applicationDocumentsDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString* runDirectory = [applicationDocumentsDir stringByAppendingPathComponent:@"test"];
+    NSString* filePath2 = [runDirectory stringByAppendingPathComponent:@"test.txt"];
+    
+    url = [[NetworkManager sharedInstance] smartURLForString:FTPURL];
     success = (url != nil);
     
     if (success)
@@ -156,20 +162,20 @@ enum {
         // URL that we're going to put to.
         
         url = CFBridgingRelease(
-            CFURLCreateCopyAppendingPathComponent(NULL, (__bridge CFURLRef) url, (__bridge CFStringRef) [path lastPathComponent], false)
+            CFURLCreateCopyAppendingPathComponent(NULL, (__bridge CFURLRef) url, (__bridge CFStringRef) [/*path*/ filePath2 lastPathComponent], false)
         );
         success = (url != nil);
     }
     
     // If the URL is bogus, let the user know.  Otherwise kick off the connection.
 
-    if (success && [[NSFileManager defaultManager] fileExistsAtPath:path])
+    if (success && [[NSFileManager defaultManager] fileExistsAtPath:filePath2])
     {
 
         // Open a stream for the file we're going to send.  We do not open this stream;
         // NSURLConnection will do it for us.
         
-        self.fileStream = [NSInputStream inputStreamWithFileAtPath:path];
+        self.fileStream = [NSInputStream inputStreamWithFileAtPath:filePath2];
         assert(self.fileStream != nil);
         
         [self.fileStream open];

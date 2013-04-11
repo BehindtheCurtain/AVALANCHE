@@ -17,7 +17,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuItemCell" id="Q6b-sq-8AG">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuItemCell" id="Q6b-sq-8AG">
                                         <rect key="frame" x="0.0" y="22" width="568" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -77,7 +77,7 @@
         <!--List Controller-->
         <scene sceneID="ML7-ff-KJX">
             <objects>
-                <viewController id="Cu0-sY-WVf" customClass="ListController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FTP List" id="Cu0-sY-WVf" customClass="ListController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MUH-ET-z6K">
                         <rect key="frame" x="0.0" y="64" width="568" height="256"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -87,7 +87,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="oXk-1B-Yzh">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="listCell" selectionStyle="blue" indentationWidth="10" reuseIdentifier="listCell" id="oXk-1B-Yzh">
                                         <rect key="frame" x="0.0" y="22" width="568" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -156,7 +156,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SampleCell" id="qyy-AV-wEG">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="sampleCell" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SampleCell" id="qyy-AV-wEG">
                                 <rect key="frame" x="0.0" y="22" width="568" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -231,9 +231,9 @@
         <!--Test Controller-->
         <scene sceneID="cSZ-Fj-saR">
             <objects>
-                <viewController storyboardIdentifier="One" id="TUY-D5-X7T" customClass="HTTPTestController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HTTPTest" id="TUY-D5-X7T" customClass="HTTPTestController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AlX-k5-7De">
-                        <rect key="frame" x="0.0" y="20" width="568" height="300"/>
+                        <rect key="frame" x="0.0" y="64" width="568" height="256"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5CO-G4-Bzf">
@@ -244,7 +244,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SsS-3Y-PKB">
-                                <rect key="frame" x="20" y="237" width="73" height="44"/>
+                                <rect key="frame" x="20" y="193" width="73" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Button">
@@ -263,6 +263,7 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="Eru-S9-pYK"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="requestButton" destination="SsS-3Y-PKB" id="Tqp-KL-tsR"/>
@@ -369,7 +370,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="bluetoothCell" id="7sN-X5-GWw">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="bluetoothCell" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="bluetoothCell" id="7sN-X5-GWw">
                                         <rect key="frame" x="0.0" y="22" width="568" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -429,7 +430,7 @@
             </objects>
             <point key="canvasLocation" x="1606" y="-2267"/>
         </scene>
-        <!--Sensor Table Controller - Configuration-->
+        <!--Sensor Table Controller-->
         <scene sceneID="7U4-WK-rMP">
             <objects>
                 <tableViewController storyboardIdentifier="Sensor Configuration" id="tZO-YW-aPn" customClass="SensorTableController" sceneMemberID="viewController">
@@ -438,8 +439,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zwg-1k-XP4">
+                            <rect key="frame" x="0.0" y="66" width="568" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="Reset">
+                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="resetAction:" destination="tZO-YW-aPn" eventType="touchUpInside" id="smE-Gx-D9X"/>
+                            </connections>
+                        </button>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sensorCell" id="bhY-wF-qEk">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sensorCell" id="bhY-wF-qEk">
                                 <rect key="frame" x="0.0" y="22" width="568" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -454,7 +470,7 @@
                             <outlet property="delegate" destination="tZO-YW-aPn" id="A8i-RX-zhY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Configuration" id="1VF-ZY-yv5">
+                    <navigationItem key="navigationItem" id="1VF-ZY-yv5">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Sjw-pZ-w2V">
                             <connections>
                                 <segue destination="faj-DO-tu6" kind="push" id="nCw-da-R5s"/>
@@ -464,6 +480,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="resetButton" destination="zwg-1k-XP4" id="yt1-QS-kZk"/>
                         <outlet property="tableView" destination="Z7f-dL-sUL" id="mbB-hE-KEd"/>
                     </connections>
                 </tableViewController>
@@ -824,6 +841,172 @@
             </objects>
             <point key="canvasLocation" x="216" y="1003"/>
         </scene>
+        <!--Real Time Controller-->
+        <scene sceneID="zqA-bM-yEb">
+            <objects>
+                <viewController storyboardIdentifier="Real Time View" id="0Eb-7R-24y" customClass="RealTimeController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gW7-aK-jWX">
+                        <rect key="frame" x="0.0" y="64" width="568" height="256"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eO8-J1-yUk">
+                                <rect key="frame" x="20" y="20" width="460" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mRn-4r-TqS">
+                                <rect key="frame" x="20" y="87" width="460" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AYj-cg-Ojo">
+                                <rect key="frame" x="20" y="150" width="460" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5y4-BR-JlX">
+                                <rect key="frame" x="20" y="215" width="454" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="27e-F9-K9N">
+                                <rect key="frame" x="463" y="193" width="85" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Serialize">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="serializeAction:" destination="0Eb-7R-24y" eventType="touchUpInside" id="DMt-7q-x7K"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="serial" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JCM-Wf-YhH">
+                                <rect key="frame" x="488" y="20" width="41" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="serializationLabel" destination="JCM-Wf-YhH" id="tvl-bu-XFf"/>
+                        <outlet property="serializeButton" destination="27e-F9-K9N" id="8lb-R2-5Ep"/>
+                        <outlet property="temp0Label" destination="eO8-J1-yUk" id="0Xv-w2-ngs"/>
+                        <outlet property="temp1Label" destination="mRn-4r-TqS" id="EFx-qe-7Wb"/>
+                        <outlet property="temp2Label" destination="AYj-cg-Ojo" id="tOb-yY-AgN"/>
+                        <outlet property="temp3Label" destination="5y4-BR-JlX" id="6QL-3K-yWM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fmf-RN-jVd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-469" y="-2253"/>
+        </scene>
+        <!--Real Time View Controller Test-->
+        <scene sceneID="yZw-7C-JX5">
+            <objects>
+                <viewController storyboardIdentifier="RealTimeTest" id="Ti3-tX-Qkr" customClass="RealTimeViewControllerTest" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RZb-as-SNe">
+                        <rect key="frame" x="0.0" y="64" width="568" height="256"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="timeStamp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zwa-vX-qhc">
+                                <rect key="frame" x="20" y="20" width="342" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="sensorName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ke9-ud-eDX">
+                                <rect key="frame" x="20" y="66" width="342" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="sensorType" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="54O-dZ-0Id">
+                                <rect key="frame" x="20" y="117" width="342" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="sensorID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UaI-5Z-aet">
+                                <rect key="frame" x="20" y="164" width="342" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="sensorData" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Eyo-vs-cmd">
+                                <rect key="frame" x="20" y="215" width="342" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kU2-oD-7Su">
+                                <rect key="frame" x="404" y="193" width="144" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Create Snapshot">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createAction:" destination="Ti3-tX-Qkr" eventType="touchUpInside" id="dm2-bT-52K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xxm-a0-yLF">
+                                <rect key="frame" x="404" y="142" width="144" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Serialize">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="createButton" destination="kU2-oD-7Su" id="o3b-Yh-N6Y"/>
+                        <outlet property="sensorDataLabel" destination="Eyo-vs-cmd" id="Mwf-gh-aad"/>
+                        <outlet property="sensorIDLabel" destination="UaI-5Z-aet" id="39B-lJ-9jX"/>
+                        <outlet property="sensorNameLabel" destination="ke9-ud-eDX" id="q4N-KE-hjx"/>
+                        <outlet property="sensorTypeLabel" destination="54O-dZ-0Id" id="RyT-WB-Yq9"/>
+                        <outlet property="timeStampLabel" destination="zwa-vX-qhc" id="mHH-pT-GYm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1aI-XW-aPb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="217" y="-2260"/>
+        </scene>
         <!--First Top View Controller-->
         <scene sceneID="FCi-rO-pkm">
             <objects>
@@ -1153,6 +1336,30 @@
                 <relationship kind="outlet" name="sendButton" candidateClass="UIButton"/>
             </relationships>
         </class>
+        <class className="RealTimeController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RealTimeController.h"/>
+            <relationships>
+                <relationship kind="action" name="serializeAction:"/>
+                <relationship kind="outlet" name="serializationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="serializeButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="temp0Label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="temp1Label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="temp2Label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="temp3Label" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="RealTimeViewControllerTest" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RealTimeViewControllerTest.h"/>
+            <relationships>
+                <relationship kind="action" name="createAction:"/>
+                <relationship kind="outlet" name="createButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="sensorDataLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sensorIDLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sensorNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sensorTypeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeStampLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
         <class className="SampleTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SampleTableViewController.h"/>
             <relationships>
@@ -1185,6 +1392,8 @@
         <class className="SensorTableController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SensorTableController.h"/>
             <relationships>
+                <relationship kind="action" name="resetAction:"/>
+                <relationship kind="outlet" name="resetButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>
         </class>
@@ -1201,7 +1410,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ved-cf-b4k"/>
         <segue reference="IUu-cx-TSU"/>
+        <segue reference="vUT-YC-Bsg"/>
     </inferredMetricsTieBreakers>
 </document>

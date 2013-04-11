@@ -12,7 +12,6 @@
 
 // Generate setter and getter methods.
 @synthesize timeStamp;
-@synthesize sensorName;
 @synthesize sensorType;
 @synthesize sensorID;
 @synthesize sensorData;
@@ -21,7 +20,7 @@
 -(id) initWithTimeStamp:(long)_timeStamp
                withType:(NSString *)_sensorType
            withSensorID:(int)_sensorID
-               withData:(int)_sensorData;
+               withData:(unsigned int)_sensorData;
 {
 	self = [super init];
     
@@ -66,7 +65,7 @@
         self.timeStamp = time;
         self.sensorType = type;
         self.sensorID = ID;
-        self.sensorData = [snapshotData objectAtIndex:1];
+        self.sensorData = (unsigned int)[snapshotData objectAtIndex:1];
      }
      
     return self;
@@ -76,7 +75,6 @@
 -(void) encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeObject:self.timeStamp forKey:@"timeStamp"];
-    [aCoder encodeObject:self.sensorName forKey:@"sensorName"];
     [aCoder encodeObject:self.sensorType forKey:@"sensorType"];
     [aCoder encodeInt:self.sensorID forKey:@"sensorID"];
     [aCoder encodeInt:self.sensorData forKey:@"sensorData"];
@@ -87,10 +85,9 @@
     if(self = [super init])
     {
         self.timeStamp = [aDecoder decodeObjectForKey:@"timeStamp"];
-        self.sensorName = [aDecoder decodeObjectForKey:@"sensorName"];
         self.sensorType = [aDecoder decodeObjectForKey:@"sensorType"];
-        self.sensorID = [aDecoder decodeObjectForKey:@"sensorID"];
-        self.sensorData = [aDecoder decodeObjectForKey:@"sensorData"];
+        self.sensorID = (int)[aDecoder decodeObjectForKey:@"sensorID"];
+        self.sensorData = (int)[aDecoder decodeObjectForKey:@"sensorData"];
     }
     
     return self;

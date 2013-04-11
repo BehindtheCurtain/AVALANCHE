@@ -41,4 +41,7 @@
 -(void) serialize:(NSString*) file;
 
 -(id) initFromFile:(NSString*) file;
+
+- (void)addSnapshot:(SensorSnapshotModel*) snapshot;
+
 @end

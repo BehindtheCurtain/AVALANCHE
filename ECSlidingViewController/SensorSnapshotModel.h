@@ -12,16 +12,15 @@
 
 // SensorSnapshotModel properties.
 @property (copy) NSDate* timeStamp;
-@property (copy) NSString* sensorName;
 @property (copy) NSString* sensorType;
 @property (assign) int sensorID;
-@property (assign) int sensorData;
+@property (assign) unsigned int sensorData;
 
 // Public instance methods.
 -(id) initWithTimeStamp:(long)timeStamp
                withType:(NSString*)sensorType
            withSensorID:(int)sensorID
-               withData:(int)sensorData;
+               withData:(unsigned int)sensorData;
 
 -(NSString*) serialize;
 

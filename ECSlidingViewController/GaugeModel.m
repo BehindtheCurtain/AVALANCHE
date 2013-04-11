@@ -50,48 +50,41 @@ static NSString* DELIM = @"\n";
 	}
 }
 
--(void) serialize:(NSString *)path
+-(void) serialize
 {
-    [self.endTimeStamp timeIntervalSince1970];
+    NSString* applicationDocumentsDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString* runDirectory = [applicationDocumentsDir stringByAppendingPathComponent:runName];
+    
+    if(![[NSFileManager defaultManager] fileExistsAtPath:runDirectory])
+    {
+        [[NSFileManager defaultManager] createDirectoryAtPath:runDirectory withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+    
+    self.endTimeStamp = [NSDate dateWithTimeIntervalSince1970:[[NSDate date] timeIntervalSince1970]];
     
     NSDateFormatter* df = [[NSDateFormatter alloc] init];
     [df setDateFormat:@"yyyy-MM-dd hh:mm:ss a"];
     
     NSMutableString* propertyList = [[NSMutableString alloc] init];
-    [propertyList appendString:runName];
+    [propertyList appendString:self.runName];
     [propertyList appendString:@"\n"];
-    [propertyList appendString:[df stringFromDate:startTimeStamp]];
+    [propertyList appendString:[df stringFromDate:self.startTimeStamp]];
     [propertyList appendString:@"\n"];
-    [propertyList appendString:[df stringFromDate:endTimeStamp]];
+    [propertyList appendString:[df stringFromDate:self.endTimeStamp]];
     [propertyList appendString:@"\n"];
     
-    NSMutableString* filePath = [[NSMutableString alloc] init];
-    [filePath appendString:path];
-    [filePath appendString:@"\\"];
-    [filePath appendString:runName];
+    NSString* filePath = [runDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.txt", self.runName]];
     
-    [[NSFileManager defaultManager] createDirectoryAtPath:filePath withIntermediateDirectories:NO attributes:nil error:nil];
-    
-    
-    for(SensorAggregateModel* sensorAggregate in sensorAggregateModelMap)
+    for(NSString* key in sensorAggregateModelMap)
     {
-        NSMutableString* aggregateFile = [[NSMutableString alloc] init];
-        [aggregateFile appendString:filePath];
-        [aggregateFile appendString:@"\\"];
-        [aggregateFile appendString:[sensorAggregate sensorName]];
-        [aggregateFile appendString:@".dat"];
-        
+        SensorAggregateModel* sensorAggregate = [sensorAggregateModelMap objectForKey:key];
+        NSString* aggregateFile = [runDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.dat", [sensorAggregate sensorName]]];
         [propertyList appendString:aggregateFile];
         [propertyList appendString:@"\n"];
-         
         [sensorAggregate serialize:aggregateFile];
     }
     
-    [filePath appendString:runName];
-    [filePath appendString:@".dat"];
-    
-    NSFileHandle* fileHandle = [NSFileHandle fileHandleForWritingAtPath:filePath];
-    [fileHandle writeData:[[NSString stringWithString:propertyList] dataUsingEncoding:NSUTF16StringEncoding]];
+    [[NSFileManager defaultManager] createFileAtPath:filePath contents:[propertyList dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
     
     [GaugeModel instance:YES];
 }

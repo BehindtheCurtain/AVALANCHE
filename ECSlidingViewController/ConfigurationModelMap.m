@@ -14,13 +14,13 @@ const int DEFAULT_SENSORS = 14;
 
 @synthesize configurationMap;
 
-+ (ConfigurationModelMap*)instance
++ (ConfigurationModelMap*)instance:(BOOL)reset
 {
     static ConfigurationModelMap* instance;
     
     @synchronized(self)
     {
-        if(instance == nil)
+        if(instance == nil || reset)
         {
             instance = [[ConfigurationModelMap alloc] init];
 
@@ -30,7 +30,7 @@ const int DEFAULT_SENSORS = 14;
 
             [instance setConfigurationMap:[NSKeyedUnarchiver unarchiveObjectWithData:data]];
             
-            if([instance configurationMap] == nil)
+            if([instance configurationMap] == nil || reset)
             {
                 [instance setConfigurationMap:[[NSMutableArray alloc] init]];
                 
@@ -51,7 +51,7 @@ const int DEFAULT_SENSORS = 14;
                     [[instance configurationMap] addObject:config];
                 }
                 
-                [[ConfigurationModelMap instance] archive];
+                [[ConfigurationModelMap instance:NO] archive];
             }
             
         }

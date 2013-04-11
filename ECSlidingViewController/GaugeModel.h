@@ -22,7 +22,7 @@
 + (GaugeModel*)instance:(BOOL)reset;
 
 // Public instance methods.
-- (void)serialize:(NSString*)path;
+- (void)serialize;
 - (id)initFromFile:(NSString*)file;
 
 @end

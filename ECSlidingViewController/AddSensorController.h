@@ -10,8 +10,8 @@
 #import "ConfigurationModel.h"
 #import "ConfigurationModelMap.h"
 
-@interface AddSensorController : UIViewController <UITextFieldDelegate, UIActionSheetDelegate, UIPickerViewDataSource, UIPickerViewDelegate> {
-    UIPickerView *sensorTypePicker;
+@interface AddSensorController : UIViewController <UITextFieldDelegate, UIActionSheetDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
+{
 }
 
 @property (weak, nonatomic) IBOutlet UITextField *sensorNameField;

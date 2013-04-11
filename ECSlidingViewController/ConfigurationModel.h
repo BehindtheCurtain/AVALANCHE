@@ -13,7 +13,7 @@
 typedef enum
 {
     Tachometer,
-    Tempature,
+    Temperature,
     Oxygen,
     Pressure,
     Voltage,

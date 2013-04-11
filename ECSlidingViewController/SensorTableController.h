@@ -13,5 +13,8 @@
 @interface SensorTableController : UITableViewController <UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIButton *resetButton;
+
+- (IBAction)resetAction:(id)sender;
 
 @end

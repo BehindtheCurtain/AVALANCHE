@@ -34,7 +34,7 @@
 
 // Create all snapshots for all active sensors.
 + (void)snapshotCreation:(NSMutableArray*)data
-           withMessageType:(unsigned int)messageType
+           withMessageType:(unsigned char)messageType
            withTimeStamp:(unsigned long)timestamp;
 
 // Transform sensor data into readable form.

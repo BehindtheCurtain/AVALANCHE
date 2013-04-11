@@ -33,11 +33,11 @@ static BOOL processing = NO;
 +(void) gaugeModelFactory
 {
 	// Make a map with a capacity for all sensors.
-	NSMutableDictionary* sensorAggregateModelMap = [NSMutableArray arrayWithCapacity: DEFAULT_NUM_SENSORS];
+	NSMutableDictionary* sensorAggregateModelMap = [[NSMutableDictionary alloc] init];
 	
 
 	// Use configuration data to set up SensorAggregateModels
-	for(ConfigurationModel* configuration in [[ConfigurationModelMap instance] configurationMap])
+	for(ConfigurationModel* configuration in [[ConfigurationModelMap instance:NO] configurationMap])
 	{
 		NSString* sensorName = [configuration name];
 		NSString* sensorType = [configuration getType];
@@ -72,13 +72,13 @@ static BOOL processing = NO;
 // Called when user ends run. Serializes the GaugeModel, saving the run in local storage, and turns off processing.
 + (void)endProcessing
 {
-    [[GaugeModel instance:NO] serialize:@"PUT PATH HERE"];
+    [[GaugeModel instance:NO] serialize];
 	
 	processing = NO;
 }
 
 // Creates a SensorSnapshotModel for each active sensor and adds each snapshot to their related SensorAggregateModel.
-+ (void)snapshotCreation:(NSMutableArray *)data withMessageType:(unsigned int)messageType withTimeStamp:(unsigned long)timestamp
++ (void)snapshotCreation:(NSMutableArray *)data withMessageType:(unsigned char)messageType withTimeStamp:(unsigned long)timestamp
 {
     NSMutableDictionary* sensorAggregateModelMap = [[GaugeModel instance:NO] sensorAggregateModelMap];
     
@@ -88,7 +88,7 @@ static BOOL processing = NO;
     {
         case 0:
         {
-            type = @"Tempature";
+            type = @"Temperature";
             break;
         }
         case 1:
@@ -118,11 +118,10 @@ static BOOL processing = NO;
         }
     }
     
-    for(NSData* dataPoint in data)
+    for(NSNumber* dataPoint in data)
     {
         int sensorID = [data indexOfObject:dataPoint];
-        int sensorData;
-        [dataPoint getBytes:&sensorData length:sizeof(dataPoint)];
+        unsigned int sensorData = [dataPoint unsignedIntValue];
         
         NSString* key = [type stringByAppendingFormat:@"%d", sensorID];
         SensorAggregateModel* aggregate = [sensorAggregateModelMap objectForKey:key];
@@ -133,7 +132,7 @@ static BOOL processing = NO;
         
         SensorSnapshotModel* snapshot = [[SensorSnapshotModel alloc] initWithTimeStamp:time withType:type withSensorID:sensorID withData:sensorData];
         
-        [[aggregate snapshots] addObject:snapshot];
+        [aggregate addSnapshot:snapshot];
     }
     
 }
@@ -153,9 +152,12 @@ static BOOL processing = NO;
         // Convert tix/8th second to tix/hour. Divide that by tix per mile. gives miles/hour.
         //transformedData = (sensorData * 8 * 60 * 60) / (8 * tixPer8thOfMile);
     }
-    else if([sensorType isEqualToString:@"Tempature"])
+    else if([sensorType isEqualToString:@"Temperature"])
     {
-        transformedData = sensorData / 10; // Sensor value off of CAN BUS is degrees celcius * 10
+        transformedData = sensorData * 18; // Sensor value off of CAN BUS is degrees celcius * 10
+        transformedData += 50;
+        transformedData /= 100;
+        transformedData += 32;
     }
     else if([sensorType isEqualToString:@"Pressure"])
     {

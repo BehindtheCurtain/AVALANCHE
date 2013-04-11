@@ -47,7 +47,7 @@
     [self.configuration setTransformConstant: [[self.transformConstantField text] intValue]];
     [self.configuration setActive:[self.activeSwitch isOn]];
     
-    [[ConfigurationModelMap instance] archive];
+    [[ConfigurationModelMap instance:NO] archive];
     
 }
 

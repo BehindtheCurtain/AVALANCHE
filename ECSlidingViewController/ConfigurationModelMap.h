@@ -14,7 +14,7 @@
 @property (retain) NSMutableArray* configurationMap;
 
 
-+ (ConfigurationModelMap*)instance;
++ (ConfigurationModelMap*)instance:(BOOL)reset;
 - (void)archive;
 - (NSArray*)sensorNames;
 

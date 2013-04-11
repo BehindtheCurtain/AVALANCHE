@@ -7,26 +7,52 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "ECSlidingViewController/PutController.m"
-         timestampString = "386963788.50094"
+         filePath = "ECSlidingViewController/RealTimeViewController.m"
+         timestampString = "387300238.623119"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "166"
-         endingLineNumber = "166"
-         landmarkName = "-startSend:"
+         startingLineNumber = "36"
+         endingLineNumber = "36"
+         landmarkName = "-observeValueForKeyPath:ofObject:change:context:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "ECSlidingViewController/RealTimeViewController.m"
+         timestampString = "387300410.007446"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "55"
+         endingLineNumber = "55"
+         landmarkName = "-createAction:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "ECSlidingViewController/HTTPTestController.m"
-         timestampString = "387123375.600515"
+         filePath = "ECSlidingViewController/GaugeModel.m"
+         timestampString = "387411331.205755"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "47"
-         endingLineNumber = "47"
-         landmarkName = "-requestAction:"
+         startingLineNumber = "53"
+         endingLineNumber = "53"
+         landmarkName = "-serialize"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "ECSlidingViewController/RealTimeBuilder.m"
+         timestampString = "387412296.072264"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "40"
+         endingLineNumber = "40"
+         landmarkName = "+gaugeModelFactory"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

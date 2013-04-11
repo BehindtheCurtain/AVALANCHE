@@ -53,7 +53,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
 {
-    return [[[ConfigurationModelMap instance] sensorNames] count];
+    return [[[ConfigurationModelMap instance:NO] sensorNames] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -65,8 +65,8 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
-    cell.textLabel.text = [[[ConfigurationModelMap instance] sensorNames] objectAtIndex:indexPath.row];
-    cell.detailTextLabel.text = [[[[ConfigurationModelMap instance] configurationMap] objectAtIndex:indexPath.row] getType];
+    cell.textLabel.text = [[[ConfigurationModelMap instance:NO] sensorNames] objectAtIndex:indexPath.row];
+    cell.detailTextLabel.text = [[[[ConfigurationModelMap instance:NO] configurationMap] objectAtIndex:indexPath.row] getType];
     
     return cell;
 }
@@ -79,7 +79,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ConfigurationModel* configuration = [[[ConfigurationModelMap instance] configurationMap] objectAtIndex:indexPath.row];
+    ConfigurationModel* configuration = [[[ConfigurationModelMap instance:NO] configurationMap] objectAtIndex:indexPath.row];
     
     SensorConfigViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"sensorConfigView"];
     [viewController setConfiguration:configuration];
@@ -95,12 +95,17 @@
 //Swipe to delete
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSMutableArray* configMap = [[ConfigurationModelMap instance] configurationMap];
-        ConfigurationModel* configuration = [[[ConfigurationModelMap instance] configurationMap] objectAtIndex:indexPath.row];
+        NSMutableArray* configMap = [[ConfigurationModelMap instance:NO] configurationMap];
+        ConfigurationModel* configuration = [[[ConfigurationModelMap instance:NO] configurationMap] objectAtIndex:indexPath.row];
         [configMap removeObjectAtIndex:[configMap indexOfObject:configuration]];
         [self.tableView reloadData];
-        [[ConfigurationModelMap instance] archive];
+        [[ConfigurationModelMap instance:NO] archive];
     }
 }
 
+- (IBAction)resetAction:(id)sender
+{
+    [ConfigurationModelMap instance:YES];
+    [self.tableView reloadData];
+}
 @end

@@ -30,7 +30,7 @@
     
     self.navigationItem.title = @"Add Sensor";
     
-    self.arrStatus = [[NSArray alloc] initWithObjects:@"Tachometer", @"Tempature", @"Oxygen", @"Pressure", @"Voltage", @"PulseRate", @"PulseCount", @"AirFuel", nil];
+    self.arrStatus = [[NSArray alloc] initWithObjects:@"Tachometer", @"Temperature", @"Oxygen", @"Pressure", @"Voltage", @"PulseRate", @"PulseCount", @"AirFuel", nil];
     
 	// Do any additional setup after loading the view.
 }
@@ -123,7 +123,7 @@
             }
             case 1:
             {
-                [configuration setSensorType:Tempature];
+                [configuration setSensorType:Temperature];
                 break;
             }
             case 2:
@@ -161,8 +161,8 @@
         // Active Switch
         [configuration setActive:self.activeSwitch.isOn];
         
-        [[[ConfigurationModelMap instance] configurationMap] addObject:configuration];
-        [[ConfigurationModelMap instance] archive];
+        [[[ConfigurationModelMap instance:NO] configurationMap] addObject:configuration];
+        [[ConfigurationModelMap instance:NO] archive];
         
         [self.navigationController popViewControllerAnimated:YES];
     }

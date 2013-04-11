@@ -27,9 +27,9 @@
             type = @"Tachometer";
             break;
         }
-        case Tempature:
+        case Temperature:
         {
-            type = @"Tempature";
+            type = @"Temperature";
             break;
         }
         case Oxygen:

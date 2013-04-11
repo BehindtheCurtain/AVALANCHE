@@ -37,7 +37,7 @@
 
 - (IBAction)requestAction:(id)sender
 {
-    NSString *urlString = [NSString stringWithFormat:@"http://129.107.132.24:2346"];
+    NSString *urlString = [NSString stringWithFormat:@"http://129.107.132.24:8100"];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:[NSURL URLWithString:urlString]];
     [request setHTTPMethod:@"POST"];

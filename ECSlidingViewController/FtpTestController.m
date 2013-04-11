@@ -84,7 +84,7 @@ const int SENDBUFF = 32768;
             break;
         case NSStreamEventHasSpaceAvailable:
         {
-            uint8_t* buffer;
+            uint8_t* buffer = nil;
             
             [self.istream read:buffer maxLength:SENDBUFF];
             
