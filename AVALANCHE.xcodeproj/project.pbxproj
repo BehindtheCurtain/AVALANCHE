@@ -51,7 +51,6 @@
 		74308134171092E000FEBEB8 /* ListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7430812D171092E000FEBEB8 /* ListController.m */; };
 		74308135171092E000FEBEB8 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7430812F171092E000FEBEB8 /* NetworkManager.m */; };
 		74308136171092E000FEBEB8 /* PutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74308131171092E000FEBEB8 /* PutController.m */; };
-		74308139171092EF00FEBEB8 /* RealTimeViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74308138171092EF00FEBEB8 /* RealTimeViewControllerTest.m */; };
 		7430813F171097D300FEBEB8 /* FtpTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7430813E171097D300FEBEB8 /* FtpTestController.m */; };
 		746178E616EBCDF80007FE56 /* ConfigurationModelMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178DF16EBCDF70007FE56 /* ConfigurationModelMap.m */; };
 		746178E816EBCDF80007FE56 /* SensorAggregateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178E316EBCDF70007FE56 /* SensorAggregateModel.m */; };
@@ -61,6 +60,7 @@
 		749FE1EE1715BADD005511D7 /* libios_brsp_device_1_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 749FE1EC1715BADD005511D7 /* libios_brsp_device_1_0.a */; };
 		749FE1EF1715BADD005511D7 /* libios_brsp_simulator_1_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 749FE1ED1715BADD005511D7 /* libios_brsp_simulator_1_0.a */; };
 		749FE1F21715C564005511D7 /* RealTimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 749FE1F11715C564005511D7 /* RealTimeController.m */; };
+		749FE1F517184DC1005511D7 /* RunListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 749FE1F417184DC1005511D7 /* RunListModel.m */; };
 		74D85A11170F24B90059B791 /* BLEGaugeAlarmService.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D85A10170F24B90059B791 /* BLEGaugeAlarmService.m */; };
 /* End PBXBuildFile section */
 
@@ -140,8 +140,6 @@
 		7430812F171092E000FEBEB8 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		74308130171092E000FEBEB8 /* PutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PutController.h; sourceTree = "<group>"; };
 		74308131171092E000FEBEB8 /* PutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PutController.m; sourceTree = "<group>"; };
-		74308137171092EF00FEBEB8 /* RealTimeViewControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealTimeViewControllerTest.h; sourceTree = "<group>"; };
-		74308138171092EF00FEBEB8 /* RealTimeViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealTimeViewControllerTest.m; sourceTree = "<group>"; };
 		7430813D171097D300FEBEB8 /* FtpTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FtpTestController.h; sourceTree = "<group>"; };
 		7430813E171097D300FEBEB8 /* FtpTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FtpTestController.m; sourceTree = "<group>"; };
 		746178DE16EBCDF70007FE56 /* ConfigurationModelMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationModelMap.h; sourceTree = "<group>"; };
@@ -159,6 +157,8 @@
 		749FE1ED1715BADD005511D7 /* libios_brsp_simulator_1_0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libios_brsp_simulator_1_0.a; path = ECSlidingViewController/libios_brsp_simulator_1_0.a; sourceTree = "<group>"; };
 		749FE1F01715C564005511D7 /* RealTimeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealTimeController.h; sourceTree = "<group>"; };
 		749FE1F11715C564005511D7 /* RealTimeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealTimeController.m; sourceTree = "<group>"; };
+		749FE1F317184DC1005511D7 /* RunListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunListModel.h; sourceTree = "<group>"; };
+		749FE1F417184DC1005511D7 /* RunListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunListModel.m; sourceTree = "<group>"; };
 		74D85A0F170F24B90059B791 /* BLEGaugeAlarmService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEGaugeAlarmService.h; sourceTree = "<group>"; };
 		74D85A10170F24B90059B791 /* BLEGaugeAlarmService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEGaugeAlarmService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -337,6 +337,8 @@
 		746178F216EBE6DD0007FE56 /* Post */ = {
 			isa = PBXGroup;
 			children = (
+				749FE1F317184DC1005511D7 /* RunListModel.h */,
+				749FE1F417184DC1005511D7 /* RunListModel.m */,
 			);
 			name = Post;
 			sourceTree = "<group>";
@@ -372,8 +374,6 @@
 		74D650E31704B93100E58615 /* Real Time */ = {
 			isa = PBXGroup;
 			children = (
-				74308137171092EF00FEBEB8 /* RealTimeViewControllerTest.h */,
-				74308138171092EF00FEBEB8 /* RealTimeViewControllerTest.m */,
 				749FE1F01715C564005511D7 /* RealTimeController.h */,
 				749FE1F11715C564005511D7 /* RealTimeController.m */,
 			);
@@ -531,11 +531,11 @@
 				74308134171092E000FEBEB8 /* ListController.m in Sources */,
 				74308135171092E000FEBEB8 /* NetworkManager.m in Sources */,
 				74308136171092E000FEBEB8 /* PutController.m in Sources */,
-				74308139171092EF00FEBEB8 /* RealTimeViewControllerTest.m in Sources */,
 				7430813F171097D300FEBEB8 /* FtpTestController.m in Sources */,
 				7424EDB51713083000994D06 /* HTTPTestController.m in Sources */,
 				088BA65217172E1B002F0831 /* GraphViewController.m in Sources */,
 				749FE1F21715C564005511D7 /* RealTimeController.m in Sources */,
+				749FE1F517184DC1005511D7 /* RunListModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -43,16 +43,16 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "ECSlidingViewController/RealTimeBuilder.m"
-         timestampString = "387412296.072264"
+         filePath = "ECSlidingViewController/HTTPTestController.m"
+         timestampString = "387472592.025417"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "40"
-         endingLineNumber = "40"
-         landmarkName = "+gaugeModelFactory"
+         startingLineNumber = "65"
+         endingLineNumber = "65"
+         landmarkName = "-requestAction:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

@@ -8,7 +8,6 @@
 
 #import "ConfigurationModelMap.h"
 
-const int DEFAULT_SENSORS = 14;
 
 @implementation ConfigurationModelMap
 
@@ -34,7 +33,7 @@ const int DEFAULT_SENSORS = 14;
             {
                 [instance setConfigurationMap:[[NSMutableArray alloc] init]];
                 
-                for(int i = 1; i <= DEFAULT_SENSORS; i++)
+                for(int i = 1; i <= 4; i++)
                 {
                     ConfigurationModel* config = [[ConfigurationModel alloc] init];
                     
@@ -51,7 +50,7 @@ const int DEFAULT_SENSORS = 14;
                     [[instance configurationMap] addObject:config];
                 }
                 
-                [[ConfigurationModelMap instance:NO] archive];
+                [instance archive];
             }
             
         }

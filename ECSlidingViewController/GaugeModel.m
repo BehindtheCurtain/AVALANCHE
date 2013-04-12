@@ -63,7 +63,9 @@ static NSString* DELIM = @"\n";
     self.endTimeStamp = [NSDate dateWithTimeIntervalSince1970:[[NSDate date] timeIntervalSince1970]];
     
     NSDateFormatter* df = [[NSDateFormatter alloc] init];
-    [df setDateFormat:@"yyyy-MM-dd hh:mm:ss a"];
+    [df setDateFormat:@"yyyy/MM/dd-hh:mm:ss-a"];
+    
+    self.runName = [df stringFromDate:self.startTimeStamp];
     
     NSMutableString* propertyList = [[NSMutableString alloc] init];
     [propertyList appendString:self.runName];
@@ -85,6 +87,8 @@ static NSString* DELIM = @"\n";
     }
     
     [[NSFileManager defaultManager] createFileAtPath:filePath contents:[propertyList dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
+    
+    [[[RunListModel instance:NO] runList] addObject:runName];
     
     [GaugeModel instance:YES];
 }

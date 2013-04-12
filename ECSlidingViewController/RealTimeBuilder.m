@@ -63,6 +63,8 @@ static BOOL processing = NO;
     
     long currentTime = (long)(NSTimeInterval)[[NSDate date] timeIntervalSince1970];
     
+    [[GaugeModel instance:NO] setStartTimeStamp:[NSDate dateWithTimeIntervalSince1970:[[NSDate date] timeIntervalSince1970]]];
+    
     for(SensorAggregateModel* aggregate in [[GaugeModel instance:NO] sensorAggregateModelMap])
     {
         [aggregate setInitialTimeStamp:currentTime];

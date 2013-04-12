@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "SensorAggregateModel.h"
 #import "SensorSnapshotModel.h"
+#import "RunListModel.h"
 
 @interface GaugeModel : NSObject
 

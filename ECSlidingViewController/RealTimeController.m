@@ -78,7 +78,6 @@ static void * const temp4Context = (void*)&temp4Context;
 
 - (IBAction)serializeAction:(id)sender
 {
-    [[GaugeModel instance:NO] setRunName:@"test"];
     [[GaugeModel instance:NO] setStartTimeStamp: [NSDate dateWithTimeIntervalSince1970:[[NSDate date] timeIntervalSince1970]]];
     [[GaugeModel instance:NO] serialize];
     
