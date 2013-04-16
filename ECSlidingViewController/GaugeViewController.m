@@ -12,12 +12,10 @@
 
 @end
 
-//TEST
 static void * const temp1Context = (void*)&temp1Context;
 static void * const temp2Context = (void*)&temp2Context;
 static void * const temp3Context = (void*)&temp3Context;
 static void * const temp4Context = (void*)&temp4Context;
-//TEST
 
 @implementation GaugeViewController
 @synthesize firstGoalBar;
@@ -46,10 +44,6 @@ static void * const temp4Context = (void*)&temp4Context;
     [thirdGoalBar setAllowSwitching:NO];
     [thirdGoalBar setPercent:0 animated:NO];
 }
-
-
-
-
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -86,10 +80,6 @@ static void * const temp4Context = (void*)&temp4Context;
 //         
 //     }
 }
-
-
-
-
 
 - (void)viewDidUnload
 {

@@ -8,12 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "KDGoalBar.h"
-
-//TEST
 #import "RealTimeBuilder.h"
 #import "BLEGaugeAlarmService.h"
 #import "GaugeModel.h"
-//TEST
 
 
 @interface GaugeViewController : UIViewController
