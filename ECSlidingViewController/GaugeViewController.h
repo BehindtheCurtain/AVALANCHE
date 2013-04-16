@@ -1,26 +1,25 @@
 //
-//  ViewController.h
-//  PercentageChart
+//  GaugeViewController.h
+//  KnobSampleProject
 //
-//  Created by Xavi Gil on 10/7/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Kevin Donnelly on 5/17/12.
+//  Copyright (c) 2012 -. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "PercentageChart.h"
+#import "KDGoalBar.h"
 
-#define MAIN_ORANGE [UIColor colorWithRed:0.83 green:0.38 blue:0.0 alpha:1.0]
-#define LINE_ORANGE [UIColor orangeColor]
-#define MAIN_RED [UIColor colorWithRed:0.70 green:0.0 blue:0.0 alpha:1.0]
-#define LINE_RED [UIColor redColor]
-#define MAIN_GREEN [UIColor colorWithRed:0.47 green:0.7 blue:0.0 alpha:1.0]
-#define LINE_GREEN [UIColor colorWithRed:0.0 green:0.7 blue:0.0 alpha:1.0]
+//TEST
+#import "RealTimeBuilder.h"
+#import "BLEGaugeAlarmService.h"
+#import "GaugeModel.h"
+//TEST
+
 
 @interface GaugeViewController : UIViewController
-{
-    IBOutlet PercentageChart *chart;
-}
 
--(IBAction) onGo:(id)sender;
+@property (weak, nonatomic) IBOutlet KDGoalBar *firstGoalBar;
+@property (weak, nonatomic) IBOutlet KDGoalBar *secondGoalBar;
+@property (weak, nonatomic) IBOutlet KDGoalBar *thirdGoalBar;
 
 @end

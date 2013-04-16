@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="H2v-Ob-DhD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="H2v-Ob-DhD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -836,30 +836,25 @@
         <!--Gauge View Controller-->
         <scene sceneID="iWc-zZ-9cJ">
             <objects>
-                <viewController id="QFR-oP-YCX" customClass="GaugeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Gauge View Controller" id="QFR-oP-YCX" customClass="GaugeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qlw-Nm-8by">
-                        <rect key="frame" x="0.0" y="0.0" width="270" height="125"/>
+                        <rect key="frame" x="0.0" y="0.0" width="552" height="188"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dhO-0C-bE1">
-                                <rect key="frame" x="223" y="43" width="47" height="39"/>
+                            <view contentMode="scaleToFill" id="HOm-2Q-WXM" customClass="KDGoalBar">
+                                <rect key="frame" x="0.0" y="5" width="177" height="177"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="GO">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onGo:" destination="QFR-oP-YCX" eventType="touchUpInside" id="HTi-hb-cPX"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" id="Hg0-Gx-MPT" customClass="PercentageChart">
-                                <rect key="frame" x="2" y="3" width="220" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="zAK-RO-0c2" customClass="KDGoalBar">
+                                <rect key="frame" x="188" y="5" width="177" height="177"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.86224490399999998" green="0.86224490399999998" blue="0.86224490399999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="c1g-Et-XhU" customClass="KDGoalBar">
+                                <rect key="frame" x="375" y="5" width="177" height="177"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.86224490399999998" green="0.86224490399999998" blue="0.86224490399999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -868,7 +863,9 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="chart" destination="Hg0-Gx-MPT" id="kQk-u3-dMD"/>
+                        <outlet property="firstGoalBar" destination="HOm-2Q-WXM" id="BOI-Tn-Ntd"/>
+                        <outlet property="secondGoalBar" destination="zAK-RO-0c2" id="NEu-ax-4Ib"/>
+                        <outlet property="thirdGoalBar" destination="c1g-Et-XhU" id="zhi-m1-Kmp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyp-sj-yeT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1103,45 +1100,34 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <containerView contentMode="center" id="DMF-hE-jdV">
-                                <rect key="frame" x="11" y="5" width="270" height="125"/>
+                                <rect key="frame" x="9" y="10" width="552" height="188"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="QFR-oP-YCX" kind="embed" id="IUu-cx-TSU"/>
                                 </connections>
                             </containerView>
-                            <containerView contentMode="center" id="JXc-UD-pMX">
-                                <rect key="frame" x="11" y="128" width="270" height="125"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="EGT1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eV8-he-ojN">
+                                <rect key="frame" x="76" y="206" width="45" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="QFR-oP-YCX" kind="embed" id="gOh-vl-saI"/>
-                                </connections>
-                            </containerView>
-                            <containerView contentMode="center" id="ug6-t4-nI3">
-                                <rect key="frame" x="289" y="128" width="135" height="125"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="EGT2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Clf-Oy-7f9">
+                                <rect key="frame" x="263" y="206" width="45" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="QU7-xD-ref" kind="embed" id="vUT-YC-Bsg"/>
-                                </connections>
-                            </containerView>
-                            <containerView contentMode="center" id="6FL-kd-bJ5">
-                                <rect key="frame" x="424" y="128" width="135" height="125"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="EGT3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UeF-4S-N4S">
+                                <rect key="frame" x="447" y="206" width="45" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="QU7-xD-ref" kind="embed" id="ved-cf-b4k"/>
-                                </connections>
-                            </containerView>
-                            <containerView contentMode="center" id="N98-dD-Jpy">
-                                <rect key="frame" x="289" y="5" width="270" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="QFR-oP-YCX" kind="embed" id="QCN-pg-Oim"/>
-                                </connections>
-                            </containerView>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.86224490399999998" green="0.86224490399999998" blue="0.86224490399999998" alpha="1" colorSpace="calibratedRGB"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -1153,6 +1139,7 @@
             </objects>
             <point key="canvasLocation" x="1571" y="158"/>
         </scene>
+<<<<<<< HEAD
         <!--Gauge View Controller-->
         <scene sceneID="64u-X1-l3p">
             <objects>
@@ -1196,13 +1183,204 @@
             <point key="canvasLocation" x="2568" y="619"/>
         </scene>
     </scenes>
+=======
+        <!--Graph View Controller-->
+        <scene sceneID="jIN-ri-3mB">
+            <objects>
+                <viewController id="qpU-L7-xh8" customClass="GraphViewController" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="m9Y-fB-CBW">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="256"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView userInteractionEnabled="NO" contentMode="scaleToFill" id="BKd-tj-YPD">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="256"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="customWebView" destination="BKd-tj-YPD" id="s15-n7-24c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MS1-S9-Vif" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="903" y="-730"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="AddSensorController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddSensorController.h"/>
+            <relationships>
+                <relationship kind="action" name="hidePicker:"/>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="action" name="showPicker:"/>
+                <relationship kind="outlet" name="activeSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="saveButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="sensorDismissButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="sensorIDField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="sensorNameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="sensorPickerNavBar" candidateClass="UIToolbar"/>
+                <relationship kind="outlet" name="sensorTypeButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="sensorTypePicker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="transformConstantField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="ConnectionController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ConnectionController.h"/>
+            <relationships>
+                <relationship kind="action" name="changeMode:"/>
+                <relationship kind="action" name="getSettings:"/>
+                <relationship kind="action" name="send10Button:"/>
+                <relationship kind="outlet" name="buttonChangeMode" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="buttonGetSettings" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="buttonSend100" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="inputText" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="CustomPagerViewController" superclassName="PagerViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomPagerViewController.h"/>
+        </class>
+        <class className="ECSlidingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ECSlidingViewController.h"/>
+        </class>
+        <class className="FirstTopViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstTopViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="revealMenu:"/>
+            </relationships>
+        </class>
+        <class className="GaugeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GaugeViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="firstGoalBar" candidateClass="KDGoalBar"/>
+                <relationship kind="outlet" name="secondGoalBar" candidateClass="KDGoalBar"/>
+                <relationship kind="outlet" name="thirdGoalBar" candidateClass="KDGoalBar"/>
+            </relationships>
+        </class>
+        <class className="GetController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GetController.h"/>
+            <relationships>
+                <relationship kind="action" name="getAction:"/>
+                <relationship kind="outlet" name="getButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="GraphViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="customWebView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="HTTPTestController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HTTPTestController.h"/>
+            <relationships>
+                <relationship kind="action" name="requestAction:"/>
+                <relationship kind="outlet" name="requestButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="InitialSlidingViewController" superclassName="ECSlidingViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InitialSlidingViewController.h"/>
+        </class>
+        <class className="KDGoalBar" superclassName="UIControl">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/KDGoalBar.h"/>
+        </class>
+        <class className="ListController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ListController.h"/>
+            <relationships>
+                <relationship kind="action" name="listOrCancelAction:"/>
+                <relationship kind="outlet" name="listButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="MenuViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
+        </class>
+        <class className="NavigationTopViewController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NavigationTopViewController.h"/>
+        </class>
+        <class className="PagerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PagerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="changePage:"/>
+                <relationship kind="outlet" name="pageControl" candidateClass="UIPageControl"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="PutController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PutController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelAction:"/>
+                <relationship kind="action" name="sendAction:" candidateClass="UIView"/>
+                <relationship kind="outlet" name="cancelButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="sendButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="RealTimeController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RealTimeController.h"/>
+            <relationships>
+                <relationship kind="action" name="serializeAction:"/>
+                <relationship kind="outlet" name="serializationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="serializeButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="temp0Label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="temp1Label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="temp2Label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="temp3Label" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SampleTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SampleTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="revealMenu:"/>
+            </relationships>
+        </class>
+        <class className="ScanController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ScanController.h"/>
+            <relationships>
+                <relationship kind="action" name="startScanButton:"/>
+                <relationship kind="action" name="stopScanButton:"/>
+                <relationship kind="outlet" name="_deviceTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="_scanButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="SecondTopViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondTopViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="revealMenu:"/>
+            </relationships>
+        </class>
+        <class className="SensorConfigViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SensorConfigViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="activeSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="sensorNameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="transformConstantField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="SensorTableController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SensorTableController.h"/>
+            <relationships>
+                <relationship kind="action" name="resetAction:"/>
+                <relationship kind="outlet" name="resetButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="ThirdTopViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ThirdTopViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="revealMenu:"/>
+            </relationships>
+        </class>
+    </classes>
+>>>>>>> c7cebb1d6e554aacf0510ac3e81fb1967f8d8f04
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="IUu-cx-TSU"/>
-        <segue reference="vUT-YC-Bsg"/>
-    </inferredMetricsTieBreakers>
 </document>
