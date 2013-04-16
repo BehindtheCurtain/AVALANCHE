@@ -625,14 +625,11 @@
 				088BA65217172E1B002F0831 /* GraphViewController.m in Sources */,
 				749FE1F21715C564005511D7 /* RealTimeController.m in Sources */,
 				749FE1F517184DC1005511D7 /* RunListModel.m in Sources */,
-<<<<<<< HEAD
 				749FE1FB171DD0AF005511D7 /* RunSelectController.m in Sources */,
-=======
 				089EC77D171DE200004A76EC /* KDBarGraph.m in Sources */,
 				089EC77E171DE200004A76EC /* KDGoalBar.m in Sources */,
 				089EC77F171DE200004A76EC /* KDGoalBarPercentLayer.m in Sources */,
 				089EC782171DE3F6004A76EC /* SoundPlayer.m in Sources */,
->>>>>>> c7cebb1d6e554aacf0510ac3e81fb1967f8d8f04
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
