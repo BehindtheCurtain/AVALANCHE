@@ -25,5 +25,6 @@
 // Public instance methods.
 - (void)serialize;
 - (id)initFromFile:(NSString*)file;
+-(SensorAggregateModel*) getAggregateWithKey:(NSString*)key;
 
 @end

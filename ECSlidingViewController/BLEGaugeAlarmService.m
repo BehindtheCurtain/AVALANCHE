@@ -37,6 +37,13 @@
     return instance;
 }
 
+#pragma mark Connection Management
+- (void)disconnect
+{
+    [self.brsp close];
+    [[AppDelegate app].cbCentral cancelPeripheralConnection:[AppDelegate app].activePeripheral];
+}
+
 
 #pragma mark BrspDelegate
 - (void)brsp:(Brsp*)brsp OpenStatusChanged:(BOOL)isOpen

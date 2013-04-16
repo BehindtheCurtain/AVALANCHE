@@ -17,16 +17,15 @@
 @synthesize sensorData;
 
 // Constructor method that sets all of the snapshots data.
--(id) initWithTimeStamp:(long)_timeStamp
+-(id) initWithTimeStamp:(NSDate*)_timeStamp
                withType:(NSString *)_sensorType
            withSensorID:(int)_sensorID
                withData:(unsigned int)_sensorData;
 {
 	self = [super init];
     
-    NSDate* date = [NSDate dateWithTimeIntervalSince1970:(NSTimeInterval)_timeStamp];
 	
-	self.timeStamp = date;
+	self.timeStamp = _timeStamp;
 	self.sensorType = _sensorType;
 	self.sensorID = _sensorID;
 	self.sensorData = _sensorData;
@@ -37,7 +36,7 @@
 -(NSString*) serialize
 {
     NSDateFormatter* df = [[NSDateFormatter alloc] init];
-    [df setDateFormat:@"yyyy-MM-dd hh:mm:ss a"];
+    [df setDateFormat:@"yyyy/MM/dd-hh:mm:ss.SS-a"];
     
     NSString* time = [df stringFromDate:self.timeStamp];
     
@@ -59,7 +58,7 @@
         NSArray* snapshotData = [data componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:delimiters]];
         
         NSDateFormatter* df = [[NSDateFormatter alloc] init];
-        [df setDateFormat:@"yyyy-MM-dd hh:mm:ss a"];
+        [df setDateFormat:@"yyyy/MM/dd-hh:mm:ss.SS-a"];
         NSDate* time = [df dateFromString:[snapshotData objectAtIndex:0]];
         
         self.timeStamp = time;

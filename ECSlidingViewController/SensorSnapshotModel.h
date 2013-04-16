@@ -17,7 +17,7 @@
 @property (assign) unsigned int sensorData;
 
 // Public instance methods.
--(id) initWithTimeStamp:(long)timeStamp
+-(id) initWithTimeStamp:(NSDate*)timeStamp
                withType:(NSString*)sensorType
            withSensorID:(int)sensorID
                withData:(unsigned int)sensorData;

@@ -61,6 +61,7 @@
 		749FE1EF1715BADD005511D7 /* libios_brsp_simulator_1_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 749FE1ED1715BADD005511D7 /* libios_brsp_simulator_1_0.a */; };
 		749FE1F21715C564005511D7 /* RealTimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 749FE1F11715C564005511D7 /* RealTimeController.m */; };
 		749FE1F517184DC1005511D7 /* RunListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 749FE1F417184DC1005511D7 /* RunListModel.m */; };
+		749FE1FB171DD0AF005511D7 /* RunSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 749FE1FA171DD0AF005511D7 /* RunSelectController.m */; };
 		74D85A11170F24B90059B791 /* BLEGaugeAlarmService.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D85A10170F24B90059B791 /* BLEGaugeAlarmService.m */; };
 /* End PBXBuildFile section */
 
@@ -159,6 +160,8 @@
 		749FE1F11715C564005511D7 /* RealTimeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealTimeController.m; sourceTree = "<group>"; };
 		749FE1F317184DC1005511D7 /* RunListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunListModel.h; sourceTree = "<group>"; };
 		749FE1F417184DC1005511D7 /* RunListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunListModel.m; sourceTree = "<group>"; };
+		749FE1F9171DD0AF005511D7 /* RunSelectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunSelectController.h; sourceTree = "<group>"; };
+		749FE1FA171DD0AF005511D7 /* RunSelectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunSelectController.m; sourceTree = "<group>"; };
 		74D85A0F170F24B90059B791 /* BLEGaugeAlarmService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEGaugeAlarmService.h; sourceTree = "<group>"; };
 		74D85A10170F24B90059B791 /* BLEGaugeAlarmService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEGaugeAlarmService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -386,6 +389,8 @@
 				088BA65317172F46002F0831 /* public_html */,
 				088BA65017172E1B002F0831 /* GraphViewController.h */,
 				088BA65117172E1B002F0831 /* GraphViewController.m */,
+				749FE1F9171DD0AF005511D7 /* RunSelectController.h */,
+				749FE1FA171DD0AF005511D7 /* RunSelectController.m */,
 			);
 			name = Post;
 			sourceTree = "<group>";
@@ -536,6 +541,7 @@
 				088BA65217172E1B002F0831 /* GraphViewController.m in Sources */,
 				749FE1F21715C564005511D7 /* RealTimeController.m in Sources */,
 				749FE1F517184DC1005511D7 /* RunListModel.m in Sources */,
+				749FE1FB171DD0AF005511D7 /* RunSelectController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

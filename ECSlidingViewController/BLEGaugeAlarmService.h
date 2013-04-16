@@ -16,5 +16,6 @@
 @property (strong) Brsp* brsp;
 
 + (BLEGaugeAlarmService*)instance;
+- (void)disconnect;
 
 @end

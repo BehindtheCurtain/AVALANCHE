@@ -66,7 +66,12 @@
     }
     
     cell.textLabel.text = [[[ConfigurationModelMap instance:NO] sensorNames] objectAtIndex:indexPath.row];
-    cell.detailTextLabel.text = [[[[ConfigurationModelMap instance:NO] configurationMap] objectAtIndex:indexPath.row] getType];
+    
+    NSMutableString* label = [[NSMutableString alloc] init];
+    ConfigurationModel* configuration = [[[ConfigurationModelMap instance:NO] configurationMap] objectAtIndex:indexPath.row];
+    [label appendString:[configuration getType]];
+    [label appendFormat:@" %d", [configuration sensorID]];
+    cell.detailTextLabel.text = label;
     
     return cell;
 }

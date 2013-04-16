@@ -14,12 +14,14 @@
 #import "BLEGaugeAlarmService.h"
 
 @interface RealTimeController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *temp0Label;
 @property (weak, nonatomic) IBOutlet UILabel *temp1Label;
 @property (weak, nonatomic) IBOutlet UILabel *temp2Label;
 @property (weak, nonatomic) IBOutlet UILabel *temp3Label;
+@property (weak, nonatomic) IBOutlet UILabel *temp4Label;
 
-@property (weak, nonatomic) IBOutlet UILabel *serializationLabel;
-@property (weak, nonatomic) IBOutlet UIButton *serializeButton;
-- (IBAction)serializeAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *startButton;
+- (IBAction)startAction:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIButton *endButton;
+- (IBAction)endAction:(id)sender;
 @end

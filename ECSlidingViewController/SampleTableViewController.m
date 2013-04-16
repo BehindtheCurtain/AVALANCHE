@@ -17,7 +17,7 @@
 
 - (void)awakeFromNib
 {
-  self.sampleItems = [NSArray arrayWithObjects:@"HTTPTest", @"RealTimeTest",
+  self.sampleItems = [NSArray arrayWithObjects:@"HTTPTest",
                       @"Bluetooth", @"Sensor Configuration", @"FTP Put", @"FTP Get", @"FTP List", nil];
 }
 

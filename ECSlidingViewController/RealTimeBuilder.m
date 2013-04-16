@@ -61,12 +61,14 @@ static BOOL processing = NO;
 {
 	processing = YES;
     
-    long currentTime = (long)(NSTimeInterval)[[NSDate date] timeIntervalSince1970];
+    NSDate* currentTime = [NSDate dateWithTimeIntervalSince1970:[[NSDate date] timeIntervalSince1970]];
     
     [[GaugeModel instance:NO] setStartTimeStamp:[NSDate dateWithTimeIntervalSince1970:[[NSDate date] timeIntervalSince1970]]];
     
-    for(SensorAggregateModel* aggregate in [[GaugeModel instance:NO] sensorAggregateModelMap])
+    for(NSString* key in [[GaugeModel instance:NO] sensorAggregateModelMap])
     {
+        SensorAggregateModel* aggregate = [[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:key];
+        [aggregate setSnapshots:[[NSMutableArray alloc] init]];
         [aggregate setInitialTimeStamp:currentTime];
     }
 }
@@ -122,7 +124,7 @@ static BOOL processing = NO;
     
     for(NSNumber* dataPoint in data)
     {
-        int sensorID = [data indexOfObject:dataPoint];
+        int sensorID = [data indexOfObject:dataPoint] + 1;
         unsigned int sensorData = [dataPoint unsignedIntValue];
         
         NSString* key = [type stringByAppendingFormat:@"%d", sensorID];
@@ -130,7 +132,7 @@ static BOOL processing = NO;
         
         sensorData = [RealTimeBuilder transformSensorData:sensorData ofSensorType:type withID:sensorID withTransform:[aggregate transformConstant]];
         
-        long time = [aggregate initialTimeStamp] + timestamp * TIME_BETWEEN_TIMESTAMP;
+        NSDate* time = [NSDate dateWithTimeIntervalSince1970:[[NSDate date] timeIntervalSince1970]];
         
         SensorSnapshotModel* snapshot = [[SensorSnapshotModel alloc] initWithTimeStamp:time withType:type withSensorID:sensorID withData:sensorData];
         

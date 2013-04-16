@@ -38,7 +38,7 @@ static NSString* DELIM = @"\n";
 	return(gaugeModelInstance);
 }
 
--(SensorAggregateModel*) getAggregateWithKey:(NSString*)key;
+-(SensorAggregateModel*) getAggregateWithKey:(NSString*)key
 {
 	if(sensorAggregateModelMap == nil)
 	{
@@ -52,6 +52,11 @@ static NSString* DELIM = @"\n";
 
 -(void) serialize
 {
+    NSDateFormatter* df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"yyyy/MM/dd-hh:mm:ss.SS-a"];
+    
+    self.runName = [df stringFromDate:self.startTimeStamp];
+    
     NSString* applicationDocumentsDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString* runDirectory = [applicationDocumentsDir stringByAppendingPathComponent:runName];
     
@@ -62,10 +67,9 @@ static NSString* DELIM = @"\n";
     
     self.endTimeStamp = [NSDate dateWithTimeIntervalSince1970:[[NSDate date] timeIntervalSince1970]];
     
-    NSDateFormatter* df = [[NSDateFormatter alloc] init];
-    [df setDateFormat:@"yyyy/MM/dd-hh:mm:ss-a"];
     
-    self.runName = [df stringFromDate:self.startTimeStamp];
+    
+    
     
     NSMutableString* propertyList = [[NSMutableString alloc] init];
     [propertyList appendString:self.runName];
@@ -98,7 +102,7 @@ static NSString* DELIM = @"\n";
     if([super init])
     {
         NSDateFormatter* df = [[NSDateFormatter alloc] init];
-        [df setDateFormat:@"yyyy-MM-dd hh:mm:ss a"];
+        [df setDateFormat:@"yyyy/MM/dd-hh:mm:ss.SS-a"];
         
         NSString* fileContents = [NSString stringWithContentsOfFile:file encoding:NSUTF16StringEncoding error:nil];
         

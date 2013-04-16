@@ -39,10 +39,10 @@ static void * const temp4Context = (void*)&temp4Context;
     [super viewWillAppear:animated];
     [RealTimeBuilder gaugeModelFactory];
     
-    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature0"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp1Context];
-    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature1"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp2Context];
-    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature2"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp3Context];
-    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature3"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp4Context];
+    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature1"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp1Context];
+    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature2"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp2Context];
+    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature3"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp3Context];
+    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature4"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp4Context];
     
     [BLEGaugeAlarmService instance];
 }
@@ -50,24 +50,47 @@ static void * const temp4Context = (void*)&temp4Context;
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     NSIndexSet* set = [change objectForKey:NSKeyValueChangeIndexesKey];
-    SensorSnapshotModel* snapshot = [[object snapshots] objectAtIndex:[set firstIndex]];
+    int snapshots = [[object snapshots] count];
+    
+    SensorSnapshotModel* snapshot;
+    int firstIndex = [set firstIndex];
+    
+    if(firstIndex <= snapshots -1)
+    {
+        snapshot = [[object snapshots] objectAtIndex:[set firstIndex]];
+    }
+    else
+    {
+        snapshot = [[object snapshots] objectAtIndex:(snapshots - 1)];
+    }
     
     if(context == temp1Context)
     {
-        self.temp0Label.text = [NSString stringWithFormat:@"EGT1: %d° F", [snapshot sensorData]];
+        self.temp1Label.text = [NSString stringWithFormat:@"EGT1: %d° F", [snapshot sensorData]];
     }
     else if(context == temp2Context)
     {
-        self.temp1Label.text = [NSString stringWithFormat:@"EGT2: %d° F", [snapshot sensorData]];
+        self.temp2Label.text = [NSString stringWithFormat:@"EGT2: %d° F", [snapshot sensorData]];
     }
     else if(context == temp3Context)
     {
-        self.temp2Label.text = [NSString stringWithFormat:@"EGT3: %d° F", [snapshot sensorData]];
+        self.temp3Label.text = [NSString stringWithFormat:@"EGT3: %d° F", [snapshot sensorData]];
     }
     else if(context == temp4Context)
     {
-        self.temp3Label.text = [NSString stringWithFormat:@"EGT4: %d° F", [snapshot sensorData]];
+        self.temp4Label.text = [NSString stringWithFormat:@"EGT4: %d° F", [snapshot sensorData]];
     }
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[BLEGaugeAlarmService instance] disconnect];
+    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature1"] removeObserver:self forKeyPath:@"snapshots"];
+    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature2"] removeObserver:self forKeyPath:@"snapshots"];
+    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature3"] removeObserver:self forKeyPath:@"snapshots"];
+    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature4"] removeObserver:self forKeyPath:@"snapshots"];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -76,29 +99,25 @@ static void * const temp4Context = (void*)&temp4Context;
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)serializeAction:(id)sender
+- (IBAction)endAction:(id)sender
 {
-    [[GaugeModel instance:NO] setStartTimeStamp: [NSDate dateWithTimeIntervalSince1970:[[NSDate date] timeIntervalSince1970]]];
-    [[GaugeModel instance:NO] serialize];
+    [RealTimeBuilder endProcessing];
     
-    NSString* applicationDocumentsDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString* runDirectory = [applicationDocumentsDir stringByAppendingPathComponent:@"test"];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+- (IBAction)startAction:(id)sender
+{
+    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature1"] removeObserver:self forKeyPath:@"snapshots"];
+    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature2"] removeObserver:self forKeyPath:@"snapshots"];
+    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature3"] removeObserver:self forKeyPath:@"snapshots"];
+    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature4"] removeObserver:self forKeyPath:@"snapshots"];
     
-    if([[NSFileManager defaultManager] fileExistsAtPath:runDirectory])
-    {
-        NSString* fileName = [runDirectory stringByAppendingPathComponent:@"test.txt"];
-        if([[NSFileManager defaultManager] fileExistsAtPath:fileName])
-        {
-            self.serializationLabel.text = @"YES";
-        }
-        else
-        {
-            self.serializationLabel.text = @"NO";
-        }
-    }
-    else
-    {
-        self.serializationLabel.text = @"NO";
-    }
+    [RealTimeBuilder beginProcessing];
+    
+    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature1"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp1Context];
+    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature2"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp2Context];
+    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature3"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp3Context];
+    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature4"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp4Context];
+    
 }
 @end

@@ -25,7 +25,7 @@
 // Instance properties.
 @property (copy) NSString* sensorName;
 @property (copy) NSString* sensorType;
-@property (assign) long initialTimeStamp;
+@property (copy) NSDate* initialTimeStamp;
 @property (assign) int transformConstant;
 @property (assign) int sensorID;
 @property (assign) BOOL isActive;
