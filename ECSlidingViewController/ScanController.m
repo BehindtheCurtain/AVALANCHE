@@ -92,7 +92,7 @@
     [AppDelegate app].activePeripheral = [_peripherals objectAtIndex:indexPath.row];
     [self.deviceTableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    ConnectionController* connection = [self.storyboard instantiateViewControllerWithIdentifier:@"Real Time View"];
+    ConnectionController* connection = [self.storyboard instantiateViewControllerWithIdentifier:@"View1"];
     
     [self.navigationController pushViewController:connection animated:YES];
     

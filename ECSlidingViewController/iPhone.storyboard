@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="H2v-Ob-DhD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="H2v-Ob-DhD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -810,30 +810,25 @@
         <!--Gauge View Controller-->
         <scene sceneID="iWc-zZ-9cJ">
             <objects>
-                <viewController id="QFR-oP-YCX" customClass="GaugeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Gauge View Controller" id="QFR-oP-YCX" customClass="GaugeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qlw-Nm-8by">
-                        <rect key="frame" x="0.0" y="0.0" width="270" height="125"/>
+                        <rect key="frame" x="0.0" y="0.0" width="552" height="188"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dhO-0C-bE1">
-                                <rect key="frame" x="223" y="43" width="47" height="39"/>
+                            <view contentMode="scaleToFill" id="HOm-2Q-WXM" customClass="KDGoalBar">
+                                <rect key="frame" x="0.0" y="5" width="177" height="177"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="GO">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onGo:" destination="QFR-oP-YCX" eventType="touchUpInside" id="HTi-hb-cPX"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" id="Hg0-Gx-MPT" customClass="PercentageChart">
-                                <rect key="frame" x="2" y="3" width="220" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="zAK-RO-0c2" customClass="KDGoalBar">
+                                <rect key="frame" x="188" y="5" width="177" height="177"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.86224490399999998" green="0.86224490399999998" blue="0.86224490399999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="c1g-Et-XhU" customClass="KDGoalBar">
+                                <rect key="frame" x="375" y="5" width="177" height="177"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.86224490399999998" green="0.86224490399999998" blue="0.86224490399999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -842,7 +837,9 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="chart" destination="Hg0-Gx-MPT" id="kQk-u3-dMD"/>
+                        <outlet property="firstGoalBar" destination="HOm-2Q-WXM" id="BOI-Tn-Ntd"/>
+                        <outlet property="secondGoalBar" destination="zAK-RO-0c2" id="NEu-ax-4Ib"/>
+                        <outlet property="thirdGoalBar" destination="c1g-Et-XhU" id="zhi-m1-Kmp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyp-sj-yeT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1060,45 +1057,34 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <containerView contentMode="center" id="DMF-hE-jdV">
-                                <rect key="frame" x="11" y="5" width="270" height="125"/>
+                                <rect key="frame" x="9" y="10" width="552" height="188"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="QFR-oP-YCX" kind="embed" id="IUu-cx-TSU"/>
                                 </connections>
                             </containerView>
-                            <containerView contentMode="center" id="JXc-UD-pMX">
-                                <rect key="frame" x="11" y="128" width="270" height="125"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="EGT1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eV8-he-ojN">
+                                <rect key="frame" x="76" y="206" width="45" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="QFR-oP-YCX" kind="embed" id="gOh-vl-saI"/>
-                                </connections>
-                            </containerView>
-                            <containerView contentMode="center" id="ug6-t4-nI3">
-                                <rect key="frame" x="289" y="128" width="135" height="125"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="EGT2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Clf-Oy-7f9">
+                                <rect key="frame" x="263" y="206" width="45" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="QU7-xD-ref" kind="embed" id="vUT-YC-Bsg"/>
-                                </connections>
-                            </containerView>
-                            <containerView contentMode="center" id="6FL-kd-bJ5">
-                                <rect key="frame" x="424" y="128" width="135" height="125"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="EGT3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UeF-4S-N4S">
+                                <rect key="frame" x="447" y="206" width="45" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="QU7-xD-ref" kind="embed" id="ved-cf-b4k"/>
-                                </connections>
-                            </containerView>
-                            <containerView contentMode="center" id="N98-dD-Jpy">
-                                <rect key="frame" x="289" y="5" width="270" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="QFR-oP-YCX" kind="embed" id="QCN-pg-Oim"/>
-                                </connections>
-                            </containerView>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.86224490399999998" green="0.86224490399999998" blue="0.86224490399999998" alpha="1" colorSpace="calibratedRGB"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -1109,48 +1095,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MOY-9Y-5TI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-437" y="542"/>
-        </scene>
-        <!--Gauge View Controller-->
-        <scene sceneID="64u-X1-l3p">
-            <objects>
-                <viewController id="QU7-xD-ref" customClass="GaugeViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3Qw-cs-Klb">
-                        <rect key="frame" x="0.0" y="0.0" width="135" height="125"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" id="vay-qF-GyH" customClass="PercentageChart">
-                                <rect key="frame" x="0.0" y="6" width="135" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.86224490399999998" green="0.86224490399999998" blue="0.86224490399999998" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iPe-pp-KX6">
-                                <rect key="frame" x="44" y="88" width="47" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="GO">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onGo:" destination="QU7-xD-ref" eventType="touchUpInside" id="IP2-du-tJn"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.86224490399999998" green="0.86224490399999998" blue="0.86224490399999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    </view>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <connections>
-                        <outlet property="chart" destination="vay-qF-GyH" id="zLa-sF-qvP"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="abW-9I-i8Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="560" y="1003"/>
         </scene>
         <!--Graph View Controller-->
         <scene sceneID="jIN-ri-3mB">
@@ -1226,8 +1170,9 @@
         <class className="GaugeViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GaugeViewController.h"/>
             <relationships>
-                <relationship kind="action" name="onGo:"/>
-                <relationship kind="outlet" name="chart" candidateClass="PercentageChart"/>
+                <relationship kind="outlet" name="firstGoalBar" candidateClass="KDGoalBar"/>
+                <relationship kind="outlet" name="secondGoalBar" candidateClass="KDGoalBar"/>
+                <relationship kind="outlet" name="thirdGoalBar" candidateClass="KDGoalBar"/>
             </relationships>
         </class>
         <class className="GetController" superclassName="UIViewController">
@@ -1254,6 +1199,9 @@
         <class className="InitialSlidingViewController" superclassName="ECSlidingViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/InitialSlidingViewController.h"/>
         </class>
+        <class className="KDGoalBar" superclassName="UIControl">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/KDGoalBar.h"/>
+        </class>
         <class className="ListController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ListController.h"/>
             <relationships>
@@ -1275,9 +1223,6 @@
                 <relationship kind="outlet" name="pageControl" candidateClass="UIPageControl"/>
                 <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
             </relationships>
-        </class>
-        <class className="PercentageChart" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PercentageChart.h"/>
         </class>
         <class className="PutController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PutController.h"/>
@@ -1349,8 +1294,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="IUu-cx-TSU"/>
-        <segue reference="vUT-YC-Bsg"/>
-    </inferredMetricsTieBreakers>
 </document>
