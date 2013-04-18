@@ -1,6 +1,5 @@
 *.DS_Store
 ECSlidingViewController.xcodeproj/*
-<<<<<<< HEAD
 .DS_Store
 
 AVALANCHE.xcodeproj/xcuserdata/BehindTheCurtain.xcuserdatad/xcdebugger/Breakpoints.xcbkptlist
@@ -18,10 +17,12 @@ AVALANCHE.xcodeproj/project.xcworkspace/xcuserdata/austenherbst.xcuserdatad/User
 AVALANCHE.xcodeproj/xcuserdata/BehindTheCurtain.xcuserdatad/xcdebugger/Breakpoints.xcbkptlist
 
 AVALANCHE.xcodeproj/xcuserdata/BehindTheCurtain.xcuserdatad/xcdebugger/Breakpoints.xcbkptlist
-=======
 AVALANCHE.xcodeproj/project.xcworkspace/xcuserdata/austenherbst.xcuserdatad/UserInterfaceState.xcuserstate
 
 *.xcuserstate
+<<<<<<< HEAD
 >>>>>>> Cleaned up Real-Time Gauge code.
 
 .DS_Store
+=======
+>>>>>>> c0c1dddb7d953b4a47098cfb722dbc0c26cefa92
