@@ -86,8 +86,8 @@
 -(void)setup {
     self.backgroundColor = [UIColor clearColor];
     self.clipsToBounds = NO;
-    bg = [UIImage imageNamed:@"circle_outline"];
-    bgPressed = [UIImage imageNamed:@"circle_outline_pressed"];
+    bg = [UIImage imageNamed:@"circle_outline_120"];
+    bgPressed = [UIImage imageNamed:@"circle_outline_pressed_120"];
     
     thumb = [UIImage imageNamed:@"circle_thumb"];
     ridge = [UIImage imageNamed:@"circle_ridge"];
@@ -410,7 +410,7 @@
         [percentLabel setFont:[UIFont fontWithName:@"Futura-CondensedMedium" size:60]];
         percentLabel.numberOfLines = 1;
     } else {
-        [percentLabel setFont:[UIFont fontWithName:@"Futura-CondensedMedium" size:30]];
+        [percentLabel setFont:[UIFont fontWithName:@"Futura-CondensedMedium" size:26]];
         percentLabel.numberOfLines = 0;
     }
     [self setNeedsLayout];

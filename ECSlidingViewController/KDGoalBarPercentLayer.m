@@ -20,13 +20,17 @@
 
     CGFloat delta = toRadians(360 * percent);
     
-    CGFloat innerRadius = 62.5;
-    CGFloat outerRadius = 87.5;
+    CGFloat innerRadius = 42; //was 62.5 for 177 outline
+    CGFloat outerRadius = 58; //was 87.5 for 177 outline
     
     if (color) {
         CGContextSetFillColorWithColor(ctx, color.CGColor);
     } else {
-        CGContextSetFillColorWithColor(ctx, [UIColor colorWithRed:99/256.0 green:183/256.0 blue:70/256.0 alpha:.5].CGColor);
+        //Green Fill
+        //CGContextSetFillColorWithColor(ctx, [UIColor colorWithRed:99/256.0 green:183/256.0 blue:70/256.0 alpha:.5].CGColor);
+        
+        //Blue Fill
+        CGContextSetFillColorWithColor(ctx, [UIColor colorWithRed:96/255.0f green:155/255.0f blue:238/255.0f alpha:1.0f].CGColor);
     }
     
     CGContextSetLineWidth(ctx, 1);

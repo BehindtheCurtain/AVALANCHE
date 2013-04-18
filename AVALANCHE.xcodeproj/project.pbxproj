@@ -38,6 +38,8 @@
 		089FFEC017034F800088D528 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089FFEBF17034F800088D528 /* iPhone.storyboard */; };
 		089FFEC217034FB40088D528 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089FFEC117034FB40088D528 /* CoreBluetooth.framework */; };
 		08A2AF2116E69C6B00065D0C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A2AF2016E69C6A00065D0C /* Default-568h@2x.png */; };
+		08E4538F1720728E00F8CA6A /* circle_outline_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 08E4538E1720728E00F8CA6A /* circle_outline_120.png */; };
+		08E45391172084F300F8CA6A /* circle_outline_pressed_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 08E45390172084F200F8CA6A /* circle_outline_pressed_120.png */; };
 		27498DCE14E96C75005C043E /* NavigationTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27498DCD14E96C75005C043E /* NavigationTopViewController.m */; };
 		27498DD514E96EEF005C043E /* SampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27498DD414E96EEF005C043E /* SampleTableViewController.m */; };
 		2750E77114CDB0DF007727A0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2750E77014CDB0DF007727A0 /* UIKit.framework */; };
@@ -123,6 +125,8 @@
 		089FFEBF17034F800088D528 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 		089FFEC117034FB40088D528 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		08A2AF2016E69C6A00065D0C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		08E4538E1720728E00F8CA6A /* circle_outline_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle_outline_120.png; sourceTree = "<group>"; };
+		08E45390172084F200F8CA6A /* circle_outline_pressed_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle_outline_pressed_120.png; sourceTree = "<group>"; };
 		27498DCC14E96C75005C043E /* NavigationTopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationTopViewController.h; sourceTree = "<group>"; };
 		27498DCD14E96C75005C043E /* NavigationTopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationTopViewController.m; sourceTree = "<group>"; };
 		27498DD314E96EEF005C043E /* SampleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleTableViewController.h; sourceTree = "<group>"; };
@@ -255,6 +259,8 @@
 		089EC75E171DE1D2004A76EC /* images */ = {
 			isa = PBXGroup;
 			children = (
+				08E4538E1720728E00F8CA6A /* circle_outline_120.png */,
+				08E45390172084F200F8CA6A /* circle_outline_pressed_120.png */,
 				089EC75F171DE1E1004A76EC /* circle_outline.png */,
 				089EC760171DE1E1004A76EC /* circle_outline@2x.png */,
 				089EC761171DE1E1004A76EC /* circle_outline_pressed.png */,
@@ -274,7 +280,6 @@
 		2750E76114CDB0DF007727A0 = {
 			isa = PBXGroup;
 			children = (
-				089EC783171DE526004A76EC /* AudioToolbox.framework */,
 				7428C470170A26E70013A04E /* Icon@2x.png */,
 				7428C46E170A26DA0013A04E /* Icon.png */,
 				08A2AF2016E69C6A00065D0C /* Default-568h@2x.png */,
@@ -297,6 +302,7 @@
 			children = (
 				749FE1EC1715BADD005511D7 /* libios_brsp_device_1_0.a */,
 				749FE1ED1715BADD005511D7 /* libios_brsp_simulator_1_0.a */,
+				089EC783171DE526004A76EC /* AudioToolbox.framework */,
 				7428C477170BA2FF0013A04E /* CFNetwork.framework */,
 				089FFEC117034FB40088D528 /* CoreBluetooth.framework */,
 				086E780A16F253D800EA221D /* CoreText.framework */,
@@ -579,6 +585,8 @@
 				089EC774171DE1E1004A76EC /* graph_week@2x.png in Resources */,
 				089EC775171DE1E1004A76EC /* graph_year.png in Resources */,
 				089EC776171DE1E1004A76EC /* graph_year@2x.png in Resources */,
+				08E4538F1720728E00F8CA6A /* circle_outline_120.png in Resources */,
+				08E45391172084F300F8CA6A /* circle_outline_pressed_120.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

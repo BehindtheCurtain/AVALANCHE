@@ -21,28 +21,39 @@ static void * const temp4Context = (void*)&temp4Context;
 @synthesize firstGoalBar;
 @synthesize secondGoalBar;
 @synthesize thirdGoalBar;
+@synthesize fourthGoalBar;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+        
 	[firstGoalBar setAllowDragging:NO];
     [firstGoalBar setAllowDecimal:YES];
     [firstGoalBar setAllowTap:NO];
     [firstGoalBar setAllowSwitching:NO];
     [firstGoalBar setPercent:0 animated:NO];
+    [firstGoalBar setCustomText:[NSString stringWithFormat:@" °F"]];
     
 	[secondGoalBar setAllowDragging:NO];
     [secondGoalBar setAllowDecimal:YES];
     [secondGoalBar setAllowTap:NO];
     [secondGoalBar setAllowSwitching:NO];
     [secondGoalBar setPercent:0 animated:NO];
+    [secondGoalBar setCustomText:[NSString stringWithFormat:@" °F"]];
     
     [thirdGoalBar setAllowDragging:NO];
     [thirdGoalBar setAllowDecimal:YES];
     [thirdGoalBar setAllowTap:NO];
     [thirdGoalBar setAllowSwitching:NO];
     [thirdGoalBar setPercent:0 animated:NO];
+    [thirdGoalBar setCustomText:[NSString stringWithFormat:@" °F"]];
+    
+    [fourthGoalBar setAllowDragging:NO];
+    [fourthGoalBar setAllowDecimal:YES];
+    [fourthGoalBar setAllowTap:NO];
+    [fourthGoalBar setAllowSwitching:NO];
+    [fourthGoalBar setPercent:0 animated:NO];
+    [fourthGoalBar setCustomText:[NSString stringWithFormat:@" °F"]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -50,10 +61,10 @@ static void * const temp4Context = (void*)&temp4Context;
     [super viewWillAppear:animated];
     [RealTimeBuilder gaugeModelFactory];
     
-    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature0"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp1Context];
-    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature1"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp2Context];
-    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature2"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp3Context];
-    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature3"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp4Context];
+    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature1"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp1Context];
+    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature2"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp2Context];
+    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature3"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp3Context];
+    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature4"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp4Context];
     
     [BLEGaugeAlarmService instance];
 }
@@ -66,23 +77,28 @@ static void * const temp4Context = (void*)&temp4Context;
     if(context == temp1Context)
     {
         [firstGoalBar setPercent:[snapshot sensorData]/25 animated:NO];
+        [firstGoalBar setCustomText:[NSString stringWithFormat:@"%.u °F", [snapshot sensorData]]];
     }
     else if(context == temp2Context)
     {
         [secondGoalBar setPercent:[snapshot sensorData]/25 animated:NO];
+        [secondGoalBar setCustomText:[NSString stringWithFormat:@"%.u °F", [snapshot sensorData]]];
     }
     else if(context == temp3Context)
     {
         [thirdGoalBar setPercent:[snapshot sensorData]/25 animated:NO];
+        [thirdGoalBar setCustomText:[NSString stringWithFormat:@"%.u °F", [snapshot sensorData]]];
     }
-//     else if(context == temp4Context)
-//     {
-//         
-//     }
+    else if(context == temp4Context)
+    {
+        [fourthGoalBar setPercent:[snapshot sensorData]/25 animated:NO];
+        [fourthGoalBar setCustomText:[NSString stringWithFormat:@"%.u °F", [snapshot sensorData]]];
+    }
 }
 
 - (void)viewDidUnload
 {
+    [self setFourthGoalBar:nil];
     [self setThirdGoalBar:nil];
     [self setSecondGoalBar:nil];
     [self setFirstGoalBar:nil];

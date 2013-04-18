@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "KDGoalBar.h"
+#import "KDBarGraph.h"
 #import "RealTimeBuilder.h"
 #import "BLEGaugeAlarmService.h"
 #import "GaugeModel.h"
@@ -18,5 +19,6 @@
 @property (weak, nonatomic) IBOutlet KDGoalBar *firstGoalBar;
 @property (weak, nonatomic) IBOutlet KDGoalBar *secondGoalBar;
 @property (weak, nonatomic) IBOutlet KDGoalBar *thirdGoalBar;
+@property (weak, nonatomic) IBOutlet KDGoalBar *fourthGoalBar;
 
 @end

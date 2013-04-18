@@ -23,3 +23,5 @@ AVALANCHE.xcodeproj/project.xcworkspace/xcuserdata/austenherbst.xcuserdatad/User
 
 *.xcuserstate
 >>>>>>> Cleaned up Real-Time Gauge code.
+
+.DS_Store
