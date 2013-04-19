@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RunModel.h"
 
 @interface RunListModel : NSObject
 
@@ -14,5 +15,6 @@
 
 + (RunListModel*)instance:(BOOL)reset;
 - (void)archive;
+- (NSArray*)runNames;
 
 @end

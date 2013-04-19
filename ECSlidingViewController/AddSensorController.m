@@ -30,7 +30,7 @@
     
     self.navigationItem.title = @"Add Sensor";
     
-    self.arrStatus = [[NSArray alloc] initWithObjects:@"Tachometer", @"Temperature", @"Oxygen", @"Pressure", @"Voltage", @"PulseRate", @"PulseCount", @"AirFuel", nil];
+    self.arrStatus = [[NSArray alloc] initWithObjects:@"Temperature", @"Oxygen", @"Pressure", @"Voltage", @"RPM", @"PulseCount", @"AirFuel", nil];
     
 	// Do any additional setup after loading the view.
 }
@@ -118,42 +118,51 @@
         {
             case 0:
             {
-                [configuration setSensorType:Tachometer];
+                [configuration setSensorType:Temperature];
+                [configuration setMaxValue:2501];
+                [configuration setMinValue:-346];
                 break;
             }
             case 1:
             {
-                [configuration setSensorType:Temperature];
+                [configuration setSensorType:Oxygen];
+                [configuration setMaxValue:0];
+                [configuration setMinValue:100];
                 break;
             }
             case 2:
             {
-                [configuration setSensorType:Oxygen];
+                [configuration setSensorType:Pressure];
+                [configuration setMaxValue:-100];
+                [configuration setMinValue:100];
                 break;
             }
             case 3:
             {
-                [configuration setSensorType:Pressure];
+                [configuration setSensorType:Voltage];
+                [configuration setMaxValue:0];
+                [configuration setMinValue:5];
                 break;
             }
             case 4:
             {
-                [configuration setSensorType:Voltage];
+                [configuration setSensorType:RPM];
+                [configuration setMaxValue:8400];
+                [configuration setMinValue:0];
                 break;
             }
             case 5:
             {
-                [configuration setSensorType:PulseRate];
+                [configuration setSensorType:PulseCount];
+                [configuration setMaxValue:65535];
+                [configuration setMinValue:0];
                 break;
             }
             case 6:
             {
-                [configuration setSensorType:PulseCount];
-                break;
-            }
-            case 7:
-            {
                 [configuration setSensorType:AirFuel];
+                [configuration setMaxValue:14875];
+                [configuration setMinValue:712];
                 break;
             }
         }

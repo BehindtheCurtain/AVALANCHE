@@ -102,7 +102,7 @@ static BOOL processing = NO;
         }
         case 2:
         {
-            type = @"PulseRate";
+            type = @"RPM";
             break;
         }
         case 3:

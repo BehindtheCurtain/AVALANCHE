@@ -42,8 +42,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
+{
+    int runNum = [[[RunListModel instance:NO] runNames] count];
+    
+    return  runNum;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+   
     NSString *cellIdentifier = @"runCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
@@ -51,7 +59,7 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
-    cell.textLabel.text = [[[RunListModel instance:NO] runList] objectAtIndex:indexPath.row];
+    cell.textLabel.text = [[[RunListModel instance:NO] runNames] objectAtIndex:indexPath.row];
     
     return cell;
 }
@@ -99,13 +107,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    RunModel* run = [[[RunListModel instance:NO] runList] objectAtIndex:indexPath.row];
+    
+    RunViewController* viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"runTest"];
+    [viewController setRun:run];
+    
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (IBAction)revealMenu:(id)sender

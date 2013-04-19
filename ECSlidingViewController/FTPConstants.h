@@ -12,6 +12,6 @@
 #define FTPPASSWORD @"lampp"
 #define FTPURL @"ftp://129.107.132.24:21/webalizer/btcserver/"
 
-@interface FTPConstants : NSObject
+@interface NetworkConstants : NSObject
 
 @end
