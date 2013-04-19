@@ -16,4 +16,10 @@
 
 - (IBAction)revealMenu:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIButton *startButton;
+- (IBAction)startAction:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIButton *endButton;
+- (IBAction)endAction:(id)sender;
+
 @end

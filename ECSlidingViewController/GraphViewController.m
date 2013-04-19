@@ -40,6 +40,7 @@
     // Load the resource using the request
     [customWebView loadRequest:request];
     
+    //[customWebView stringByEvaluatingJavaScriptFromString:@"setTextField()"];
 }
 
 - (void)viewDidUnload
