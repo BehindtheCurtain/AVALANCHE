@@ -12,12 +12,11 @@
 
 typedef enum
 {
-    Tachometer,
     Temperature,
     Oxygen,
     Pressure,
     Voltage,
-    PulseRate,
+    RPM,
     PulseCount,
     AirFuel
 } SensorTypes;
@@ -27,6 +26,8 @@ typedef enum
 @property (assign) int sensorID;
 @property (assign) BOOL active;
 @property (assign) int transformConstant;
+@property (assign) int maxValue;
+@property (assign) int minValue;
 
 - (NSString*) getType;
 

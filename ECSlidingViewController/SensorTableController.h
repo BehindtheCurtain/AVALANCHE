@@ -10,6 +10,7 @@
 #import "ConfigurationModelMap.h"
 #import "SensorConfigViewController.h"
 
+
 @interface SensorTableController : UITableViewController <UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;

@@ -20,6 +20,8 @@
     {
         if(instance == nil || reset)
         {
+            instance = [[RunListModel alloc] init];
+            
             NSUserDefaults* currentDefaults = [NSUserDefaults standardUserDefaults];
             NSData* data = [currentDefaults objectForKey:@"runList"];
             
@@ -35,6 +37,18 @@
         
         return instance;
     }
+}
+
+- (NSArray*)runNames
+{
+    NSMutableArray* names = [[NSMutableArray alloc] init];
+    
+    for(RunModel* run in self.runList)
+    {
+        [names addObject:[run runName]];
+    }
+    
+    return names;
 }
 
 - (void)archive

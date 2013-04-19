@@ -52,7 +52,7 @@
 */
 
 #import <UIKit/UIKit.h>
-#import "FTPConstants.h"
+#import "NetworkConstants.h"
 
 @interface GetController : UIViewController
 

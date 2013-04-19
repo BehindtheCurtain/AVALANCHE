@@ -36,7 +36,7 @@
 -(NSString*) serialize
 {
     NSDateFormatter* df = [[NSDateFormatter alloc] init];
-    [df setDateFormat:@"yyyy/MM/dd-hh:mm:ss.SS-a"];
+    [df setDateFormat:@"yyyy-MM-dd_hh:mm:ss.SS_a"];
     
     NSString* time = [df stringFromDate:self.timeStamp];
     
@@ -54,11 +54,11 @@
 {
     if(self = [super init])
     {
-        NSString* delimiters = @",";
+        NSString* delimiters = @" ";
         NSArray* snapshotData = [data componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:delimiters]];
         
         NSDateFormatter* df = [[NSDateFormatter alloc] init];
-        [df setDateFormat:@"yyyy/MM/dd-hh:mm:ss.SS-a"];
+        [df setDateFormat:@"yyyy-MM-dd_hh:mm:ss.SS_a"];
         NSDate* time = [df dateFromString:[snapshotData objectAtIndex:0]];
         
         self.timeStamp = time;

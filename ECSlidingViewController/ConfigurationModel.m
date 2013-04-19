@@ -15,6 +15,8 @@
 @synthesize sensorID;
 @synthesize active;
 @synthesize transformConstant;
+@synthesize maxValue;
+@synthesize minValue;
 
 - (NSString*)getType
 {
@@ -22,11 +24,6 @@
     
     switch(sensorType)
     {
-        case Tachometer:
-        {
-            type = @"Tachometer";
-            break;
-        }
         case Temperature:
         {
             type = @"Temperature";
@@ -52,9 +49,9 @@
             type = @"PulseCount";
             break;
         }
-        case PulseRate:
+        case RPM:
         {
-            type = @"PulseRate";
+            type = @"RPM";
             break;
         }
         case AirFuel:
@@ -72,6 +69,8 @@
     [aCoder encodeObject:self.name forKey:@"name"];
     [aCoder encodeInt:self.sensorType forKey:@"type"];
     [aCoder encodeInt:self.sensorID forKey:@"sensorID"];
+    [aCoder encodeInt:self.maxValue forKey:@"maxValue"];
+    [aCoder encodeInt:self.minValue forKey:@"minValue"];
     [aCoder encodeBool:self.active forKey:@"active"];
     [aCoder encodeInt:self.transformConstant forKey:@"transformConstant"];
 }
@@ -83,6 +82,8 @@
         self.name = [aDecoder decodeObjectForKey:@"name"];
         self.sensorType = [aDecoder decodeIntForKey:@"type"];
         self.sensorID = [aDecoder decodeIntForKey:@"sensorID"];
+        self.maxValue = [aDecoder decodeIntForKey:@"maxValue"];
+        self.minValue = [aDecoder decodeIntForKey:@"minValue"];
         self.active = [aDecoder decodeBoolForKey:@"active"];
         self.transformConstant = [aDecoder decodeIntForKey:@"transformConstant"];
     }

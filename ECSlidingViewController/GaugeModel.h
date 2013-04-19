@@ -10,6 +10,7 @@
 #import "SensorAggregateModel.h"
 #import "SensorSnapshotModel.h"
 #import "RunListModel.h"
+#import "RunModel.h"
 
 @interface GaugeModel : NSObject
 

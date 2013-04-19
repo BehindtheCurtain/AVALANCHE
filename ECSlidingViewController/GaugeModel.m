@@ -53,7 +53,7 @@ static NSString* DELIM = @"\n";
 -(void) serialize
 {
     NSDateFormatter* df = [[NSDateFormatter alloc] init];
-    [df setDateFormat:@"yyyy/MM/dd-hh:mm:ss.SS-a"];
+    [df setDateFormat:@"yyyy-MM-dd_hh:mm:ss.SS_a"];
     
     self.runName = [df stringFromDate:self.startTimeStamp];
     
@@ -92,7 +92,15 @@ static NSString* DELIM = @"\n";
     
     [[NSFileManager defaultManager] createFileAtPath:filePath contents:[propertyList dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
     
-    [[[RunListModel instance:NO] runList] addObject:runName];
+    RunModel* run = [[RunModel alloc] init];
+    
+    [run setRunName:runName];
+    [run setDirectory:runDirectory];
+    [run setFilePath:filePath];
+    
+    [[[RunListModel instance:NO] runList] addObject:run];
+    [[RunListModel instance:NO] archive];
+    RunListModel* instance = [RunListModel instance:NO];
     
     [GaugeModel instance:YES];
 }
@@ -102,9 +110,9 @@ static NSString* DELIM = @"\n";
     if([super init])
     {
         NSDateFormatter* df = [[NSDateFormatter alloc] init];
-        [df setDateFormat:@"yyyy/MM/dd-hh:mm:ss.SS-a"];
+        [df setDateFormat:@"yyyy-MM-dd_hh:mm:ss.SS_a"];
         
-        NSString* fileContents = [NSString stringWithContentsOfFile:file encoding:NSUTF16StringEncoding error:nil];
+        NSString* fileContents = [NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error:nil];
         
         NSArray* fileByLine = [fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:DELIM]];
         

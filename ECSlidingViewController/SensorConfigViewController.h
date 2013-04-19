@@ -14,6 +14,8 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *sensorNameField;
 @property (weak, nonatomic) IBOutlet UITextField *transformConstantField;
+@property (weak, nonatomic) IBOutlet UITextField *maxValueField;
+@property (weak, nonatomic) IBOutlet UITextField *minValueField;
 @property (weak, nonatomic) IBOutlet UISwitch *activeSwitch;
 
 @property (retain) ConfigurationModel* configuration;

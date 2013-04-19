@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "RunListModel.h"
+#import "RunModel.h"
+#import "RunViewController.h"
 #import "ECSlidingViewController.h"
 
 @interface RunSelectController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
