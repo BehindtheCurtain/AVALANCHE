@@ -107,12 +107,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    /*
     RunModel* run = [[[RunListModel instance:NO] runList] objectAtIndex:indexPath.row];
     
     RunViewController* viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"runTest"];
     [viewController setRun:run];
     
     [self.navigationController pushViewController:viewController animated:YES];
+    */
 }
 
 - (IBAction)revealMenu:(id)sender
