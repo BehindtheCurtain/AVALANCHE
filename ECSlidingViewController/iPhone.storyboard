@@ -843,7 +843,7 @@
             <objects>
                 <viewController storyboardIdentifier="Gauge View Controller" id="QFR-oP-YCX" customClass="GaugeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qlw-Nm-8by">
-                        <rect key="frame" x="0.0" y="0.0" width="552" height="155"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="256"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="HOm-2Q-WXM" customClass="KDGoalBar">
@@ -894,6 +894,23 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="3Bq-CC-P7h">
+                                <rect key="frame" x="0.0" y="224" width="568" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="play" id="6OI-IO-7dA">
+                                        <connections>
+                                            <action selector="startAction:" destination="QFR-oP-YCX" id="jb3-DO-sC3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="PXR-d8-271"/>
+                                    <barButtonItem systemItem="stop" id="HJE-cP-651">
+                                        <connections>
+                                            <action selector="endAction:" destination="QFR-oP-YCX" id="gly-ws-NKa"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.86224490399999998" green="0.86224490399999998" blue="0.86224490399999998" alpha="1" colorSpace="calibratedRGB"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -901,100 +918,17 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="endButton" destination="HJE-cP-651" id="dhG-0x-Iwk"/>
                         <outlet property="firstGoalBar" destination="HOm-2Q-WXM" id="BOI-Tn-Ntd"/>
                         <outlet property="fourthGoalBar" destination="kIJ-Zm-q4E" id="phN-G8-5Gh"/>
                         <outlet property="secondGoalBar" destination="zAK-RO-0c2" id="NEu-ax-4Ib"/>
+                        <outlet property="startButton" destination="6OI-IO-7dA" id="uxR-Mw-CQu"/>
                         <outlet property="thirdGoalBar" destination="c1g-Et-XhU" id="Uvq-Sf-EvO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyp-sj-yeT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1587" y="613"/>
-        </scene>
-        <!--Real Time Controller-->
-        <scene sceneID="zqA-bM-yEb">
-            <objects>
-                <viewController storyboardIdentifier="Real Time View" id="0Eb-7R-24y" customClass="RealTimeController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gW7-aK-jWX">
-                        <rect key="frame" x="0.0" y="64" width="568" height="256"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eO8-J1-yUk">
-                                <rect key="frame" x="20" y="20" width="428" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mRn-4r-TqS">
-                                <rect key="frame" x="20" y="87" width="428" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AYj-cg-Ojo">
-                                <rect key="frame" x="20" y="150" width="428" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5y4-BR-JlX">
-                                <rect key="frame" x="20" y="215" width="428" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="27e-F9-K9N">
-                                <rect key="frame" x="456" y="193" width="92" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="End Run">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="endAction:" destination="0Eb-7R-24y" eventType="touchUpInside" id="K7d-A6-4yh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IeD-b4-6sz">
-                                <rect key="frame" x="456" y="142" width="92" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Start Run">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="startAction:" destination="0Eb-7R-24y" eventType="touchUpInside" id="ewm-Ym-tzA"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <connections>
-                        <outlet property="endButton" destination="27e-F9-K9N" id="Irr-N4-ABU"/>
-                        <outlet property="startButton" destination="IeD-b4-6sz" id="Szw-wT-Qyc"/>
-                        <outlet property="temp1Label" destination="eO8-J1-yUk" id="cMg-XG-nTr"/>
-                        <outlet property="temp2Label" destination="mRn-4r-TqS" id="zs3-B2-VHx"/>
-                        <outlet property="temp3Label" destination="AYj-cg-Ojo" id="o7p-IH-1iT"/>
-                        <outlet property="temp4Label" destination="5y4-BR-JlX" id="NJO-ls-rhE"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fmf-RN-jVd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="227" y="-2700"/>
         </scene>
         <!--First Top View Controller - Live View-->
         <scene sceneID="FCi-rO-pkm">
@@ -1005,22 +939,13 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <containerView contentMode="scaleToFill" id="SdT-u5-Z8S">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="212"/>
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="256"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="TsF-5V-tPf" kind="embed" id="9Bl-Q1-xYb"/>
                                 </connections>
                             </containerView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="3Bq-CC-P7h">
-                                <rect key="frame" x="0.0" y="212" width="568" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem systemItem="play" id="6OI-IO-7dA"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="PXR-d8-271"/>
-                                    <barButtonItem systemItem="stop" id="HJE-cP-651"/>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -1059,20 +984,22 @@
             <objects>
                 <viewController storyboardIdentifier="" id="TsF-5V-tPf" customClass="CustomPagerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8m8-vN-Hg6">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="212"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="256"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="2Qw-HH-TYq">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="212"/>
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="256"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="IVO-eq-dyM">
+                                        <rect key="frame" x="257" y="220" width="55" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="changePage:" destination="TsF-5V-tPf" eventType="valueChanged" id="8M3-yO-xWG"/>
+                                        </connections>
+                                    </pageControl>
+                                </subviews>
                             </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="IVO-eq-dyM">
-                                <rect key="frame" x="257" y="228" width="55" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="changePage:" destination="TsF-5V-tPf" eventType="valueChanged" id="8M3-yO-xWG"/>
-                                </connections>
-                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -1148,7 +1075,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <containerView contentMode="center" id="DMF-hE-jdV">
-                                <rect key="frame" x="8" y="10" width="552" height="155"/>
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="256"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
@@ -1185,7 +1112,13 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="9AR-97-vIz"/>
+                    <navigationItem key="navigationItem" id="9AR-97-vIz">
+                        <barButtonItem key="rightBarButtonItem" title="Alert" id="Q0X-1x-nEm">
+                            <connections>
+                                <action selector="alertBox:" destination="qpU-L7-xh8" id="fLv-J2-bn4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="customWebView" destination="BKd-tj-YPD" id="s15-n7-24c"/>
                     </connections>
@@ -1235,19 +1168,19 @@
         <class className="FirstTopViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstTopViewController.h"/>
             <relationships>
-                <relationship kind="action" name="endAction:"/>
                 <relationship kind="action" name="revealMenu:"/>
-                <relationship kind="action" name="startAction:"/>
-                <relationship kind="outlet" name="endButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="startButton" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="GaugeViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GaugeViewController.h"/>
             <relationships>
+                <relationship kind="action" name="endAction:"/>
+                <relationship kind="action" name="startAction:"/>
+                <relationship kind="outlet" name="endButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="firstGoalBar" candidateClass="KDGoalBar"/>
                 <relationship kind="outlet" name="fourthGoalBar" candidateClass="KDGoalBar"/>
                 <relationship kind="outlet" name="secondGoalBar" candidateClass="KDGoalBar"/>
+                <relationship kind="outlet" name="startButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="thirdGoalBar" candidateClass="KDGoalBar"/>
             </relationships>
         </class>
@@ -1262,6 +1195,7 @@
         <class className="GraphViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphViewController.h"/>
             <relationships>
+                <relationship kind="action" name="alertBox:"/>
                 <relationship kind="outlet" name="customWebView" candidateClass="UIWebView"/>
             </relationships>
         </class>
@@ -1269,7 +1203,9 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HTTPTestController.h"/>
             <relationships>
                 <relationship kind="action" name="requestAction:"/>
+                <relationship kind="action" name="socketAction:"/>
                 <relationship kind="outlet" name="requestButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="socketButton" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="InitialSlidingViewController" superclassName="ECSlidingViewController">
@@ -1309,19 +1245,6 @@
                 <relationship kind="outlet" name="sendButton" candidateClass="UIButton"/>
             </relationships>
         </class>
-        <class className="RealTimeController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RealTimeController.h"/>
-            <relationships>
-                <relationship kind="action" name="endAction:"/>
-                <relationship kind="action" name="startAction:"/>
-                <relationship kind="outlet" name="endButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="startButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="temp1Label" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="temp2Label" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="temp3Label" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="temp4Label" candidateClass="UILabel"/>
-            </relationships>
-        </class>
         <class className="RunSelectController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RunSelectController.h"/>
             <relationships>
@@ -1348,6 +1271,8 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SensorConfigViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="activeSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="maxValueField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="minValueField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="sensorNameField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="transformConstantField" candidateClass="UITextField"/>
             </relationships>

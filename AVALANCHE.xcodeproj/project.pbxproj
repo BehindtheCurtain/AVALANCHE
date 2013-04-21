@@ -16,6 +16,7 @@
 		0866AF9816F8E0760097F624 /* RealTimeBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0866AF9716F8E0760097F624 /* RealTimeBuilder.m */; };
 		086E780816F2428200EA221D /* GaugeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086E780416F2428200EA221D /* GaugeViewController.m */; };
 		086E780B16F253D800EA221D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 086E780A16F253D800EA221D /* CoreText.framework */; };
+		0883F5AF172490880072D952 /* chart.js in Resources */ = {isa = PBXBuildFile; fileRef = 0883F5AE172490880072D952 /* chart.js */; };
 		088BA65217172E1B002F0831 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 088BA65117172E1B002F0831 /* GraphViewController.m */; };
 		088BA65B17173AA6002F0831 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 088BA65A17173AA6002F0831 /* index.html */; };
 		089EC76B171DE1E1004A76EC /* circle_outline.png in Resources */ = {isa = PBXBuildFile; fileRef = 089EC75F171DE1E1004A76EC /* circle_outline.png */; };
@@ -78,7 +79,6 @@
 		748D497A1724910000407F32 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 748D49791724910000407F32 /* UserModel.m */; };
 		749FE1EE1715BADD005511D7 /* libios_brsp_device_1_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 749FE1EC1715BADD005511D7 /* libios_brsp_device_1_0.a */; };
 		749FE1EF1715BADD005511D7 /* libios_brsp_simulator_1_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 749FE1ED1715BADD005511D7 /* libios_brsp_simulator_1_0.a */; };
-		749FE1F21715C564005511D7 /* RealTimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 749FE1F11715C564005511D7 /* RealTimeController.m */; };
 		749FE1F517184DC1005511D7 /* RunListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 749FE1F417184DC1005511D7 /* RunListModel.m */; };
 		749FE1FB171DD0AF005511D7 /* RunSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 749FE1FA171DD0AF005511D7 /* RunSelectController.m */; };
 		74D85A11170F24B90059B791 /* BLEGaugeAlarmService.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D85A10170F24B90059B791 /* BLEGaugeAlarmService.m */; };
@@ -100,6 +100,7 @@
 		086E780316F2428200EA221D /* GaugeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaugeViewController.h; sourceTree = "<group>"; };
 		086E780416F2428200EA221D /* GaugeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaugeViewController.m; sourceTree = "<group>"; };
 		086E780A16F253D800EA221D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		0883F5AE172490880072D952 /* chart.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = chart.js; sourceTree = "<group>"; };
 		088BA65017172E1B002F0831 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
 		088BA65117172E1B002F0831 /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
 		088BA65A17173AA6002F0831 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
@@ -199,8 +200,6 @@
 		748D49791724910000407F32 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		749FE1EC1715BADD005511D7 /* libios_brsp_device_1_0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libios_brsp_device_1_0.a; path = ECSlidingViewController/libios_brsp_device_1_0.a; sourceTree = "<group>"; };
 		749FE1ED1715BADD005511D7 /* libios_brsp_simulator_1_0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libios_brsp_simulator_1_0.a; path = ECSlidingViewController/libios_brsp_simulator_1_0.a; sourceTree = "<group>"; };
-		749FE1F01715C564005511D7 /* RealTimeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealTimeController.h; sourceTree = "<group>"; };
-		749FE1F11715C564005511D7 /* RealTimeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealTimeController.m; sourceTree = "<group>"; };
 		749FE1F317184DC1005511D7 /* RunListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunListModel.h; sourceTree = "<group>"; };
 		749FE1F417184DC1005511D7 /* RunListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunListModel.m; sourceTree = "<group>"; };
 		749FE1F9171DD0AF005511D7 /* RunSelectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunSelectController.h; sourceTree = "<group>"; };
@@ -233,6 +232,7 @@
 		088BA65317172F46002F0831 /* public_html */ = {
 			isa = PBXGroup;
 			children = (
+				0883F5AE172490880072D952 /* chart.js */,
 				0808054617174454007D6996 /* d3.min.js */,
 				080805441717430A007D6996 /* data.tsv */,
 				088BA65A17173AA6002F0831 /* index.html */,
@@ -471,8 +471,6 @@
 		74D650E31704B93100E58615 /* Real Time */ = {
 			isa = PBXGroup;
 			children = (
-				749FE1F01715C564005511D7 /* RealTimeController.h */,
-				749FE1F11715C564005511D7 /* RealTimeController.m */,
 			);
 			name = "Real Time";
 			sourceTree = "<group>";
@@ -577,6 +575,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0883F5AF172490880072D952 /* chart.js in Resources */,
 				0808054717174454007D6996 /* d3.min.js in Resources */,
 				2750E77B14CDB0DF007727A0 /* InfoPlist.strings in Resources */,
 				08A2AF2116E69C6B00065D0C /* Default-568h@2x.png in Resources */,
@@ -643,7 +642,6 @@
 				7430813F171097D300FEBEB8 /* FtpTestController.m in Sources */,
 				7424EDB51713083000994D06 /* HTTPTestController.m in Sources */,
 				088BA65217172E1B002F0831 /* GraphViewController.m in Sources */,
-				749FE1F21715C564005511D7 /* RealTimeController.m in Sources */,
 				749FE1F517184DC1005511D7 /* RunListModel.m in Sources */,
 				749FE1FB171DD0AF005511D7 /* RunSelectController.m in Sources */,
 				089EC77D171DE200004A76EC /* KDBarGraph.m in Sources */,
