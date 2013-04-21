@@ -11,4 +11,6 @@
 @interface GraphViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIWebView *customWebView;
 
+- (IBAction)alertBox:(id)sender;
+
 @end

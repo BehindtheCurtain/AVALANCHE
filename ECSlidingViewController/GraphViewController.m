@@ -39,8 +39,6 @@
     NSURLRequest* request = [NSURLRequest requestWithURL:address] ;
     // Load the resource using the request
     [customWebView loadRequest:request];
-    
-    //[customWebView stringByEvaluatingJavaScriptFromString:@"setTextField()"];
 }
 
 - (void)viewDidUnload
@@ -75,6 +73,11 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+- (IBAction)alertBox:(id)sender
+{
+    [customWebView stringByEvaluatingJavaScriptFromString:@"popAlertBox()"];
 }
 
 @end
