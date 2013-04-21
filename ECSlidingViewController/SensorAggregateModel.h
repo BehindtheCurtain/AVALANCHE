@@ -38,9 +38,9 @@
       withSensorID:(int) ID
           isActive:(BOOL) active;
 
--(void) serialize:(NSString*) file;
+- (NSString*)serialize;
 
--(id) initFromFile:(NSString*) file;
+- (id)initFromFile:(NSString*) file;
 
 - (void)addSnapshot:(SensorSnapshotModel*) snapshot;
 

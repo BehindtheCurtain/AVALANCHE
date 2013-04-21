@@ -75,6 +75,7 @@
 		746178ED16EBCFC00007FE56 /* GaugeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178EC16EBCFC00007FE56 /* GaugeModel.m */; };
 		746178F016EBE5720007FE56 /* ConfigurationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178EF16EBE5720007FE56 /* ConfigurationModel.m */; };
 		748D49761721AA3900407F32 /* RunModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 748D49751721AA3900407F32 /* RunModel.m */; };
+		748D497A1724910000407F32 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 748D49791724910000407F32 /* UserModel.m */; };
 		749FE1EE1715BADD005511D7 /* libios_brsp_device_1_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 749FE1EC1715BADD005511D7 /* libios_brsp_device_1_0.a */; };
 		749FE1EF1715BADD005511D7 /* libios_brsp_simulator_1_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 749FE1ED1715BADD005511D7 /* libios_brsp_simulator_1_0.a */; };
 		749FE1F21715C564005511D7 /* RealTimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 749FE1F11715C564005511D7 /* RealTimeController.m */; };
@@ -194,6 +195,8 @@
 		748D49741721AA3900407F32 /* RunModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunModel.h; sourceTree = "<group>"; };
 		748D49751721AA3900407F32 /* RunModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunModel.m; sourceTree = "<group>"; };
 		748D49771724814900407F32 /* NetworkConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkConstants.h; sourceTree = "<group>"; };
+		748D49781724910000407F32 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		748D49791724910000407F32 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		749FE1EC1715BADD005511D7 /* libios_brsp_device_1_0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libios_brsp_device_1_0.a; path = ECSlidingViewController/libios_brsp_device_1_0.a; sourceTree = "<group>"; };
 		749FE1ED1715BADD005511D7 /* libios_brsp_simulator_1_0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libios_brsp_simulator_1_0.a; path = ECSlidingViewController/libios_brsp_simulator_1_0.a; sourceTree = "<group>"; };
 		749FE1F01715C564005511D7 /* RealTimeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealTimeController.h; sourceTree = "<group>"; };
@@ -442,6 +445,8 @@
 				746178DF16EBCDF70007FE56 /* ConfigurationModelMap.m */,
 				746178EE16EBE5710007FE56 /* ConfigurationModel.h */,
 				746178EF16EBE5720007FE56 /* ConfigurationModel.m */,
+				748D49781724910000407F32 /* UserModel.h */,
+				748D49791724910000407F32 /* UserModel.m */,
 			);
 			name = Configuration;
 			sourceTree = "<group>";
@@ -646,6 +651,7 @@
 				089EC77F171DE200004A76EC /* KDGoalBarPercentLayer.m in Sources */,
 				089EC782171DE3F6004A76EC /* SoundPlayer.m in Sources */,
 				748D49761721AA3900407F32 /* RunModel.m in Sources */,
+				748D497A1724910000407F32 /* UserModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

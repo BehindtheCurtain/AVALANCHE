@@ -41,8 +41,29 @@ static const int DEFAULT_NUM_SENSORS = 12;
 	return self;
 }
 
--(void) serialize:(NSString*)file
+- (NSString*)serialize
 {
+    NSMutableString* xml = [[NSMutableString alloc] init];
+    [xml appendFormat:@"\t\t<sensor name=\"%@\">\n", self.sensorName];
+    [xml appendFormat:@"\t\t\t<type>%@</type>\n", self.sensorType];
+    [xml appendFormat:@"\t\t<transform>%d</transform>\n", self.transformConstant];
+    [xml appendFormat:@"\t\t\t<sensorID>%d</sensorID>\n", self.sensorID];
+    [xml appendFormat:@"\t\t\t<active>%d</active>\n", self.isActive];
+    [xml appendString:@"\t\t\t<snapshots>\n"];
+    
+    int index = 0;
+    for(SensorSnapshotModel* snapshot in snapshots)
+    {
+        [xml appendFormat:@"\t\t\t\t<snapshot id=%d>\n", index];
+        [xml appendString:[snapshot serialize]];
+        [xml appendString:@"\t\t\t\t</snapshot>\n"];
+    }
+    
+    [xml appendString:@"t\t\t</snapshots>\n"];
+    [xml appendString:@"\t\t</sensor>\n"];
+    
+    return xml;
+    /*
     NSMutableString* serialString = [[NSMutableString alloc] init];
     [serialString appendString:self.sensorName];
     [serialString appendString:DELIM];
@@ -62,6 +83,7 @@ static const int DEFAULT_NUM_SENSORS = 12;
     }
     
     [[NSFileManager defaultManager] createFileAtPath:file contents:[serialString dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
+     */
 }
 
 
