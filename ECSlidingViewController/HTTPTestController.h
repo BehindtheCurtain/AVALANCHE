@@ -7,16 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+
 #import "NetworkConstants.h"
+#import "ASIHTTPRequest.h"
 
-@interface HTTPTestController : UIViewController <NSURLConnectionDelegate, NSStreamDelegate>
-
-@property (retain) NSInputStream* istream;
-@property (retain) NSOutputStream* ostream;
+@interface HTTPTestController : UIViewController <ASIHTTPRequestDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *requestButton;
 - (IBAction)requestAction:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UIButton *socketButton;
-- (IBAction)socketAction:(id)sender;
 @end

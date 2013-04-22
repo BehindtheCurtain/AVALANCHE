@@ -58,7 +58,7 @@ static NSString* DELIM = @"\n";
     self.runName = [df stringFromDate:self.startTimeStamp];
     
     NSString* applicationDocumentsDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString* runDirectory = [applicationDocumentsDir stringByAppendingPathComponent:runName];
+    NSString* runDirectory = [applicationDocumentsDir stringByAppendingPathComponent:@"runs"];
     
     if(![[NSFileManager defaultManager] fileExistsAtPath:runDirectory])
     {
@@ -68,29 +68,25 @@ static NSString* DELIM = @"\n";
     self.endTimeStamp = [NSDate dateWithTimeIntervalSince1970:[[NSDate date] timeIntervalSince1970]];
     
     
+    NSMutableString* xml = [[NSMutableString alloc] init];
+    [xml appendString:@"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"];
+    [xml appendFormat:@"<run name=\"%@\">\n", self.runName];
+    [xml appendFormat:@"\t<startTime>%ld</startTime>\n", (time_t)[self.startTimeStamp timeIntervalSince1970]];
+    [xml appendFormat:@"\t<endTime>%ld</endTime>\n", (time_t)[self.endTimeStamp timeIntervalSince1970]];
+    [xml appendString:@"\t<sensors>\n"];
     
-    
-    
-    NSMutableString* propertyList = [[NSMutableString alloc] init];
-    [propertyList appendString:self.runName];
-    [propertyList appendString:@"\n"];
-    [propertyList appendString:[df stringFromDate:self.startTimeStamp]];
-    [propertyList appendString:@"\n"];
-    [propertyList appendString:[df stringFromDate:self.endTimeStamp]];
-    [propertyList appendString:@"\n"];
-    
-    NSString* filePath = [runDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.txt", self.runName]];
+    NSString* filePath = [runDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.dat", self.runName]];
     
     for(NSString* key in sensorAggregateModelMap)
     {
         SensorAggregateModel* sensorAggregate = [sensorAggregateModelMap objectForKey:key];
-        NSString* aggregateFile = [runDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.dat", [sensorAggregate sensorName]]];
-        [propertyList appendString:aggregateFile];
-        [propertyList appendString:@"\n"];
-        [sensorAggregate serialize:aggregateFile];
+        [xml appendString:[sensorAggregate serialize]];
     }
     
-    [[NSFileManager defaultManager] createFileAtPath:filePath contents:[propertyList dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
+    [xml appendString:@"\t</sensors>\n"];
+    [xml appendString:@"</run>\n\n"];
+    
+    [[NSFileManager defaultManager] createFileAtPath:filePath contents:[xml dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
     
     RunModel* run = [[RunModel alloc] init];
     
@@ -100,7 +96,6 @@ static NSString* DELIM = @"\n";
     
     [[[RunListModel instance:NO] runList] addObject:run];
     [[RunListModel instance:NO] archive];
-    RunListModel* instance = [RunListModel instance:NO];
     
     [GaugeModel instance:YES];
 }

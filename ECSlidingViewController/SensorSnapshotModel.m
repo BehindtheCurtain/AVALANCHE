@@ -35,6 +35,12 @@
 
 -(NSString*) serialize
 {
+    NSMutableString* xml = [[NSMutableString alloc] init];
+    [xml appendFormat:@"\t\t\t\t\t<time>%ld</time>\n", (time_t)[self.timeStamp timeIntervalSince1970]];
+    [xml appendFormat:@"\t\t\t\t\t<data>%d</data>\n", self.sensorData];
+    
+    return xml;
+    /*
     NSDateFormatter* df = [[NSDateFormatter alloc] init];
     [df setDateFormat:@"yyyy-MM-dd_hh:mm:ss.SS_a"];
     
@@ -46,6 +52,7 @@
     [data appendString:[NSString stringWithFormat:@"%d", self.sensorData]];
     
     return [NSString stringWithString:data];
+     */
 }
 
 -(id) initFromDataString:(NSString*)data
