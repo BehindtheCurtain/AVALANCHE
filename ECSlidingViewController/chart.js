@@ -1,10 +1,32 @@
 
+var $testString;
 
-function buildChart(runName, sensor)
-{
-
-
+$(document).ready(function(){
+ $.ajax({
+  type: "GET",
+  dataType: "xml",
+  url: "saveRun.xml",
+  success: function(xml){
+    //$("#output").append("date " + "close" + "<br />");
   
+  $(xml).find("snapshot").each(function(){
+      
+      $("#output").append($(this).find("time").text());
+      $("#output").append(" " + $(this).find("data").text() + "<br />");
+
+   });
+
+    console.log($.parseXML(xml));
+  }
+ });
+});
+
+console.log(output);
+
+buildChart();
+
+function buildChart(){
+
   var margin = {top: 10, right: 10, bottom: 30, left: 40},
   width = 550 - margin.left - margin.right,
   height = 240 - margin.top - margin.bottom;
@@ -40,7 +62,7 @@ function buildChart(runName, sensor)
                       d.date = parseDate(d.date);
                       d.close = +d.close;
                       });
-         
+
          x.domain(d3.extent(data, function(d) { return d.date; }));
          y.domain(d3.extent(data, function(d) { return d.close; }));
          
@@ -64,6 +86,7 @@ function buildChart(runName, sensor)
          .attr("class", "line")
          .attr("d", line);
          });
+
 }
 
 function popAlertBox()

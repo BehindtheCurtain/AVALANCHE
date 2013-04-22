@@ -106,6 +106,17 @@ static void * const temp4Context = (void*)&temp4Context;
     // Release any retained subviews of the main view.
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[BLEGaugeAlarmService instance] disconnect];
+    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature1"] removeObserver:self forKeyPath:@"snapshots"];
+    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature2"] removeObserver:self forKeyPath:@"snapshots"];
+    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature3"] removeObserver:self forKeyPath:@"snapshots"];
+    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature4"] removeObserver:self forKeyPath:@"snapshots"];
+    
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);

@@ -17,6 +17,8 @@
 		086E780816F2428200EA221D /* GaugeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086E780416F2428200EA221D /* GaugeViewController.m */; };
 		086E780B16F253D800EA221D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 086E780A16F253D800EA221D /* CoreText.framework */; };
 		0883F5AF172490880072D952 /* chart.js in Resources */ = {isa = PBXBuildFile; fileRef = 0883F5AE172490880072D952 /* chart.js */; };
+		0883F5B117249C5A0072D952 /* jquery-2.0.0.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 0883F5B017249C5A0072D952 /* jquery-2.0.0.min.js */; };
+		0883F5B317249F640072D952 /* saveRun.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0883F5B217249F640072D952 /* saveRun.xml */; };
 		088BA65217172E1B002F0831 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 088BA65117172E1B002F0831 /* GraphViewController.m */; };
 		088BA65B17173AA6002F0831 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 088BA65A17173AA6002F0831 /* index.html */; };
 		089EC76B171DE1E1004A76EC /* circle_outline.png in Resources */ = {isa = PBXBuildFile; fileRef = 089EC75F171DE1E1004A76EC /* circle_outline.png */; };
@@ -100,6 +102,8 @@
 		086E780416F2428200EA221D /* GaugeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaugeViewController.m; sourceTree = "<group>"; };
 		086E780A16F253D800EA221D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		0883F5AE172490880072D952 /* chart.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = chart.js; sourceTree = "<group>"; };
+		0883F5B017249C5A0072D952 /* jquery-2.0.0.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-2.0.0.min.js"; sourceTree = "<group>"; };
+		0883F5B217249F640072D952 /* saveRun.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = saveRun.xml; sourceTree = "<group>"; };
 		088BA65017172E1B002F0831 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
 		088BA65117172E1B002F0831 /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
 		088BA65A17173AA6002F0831 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
@@ -229,6 +233,8 @@
 		088BA65317172F46002F0831 /* public_html */ = {
 			isa = PBXGroup;
 			children = (
+				0883F5B217249F640072D952 /* saveRun.xml */,
+				0883F5B017249C5A0072D952 /* jquery-2.0.0.min.js */,
 				0883F5AE172490880072D952 /* chart.js */,
 				0808054617174454007D6996 /* d3.min.js */,
 				080805441717430A007D6996 /* data.tsv */,
@@ -570,6 +576,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0883F5B117249C5A0072D952 /* jquery-2.0.0.min.js in Resources */,
 				0883F5AF172490880072D952 /* chart.js in Resources */,
 				0808054717174454007D6996 /* d3.min.js in Resources */,
 				2750E77B14CDB0DF007727A0 /* InfoPlist.strings in Resources */,
@@ -593,6 +600,7 @@
 				089EC776171DE1E1004A76EC /* graph_year@2x.png in Resources */,
 				08E4538F1720728E00F8CA6A /* circle_outline_120.png in Resources */,
 				08E45391172084F300F8CA6A /* circle_outline_pressed_120.png in Resources */,
+				0883F5B317249F640072D952 /* saveRun.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

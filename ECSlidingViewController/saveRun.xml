@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<run name="1970-1-1_12:30:00.00_am">
+	<startTime>66600</startTime>
+	<endTime>67800</endTime>
+	<sensors>
+		<sensor name="EGT 1">
+			<type>Temperature</type>
+			<transform>0</transform>
+			<sensorID>1</sensorID>
+			<active>1</active>
+			<snapshots>
+				<snapshot id="0">
+					<time>66600</time>
+					<data>50</data>
+				</snapshot>
+				<snapshot id="1">
+					<time>66700</time>
+					<data>55</data>
+				</snapshot>
+				<snapshot id="2">
+					<time>66800</time>
+					<data>60</data>
+				</snapshot>
+				<snapshot id="3">
+					<time>66900</time>
+					<data>65</data>
+				</snapshot>
+				<snapshot id="4">
+					<time>67000</time>
+					<data>70</data>
+				</snapshot>
+				<snapshot id="5">
+					<time>67100</time>
+					<data>75</data>
+				</snapshot>
+				<snapshot id="6">
+					<time>67200</time>
+					<data>80</data>
+				</snapshot>
+				<snapshot id="7">
+					<time>67300</time>
+					<data>85</data>
+				</snapshot>
+				<snapshot id="8">
+					<time>67400</time>
+					<data>90</data>
+				</snapshot>
+				<snapshot id="9">
+					<time>67500</time>
+					<data>95</data>
+				</snapshot>
+				<snapshot id="10">
+					<time>67600</time>
+					<data>100</data>
+				</snapshot>
+				<snapshot id="11">
+					<time>67700</time>
+					<data>105</data>
+				</snapshot>
+				<snapshot id="12">
+					<time>67800</time>
+					<data>105</data>
+				</snapshot>
+			</snapshots>
+		</sensor>
+		<sensor name="EGT 2">
+			<type>Temperature</type>
+			<transform>0</transform>
+			<sensorID>2</sensorID>
+			<active>1</active>
+			<snapshots>
+				<snapshot id="0">
+					<time>66600</time>
+					<data>50</data>
+				</snapshot>
+				<snapshot id="1">
+					<time>66700</time>
+					<data>55</data>
+				</snapshot>
+				<snapshot id="2">
+					<time>66800</time>
+					<data>60</data>
+				</snapshot>
+				<snapshot id="3">
+					<time>66900</time>
+					<data>65</data>
+				</snapshot>
+				<snapshot id="4">
+					<time>67000</time>
+					<data>70</data>
+				</snapshot>
+				<snapshot id="5">
+					<time>67100</time>
+					<data>75</data>
+				</snapshot>
+				<snapshot id="6">
+					<time>67200</time>
+					<data>80</data>
+				</snapshot>
+				<snapshot id="7">
+					<time>67300</time>
+					<data>85</data>
+				</snapshot>
+				<snapshot id="8">
+					<time>67400</time>
+					<data>90</data>
+				</snapshot>
+				<snapshot id="9">
+					<time>67500</time>
+					<data>95</data>
+				</snapshot>
+				<snapshot id="10">
+					<time>67600</time>
+					<data>100</data>
+				</snapshot>
+				<snapshot id="11">
+					<time>67700</time>
+					<data>105</data>
+				</snapshot>
+				<snapshot id="12">
+					<time>67800</time>
+					<data>105</data>
+				</snapshot>
+			</snapshots>
+		</sensor>
+		<sensor name="EGT 3">
+			<type>Temperature</type>
+			<transform>0</transform>
+			<sensorID>1</sensorID>
+			<active>1</active>
+			<snapshots>
+				<snapshot id="0">
+					<time>66600</time>
+					<data>50</data>
+				</snapshot>
+				<snapshot id="1">
+					<time>66700</time>
+					<data>55</data>
+				</snapshot>
+				<snapshot id="2">
+					<time>66800</time>
+					<data>60</data>
+				</snapshot>
+				<snapshot id="3">
+					<time>66900</time>
+					<data>65</data>
+				</snapshot>
+				<snapshot id="4">
+					<time>67000</time>
+					<data>70</data>
+				</snapshot>
+				<snapshot id="5">
+					<time>67100</time>
+					<data>75</data>
+				</snapshot>
+				<snapshot id="6">
+					<time>67200</time>
+					<data>80</data>
+				</snapshot>
+				<snapshot id="7">
+					<time>67300</time>
+					<data>85</data>
+				</snapshot>
+				<snapshot id="8">
+					<time>67400</time>
+					<data>90</data>
+				</snapshot>
+				<snapshot id="9">
+					<time>67500</time>
+					<data>95</data>
+				</snapshot>
+				<snapshot id="10">
+					<time>67600</time>
+					<data>100</data>
+				</snapshot>
+				<snapshot id="11">
+					<time>67700</time>
+					<data>105</data>
+				</snapshot>
+				<snapshot id="12">
+					<time>67800</time>
+					<data>105</data>
+				</snapshot>
+			</snapshots>
+		</sensor>
+		<sensor name="EGT 4">
+			<type>Temperature</type>
+			<transform>0</transform>
+			<sensorID>1</sensorID>
+			<active>1</active>
+			<snapshots>
+				<snapshot id="0">
+					<time>66600</time>
+					<data>50</data>
+				</snapshot>
+				<snapshot id="1">
+					<time>66700</time>
+					<data>55</data>
+				</snapshot>
+				<snapshot id="2">
+					<time>66800</time>
+					<data>60</data>
+				</snapshot>
+				<snapshot id="3">
+					<time>66900</time>
+					<data>65</data>
+				</snapshot>
+				<snapshot id="4">
+					<time>67000</time>
+					<data>70</data>
+				</snapshot>
+				<snapshot id="5">
+					<time>67100</time>
+					<data>75</data>
+				</snapshot>
+				<snapshot id="6">
+					<time>67200</time>
+					<data>80</data>
+				</snapshot>
+				<snapshot id="7">
+					<time>67300</time>
+					<data>85</data>
+				</snapshot>
+				<snapshot id="8">
+					<time>67400</time>
+					<data>90</data>
+				</snapshot>
+				<snapshot id="9">
+					<time>67500</time>
+					<data>95</data>
+				</snapshot>
+				<snapshot id="10">
+					<time>67600</time>
+					<data>100</data>
+				</snapshot>
+				<snapshot id="11">
+					<time>67700</time>
+					<data>105</data>
+				</snapshot>
+				<snapshot id="12">
+					<time>67800</time>
+					<data>105</data>
+				</snapshot>
+			</snapshots>
+		</sensor>
+	</sensors>
+</run>
