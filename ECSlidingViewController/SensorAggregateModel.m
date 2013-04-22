@@ -57,9 +57,10 @@ static const int DEFAULT_NUM_SENSORS = 12;
         [xml appendFormat:@"\t\t\t\t<snapshot id=%d>\n", index];
         [xml appendString:[snapshot serialize]];
         [xml appendString:@"\t\t\t\t</snapshot>\n"];
+        index++;
     }
     
-    [xml appendString:@"t\t\t</snapshots>\n"];
+    [xml appendString:@"\t\t\t</snapshots>\n"];
     [xml appendString:@"\t\t</sensor>\n"];
     
     return xml;

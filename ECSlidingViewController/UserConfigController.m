@@ -58,10 +58,31 @@
 
 - (IBAction)loginAction:(id)sender
 {
-    if([[[UserModel instance:NO] userName] isEqualToString:self.userNameField.text] && [[[UserModel instance:NO] password] isEqualToString:self.passwordField.text])
+    NSString* user = self.userNameField.text;
+    NSString* password = self.passwordField.text;
+    password = [UserConfigController createSHA512:password];
+    
+    if([[[UserModel instance:NO] userName] isEqualToString:user] && [[[UserModel instance:NO] password] isEqualToString:password])
     {
         NSURL* url = [NSURL URLWithString:HTTPURL];
         ASIHTTPRequest* request = [ASIHTTPRequest requestWithURL:url];
+        [request setRequestMethod:@"POST"];
+        
+        NSMutableData *postBody = [NSMutableData data];
+        [postBody appendData:[[NSString stringWithFormat:@"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+        [postBody appendData:[[NSString stringWithFormat:@"<login>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+        [postBody appendData:[[NSString stringWithFormat:@"\t<username>%@</username>\n", user] dataUsingEncoding:NSUTF8StringEncoding]];
+        [postBody appendData:[[NSString stringWithFormat:@"\t<password>%@</password>\n", password] dataUsingEncoding:NSUTF8StringEncoding]];
+        [postBody appendData:[[NSString stringWithFormat:@"</login>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+        [postBody appendData:[[NSString stringWithFormat:@"<?>"] dataUsingEncoding:NSUTF8StringEncoding]];
+        
+        [request startSynchronous];
+        NSError* error = [request error];
+        NSString* response = nil;
+        if (!error)
+        {
+            response = [request responseString];
+        }
         
         
     }
