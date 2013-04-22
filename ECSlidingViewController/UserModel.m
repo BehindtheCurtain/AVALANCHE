@@ -12,6 +12,7 @@
 
 @synthesize userName;
 @synthesize password;
+@synthesize loggedOn;
 
 + (UserModel*)instance:(BOOL)reset
 {

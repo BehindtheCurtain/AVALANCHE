@@ -70,7 +70,7 @@ static NSString* DELIM = @"\n";
     
     NSMutableString* xml = [[NSMutableString alloc] init];
     [xml appendString:@"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"];
-    [xml appendString:@"<run>\n"];
+    [xml appendFormat:@"<run name=\"%@\">\n", self.runName];
     [xml appendFormat:@"\t<startTime>%ld</startTime>\n", (time_t)[self.startTimeStamp timeIntervalSince1970]];
     [xml appendFormat:@"\t<endTime>%ld</endTime>\n", (time_t)[self.endTimeStamp timeIntervalSince1970]];
     [xml appendString:@"\t<sensors>\n"];
