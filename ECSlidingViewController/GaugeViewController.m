@@ -67,6 +67,8 @@ static void * const temp4Context = (void*)&temp4Context;
     [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature4"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp4Context];
     
     [BLEGaugeAlarmService instance];
+    
+    [[GaugeModel instance:NO] setStartTimeStamp:[NSDate dateWithTimeIntervalSince1970:[[NSDate date] timeIntervalSince1970]]];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
