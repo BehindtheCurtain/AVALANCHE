@@ -36,7 +36,7 @@
 -(NSString*) serialize
 {
     NSMutableString* xml = [[NSMutableString alloc] init];
-    [xml appendFormat:@"\t\t\t\t\t<time>%ld</time>\n", (time_t)([self.timeStamp timeIntervalSince1970] * 1000)];
+    [xml appendFormat:@"\t\t\t\t\t<time>%ld</time>\n", (time_t)[self.timeStamp timeIntervalSince1970]];
     [xml appendFormat:@"\t\t\t\t\t<data>%d</data>\n", self.sensorData];
     
     return xml;
