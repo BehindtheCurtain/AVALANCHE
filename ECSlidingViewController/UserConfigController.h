@@ -10,7 +10,7 @@
 #import <CommonCrypto/CommonDigest.h>
 #import "UserModel.h"
 #import "ASIHTTPRequest.h"
-#import "NetworkConstants.h"
+#import "NetworkConfigModel.h"
 
 @interface UserConfigController : UIViewController <UITextFieldDelegate, UIActionSheetDelegate, ASIHTTPRequestDelegate>
 

@@ -153,7 +153,7 @@ enum {
     NSString* runDirectory = [applicationDocumentsDir stringByAppendingPathComponent:@"test"];
     NSString* filePath2 = [runDirectory stringByAppendingPathComponent:@"test.txt"];
     
-    url = [[NetworkManager sharedInstance] smartURLForString:FTPURL];
+    url = [[NetworkManager sharedInstance] smartURLForString:[[NetworkConfigModel instance:NO] ftpURL]];
     success = (url != nil);
     
     if (success)
@@ -188,9 +188,9 @@ enum {
         assert(self.networkStream != nil);
 
 
-        success = [self.networkStream setProperty:FTPUSER forKey:(id)kCFStreamPropertyFTPUserName];
+        success = [self.networkStream setProperty:[[NetworkConfigModel instance:NO] ftpUser] forKey:(id)kCFStreamPropertyFTPUserName];
         assert(success);
-        success = [self.networkStream setProperty:FTPPASSWORD forKey:(id)kCFStreamPropertyFTPPassword];
+        success = [self.networkStream setProperty:[[NetworkConfigModel instance:NO] ftpPassword] forKey:(id)kCFStreamPropertyFTPPassword];
         assert(success);
 
         self.networkStream.delegate = self;

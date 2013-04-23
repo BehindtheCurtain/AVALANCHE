@@ -82,7 +82,7 @@ static BOOL processing = NO;
 }
 
 // Creates a SensorSnapshotModel for each active sensor and adds each snapshot to their related SensorAggregateModel.
-+ (void)snapshotCreation:(NSMutableArray *)data withMessageType:(unsigned char)messageType withTimeStamp:(unsigned long)timestamp
++ (void)snapshotCreation:(NSMutableArray *)data withMessageType:(unsigned char)messageType
 {
     NSMutableDictionary* sensorAggregateModelMap = [[GaugeModel instance:NO] sensorAggregateModelMap];
     
@@ -122,6 +122,8 @@ static BOOL processing = NO;
         }
     }
     
+    NSDate* time = [NSDate dateWithTimeIntervalSince1970:[[NSDate date] timeIntervalSince1970]];
+    
     for(NSNumber* dataPoint in data)
     {
         int sensorID = [data indexOfObject:dataPoint] + 1;
@@ -131,8 +133,6 @@ static BOOL processing = NO;
         SensorAggregateModel* aggregate = [sensorAggregateModelMap objectForKey:key];
         
         sensorData = [RealTimeBuilder transformSensorData:sensorData ofSensorType:type withID:sensorID withTransform:[aggregate transformConstant]];
-        
-        NSDate* time = [NSDate dateWithTimeIntervalSince1970:[[NSDate date] timeIntervalSince1970]];
         
         SensorSnapshotModel* snapshot = [[SensorSnapshotModel alloc] initWithTimeStamp:time withType:type withSensorID:sensorID withData:sensorData];
         

@@ -71,7 +71,6 @@
 		74308134171092E000FEBEB8 /* ListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7430812D171092E000FEBEB8 /* ListController.m */; };
 		74308135171092E000FEBEB8 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7430812F171092E000FEBEB8 /* NetworkManager.m */; };
 		74308136171092E000FEBEB8 /* PutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74308131171092E000FEBEB8 /* PutController.m */; };
-		7430813F171097D300FEBEB8 /* FtpTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7430813E171097D300FEBEB8 /* FtpTestController.m */; };
 		746178E616EBCDF80007FE56 /* ConfigurationModelMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178DF16EBCDF70007FE56 /* ConfigurationModelMap.m */; };
 		746178E816EBCDF80007FE56 /* SensorAggregateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178E316EBCDF70007FE56 /* SensorAggregateModel.m */; };
 		746178E916EBCDF80007FE56 /* SensorSnapshotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178E516EBCDF80007FE56 /* SensorSnapshotModel.m */; };
@@ -85,6 +84,8 @@
 		748D49A31724AF6A00407F32 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 748D49A21724AF6A00407F32 /* libz.dylib */; };
 		748D4A851724BAE000407F32 /* libASIHTTPRequest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 748D4A831724BADF00407F32 /* libASIHTTPRequest.a */; };
 		748D4A861724BAE000407F32 /* libASIHTTPRequestsim.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 748D4A841724BAE000407F32 /* libASIHTTPRequestsim.a */; };
+		748D4A891725D06600407F32 /* ServerConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748D4A881725D06500407F32 /* ServerConfigController.m */; };
+		748D4A8D1725D16200407F32 /* NetworkConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 748D4A8C1725D16200407F32 /* NetworkConfigModel.m */; };
 		749FE1EE1715BADD005511D7 /* libios_brsp_device_1_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 749FE1EC1715BADD005511D7 /* libios_brsp_device_1_0.a */; };
 		749FE1EF1715BADD005511D7 /* libios_brsp_simulator_1_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 749FE1ED1715BADD005511D7 /* libios_brsp_simulator_1_0.a */; };
 		749FE1F517184DC1005511D7 /* RunListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 749FE1F417184DC1005511D7 /* RunListModel.m */; };
@@ -190,8 +191,6 @@
 		7430812F171092E000FEBEB8 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		74308130171092E000FEBEB8 /* PutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PutController.h; sourceTree = "<group>"; };
 		74308131171092E000FEBEB8 /* PutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PutController.m; sourceTree = "<group>"; };
-		7430813D171097D300FEBEB8 /* FtpTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FtpTestController.h; sourceTree = "<group>"; };
-		7430813E171097D300FEBEB8 /* FtpTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FtpTestController.m; sourceTree = "<group>"; };
 		746178DE16EBCDF70007FE56 /* ConfigurationModelMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationModelMap.h; sourceTree = "<group>"; };
 		746178DF16EBCDF70007FE56 /* ConfigurationModelMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationModelMap.m; sourceTree = "<group>"; };
 		746178E016EBCDF70007FE56 /* RealTimeBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealTimeBuilder.h; sourceTree = "<group>"; };
@@ -205,7 +204,6 @@
 		746178EF16EBE5720007FE56 /* ConfigurationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationModel.m; sourceTree = "<group>"; };
 		748D49741721AA3900407F32 /* RunModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunModel.h; sourceTree = "<group>"; };
 		748D49751721AA3900407F32 /* RunModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunModel.m; sourceTree = "<group>"; };
-		748D49771724814900407F32 /* NetworkConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkConstants.h; sourceTree = "<group>"; };
 		748D49781724910000407F32 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		748D49791724910000407F32 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		748D497B17249BF400407F32 /* UserConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserConfigController.h; sourceTree = "<group>"; };
@@ -230,6 +228,10 @@
 		748D49B71724B48300407F32 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		748D4A831724BADF00407F32 /* libASIHTTPRequest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libASIHTTPRequest.a; path = ECSlidingViewController/libASIHTTPRequest.a; sourceTree = "<group>"; };
 		748D4A841724BAE000407F32 /* libASIHTTPRequestsim.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libASIHTTPRequestsim.a; path = ECSlidingViewController/libASIHTTPRequestsim.a; sourceTree = "<group>"; };
+		748D4A871725D06500407F32 /* ServerConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerConfigController.h; sourceTree = "<group>"; };
+		748D4A881725D06500407F32 /* ServerConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerConfigController.m; sourceTree = "<group>"; };
+		748D4A8B1725D16200407F32 /* NetworkConfigModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkConfigModel.h; sourceTree = "<group>"; };
+		748D4A8C1725D16200407F32 /* NetworkConfigModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkConfigModel.m; sourceTree = "<group>"; };
 		749FE1EC1715BADD005511D7 /* libios_brsp_device_1_0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libios_brsp_device_1_0.a; path = ECSlidingViewController/libios_brsp_device_1_0.a; sourceTree = "<group>"; };
 		749FE1ED1715BADD005511D7 /* libios_brsp_simulator_1_0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libios_brsp_simulator_1_0.a; path = ECSlidingViewController/libios_brsp_simulator_1_0.a; sourceTree = "<group>"; };
 		749FE1F317184DC1005511D7 /* RunListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunListModel.h; sourceTree = "<group>"; };
@@ -429,9 +431,6 @@
 		74308127171092BE00FEBEB8 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				748D49771724814900407F32 /* NetworkConstants.h */,
-				7430813D171097D300FEBEB8 /* FtpTestController.h */,
-				7430813E171097D300FEBEB8 /* FtpTestController.m */,
 				74308128171092E000FEBEB8 /* CreateDirController.h */,
 				74308129171092E000FEBEB8 /* CreateDirController.m */,
 				7430812A171092E000FEBEB8 /* GetController.h */,
@@ -444,6 +443,8 @@
 				74308131171092E000FEBEB8 /* PutController.m */,
 				7424EDB31713083000994D06 /* HTTPTestController.h */,
 				7424EDB41713083000994D06 /* HTTPTestController.m */,
+				748D4A871725D06500407F32 /* ServerConfigController.h */,
+				748D4A881725D06500407F32 /* ServerConfigController.m */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -451,6 +452,7 @@
 		746178EA16EBCE0E0007FE56 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				748D4A8A1725D11A00407F32 /* Networking */,
 				74D85A0E170F24A50059B791 /* Sync */,
 				746178F316EBE6E50007FE56 /* Configuration */,
 				746178F216EBE6DD0007FE56 /* Post */,
@@ -532,6 +534,15 @@
 				748D49AC1724B48300407F32 /* ASIHTTPRequest-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		748D4A8A1725D11A00407F32 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				748D4A8B1725D16200407F32 /* NetworkConfigModel.h */,
+				748D4A8C1725D16200407F32 /* NetworkConfigModel.m */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 		74D650E21704B91400E58615 /* Configurations */ = {
@@ -726,7 +737,6 @@
 				74308134171092E000FEBEB8 /* ListController.m in Sources */,
 				74308135171092E000FEBEB8 /* NetworkManager.m in Sources */,
 				74308136171092E000FEBEB8 /* PutController.m in Sources */,
-				7430813F171097D300FEBEB8 /* FtpTestController.m in Sources */,
 				7424EDB51713083000994D06 /* HTTPTestController.m in Sources */,
 				088BA65217172E1B002F0831 /* GraphViewController.m in Sources */,
 				749FE1F517184DC1005511D7 /* RunListModel.m in Sources */,
@@ -738,6 +748,8 @@
 				748D49761721AA3900407F32 /* RunModel.m in Sources */,
 				748D497A1724910000407F32 /* UserModel.m in Sources */,
 				748D497D17249BF400407F32 /* UserConfigController.m in Sources */,
+				748D4A891725D06600407F32 /* ServerConfigController.m in Sources */,
+				748D4A8D1725D16200407F32 /* NetworkConfigModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

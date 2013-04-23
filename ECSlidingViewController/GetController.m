@@ -123,7 +123,7 @@
 
     // First get and check the URL.
     
-    url = [[NetworkManager sharedInstance] smartURLForString:[FTPURL stringByAppendingString:@"test2.txt"]];
+    url = [[NetworkManager sharedInstance] smartURLForString:[[[NetworkConfigModel instance:NO] ftpURL] stringByAppendingString:@"test2.txt"]];
     success = (url != nil);
 
     // If the URL is bogus, let the user know.  Otherwise kick off the connection.
@@ -149,8 +149,8 @@
         );
         assert(self.networkStream != nil);
         
-        success = [self.networkStream setProperty:FTPUSER forKey:(id)kCFStreamPropertyFTPUserName];
-        success = [self.networkStream setProperty:FTPPASSWORD forKey:(id)kCFStreamPropertyFTPPassword];
+        success = [self.networkStream setProperty:[[NetworkConfigModel instance:NO] ftpUser] forKey:(id)kCFStreamPropertyFTPUserName];
+        success = [self.networkStream setProperty:[[NetworkConfigModel instance:NO] ftpPassword] forKey:(id)kCFStreamPropertyFTPPassword];
         
         self.networkStream.delegate = self;
         [self.networkStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];

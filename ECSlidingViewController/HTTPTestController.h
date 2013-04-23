@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "NetworkConstants.h"
+#import "NetworkConfigModel.h"
 #import "ASIHTTPRequest.h"
 
 @interface HTTPTestController : UIViewController <ASIHTTPRequestDelegate>

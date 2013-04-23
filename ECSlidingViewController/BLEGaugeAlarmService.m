@@ -110,16 +110,6 @@
     // Flush "NEW".
     [[self brsp] flushInputBuffer:3];
     
-    
-    // Stall until the timestamp and message id are on the buffer.
-    while([[self brsp] inputBufferCount] < 5);
-    
-    UInt8* timeArray = (UInt8*)[[[self brsp] readBytes:4] bytes];
-    unsigned int timestamp = timeArray[0];
-    timestamp= (timestamp << 8) + timeArray[1];
-    timestamp = (timestamp << 8) + timeArray[2];
-    timestamp = (timestamp << 8) + timeArray[3];
-    
     UInt8* messageIDArray = (UInt8*)[[[self brsp] readBytes:1] bytes];
     UInt8 messageID = messageIDArray[0];
 
@@ -141,7 +131,7 @@
         }
     }
     
-    [RealTimeBuilder snapshotCreation:sensorData withMessageType:messageID withTimeStamp:timestamp];
+    [RealTimeBuilder snapshotCreation:sensorData withMessageType:messageID];
 }
 
 #pragma mark CBCentralManagerDelegate

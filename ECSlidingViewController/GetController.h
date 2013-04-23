@@ -52,7 +52,7 @@
 */
 
 #import <UIKit/UIKit.h>
-#import "NetworkConstants.h"
+#import "NetworkConfigModel.h"
 
 @interface GetController : UIViewController
 

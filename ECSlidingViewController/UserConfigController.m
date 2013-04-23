@@ -64,7 +64,7 @@
     
     if([[[UserModel instance:NO] userName] isEqualToString:user] && [[[UserModel instance:NO] password] isEqualToString:password])
     {
-        NSURL* url = [NSURL URLWithString:HTTPURL];
+        NSURL* url = [NSURL URLWithString:[[NetworkConfigModel instance:NO] httpURL]];
         ASIHTTPRequest* request = [ASIHTTPRequest requestWithURL:url];
         [request setRequestMethod:@"POST"];
         
@@ -94,7 +94,7 @@
     NSString* password = self.passwordField.text;
     password = [UserConfigController createSHA512:password];
     
-    NSURL* url = [NSURL URLWithString:HTTPURL];
+    NSURL* url = [NSURL URLWithString:[[NetworkConfigModel instance:NO] httpURL]];
     ASIHTTPRequest* request = [ASIHTTPRequest requestWithURL:url];
     [request setRequestMethod:@"POST"];
     
@@ -105,7 +105,8 @@
     [postBody appendData:[[NSString stringWithFormat:@"\t<password>%@</password>\n", password] dataUsingEncoding:NSUTF8StringEncoding]];
     [postBody appendData:[[NSString stringWithFormat:@"</create>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
     [postBody appendData:[[NSString stringWithFormat:@"<?>"] dataUsingEncoding:NSUTF8StringEncoding]];
-    
+    [request setTimeOutSeconds:1];
+    [request setPostBody:postBody];
     [request startSynchronous];
     NSError* error = [request error];
     NSString* response = nil;
@@ -137,7 +138,12 @@
     
     NSData *out = [NSData dataWithBytes:digest length:CC_SHA512_DIGEST_LENGTH];
     
-    return [out description];
+    NSString* ret = [out description];
+    
+    ret = [ret stringByReplacingOccurrencesOfString:@"<" withString:@""];
+    ret = [ret stringByReplacingOccurrencesOfString:@">" withString:@""];
+    
+    return ret;
 }
 
 @end

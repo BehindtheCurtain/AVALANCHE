@@ -14,7 +14,6 @@
 
 @implementation HTTPTestController
 
-static NSMutableData* responseData;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,7 +39,7 @@ static NSMutableData* responseData;
 - (IBAction)requestAction:(id)sender
 {
     
-    NSURL* url = [NSURL URLWithString:HTTPURL];
+    NSURL* url = [NSURL URLWithString:[[NetworkConfigModel instance:NO] httpURL]];
     ASIHTTPRequest* request = [ASIHTTPRequest requestWithURL:url];
     [request setRequestMethod:@"POST"];
     
