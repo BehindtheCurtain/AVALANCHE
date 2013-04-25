@@ -22,6 +22,7 @@ static const int DEFAULT_NUM_SENSORS = 12;
 @synthesize transformConstant;
 @synthesize sensorID;
 @synthesize isActive;
+@synthesize pressureTear;
 
 // Init with metadata.
 -(id) initWithName:(NSString*) name
@@ -54,7 +55,7 @@ static const int DEFAULT_NUM_SENSORS = 12;
     int index = 0;
     for(SensorSnapshotModel* snapshot in snapshots)
     {
-        [xml appendFormat:@"\t\t\t\t<snapshot id=%d>\n", index];
+        [xml appendFormat:@"\t\t\t\t<snapshot id=\"%d\">\n", index];
         [xml appendString:[snapshot serialize]];
         [xml appendString:@"\t\t\t\t</snapshot>\n"];
         index++;

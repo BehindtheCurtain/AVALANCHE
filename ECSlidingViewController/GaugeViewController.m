@@ -66,13 +66,14 @@ static void * const temp4Context = (void*)&temp4Context;
     [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature3"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp3Context];
     [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature4"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp4Context];
     
-    [BLEGaugeAlarmService instance];
+    [BLEGaugeAlarmService instance:NO];
     
     [[GaugeModel instance:NO] setStartTimeStamp:[NSDate dateWithTimeIntervalSince1970:[[NSDate date] timeIntervalSince1970]]];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
+    NSLog(@"Observer called");
     NSIndexSet* set = [change objectForKey:NSKeyValueChangeIndexesKey];
     SensorSnapshotModel* snapshot = [[object snapshots] objectAtIndex:[set firstIndex]];
     
@@ -96,6 +97,7 @@ static void * const temp4Context = (void*)&temp4Context;
         [fourthGoalBar setPercent:[snapshot sensorData]/25 animated:NO];
         [fourthGoalBar setCustomText:[NSString stringWithFormat:@"%.u °F", [snapshot sensorData]]];
     }
+    NSLog(@"Observed");
 }
 
 - (void)viewDidUnload
@@ -111,7 +113,7 @@ static void * const temp4Context = (void*)&temp4Context;
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [[BLEGaugeAlarmService instance] disconnect];
+    [[BLEGaugeAlarmService instance:NO] disconnect];
     [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature1"] removeObserver:self forKeyPath:@"snapshots"];
     [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature2"] removeObserver:self forKeyPath:@"snapshots"];
     [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature3"] removeObserver:self forKeyPath:@"snapshots"];

@@ -43,6 +43,8 @@
     {
         [self.passwordField resignFirstResponder];
     }
+    
+    return NO;
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
@@ -62,66 +64,138 @@
     NSString* password = self.passwordField.text;
     password = [UserConfigController createSHA512:password];
     
-    if([[[UserModel instance:NO] userName] isEqualToString:user] && [[[UserModel instance:NO] password] isEqualToString:password])
-    {
-        NSURL* url = [NSURL URLWithString:[[NetworkConfigModel instance:NO] httpURL]];
-        ASIHTTPRequest* request = [ASIHTTPRequest requestWithURL:url];
-        [request setRequestMethod:@"POST"];
-        
-        NSMutableData *postBody = [NSMutableData data];
-        [postBody appendData:[[NSString stringWithFormat:@"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
-        [postBody appendData:[[NSString stringWithFormat:@"<login>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
-        [postBody appendData:[[NSString stringWithFormat:@"\t<username>%@</username>\n", user] dataUsingEncoding:NSUTF8StringEncoding]];
-        [postBody appendData:[[NSString stringWithFormat:@"\t<password>%@</password>\n", password] dataUsingEncoding:NSUTF8StringEncoding]];
-        [postBody appendData:[[NSString stringWithFormat:@"</login>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
-        [postBody appendData:[[NSString stringWithFormat:@"<?>"] dataUsingEncoding:NSUTF8StringEncoding]];
-        
-        [request startSynchronous];
-        NSError* error = [request error];
-        NSString* response = nil;
-        if (!error)
-        {
-            response = [request responseString];
-        }
-        
-        
-    }
-}
-
-- (IBAction)createAction:(id)sender
-{
-    NSString* user = self.userNameField.text;
-    NSString* password = self.passwordField.text;
-    password = [UserConfigController createSHA512:password];
-    
     NSURL* url = [NSURL URLWithString:[[NetworkConfigModel instance:NO] httpURL]];
     ASIHTTPRequest* request = [ASIHTTPRequest requestWithURL:url];
     [request setRequestMethod:@"POST"];
     
     NSMutableData *postBody = [NSMutableData data];
     [postBody appendData:[[NSString stringWithFormat:@"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
-    [postBody appendData:[[NSString stringWithFormat:@"<create>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [postBody appendData:[[NSString stringWithFormat:@"<login>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
     [postBody appendData:[[NSString stringWithFormat:@"\t<username>%@</username>\n", user] dataUsingEncoding:NSUTF8StringEncoding]];
     [postBody appendData:[[NSString stringWithFormat:@"\t<password>%@</password>\n", password] dataUsingEncoding:NSUTF8StringEncoding]];
-    [postBody appendData:[[NSString stringWithFormat:@"</create>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
-    [postBody appendData:[[NSString stringWithFormat:@"<?>"] dataUsingEncoding:NSUTF8StringEncoding]];
-    [request setTimeOutSeconds:1];
+    [postBody appendData:[[NSString stringWithFormat:@"</login>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [postBody appendData:[[NSString stringWithFormat:@"<?>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [request setTimeOutSeconds:600];
     [request setPostBody:postBody];
     [request startSynchronous];
+    
     NSError* error = [request error];
     NSString* response = nil;
+    int statusCode = -1;
     if (!error)
     {
+        statusCode = [request responseStatusCode];
         response = [request responseString];
     }
     
-    if([response isEqualToString:@""])
+    if(statusCode == 202)
     {
+        [[UserModel instance:NO] setLoggedOn:YES];
+        [[UserModel instance:NO] archive];
         
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle: @"Logged In"
+                              message:@""
+                              delegate: nil
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:nil];
+        [alert show];
+        [self.navigationController popViewControllerAnimated:YES];
     }
-    else if([response isEqualToString:@""])
+    else if(statusCode == 401)
     {
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle: @"Please Try Again."
+                              message: @"Username or password is incorrect."
+                              delegate: nil
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:nil];
+        [alert show];
+    }
+}
+
+- (IBAction)createAction:(id)sender
+{
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Create New Account" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Create" otherButtonTitles:nil, nil];
+    
+    [actionSheet showFromRect:[self.view bounds] inView:self.view  animated:NO];
+    
+    [super viewDidLoad];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    // Create button clicked.
+    if(buttonIndex == 0)
+    {
+        NSString* user = self.userNameField.text;
+        NSString* password = self.passwordField.text;
+        password = [UserConfigController createSHA512:password];
         
+        NSURL* url = [NSURL URLWithString:[[NetworkConfigModel instance:NO] httpURL]];
+        ASIHTTPRequest* request = [ASIHTTPRequest requestWithURL:url];
+        [request setRequestMethod:@"POST"];
+        
+        NSMutableData *postBody = [NSMutableData data];
+        [postBody appendData:[[NSString stringWithFormat:@"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+        [postBody appendData:[[NSString stringWithFormat:@"<create>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+        [postBody appendData:[[NSString stringWithFormat:@"\t<username>%@</username>\n", user] dataUsingEncoding:NSUTF8StringEncoding]];
+        [postBody appendData:[[NSString stringWithFormat:@"\t<password>%@</password>\n", password] dataUsingEncoding:NSUTF8StringEncoding]];
+        [postBody appendData:[[NSString stringWithFormat:@"</create>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+        [postBody appendData:[[NSString stringWithFormat:@"<?>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+        [request setTimeOutSeconds:600];
+        [request setPostBody:postBody];
+        [request startSynchronous];
+        NSError* error = [request error];
+        NSString* response = nil;
+        int statusCode = -1;
+        if (!error)
+        {
+            statusCode = [request responseStatusCode];
+            response = [request responseString];
+        }
+        
+        if(statusCode == 201)
+        {
+            [[UserModel instance:NO] setUserName:user];
+            [[UserModel instance:NO] setPassword:password];
+            [[UserModel instance:NO] setLoggedOn:YES];
+            [[UserModel instance:NO] archive];
+            
+            UIAlertView *alert = [[UIAlertView alloc]
+                                  initWithTitle: @"Logged In"
+                                  message:@""
+                                  delegate: nil
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil];
+            [alert show];
+            
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+        else if(statusCode == 409)
+        {
+            [actionSheet dismissWithClickedButtonIndex:buttonIndex animated:YES];
+            
+            UIAlertView *alert = [[UIAlertView alloc]
+                                  initWithTitle: @"Please Try Again."
+                                  message: @"User account name is already taken."
+                                  delegate: nil
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil];
+            [alert show];
+        }
+        else if(statusCode == 401)
+        {
+            [actionSheet dismissWithClickedButtonIndex:buttonIndex animated:YES];
+            
+            UIAlertView *alert = [[UIAlertView alloc]
+                                  initWithTitle: @"Please Try Again."
+                                  message: @"Username or password is incorrect."
+                                  delegate: nil
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil];
+            [alert show];
+        }
     }
 }
 

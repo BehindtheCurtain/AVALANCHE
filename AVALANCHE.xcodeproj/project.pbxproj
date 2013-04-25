@@ -60,12 +60,14 @@
 		27FC94E014D0C14E0000B18C /* InitialSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FC94DF14D0C14E0000B18C /* InitialSlidingViewController.m */; };
 		27FC94E314D105C60000B18C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FC94E214D105C60000B18C /* QuartzCore.framework */; };
 		7424EDB51713083000994D06 /* HTTPTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7424EDB41713083000994D06 /* HTTPTestController.m */; };
-		7428C4491704C5AA0013A04E /* ConnectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7428C4481704C5AA0013A04E /* ConnectionController.m */; };
 		7428C44F1704CCBC0013A04E /* SensorTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7428C44E1704CCBC0013A04E /* SensorTableController.m */; };
 		7428C46F170A26DA0013A04E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7428C46E170A26DA0013A04E /* Icon.png */; };
 		7428C471170A26E70013A04E /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7428C470170A26E70013A04E /* Icon@2x.png */; };
 		7428C473170B8D150013A04E /* AddSensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7428C472170B8D150013A04E /* AddSensorController.m */; };
 		7428C478170BA2FF0013A04E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7428C477170BA2FF0013A04E /* CFNetwork.framework */; };
+		742C43F717272A3C0013AB46 /* ConnectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742C43F617272A3C0013AB46 /* ConnectionController.m */; };
+		742C43FA172733610013AB46 /* brsp_device1_0_1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 742C43F8172733600013AB46 /* brsp_device1_0_1.a */; };
+		742C43FB172733610013AB46 /* brsp_simulator1_0_1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 742C43F9172733610013AB46 /* brsp_simulator1_0_1.a */; };
 		74308132171092E000FEBEB8 /* CreateDirController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74308129171092E000FEBEB8 /* CreateDirController.m */; };
 		74308133171092E000FEBEB8 /* GetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7430812B171092E000FEBEB8 /* GetController.m */; };
 		74308134171092E000FEBEB8 /* ListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7430812D171092E000FEBEB8 /* ListController.m */; };
@@ -86,8 +88,6 @@
 		748D4A861724BAE000407F32 /* libASIHTTPRequestsim.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 748D4A841724BAE000407F32 /* libASIHTTPRequestsim.a */; };
 		748D4A891725D06600407F32 /* ServerConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748D4A881725D06500407F32 /* ServerConfigController.m */; };
 		748D4A8D1725D16200407F32 /* NetworkConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 748D4A8C1725D16200407F32 /* NetworkConfigModel.m */; };
-		749FE1EE1715BADD005511D7 /* libios_brsp_device_1_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 749FE1EC1715BADD005511D7 /* libios_brsp_device_1_0.a */; };
-		749FE1EF1715BADD005511D7 /* libios_brsp_simulator_1_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 749FE1ED1715BADD005511D7 /* libios_brsp_simulator_1_0.a */; };
 		749FE1F517184DC1005511D7 /* RunListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 749FE1F417184DC1005511D7 /* RunListModel.m */; };
 		749FE1FB171DD0AF005511D7 /* RunSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 749FE1FA171DD0AF005511D7 /* RunSelectController.m */; };
 		74D85A11170F24B90059B791 /* BLEGaugeAlarmService.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D85A10170F24B90059B791 /* BLEGaugeAlarmService.m */; };
@@ -172,8 +172,6 @@
 		27FC94E214D105C60000B18C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		7424EDB31713083000994D06 /* HTTPTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPTestController.h; sourceTree = "<group>"; };
 		7424EDB41713083000994D06 /* HTTPTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPTestController.m; sourceTree = "<group>"; };
-		7428C4471704C5AA0013A04E /* ConnectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionController.h; sourceTree = "<group>"; };
-		7428C4481704C5AA0013A04E /* ConnectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionController.m; sourceTree = "<group>"; };
 		7428C44D1704CCBB0013A04E /* SensorTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorTableController.h; sourceTree = "<group>"; };
 		7428C44E1704CCBC0013A04E /* SensorTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorTableController.m; sourceTree = "<group>"; };
 		7428C46B170A11890013A04E /* AddSensorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSensorController.h; sourceTree = "<group>"; };
@@ -181,6 +179,10 @@
 		7428C470170A26E70013A04E /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		7428C472170B8D150013A04E /* AddSensorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSensorController.m; sourceTree = "<group>"; };
 		7428C477170BA2FF0013A04E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		742C43F517272A3C0013AB46 /* ConnectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionController.h; sourceTree = "<group>"; };
+		742C43F617272A3C0013AB46 /* ConnectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionController.m; sourceTree = "<group>"; };
+		742C43F8172733600013AB46 /* brsp_device1_0_1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = brsp_device1_0_1.a; path = ECSlidingViewController/brsp_device1_0_1.a; sourceTree = "<group>"; };
+		742C43F9172733610013AB46 /* brsp_simulator1_0_1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = brsp_simulator1_0_1.a; path = ECSlidingViewController/brsp_simulator1_0_1.a; sourceTree = "<group>"; };
 		74308128171092E000FEBEB8 /* CreateDirController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateDirController.h; sourceTree = "<group>"; };
 		74308129171092E000FEBEB8 /* CreateDirController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateDirController.m; sourceTree = "<group>"; };
 		7430812A171092E000FEBEB8 /* GetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetController.h; sourceTree = "<group>"; };
@@ -232,8 +234,6 @@
 		748D4A881725D06500407F32 /* ServerConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerConfigController.m; sourceTree = "<group>"; };
 		748D4A8B1725D16200407F32 /* NetworkConfigModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkConfigModel.h; sourceTree = "<group>"; };
 		748D4A8C1725D16200407F32 /* NetworkConfigModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkConfigModel.m; sourceTree = "<group>"; };
-		749FE1EC1715BADD005511D7 /* libios_brsp_device_1_0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libios_brsp_device_1_0.a; path = ECSlidingViewController/libios_brsp_device_1_0.a; sourceTree = "<group>"; };
-		749FE1ED1715BADD005511D7 /* libios_brsp_simulator_1_0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libios_brsp_simulator_1_0.a; path = ECSlidingViewController/libios_brsp_simulator_1_0.a; sourceTree = "<group>"; };
 		749FE1F317184DC1005511D7 /* RunListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunListModel.h; sourceTree = "<group>"; };
 		749FE1F417184DC1005511D7 /* RunListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunListModel.m; sourceTree = "<group>"; };
 		749FE1F9171DD0AF005511D7 /* RunSelectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunSelectController.h; sourceTree = "<group>"; };
@@ -247,14 +247,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				742C43FA172733610013AB46 /* brsp_device1_0_1.a in Frameworks */,
+				742C43FB172733610013AB46 /* brsp_simulator1_0_1.a in Frameworks */,
 				748D4A851724BAE000407F32 /* libASIHTTPRequest.a in Frameworks */,
 				748D4A861724BAE000407F32 /* libASIHTTPRequestsim.a in Frameworks */,
 				748D49A31724AF6A00407F32 /* libz.dylib in Frameworks */,
 				748D49A11724AF5900407F32 /* MobileCoreServices.framework in Frameworks */,
 				748D499F1724AF4C00407F32 /* SystemConfiguration.framework in Frameworks */,
 				089EC784171DE526004A76EC /* AudioToolbox.framework in Frameworks */,
-				749FE1EE1715BADD005511D7 /* libios_brsp_device_1_0.a in Frameworks */,
-				749FE1EF1715BADD005511D7 /* libios_brsp_simulator_1_0.a in Frameworks */,
 				27FC94E314D105C60000B18C /* QuartzCore.framework in Frameworks */,
 				2750E77114CDB0DF007727A0 /* UIKit.framework in Frameworks */,
 				2750E77314CDB0DF007727A0 /* Foundation.framework in Frameworks */,
@@ -328,8 +328,6 @@
 		2750E76114CDB0DF007727A0 = {
 			isa = PBXGroup;
 			children = (
-				748D4A831724BADF00407F32 /* libASIHTTPRequest.a */,
-				748D4A841724BAE000407F32 /* libASIHTTPRequestsim.a */,
 				7428C470170A26E70013A04E /* Icon@2x.png */,
 				7428C46E170A26DA0013A04E /* Icon.png */,
 				08A2AF2016E69C6A00065D0C /* Default-568h@2x.png */,
@@ -351,11 +349,13 @@
 		2750E76F14CDB0DF007727A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				742C43F8172733600013AB46 /* brsp_device1_0_1.a */,
+				742C43F9172733610013AB46 /* brsp_simulator1_0_1.a */,
+				748D4A831724BADF00407F32 /* libASIHTTPRequest.a */,
+				748D4A841724BAE000407F32 /* libASIHTTPRequestsim.a */,
 				748D49A21724AF6A00407F32 /* libz.dylib */,
 				748D49A01724AF5800407F32 /* MobileCoreServices.framework */,
 				748D499E1724AF4C00407F32 /* SystemConfiguration.framework */,
-				749FE1EC1715BADD005511D7 /* libios_brsp_device_1_0.a */,
-				749FE1ED1715BADD005511D7 /* libios_brsp_simulator_1_0.a */,
 				089EC783171DE526004A76EC /* AudioToolbox.framework */,
 				7428C477170BA2FF0013A04E /* CFNetwork.framework */,
 				089FFEC117034FB40088D528 /* CoreBluetooth.framework */,
@@ -550,8 +550,6 @@
 			children = (
 				7428C46B170A11890013A04E /* AddSensorController.h */,
 				7428C472170B8D150013A04E /* AddSensorController.m */,
-				7428C4471704C5AA0013A04E /* ConnectionController.h */,
-				7428C4481704C5AA0013A04E /* ConnectionController.m */,
 				0854942E170288830007566F /* ScanController.h */,
 				0854942F170288830007566F /* ScanController.m */,
 				08549430170288830007566F /* SensorConfigViewController.h */,
@@ -567,6 +565,8 @@
 		74D650E31704B93100E58615 /* Real Time */ = {
 			isa = PBXGroup;
 			children = (
+				086E780316F2428200EA221D /* GaugeViewController.h */,
+				086E780416F2428200EA221D /* GaugeViewController.m */,
 			);
 			name = "Real Time";
 			sourceTree = "<group>";
@@ -586,6 +586,8 @@
 		74D85A0E170F24A50059B791 /* Sync */ = {
 			isa = PBXGroup;
 			children = (
+				742C43F517272A3C0013AB46 /* ConnectionController.h */,
+				742C43F617272A3C0013AB46 /* ConnectionController.m */,
 				74D85A0F170F24B90059B791 /* BLEGaugeAlarmService.h */,
 				74D85A10170F24B90059B791 /* BLEGaugeAlarmService.m */,
 			);
@@ -601,8 +603,6 @@
 				08089F2D16E6A90C00EBA435 /* CustomPagerViewController.m */,
 				2750E79514CDB959007727A0 /* FirstTopViewController.h */,
 				2750E79614CDB959007727A0 /* FirstTopViewController.m */,
-				086E780316F2428200EA221D /* GaugeViewController.h */,
-				086E780416F2428200EA221D /* GaugeViewController.m */,
 				27FC94DE14D0C14E0000B18C /* InitialSlidingViewController.h */,
 				27FC94DF14D0C14E0000B18C /* InitialSlidingViewController.m */,
 				2750E79214CDB93A007727A0 /* MenuViewController.h */,
@@ -728,7 +728,6 @@
 				0866AF9816F8E0760097F624 /* RealTimeBuilder.m in Sources */,
 				08549435170288830007566F /* ScanController.m in Sources */,
 				08549436170288830007566F /* SensorConfigViewController.m in Sources */,
-				7428C4491704C5AA0013A04E /* ConnectionController.m in Sources */,
 				7428C44F1704CCBC0013A04E /* SensorTableController.m in Sources */,
 				7428C473170B8D150013A04E /* AddSensorController.m in Sources */,
 				74D85A11170F24B90059B791 /* BLEGaugeAlarmService.m in Sources */,
@@ -750,6 +749,7 @@
 				748D497D17249BF400407F32 /* UserConfigController.m in Sources */,
 				748D4A891725D06600407F32 /* ServerConfigController.m in Sources */,
 				748D4A8D1725D16200407F32 /* NetworkConfigModel.m in Sources */,
+				742C43F717272A3C0013AB46 /* ConnectionController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -833,8 +833,6 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/ECSlidingViewController\"",
 				);
-				"OTHER_LDFLAGS[arch=armv7]" = "\"$(SRCROOT)/ECSlidingViewController/libios_brsp_device_1_0.a\"";
-				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = "\"$(SRCROOT)/ECSlidingViewController/libios_brsp_simulator_1_0.a\"";
 				PRODUCT_NAME = AVALANCHE;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -852,8 +850,6 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/ECSlidingViewController\"",
 				);
-				"OTHER_LDFLAGS[arch=armv7]" = "\"$(SRCROOT)/ECSlidingViewController/libios_brsp_device_1_0.a\"";
-				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = "\"$(SRCROOT)/ECSlidingViewController/libios_brsp_simulator_1_0.a\"";
 				PRODUCT_NAME = AVALANCHE;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

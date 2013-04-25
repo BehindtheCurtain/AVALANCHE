@@ -107,14 +107,32 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    /*
+    
     RunModel* run = [[[RunListModel instance:NO] runList] objectAtIndex:indexPath.row];
+    NSString* filePath = [run filePath];
     
-    RunViewController* viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"runTest"];
-    [viewController setRun:run];
+    NSURL* url = [NSURL URLWithString:[[NetworkConfigModel instance:NO] httpURL]];
+    ASIHTTPRequest* request = [ASIHTTPRequest requestWithURL:url];
+    [request setRequestMethod:@"POST"];
+    [request setPostBodyFilePath:filePath];
+    [request setTimeOutSeconds:120];
+    [request setDelegate:self];
+    [request startAsynchronous];
+}
+
+- (void)requestFinished:(ASIHTTPRequest *)request
+{
+    // Use when fetching text data
+    NSString *responseString = [request responseString];
     
-    [self.navigationController pushViewController:viewController animated:YES];
-    */
+    // Use when fetching binary data
+    NSData *responseData = [request responseData];
+}
+
+- (void)requestFailed:(ASIHTTPRequest *)request
+{
+    NSError *error = [request error];
+    NSLog(@"%@", error);
 }
 
 - (IBAction)revealMenu:(id)sender

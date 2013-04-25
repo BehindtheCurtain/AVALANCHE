@@ -48,6 +48,7 @@ static BOOL processing = NO;
 		if(active)
 		{
             SensorAggregateModel* sensorAggregateModel = [[SensorAggregateModel alloc] initWithName:sensorName withType:sensorType withTransform:transform withSensorID:sensorID isActive:active];
+            [sensorAggregateModel setPressureTear:-1];
 			NSString* key = [[sensorAggregateModel sensorType] stringByAppendingFormat:@"%d", [sensorAggregateModel sensorID]];
 			[sensorAggregateModelMap setObject:sensorAggregateModel forKey:key];
 		}
@@ -82,57 +83,46 @@ static BOOL processing = NO;
 }
 
 // Creates a SensorSnapshotModel for each active sensor and adds each snapshot to their related SensorAggregateModel.
-+ (void)snapshotCreation:(NSMutableArray *)data withMessageType:(unsigned char)messageType
++ (void)snapshotCreation:(NSMutableArray *)data
 {
     NSMutableDictionary* sensorAggregateModelMap = [[GaugeModel instance:NO] sensorAggregateModelMap];
     
     NSString* type;
     
-    switch (messageType)
-    {
-        case 0:
-        {
-            type = @"Temperature";
-            break;
-        }
-        case 1:
-        {
-            type = @"Pressure";
-            break;
-        }
-        case 2:
-        {
-            type = @"RPM";
-            break;
-        }
-        case 3:
-        {
-            type = @"PulseCount";
-            break;
-        }
-        case 4:
-        {
-            type = @"Voltage";
-            break;
-        }
-        case 5:
-        {
-            type = @"AirFuel";
-            break;
-        }
-    }
-    
     NSDate* time = [NSDate dateWithTimeIntervalSince1970:[[NSDate date] timeIntervalSince1970]];
     
-    for(NSNumber* dataPoint in data)
+    for(int i = 0; i < [data count]; i++)
     {
-        int sensorID = [data indexOfObject:dataPoint] + 1;
+        NSNumber* dataPoint = [data objectAtIndex:i];
+        int sensorID = i + 1;
+        NSString* sensorType = nil;
+        
+        if(i >= 0 && i <= 3)
+        {
+            sensorType = @"Temperature";
+        }
+        else if(i >= 4 && i <= 6)
+        {
+            sensorType = @"Pressure";
+            sensorID -= 3;
+        }
+        else if(i >= 7 && i <= 9)
+        {
+            sensorType = @"RPM";
+            sensorID -= 6;
+        }
+        else if(i >= 10 && i <= 11)
+        {
+            sensorType = @"AirFuel";
+            sensorID -= 9;
+        }
+        
         unsigned int sensorData = [dataPoint unsignedIntValue];
         
         NSString* key = [type stringByAppendingFormat:@"%d", sensorID];
         SensorAggregateModel* aggregate = [sensorAggregateModelMap objectForKey:key];
-        
-        sensorData = [RealTimeBuilder transformSensorData:sensorData ofSensorType:type withID:sensorID withTransform:[aggregate transformConstant]];
+        int tear = [aggregate pressureTear];
+        sensorData = [RealTimeBuilder transformSensorData:sensorData ofSensorType:type withID:sensorID withTransform:[aggregate transformConstant] withAggregate:aggregate];
         
         SensorSnapshotModel* snapshot = [[SensorSnapshotModel alloc] initWithTimeStamp:time withType:type withSensorID:sensorID withData:sensorData];
         
@@ -142,19 +132,15 @@ static BOOL processing = NO;
 }
 
 // Transform the raw sensor data into formatted readable sensor data.
-+ (int)transformSensorData:(int)sensorData ofSensorType:(NSString *)sensorType withID:(int)sensorID withTransform:(int)transformConstant
++ (int)transformSensorData:(int)sensorData ofSensorType:(NSString *)sensorType withID:(int)sensorID withTransform:(int)transformConstant withAggregate:(SensorAggregateModel *)aggregate
 {
     int transformedData = sensorData;
     
-    if([sensorType isEqualToString:@"tachometer"])
+    if([sensorType isEqualToString:@"RPM"])
     {
-        // # of ticks / ticks per revolution * 8 hertz * 60 sec per min. = revolutions per minute.
-        transformedData = (sensorData / transformConstant) * 8 * 60;
-    }
-    else if([sensorType isEqualToString:@"spedometer"])
-    {
-        // Convert tix/8th second to tix/hour. Divide that by tix per mile. gives miles/hour.
-        //transformedData = (sensorData * 8 * 60 * 60) / (8 * tixPer8thOfMile);
+        transformConstant = (transformConstant >= 1) ? transformConstant : 1;
+        
+        transformedData = (transformedData * 60) / transformConstant;
     }
     else if([sensorType isEqualToString:@"Temperature"])
     {
@@ -165,11 +151,17 @@ static BOOL processing = NO;
     }
     else if([sensorType isEqualToString:@"Pressure"])
     {
-        transformedData = sensorData / 10; // Sensor value off of CAN BUS is PSI * 10
-    }
-    else if([sensorType isEqualToString:@"Voltage"])
-    {
-        transformedData = sensorData;
+        if([aggregate pressureTear] < 0)
+        {
+            [aggregate setPressureTear:sensorData];
+            
+            transformedData = 0;
+        }
+        else
+        {
+            transformedData = sensorData - [aggregate pressureTear];
+            transformedData = transformedData / 10;
+        }
     }
     else if([sensorType isEqualToString:@"AirFuel"])
     {

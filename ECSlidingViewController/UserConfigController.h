@@ -12,7 +12,7 @@
 #import "ASIHTTPRequest.h"
 #import "NetworkConfigModel.h"
 
-@interface UserConfigController : UIViewController <UITextFieldDelegate, UIActionSheetDelegate, ASIHTTPRequestDelegate>
+@interface UserConfigController : UIViewController <UITextFieldDelegate, UIActionSheetDelegate, ASIHTTPRequestDelegate, UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *userNameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;

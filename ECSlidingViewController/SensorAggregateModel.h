@@ -29,6 +29,7 @@
 @property (assign) int transformConstant;
 @property (assign) int sensorID;
 @property (assign) BOOL isActive;
+@property (assign) int pressureTear;
 
 
 //Initialize SensorAggregateModel with inputted metadata.
