@@ -93,6 +93,7 @@ static NSString* DELIM = @"\n";
     [run setRunName:runName];
     [run setDirectory:runDirectory];
     [run setFilePath:filePath];
+    [run setUploaded:NO];
     
     [[[RunListModel instance:NO] runList] addObject:run];
     [[RunListModel instance:NO] archive];

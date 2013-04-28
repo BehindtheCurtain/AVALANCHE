@@ -13,12 +13,14 @@
 @synthesize runName;
 @synthesize directory;
 @synthesize filePath;
+@synthesize uploaded;
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeObject:self.runName forKey:@"runName"];
     [aCoder encodeObject:self.directory forKey:@"directory"];
     [aCoder encodeObject:self.filePath forKey:@"filePath"];
+    [aCoder encodeInt:self.uploaded forKey:@"uploaded"];
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -28,6 +30,7 @@
         self.runName = [aDecoder decodeObjectForKey:@"runName"];
         self.directory = [aDecoder decodeObjectForKey:@"directory"];
         self.filePath = [aDecoder decodeObjectForKey:@"filePath"];
+        self.uploaded = [aDecoder decodeIntForKey:@"uploaded"];
     }
     
     return self;

@@ -22,13 +22,16 @@
     {
         if(instance == nil || reset)
         {
-            instance = [[UserModel alloc] init];
             
             NSUserDefaults* currentDefaults = [NSUserDefaults standardUserDefaults];
             NSData* data = [currentDefaults objectForKey:@"credentials"];
+            NSMutableDictionary* rootObject = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+            instance = [rootObject valueForKey:@"credentials"];
             
-            
-            instance = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+            if(instance == nil)
+            {
+                instance = [[UserModel alloc] init];
+            }
             
             [instance archive];            
         }
@@ -40,7 +43,9 @@
 - (void)archive
 {
     NSUserDefaults* currentDefaults = [NSUserDefaults standardUserDefaults];
-    NSData* data = [NSKeyedArchiver archivedDataWithRootObject:self];
+    NSMutableDictionary* rootObject = [NSMutableDictionary dictionary];
+    [rootObject setValue:self forKey:@"credentials"];
+    NSData* data = [NSKeyedArchiver archivedDataWithRootObject:rootObject];
     [currentDefaults setObject:data forKey:@"credentials"];
 }
 

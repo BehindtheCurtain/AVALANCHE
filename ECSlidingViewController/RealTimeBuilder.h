@@ -33,13 +33,13 @@
 + (void)endProcessing;
 
 // Create all snapshots for all active sensors.
-+ (void)snapshotCreation:(NSMutableArray*)data
-           withMessageType:(unsigned char)messageType;
++ (void)snapshotCreation:(NSMutableArray*)data;
 
 // Transform sensor data into readable form.
 + (int)transformSensorData:(int)sensorData
               ofSensorType:(NSString*)sensorType
                     withID:(int)sensorID
-             withTransform:(int)transformConstant;
+             withTransform:(int)transformConstant
+                  withAggregate:(SensorAggregateModel*)aggregate;
 
 @end;

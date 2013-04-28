@@ -20,6 +20,7 @@
 @property (strong, nonatomic) UITableView* deviceTableView;
 
 //UI Elements
+- (IBAction)revealMenu:(id)sender;
 - (IBAction)startScanButton:(id)sender;
 - (IBAction)stopScanButton:(id)sender;
 - (void)enableButton:(UIButton*)butt;

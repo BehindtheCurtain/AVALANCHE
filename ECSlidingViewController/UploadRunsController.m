@@ -1,18 +1,18 @@
 //
-//  RunSelectController.m
+//  UploadRunsController.m
 //  AVALANCHE
 //
-//  Created by BehindTheCurtain on 4/16/13.
+//  Created by BehindTheCurtain on 4/27/13.
 //
 //
 
-#import "RunSelectController.h"
+#import "UploadRunsController.h"
 
-@interface RunSelectController ()
+@interface UploadRunsController ()
 
 @end
 
-@implementation RunSelectController
+@implementation UploadRunsController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,7 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     self.navigationItem.title = @"Select Run";
 }
 
@@ -49,17 +49,17 @@
     return  runNum;
 }
 
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-   
+    
     NSString *cellIdentifier = @"runCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
-    cell.textLabel.text = [[[RunListModel instance:NO] runNames] objectAtIndex:indexPath.row];
+    cell.textLabel.text = [[[RunListModel instance:NO] notUploadedRunNames] objectAtIndex:indexPath.row];
     
     return cell;
 }
@@ -106,8 +106,8 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{    
-    RunModel* run = [[[RunListModel instance:NO] runList] objectAtIndex:indexPath.row];
+{
+    RunModel* run = [[[RunListModel instance:NO] notUploadedRuns] objectAtIndex:indexPath.row];
     NSString* filePath = [run filePath];
     
     NSURL* url = [NSURL URLWithString:[[NetworkConfigModel instance:NO] httpURL]];
@@ -140,6 +140,9 @@
     
     if(statusCode == 202)
     {
+        [run setUploaded:YES];
+        [self.tableView reloadData];
+        
         NSString* fileContents = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
         NSMutableData *postBody = [NSMutableData data];
         [postBody appendData:[[fileContents stringByAppendingFormat:@"<<\n%@\n<?>\n", [[UserModel instance:NO] userName]] dataUsingEncoding:NSUTF8StringEncoding]];

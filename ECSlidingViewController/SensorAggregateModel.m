@@ -22,6 +22,14 @@ static const int DEFAULT_NUM_SENSORS = 12;
 @synthesize transformConstant;
 @synthesize sensorID;
 @synthesize isActive;
+@synthesize pressureTear;
+@synthesize min;
+@synthesize max;
+@synthesize average;
+@synthesize first;
+@synthesize count;
+@synthesize warningHigh;
+@synthesize warningLow;
 
 // Init with metadata.
 -(id) initWithName:(NSString*) name
@@ -46,15 +54,18 @@ static const int DEFAULT_NUM_SENSORS = 12;
     NSMutableString* xml = [[NSMutableString alloc] init];
     [xml appendFormat:@"\t\t<sensor name=\"%@\">\n", self.sensorName];
     [xml appendFormat:@"\t\t\t<type>%@</type>\n", self.sensorType];
-    [xml appendFormat:@"\t\t<transform>%d</transform>\n", self.transformConstant];
+    [xml appendFormat:@"\t\t\t<transform>%d</transform>\n", self.transformConstant];
     [xml appendFormat:@"\t\t\t<sensorID>%d</sensorID>\n", self.sensorID];
     [xml appendFormat:@"\t\t\t<active>%d</active>\n", self.isActive];
+    [xml appendFormat:@"\t\t\t<min>%d</min>\n", self.min];
+    [xml appendFormat:@"\t\t\t<max>%d</max>\n", self.max];
+    [xml appendFormat:@"\t\t\t<average>%d</average>\n", self.average];
     [xml appendString:@"\t\t\t<snapshots>\n"];
     
     int index = 0;
     for(SensorSnapshotModel* snapshot in snapshots)
     {
-        [xml appendFormat:@"\t\t\t\t<snapshot id=%d>\n", index];
+        [xml appendFormat:@"\t\t\t\t<snapshot id=\"%d\">\n", index];
         [xml appendString:[snapshot serialize]];
         [xml appendString:@"\t\t\t\t</snapshot>\n"];
         index++;
@@ -64,30 +75,7 @@ static const int DEFAULT_NUM_SENSORS = 12;
     [xml appendString:@"\t\t</sensor>\n"];
     
     return xml;
-    /*
-    NSMutableString* serialString = [[NSMutableString alloc] init];
-    [serialString appendString:self.sensorName];
-    [serialString appendString:DELIM];
-    [serialString appendString:self.sensorType];
-    [serialString appendString:DELIM];
-    [serialString appendString:[NSString stringWithFormat:@"%d", self.transformConstant]];
-    [serialString appendString:DELIM];
-    [serialString appendString:[NSString stringWithFormat:@"%d", self.sensorID]];
-    [serialString appendString:DELIM];
-    [serialString appendString:[NSString stringWithFormat:@"%d", self.isActive]];
-    [serialString appendString:DELIM];
-    
-    for(SensorSnapshotModel* snapshot in snapshots)
-    {
-        [serialString appendString:[snapshot serialize]];
-        [serialString appendString:DELIM];
-    }
-    
-    [[NSFileManager defaultManager] createFileAtPath:file contents:[serialString dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
-     */
 }
-
-
 
 -(id) initFromFile:(NSString*)file
 {
@@ -125,55 +113,6 @@ static const int DEFAULT_NUM_SENSORS = 12;
     [self.snapshots addObject:snapshot];
     [self didChange:NSKeyValueChangeInsertion valuesAtIndexes:set forKey:@"snapshots"];
 }
-
-
-/*
--(void) encodeWithCoder:(NSCoder *)aCoder
-{
-    // Get current time stamp.
-    NSDate* timeStamp = [[NSDate alloc] init];
-    [timeStamp timeIntervalSince1970];
-    
-    // Setup up date formatter that will turn the timestamp into a string.
-    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateStyle:NSDateFormatterFullStyle];
-    [formatter setTimeStyle:NSDateFormatterFullStyle];
-    
-    // Create filename by appending timestamp to sensor name.
-    NSMutableString* file;
-    file = [self.sensorName copy];
-    [file appendString:[formatter stringFromDate:timeStamp]];
-    
-    
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    snapshotsFile = [documentsDirectory stringByAppendingPathComponent:file];
-    
-    [NSKeyedArchiver archiveRootObject:snapshots toFile:snapshotsFile];
-    
-    [aCoder encodeObject:self.sensorName forKey:@"sensorName"];
-    [aCoder encodeObject:self.sensorType forKey:@"sensorType"];
-    [aCoder encodeInt:self.sensorID forKey:@"sensorID"];
-    [aCoder encodeBool:self.isActive forKey:@"isActive"];
-    [aCoder encodeObject:self.snapshotsFile forKey:@"snapshotsFile"];
-}
-
--(id) initWithCoder:(NSCoder *)aDecoder
-{
-    if(self = [super init])
-    {
-        self.sensorName = [aDecoder decodeObjectForKey:@"sensorName"];
-        self.sensorType = [aDecoder decodeObjectForKey:@"sensorType"];
-        self.sensorID = [aDecoder decodeIntForKey:@"sensorID"];
-        self.isActive = [aDecoder decodeBoolForKey:@"isActive"];
-        self.snapshotsFile = [aDecoder decodeObjectForKey:@"snapshotsFile"];
-        
-        snapshots = [NSKeyedUnarchiver unarchiveObjectWithFile:snapshotsFile];
-    }
-    
-    return self;
-}
- */
 
 
 @end

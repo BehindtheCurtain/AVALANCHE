@@ -6,6 +6,9 @@
 //
 
 #import "PagerViewController.h"
+#import "FirstTopViewController.h"
+#import "GaugeViewController.h"
+#import "GaugeDisplayModel.h"
 
 @interface CustomPagerViewController : PagerViewController
 

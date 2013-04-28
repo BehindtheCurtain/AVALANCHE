@@ -16,5 +16,7 @@
 + (RunListModel*)instance:(BOOL)reset;
 - (void)archive;
 - (NSArray*)runNames;
+- (NSArray*)notUploadedRunNames;
+- (NSArray*)notUploadedRuns;
 
 @end

@@ -12,16 +12,19 @@
 
 @end
 
-static void * const temp1Context = (void*)&temp1Context;
-static void * const temp2Context = (void*)&temp2Context;
-static void * const temp3Context = (void*)&temp3Context;
-static void * const temp4Context = (void*)&temp4Context;
+static void * const sensor1Context = (void*)&sensor1Context;
+static void * const sensor2Context = (void*)&sensor2Context;
+static void * const sensor3Context = (void*)&sensor3Context;
+static void * const sensor4Context = (void*)&sensor4Context;
 
 @implementation GaugeViewController
 @synthesize firstGoalBar;
 @synthesize secondGoalBar;
 @synthesize thirdGoalBar;
 @synthesize fourthGoalBar;
+
+@synthesize page;
+@synthesize gaugeDisplays;
 
 - (void)viewDidLoad
 {
@@ -32,51 +35,117 @@ static void * const temp4Context = (void*)&temp4Context;
     [firstGoalBar setAllowTap:NO];
     [firstGoalBar setAllowSwitching:NO];
     [firstGoalBar setPercent:0 animated:NO];
-    [firstGoalBar setCustomText:[NSString stringWithFormat:@" °F"]];
+    [firstGoalBar setCustomText:[NSString stringWithFormat:@" "]];
     
 	[secondGoalBar setAllowDragging:NO];
     [secondGoalBar setAllowDecimal:YES];
     [secondGoalBar setAllowTap:NO];
     [secondGoalBar setAllowSwitching:NO];
     [secondGoalBar setPercent:0 animated:NO];
-    [secondGoalBar setCustomText:[NSString stringWithFormat:@" °F"]];
+    [secondGoalBar setCustomText:[NSString stringWithFormat:@" "]];
     
     [thirdGoalBar setAllowDragging:NO];
     [thirdGoalBar setAllowDecimal:YES];
     [thirdGoalBar setAllowTap:NO];
     [thirdGoalBar setAllowSwitching:NO];
     [thirdGoalBar setPercent:0 animated:NO];
-    [thirdGoalBar setCustomText:[NSString stringWithFormat:@" °F"]];
+    [thirdGoalBar setCustomText:[NSString stringWithFormat:@" "]];
     
     [fourthGoalBar setAllowDragging:NO];
     [fourthGoalBar setAllowDecimal:YES];
     [fourthGoalBar setAllowTap:NO];
     [fourthGoalBar setAllowSwitching:NO];
     [fourthGoalBar setPercent:0 animated:NO];
-    [fourthGoalBar setCustomText:[NSString stringWithFormat:@" °F"]];
+    [fourthGoalBar setCustomText:[NSString stringWithFormat:@" "]];
+    
+    [self setObservers];
 }
 
-- (void)viewWillAppear:(BOOL)animated
+
+- (void)setObservers
 {
-    [super viewWillAppear:animated];
-    [RealTimeBuilder gaugeModelFactory];
+
+    //if([[GaugeDisplayModel alloc] initwithPage:self.page] != nil)
+    {
+      //  self.gaugeDisplays = [[GaugeDisplayModel alloc] initwithPage:self.page];
+    }
     
-    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature1"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp1Context];
-    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature2"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp2Context];
-    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature3"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp3Context];
-    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature4"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp4Context];
+    if(self.gaugeDisplays != nil)
+    {
     
-    [BLEGaugeAlarmService instance];
+        NSString* observe1 = [[self.gaugeDisplays sensors] objectAtIndex:0];
+        NSString* observe2 = [[self.gaugeDisplays sensors] objectAtIndex:1];
+        NSString* observe3 = [[self.gaugeDisplays sensors] objectAtIndex:2];
+        NSString* observe4 = [[self.gaugeDisplays sensors] objectAtIndex:3];
+        
+        SensorAggregateModel* aggregate1 = [[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:observe1];
+        SensorAggregateModel* aggregate2 = [[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:observe2];
+        SensorAggregateModel* aggregate3 = [[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:observe3];
+        SensorAggregateModel* aggregate4 = [[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:observe4];
+        self.sensorLabel1.text = [aggregate1 sensorName];
+        self.sensorLabel2.text = [aggregate2 sensorName];
+        self.sensorLabel3.text = [aggregate3 sensorName];
+        self.sensorLabel4.text = [aggregate4 sensorName];
+        
+        [aggregate1 addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:sensor1Context];
+        [aggregate2 addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:sensor2Context];
+        [aggregate3 addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:sensor3Context];
+        [aggregate4 addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:sensor4Context];
+    }
     
-    [[GaugeModel instance:NO] setStartTimeStamp:[NSDate dateWithTimeIntervalSince1970:[[NSDate date] timeIntervalSince1970]]];
+    //[self.gaugeDisplays archive:self.page];
+}
+
+- (void)removeObservers
+{
+    if(self.gaugeDisplays != nil)
+    {
+        
+        NSString* observe1 = [[self.gaugeDisplays sensors] objectAtIndex:0];
+        NSString* observe2 = [[self.gaugeDisplays sensors] objectAtIndex:1];
+        NSString* observe3 = [[self.gaugeDisplays sensors] objectAtIndex:2];
+        NSString* observe4 = [[self.gaugeDisplays sensors] objectAtIndex:3];
+    
+        [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:observe1] removeObserver:self forKeyPath:@"snapshots"];
+        [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:observe2] removeObserver:self forKeyPath:@"snapshots"];
+        [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:observe3] removeObserver:self forKeyPath:@"snapshots"];
+        [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:observe4] removeObserver:self forKeyPath:@"snapshots"];
+    }
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     NSIndexSet* set = [change objectForKey:NSKeyValueChangeIndexesKey];
     SensorSnapshotModel* snapshot = [[object snapshots] objectAtIndex:[set firstIndex]];
+    KDGoalBar* current = nil;
+    NSString* key = nil;
     
-    if(context == temp1Context)
+    if(context == sensor1Context)
+    {
+        current = firstGoalBar;
+        key = [[self.gaugeDisplays sensors] objectAtIndex:0];
+        
+    }
+    else if(context == sensor2Context)
+    {
+        current = secondGoalBar;
+        key = [[self.gaugeDisplays sensors] objectAtIndex:1];
+    }
+    else if(context == sensor3Context)
+    {
+        current = thirdGoalBar;
+        key = [[self.gaugeDisplays sensors] objectAtIndex:2];
+    }
+    else if(context == sensor4Context)
+    {
+        current = fourthGoalBar;
+        key = [[self.gaugeDisplays sensors] objectAtIndex:3];
+    }
+    
+    int high = [object warningHigh];
+    int low = [object warningLow];
+    
+    if([key rangeOfString:@"Temperature"].location != NSNotFound)
     {
         if([snapshot sensorData] == 5930) //Check for Error Value
         {
@@ -87,42 +156,161 @@ static void * const temp4Context = (void*)&temp4Context;
             [firstGoalBar setPercent:[snapshot sensorData]/25 animated:NO];
             [firstGoalBar setCustomText:[NSString stringWithFormat:@"%.u °F", [snapshot sensorData]]];
         }
-    }
-    else if(context == temp2Context)
-    {
-        if([snapshot sensorData] == 5930) //Check for Error Value
+        int sensorData = [snapshot sensorData];
+        double percent = sensorData;
+        if(sensorData >= 0)
         {
-            [secondGoalBar setCustomText:[NSString stringWithFormat:@"Error"]];
+            percent /= high;
+            percent *= 100;
+            
+            if(percent <= 60)
+            {
+                [current setBarColor:[UIColor greenColor]];
+            }
+            else if(percent <= 80)
+            {
+                [current setBarColor:[UIColor orangeColor]];
+            }
+            else
+            {
+                [current setBarColor:[UIColor redColor]];
+            }
         }
         else
         {
-            [secondGoalBar setPercent:[snapshot sensorData]/25 animated:NO];
-            [secondGoalBar setCustomText:[NSString stringWithFormat:@"%.u °F", [snapshot sensorData]]];
+            percent /= low;
+            percent *= 100;
+            
+            
+            if(percent <= 80)
+            {
+                [current setBarColor:[UIColor cyanColor]];
+            }
+            else
+            {
+                [current setBarColor:[UIColor redColor]];
+            }
+            
+            percent *= -1;
         }
+        
+        [current setPercent:percent animated:NO];
+        [current setCustomText:[NSString stringWithFormat:@"%u °F", sensorData]];
     }
-    else if(context == temp3Context)
+    else if([key rangeOfString:@"Pressure"].location != NSNotFound)
     {
-        if([snapshot sensorData] == 5930) //Check for Error Value
+        int sensorData = [snapshot sensorData];
+        double percent = sensorData;
+        if(sensorData >= 0)
         {
-            [thirdGoalBar setCustomText:[NSString stringWithFormat:@"Error"]];
+            percent /= (high * 10);
+            percent *= 100;
+            
+            if(percent <= 60)
+            {
+                [current setBarColor:[UIColor greenColor]];
+            }
+            else if(percent <= 80)
+            {
+                [current setBarColor:[UIColor orangeColor]];
+            }
+            else
+            {
+                [current setBarColor:[UIColor redColor]];
+            }
         }
         else
         {
-            [thirdGoalBar setPercent:[snapshot sensorData]/25 animated:NO];
-            [thirdGoalBar setCustomText:[NSString stringWithFormat:@"%.u °F", [snapshot sensorData]]];
+            percent /= low;
+            percent *= 100;
+            
+            
+            if(percent <= 80)
+            {
+                [current setBarColor:[UIColor cyanColor]];
+            }
+            else
+            {
+                [current setBarColor:[UIColor redColor]];
+            }
         }
+        
+        double data = sensorData;
+        data /= 10;
+        [current setPercent:percent animated:NO];
+        [current setCustomText:[NSString stringWithFormat:@"%.1f PSI", data]];
     }
-    else if(context == temp4Context)
+    else if([key rangeOfString:@"RPM"].location != NSNotFound)
     {
-        if([snapshot sensorData] == 5930) //Check for Error Value
+
+        int sensorData = [snapshot sensorData];
+        double percent = sensorData;
+        if(sensorData >= 0)
         {
-            [fourthGoalBar setCustomText:[NSString stringWithFormat:@"Error"]];
+            percent /= high;
+            percent *= 100;
+            
+            if(percent <= 60)
+            {
+                [current setBarColor:[UIColor greenColor]];
+            }
+            else if(percent <= 80)
+            {
+                [current setBarColor:[UIColor orangeColor]];
+            }
+            else
+            {
+                [current setBarColor:[UIColor redColor]];
+            }
+        }
+        
+        [current setPercent:percent animated:NO];
+        [current setCustomText:[NSString stringWithFormat:@"%u", sensorData]];
+    }
+    else if([key rangeOfString:@"AirFuel"].location != NSNotFound)
+    {
+
+        int sensorData = [snapshot sensorData];
+        double percent = sensorData;
+        if(sensorData >= 0)
+        {
+            percent /= high;
+            percent *= 100;
+            
+            if(percent <= 60)
+            {
+                [current setBarColor:[UIColor greenColor]];
+            }
+            else if(percent <= 80)
+            {
+                [current setBarColor:[UIColor orangeColor]];
+            }
+            else
+            {
+                [current setBarColor:[UIColor redColor]];
+            }
         }
         else
         {
-            [fourthGoalBar setPercent:[snapshot sensorData]/25 animated:NO];
-            [fourthGoalBar setCustomText:[NSString stringWithFormat:@"%.u °F", [snapshot sensorData]]];
+            percent /= low;
+            percent *= 100;
+            
+            
+            if(percent <= 80)
+            {
+                [current setBarColor:[UIColor cyanColor]];
+            }
+            else
+            {
+                [current setBarColor:[UIColor redColor]];
+            }
+            
         }
+        
+        double data = sensorData;
+        data /= 100;
+        [current setPercent:percent animated:NO];
+        [current setCustomText:[NSString stringWithFormat:@"%.2f %%", data]];
     }
 }
 
@@ -136,42 +324,21 @@ static void * const temp4Context = (void*)&temp4Context;
     // Release any retained subviews of the main view.
 }
 
+/*
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [[BLEGaugeAlarmService instance] disconnect];
+    [[BLEGaugeAlarmService instance:NO] disconnect];
     [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature1"] removeObserver:self forKeyPath:@"snapshots"];
     [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature2"] removeObserver:self forKeyPath:@"snapshots"];
     [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature3"] removeObserver:self forKeyPath:@"snapshots"];
     [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature4"] removeObserver:self forKeyPath:@"snapshots"];
-    
 }
+*/
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-}
-
-- (IBAction)endAction:(id)sender
-{
-    [RealTimeBuilder endProcessing];
-    
-    [self.navigationController popViewControllerAnimated:YES];
-}
-- (IBAction)startAction:(id)sender
-{
-    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature1"] removeObserver:self forKeyPath:@"snapshots"];
-    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature2"] removeObserver:self forKeyPath:@"snapshots"];
-    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature3"] removeObserver:self forKeyPath:@"snapshots"];
-    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature4"] removeObserver:self forKeyPath:@"snapshots"];
-    
-    [RealTimeBuilder beginProcessing];
-    
-    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature1"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp1Context];
-    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature2"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp2Context];
-    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature3"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp3Context];
-    [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:@"Temperature4"] addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:temp4Context];
-    
 }
 
 @end

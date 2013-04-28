@@ -62,7 +62,7 @@
 
 - (NSString*)httpURL
 {
-    return [NSString stringWithFormat:@"http://%@", self.serverIP];
+    return [NSString stringWithFormat:@"http://%@:8080", self.serverIP];
 }
 
 - (void)archive
