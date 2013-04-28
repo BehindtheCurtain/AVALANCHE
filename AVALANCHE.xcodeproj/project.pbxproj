@@ -11,6 +11,7 @@
 		0808054717174454007D6996 /* d3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 0808054617174454007D6996 /* d3.min.js */; };
 		08089F3116E6A90C00EBA435 /* CustomPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08089F2D16E6A90C00EBA435 /* CustomPagerViewController.m */; };
 		08089F3316E6A90C00EBA435 /* PagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08089F3016E6A90C00EBA435 /* PagerViewController.m */; };
+		084FCEB9172D9BAB0037CDA8 /* temp3.xml in Resources */ = {isa = PBXBuildFile; fileRef = 084FCEB8172D9BAB0037CDA8 /* temp3.xml */; };
 		08549435170288830007566F /* ScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0854942F170288830007566F /* ScanController.m */; };
 		08549436170288830007566F /* SensorConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08549431170288830007566F /* SensorConfigViewController.m */; };
 		0866AF9816F8E0760097F624 /* RealTimeBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0866AF9716F8E0760097F624 /* RealTimeBuilder.m */; };
@@ -99,6 +100,7 @@
 		08089F2D16E6A90C00EBA435 /* CustomPagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPagerViewController.m; sourceTree = "<group>"; };
 		08089F2F16E6A90C00EBA435 /* PagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagerViewController.h; sourceTree = "<group>"; };
 		08089F3016E6A90C00EBA435 /* PagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagerViewController.m; sourceTree = "<group>"; };
+		084FCEB8172D9BAB0037CDA8 /* temp3.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = temp3.xml; sourceTree = "<group>"; };
 		0854942B170288830007566F /* Brsp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Brsp.h; sourceTree = "<group>"; };
 		0854942E170288830007566F /* ScanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanController.h; sourceTree = "<group>"; };
 		0854942F170288830007566F /* ScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanController.m; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 		088BA65317172F46002F0831 /* public_html */ = {
 			isa = PBXGroup;
 			children = (
+				084FCEB8172D9BAB0037CDA8 /* temp3.xml */,
 				08F7E3101729E2CC00A1F761 /* temp2.xml */,
 				08F7E30E1729AC4100A1F761 /* temp.xml */,
 				0883F5B217249F640072D952 /* saveRun.xml */,
@@ -681,6 +684,7 @@
 				0883F5B317249F640072D952 /* saveRun.xml in Resources */,
 				08F7E30F1729AC4100A1F761 /* temp.xml in Resources */,
 				08F7E3111729E2CD00A1F761 /* temp2.xml in Resources */,
+				084FCEB9172D9BAB0037CDA8 /* temp3.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

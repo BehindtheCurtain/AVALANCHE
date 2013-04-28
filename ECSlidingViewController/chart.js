@@ -5,13 +5,13 @@
 function buildChart(fileName, sensorName, yLabel)
 {
 	var margin = {
-		top: 10,
+		top: 30,
 		right: 10,
 		bottom: 30,
 		left: 40
 	},
 		width = 550 - margin.left - margin.right,
-		height = 240 - margin.top - margin.bottom;
+		height = 255 - margin.top - margin.bottom;
 
 	var x = d3.time.scale()
 		.range([0, width]);
@@ -45,6 +45,31 @@ function buildChart(fileName, sensorName, yLabel)
 
 	d3.xml(fileName, function (xml)
 	{
+		//Total number of sensors in the XMl file
+		var sensorCount = d3.select(xml).select("sensors").selectAll("sensor")[0].length;
+		//Input sensor index in the XML file
+		var sensorIndex = -1;
+
+		//Find the input sensor location in the given XML file
+		for(var i = 0; i < sensorCount; i++)
+		{
+			if(d3.select(xml).selectAll("sensor")[0][i].getAttribute("name") == sensorName)
+			{
+				sensorIndex = i;
+			}
+		}
+
+
+		var dateTest = new Date((d3.select(xml).selectAll("startTime")[0][0].textContent)*1000);
+
+		$('#date').text("Date: " + dateTest.toLocaleString());
+		$('#average').text("Average: " + d3.select(xml).selectAll("sensor").select("average")[0][sensorIndex].textContent);
+		$('#min').text("Min: " + d3.select(xml).selectAll("sensor").select("min")[0][sensorIndex].textContent);
+		$('#max').text("Max: " + d3.select(xml).selectAll("sensor").select("max")[0][sensorIndex].textContent);
+
+		//console.log(d3.select(xml).selectAll("sensor").select("max")[0][sensorIndex].textContent)
+
+
 		var data = [];
 		var len = d3.select(xml).select("sensor").selectAll("snapshot").selectAll("data").length; //Number of snapshots available
 		var skip = Math.round(len / 100); //Ensure that only 100 points are graphed
@@ -52,14 +77,11 @@ function buildChart(fileName, sensorName, yLabel)
 		for (var i = 0; i < len; i = i + skip)
 		{
 			var obj = {
-				close: parseInt(d3.select(xml).select("sensor").selectAll("snapshot").selectAll("data")[i][0].textContent),
-				date: parseInt(d3.select(xml).select("sensor").selectAll("snapshot").selectAll("time")[i][0].textContent)
+				close: parseInt(d3.select(xml).selectAll("sensor").selectAll("snapshot").select("data")[sensorIndex][i].textContent),
+				date: parseInt(d3.select(xml).selectAll("sensor").selectAll("snapshot").select("time")[sensorIndex][i].textContent)
 			};
 			data.push(obj);
 		}
-
-		console.log(d3.select(xml).select("sensor").selectAll("snapshots").selectAll("snapshot")[0][3].getAttribute("id"));
-		console.log(d3.select(xml).selectAll("sensor")[0][0].getAttribute("name"));
 
 		data.forEach(function (d)
 		{
