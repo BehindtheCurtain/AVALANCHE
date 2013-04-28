@@ -75,8 +75,11 @@
     [postBody appendData:[[NSString stringWithFormat:@"\t<password>%@</password>\n", password] dataUsingEncoding:NSUTF8StringEncoding]];
     [postBody appendData:[[NSString stringWithFormat:@"</login>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
     [postBody appendData:[[NSString stringWithFormat:@"<?>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
-    [request setTimeOutSeconds:600];
+    [request setTimeOutSeconds:60];
+    [request setPassword:password];
+    [request setUsername:user];
     [request setPostBody:postBody];
+    [request setValidatesSecureCertificate:NO];
     [request startSynchronous];
     
     NSError* error = [request error];
@@ -91,6 +94,8 @@
     if(statusCode == 202)
     {
         [[UserModel instance:NO] setLoggedOn:YES];
+        [[UserModel instance:NO] setUserName:user];
+        [[UserModel instance:NO] setPassword:password];
         [[UserModel instance:NO] archive];
         
         UIAlertView *alert = [[UIAlertView alloc]

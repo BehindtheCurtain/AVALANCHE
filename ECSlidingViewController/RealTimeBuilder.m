@@ -8,9 +8,6 @@
 
 #import "RealTimeBuilder.h"
 
-#define DEFAULT_NUM_SENSORS 12
-#define TIME_BETWEEN_TIMESTAMP 10
-
 // Class variables
 static BOOL processing = NO;
 
@@ -43,12 +40,17 @@ static BOOL processing = NO;
 		NSString* sensorType = [configuration getType];
         int transform = [configuration transformConstant];
 		int sensorID = [configuration sensorID];
+        int warnHigh = [configuration maxValue];
+        int warnLow = [configuration minValue];
 		BOOL active = [configuration active];
 		
 		if(active)
 		{
             SensorAggregateModel* sensorAggregateModel = [[SensorAggregateModel alloc] initWithName:sensorName withType:sensorType withTransform:transform withSensorID:sensorID isActive:active];
             [sensorAggregateModel setPressureTear:-1];
+            [sensorAggregateModel setWarningHigh:warnHigh];
+            [sensorAggregateModel setWarningLow:warnLow];
+            [sensorAggregateModel setFirst:YES];
 			NSString* key = [[sensorAggregateModel sensorType] stringByAppendingFormat:@"%d", [sensorAggregateModel sensorID]];
 			[sensorAggregateModelMap setObject:sensorAggregateModel forKey:key];
 		}
@@ -87,8 +89,6 @@ static BOOL processing = NO;
 {
     NSMutableDictionary* sensorAggregateModelMap = [[GaugeModel instance:NO] sensorAggregateModelMap];
     
-    NSString* type;
-    
     NSDate* time = [NSDate dateWithTimeIntervalSince1970:[[NSDate date] timeIntervalSince1970]];
     
     for(int i = 0; i < [data count]; i++)
@@ -104,27 +104,26 @@ static BOOL processing = NO;
         else if(i >= 4 && i <= 6)
         {
             sensorType = @"Pressure";
-            sensorID -= 3;
+            sensorID  -= 4;
         }
         else if(i >= 7 && i <= 9)
         {
             sensorType = @"RPM";
-            sensorID -= 6;
+            sensorID -= 7;
         }
         else if(i >= 10 && i <= 11)
         {
             sensorType = @"AirFuel";
-            sensorID -= 9;
+            sensorID -= 10;
         }
         
         unsigned int sensorData = [dataPoint unsignedIntValue];
         
-        NSString* key = [type stringByAppendingFormat:@"%d", sensorID];
+        NSString* key = [sensorType stringByAppendingFormat:@"%d", sensorID];
         SensorAggregateModel* aggregate = [sensorAggregateModelMap objectForKey:key];
-        int tear = [aggregate pressureTear];
-        sensorData = [RealTimeBuilder transformSensorData:sensorData ofSensorType:type withID:sensorID withTransform:[aggregate transformConstant] withAggregate:aggregate];
+        sensorData = [RealTimeBuilder transformSensorData:sensorData ofSensorType:sensorType withID:sensorID withTransform:[aggregate transformConstant] withAggregate:aggregate];
         
-        SensorSnapshotModel* snapshot = [[SensorSnapshotModel alloc] initWithTimeStamp:time withType:type withSensorID:sensorID withData:sensorData];
+        SensorSnapshotModel* snapshot = [[SensorSnapshotModel alloc] initWithTimeStamp:time withType:sensorType withSensorID:sensorID withData:sensorData];
         
         [aggregate addSnapshot:snapshot];
     }
@@ -151,7 +150,7 @@ static BOOL processing = NO;
     }
     else if([sensorType isEqualToString:@"Pressure"])
     {
-        if([aggregate pressureTear] < 0)
+        if([aggregate first])
         {
             [aggregate setPressureTear:sensorData];
             
@@ -160,12 +159,37 @@ static BOOL processing = NO;
         else
         {
             transformedData = sensorData - [aggregate pressureTear];
-            transformedData = transformedData / 10;
         }
     }
     else if([sensorType isEqualToString:@"AirFuel"])
     {
         transformedData = sensorData;
+    }
+    
+    if([aggregate min] > transformedData)
+    {
+        [aggregate setMin:transformedData];
+    }
+    else if([aggregate max] < transformedData)
+    {
+        [aggregate setMax:transformedData];
+    }
+    
+    if([aggregate first])
+    {
+        [aggregate setAverage:transformedData];
+        [aggregate setCount:1];
+        [aggregate setMin:transformedData];
+        [aggregate setMax:transformedData];
+        [aggregate setFirst:NO];
+    }
+    else
+    {
+        int count = [aggregate count] + 1;
+        [aggregate setCount:count];
+        int average = [aggregate average];
+        average = average + ((transformedData - average) / count);
+        [aggregate setAverage:average];
     }
     
     return transformedData;

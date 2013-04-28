@@ -30,6 +30,13 @@
 @property (assign) int sensorID;
 @property (assign) BOOL isActive;
 @property (assign) int pressureTear;
+@property (assign) int min;
+@property (assign) int max;
+@property (assign) int average;
+@property (assign) BOOL first;
+@property (assign) int count;
+@property (assign) double warningHigh;
+@property (assign) double warningLow;
 
 
 //Initialize SensorAggregateModel with inputted metadata.

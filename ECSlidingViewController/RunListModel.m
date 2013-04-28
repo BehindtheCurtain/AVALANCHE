@@ -39,6 +39,41 @@
     }
 }
 
+- (void)clean
+{
+    
+}
+
+- (NSArray*)notUploadedRunNames
+{
+    NSMutableArray* names = [[NSMutableArray alloc] init];
+    
+    for(RunModel* run in self.runList)
+    {
+        if(![run uploaded])
+        {
+            [names addObject:[run runName]];
+        }
+    }
+    
+    return names;
+}
+
+- (NSArray*)notUploadedRuns
+{
+    NSMutableArray* runs = [[NSMutableArray alloc] init];
+    
+    for(RunModel* run in self.runList)
+    {
+        if(![run uploaded])
+        {
+            [runs addObject:run];
+        }
+    }
+    
+    return runs;
+}
+
 - (NSArray*)runNames
 {
     NSMutableArray* names = [[NSMutableArray alloc] init];

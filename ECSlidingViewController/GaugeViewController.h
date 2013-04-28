@@ -16,6 +16,9 @@
 #import "AppDelegate.h"
 #import "SensorAggregateModel.h"
 #import "SensorSnapshotModel.h"
+#import "GaugeDisplayModel.h"
+#import "ConfigurationModel.h"
+#import "ConfigurationModelMap.h"
 
 
 @interface GaugeViewController : UIViewController
@@ -25,10 +28,16 @@
 @property (weak, nonatomic) IBOutlet KDGoalBar *thirdGoalBar;
 @property (weak, nonatomic) IBOutlet KDGoalBar *fourthGoalBar;
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *startButton;
-- (IBAction)startAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *sensorLabel1;
+@property (weak, nonatomic) IBOutlet UILabel *sensorLabel2;
+@property (weak, nonatomic) IBOutlet UILabel *sensorLabel3;
+@property (weak, nonatomic) IBOutlet UILabel *sensorLabel4;
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *endButton;
-- (IBAction)endAction:(id)sender;
+
+@property (assign) int page;
+@property (retain) GaugeDisplayModel* gaugeDisplays;
+
+- (void)setObservers;
+- (void)removeObservers;
 
 @end

@@ -13,5 +13,6 @@
 @property (retain) NSString* runName;
 @property (retain) NSString* directory;
 @property (retain) NSString* filePath;
+@property (assign) BOOL uploaded;
 
 @end

@@ -102,6 +102,11 @@
 
 #pragma mark - UI 
 
+- (IBAction)revealMenu:(id)sender
+{
+    [self.slidingViewController anchorTopViewTo:ECRight];
+}
+
 - (void) startScanButton:(id)sender {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     [_peripherals removeAllObjects];
