@@ -66,7 +66,7 @@
             // Flush until we get "NEW".
             [[self brsp] flushInputBuffer:1];
         }
-
+        
         // Flush "NEW".
         [[self brsp] flushInputBuffer:3];
 

@@ -105,13 +105,26 @@ static void * const sensor4Context = (void*)&sensor4Context;
         NSString* observe2 = [[self.gaugeDisplays sensors] objectAtIndex:1];
         NSString* observe3 = [[self.gaugeDisplays sensors] objectAtIndex:2];
         NSString* observe4 = [[self.gaugeDisplays sensors] objectAtIndex:3];
-    
-        [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:observe1] removeObserver:self forKeyPath:@"snapshots"];
-        [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:observe2] removeObserver:self forKeyPath:@"snapshots"];
-        [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:observe3] removeObserver:self forKeyPath:@"snapshots"];
-        [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:observe4] removeObserver:self forKeyPath:@"snapshots"];
+
+        
+        SensorAggregateModel* aggregate1 = [[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:observe1];
+        SensorAggregateModel* aggregate2 = [[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:observe2];
+        SensorAggregateModel* aggregate3 = [[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:observe3];
+        SensorAggregateModel* aggregate4 = [[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:observe4];
+        self.sensorLabel1.text = [aggregate1 sensorName];
+        self.sensorLabel2.text = [aggregate2 sensorName];
+        self.sensorLabel3.text = [aggregate3 sensorName];
+        self.sensorLabel4.text = [aggregate4 sensorName];
+        
+        [aggregate1 addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:sensor1Context];
+        [aggregate2 addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:sensor2Context];
+        [aggregate3 addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:sensor3Context];
+        [aggregate4 addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:sensor4Context];
     }
+    
+    //[self.gaugeDisplays archive:self.page];
 }
+
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
@@ -147,6 +160,16 @@ static void * const sensor4Context = (void*)&sensor4Context;
     
     if([key rangeOfString:@"Temperature"].location != NSNotFound)
     {
+        if([snapshot sensorData] == 5930) //Check for Error Value
+        {
+            [firstGoalBar setCustomText:[NSString stringWithFormat:@"Error"]];
+        }
+        else
+        {
+            [firstGoalBar setPercent:[snapshot sensorData]/25 animated:NO];
+            [firstGoalBar setCustomText:[NSString stringWithFormat:@"%.u °F", [snapshot sensorData]]];
+        }
+
         int sensorData = [snapshot sensorData];
         double percent = sensorData;
         if(sensorData >= 0)
@@ -233,6 +256,7 @@ static void * const sensor4Context = (void*)&sensor4Context;
     }
     else if([key rangeOfString:@"RPM"].location != NSNotFound)
     {
+
         int sensorData = [snapshot sensorData];
         double percent = sensorData;
         if(sensorData >= 0)
@@ -259,6 +283,7 @@ static void * const sensor4Context = (void*)&sensor4Context;
     }
     else if([key rangeOfString:@"AirFuel"].location != NSNotFound)
     {
+
         int sensorData = [snapshot sensorData];
         double percent = sensorData;
         if(sensorData >= 0)

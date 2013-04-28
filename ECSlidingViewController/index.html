@@ -1,41 +1,43 @@
 <!doctype html>
 <html lang="en-US">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>UIWebView Test</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="HandheldFriendly" content="true">
-  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>UIWebView Test</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="true">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<style>
+			body {
+				font: 12px sans-serif;
+			}
+			.axis path, .axis line {
+				fill: none;
+				stroke: #000;
+				shape-rendering: crispEdges;
+			}
+			.x.axis path {
+				display: none;
+			}
+			.line {
+				fill: none;
+				stroke: steelblue;
+				stroke-width: 2px;
+			}
 
-  <style>
-      
-    body {
-        font: 10px sans-serif;
-    }
-    
-    .axis path,
-    .axis line {
-        fill: none;
-        stroke: #000;
-        shape-rendering: crispEdges;
-    }
-    
-    .x.axis path {
-        display: none;
-    }
-    
-    .line {
-        fill: none;
-        stroke: steelblue;
-        stroke-width: 1.5px;
-    }
-    
-  </style>
-</head>
-<body>
-  <div id="output"></div>
-</body>
-  <script src="d3.min.js"></script>
-  <script src="jquery-2.0.0.min.js"></script>
-  <script src="chart.js"></script>
+			div { float: left; width: 20%; margin: 6px;}
+			
+		</style>
+	</head>
+	<body>
+		<div id="date">Date: </div>
+		<div id="average">Average: </div>
+		<div id="min">Min: </div>
+		<div id="max">Max: </div>
+	</body>
+	<script src="d3.min.js"></script>
+	<script src="jquery-2.0.0.min.js"></script>
+	<script src="chart.js"></script>
+	<script>
+	 	buildChart("temp2.xml", "EGT 1", "Temp °F");
+	</script>
 </html>

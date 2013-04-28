@@ -77,7 +77,7 @@
 
 - (IBAction)alertBox:(id)sender
 {
-    [customWebView stringByEvaluatingJavaScriptFromString:@"popAlertBox()"];
+    [customWebView stringByEvaluatingJavaScriptFromString:@"buildChart('temp2.xml', 'EGT 1', 'Temp °F')"];
 }
 
 @end
