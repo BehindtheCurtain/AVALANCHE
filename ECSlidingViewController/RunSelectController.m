@@ -14,6 +14,12 @@
 
 @implementation RunSelectController
 
+@synthesize sensors;
+@synthesize selectedRun;
+@synthesize typeDict;
+@synthesize lastSensor;
+@synthesize type;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -34,6 +40,9 @@
     [super viewDidLoad];
 
     self.navigationItem.title = @"Select Run";
+    self.sensors = [[NSMutableArray alloc] init];
+    self.selectedRun = [[RunModel alloc] init];
+    self.typeDict = [[NSMutableDictionary alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -106,74 +115,56 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{    
+{
+    self.sensors = [[NSMutableArray alloc] init];
     RunModel* run = [[[RunListModel instance:NO] runList] objectAtIndex:indexPath.row];
+    self.selectedRun = run;
     NSString* filePath = [run filePath];
     
-    NSURL* url = [NSURL URLWithString:[[NetworkConfigModel instance:NO] httpURL]];
+    NSString* xml = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     
-    ASIHTTPRequest* request = [ASIHTTPRequest requestWithURL:url];
+    NSData* xmlData = [xml dataUsingEncoding:NSUTF8StringEncoding];
     
-    ASIHTTPRequest* login = [ASIHTTPRequest requestWithURL:url];
-    
-    [login setRequestMethod:@"POST"];
-    [login useSessionPersistence];
-    NSMutableData *post = [NSMutableData data];
-    [post appendData:[[NSString stringWithFormat:@"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
-    [post appendData:[[NSString stringWithFormat:@"<login>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
-    [post appendData:[[NSString stringWithFormat:@"\t<username>%@</username>\n", [[UserModel instance:NO] userName]] dataUsingEncoding:NSUTF8StringEncoding]];
-    [post appendData:[[NSString stringWithFormat:@"\t<password>%@</password>\n", [[UserModel instance:NO] password]] dataUsingEncoding:NSUTF8StringEncoding]];
-    [post appendData:[[NSString stringWithFormat:@"</login>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
-    [post appendData:[[NSString stringWithFormat:@"<?>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
-    [login setTimeOutSeconds:600];
-    [login setPostBody:post];
-    [login startSynchronous];
-    
-    NSError* error = [request error];
-    NSString* response = nil;
-    int statusCode = -1;
-    if (!error)
+    NSXMLParser* parser = [[NSXMLParser alloc] initWithData:xmlData];
+    [parser setDelegate:self];
+    [parser parse];
+
+}
+
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
+{
+    if([elementName isEqualToString:@"sensor"])
     {
-        statusCode = [login responseStatusCode];
-        response = [login responseString];
-    }
-    
-    if(statusCode == 202)
-    {
-        NSString* fileContents = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-        NSMutableData *postBody = [NSMutableData data];
-        [postBody appendData:[[fileContents stringByAppendingFormat:@"<<\n%@\n<?>\n", [[UserModel instance:NO] userName]] dataUsingEncoding:NSUTF8StringEncoding]];
-        [request setPostBody:postBody];
-        [request setRequestMethod:@"POST"];
-        [request setTimeOutSeconds:120];
-        [request setDelegate:self];
-        [request startAsynchronous];
-    }
-    else
-    {
-        UIAlertView *alert = [[UIAlertView alloc]
-                              initWithTitle: @"Please Try Again."
-                              message: @"Cannot login."
-                              delegate: nil
-                              cancelButtonTitle:@"OK"
-                              otherButtonTitles:nil];
-        [alert show];
+        [self setLastSensor:[attributeDict valueForKey:@"name"]];
+        [self.sensors addObject:[attributeDict valueForKey:@"name"]];
     }
 }
 
-- (void)requestFinished:(ASIHTTPRequest *)request
+- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
 {
-    // Use when fetching text data
-    NSString *responseString = [request responseString];
-    
-    // Use when fetching binary data
-    NSData *responseData = [request responseData];
+    [self setType:string];
+}
+         
+ - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
+{
+    if([elementName isEqualToString:@"type"])
+    {
+        [self.typeDict setValue:[self type] forKey:[self lastSensor]];
+    }
 }
 
-- (void)requestFailed:(ASIHTTPRequest *)request
+- (void)parserDidEndDocument:(NSXMLParser *)parser
 {
-    NSError *error = [request error];
-    NSLog(@"%@", error);
+    [self.sensors sortUsingSelector:@selector(caseInsensitiveCompare:)];
+    SensorSelectController* sensorSelect = [self.storyboard instantiateViewControllerWithIdentifier:@"sensorSelect"];
+    [sensorSelect setRun:[self selectedRun]];
+    [sensorSelect setSensors:[self sensors]];
+    [sensorSelect setTypeDict:[self typeDict]];
+    
+    
+    
+    
+    [self.navigationController pushViewController:sensorSelect animated:YES];
 }
 
 - (IBAction)revealMenu:(id)sender

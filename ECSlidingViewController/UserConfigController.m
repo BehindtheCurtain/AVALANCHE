@@ -90,6 +90,11 @@
         statusCode = [request responseStatusCode];
         response = [request responseString];
     }
+    else
+    {
+        NSLog(@"%@", error);
+        statusCode = [request responseStatusCode];
+    }
     
     if(statusCode == 202)
     {
@@ -98,9 +103,11 @@
         [[UserModel instance:NO] setPassword:password];
         [[UserModel instance:NO] archive];
         
+        NSString* message = [NSString stringWithFormat:@"Welcome back %@.", user];
+        
         UIAlertView *alert = [[UIAlertView alloc]
                               initWithTitle: @"Logged In"
-                              message:@""
+                              message:message
                               delegate: nil
                               cancelButtonTitle:@"OK"
                               otherButtonTitles:nil];
@@ -128,6 +135,86 @@
     [super viewDidLoad];
 }
 
+- (IBAction)changeAction:(id)sender
+{
+    NSString* user = self.userNameField.text;
+    NSString* password = self.passwordField.text;
+    password = [UserConfigController createSHA512:password];
+    
+    NSURL* url = [NSURL URLWithString:[[NetworkConfigModel instance:NO] httpURL]];
+    ASIHTTPRequest* request = [ASIHTTPRequest requestWithURL:url];
+    [request setRequestMethod:@"POST"];
+    
+    NSMutableData *postBody = [NSMutableData data];
+    [postBody appendData:[[NSString stringWithFormat:@"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [postBody appendData:[[NSString stringWithFormat:@"<change>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [postBody appendData:[[NSString stringWithFormat:@"\t<username>%@</username>\n", user] dataUsingEncoding:NSUTF8StringEncoding]];
+    [postBody appendData:[[NSString stringWithFormat:@"\t<password>%@</password>\n", [[UserModel instance:NO] password]] dataUsingEncoding:NSUTF8StringEncoding]];
+    [postBody appendData:[[NSString stringWithFormat:@"\t<newpassword>%@</newpassword>\n", password] dataUsingEncoding:NSUTF8StringEncoding]];
+    [postBody appendData:[[NSString stringWithFormat:@"</change>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [postBody appendData:[[NSString stringWithFormat:@"<?>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [request setTimeOutSeconds:60];
+    [request setPassword:password];
+    [request setUsername:user];
+    [request setPostBody:postBody];
+    [request setValidatesSecureCertificate:NO];
+    [request startSynchronous];
+    
+    NSError* error = [request error];
+    NSString* response = nil;
+    int statusCode = -1;
+    if (!error)
+    {
+        statusCode = [request responseStatusCode];
+        response = [request responseString];
+    }
+    else
+    {
+        statusCode = [request responseStatusCode];
+    }
+    
+    if(statusCode == 202)
+    {
+        [[UserModel instance:NO] setLoggedOn:YES];
+        [[UserModel instance:NO] setUserName:user];
+        [[UserModel instance:NO] setPassword:password];
+        [[UserModel instance:NO] archive];
+        
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle: @"Success"
+                              message: @"User account password changed."
+                              delegate: nil
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:nil];
+        [alert show];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    else if(statusCode == 401)
+    {
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle: @"Please Try Again."
+                              message: @"Cannot change password."
+                              delegate: nil
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:nil];
+        [alert show];
+    }
+}
+
+NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+-( NSString *)salt
+{
+    
+    NSMutableString *randomString = [NSMutableString stringWithCapacity: 15];
+    
+    for (int i=0; i<15; i++) {
+        [randomString appendFormat: @"%C", [letters characterAtIndex: arc4random() % [letters length]]];
+    }
+    
+    return randomString;
+}
+
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     // Create button clicked.
@@ -135,6 +222,7 @@
     {
         NSString* user = self.userNameField.text;
         NSString* password = self.passwordField.text;
+        NSString* salt = [self salt];
         password = [UserConfigController createSHA512:password];
         
         NSURL* url = [NSURL URLWithString:[[NetworkConfigModel instance:NO] httpURL]];
@@ -146,9 +234,10 @@
         [postBody appendData:[[NSString stringWithFormat:@"<create>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
         [postBody appendData:[[NSString stringWithFormat:@"\t<username>%@</username>\n", user] dataUsingEncoding:NSUTF8StringEncoding]];
         [postBody appendData:[[NSString stringWithFormat:@"\t<password>%@</password>\n", password] dataUsingEncoding:NSUTF8StringEncoding]];
+        [postBody appendData:[[NSString stringWithFormat:@"\t<salt>%@</salt>\n",salt] dataUsingEncoding:NSUTF8StringEncoding]];
         [postBody appendData:[[NSString stringWithFormat:@"</create>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
         [postBody appendData:[[NSString stringWithFormat:@"<?>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
-        [request setTimeOutSeconds:600];
+        [request setTimeOutSeconds:60];
         [request setPostBody:postBody];
         [request startSynchronous];
         NSError* error = [request error];
@@ -159,6 +248,10 @@
             statusCode = [request responseStatusCode];
             response = [request responseString];
         }
+        else
+        {
+            statusCode = [request responseStatusCode];
+        }
         
         if(statusCode == 201)
         {
@@ -167,9 +260,11 @@
             [[UserModel instance:NO] setLoggedOn:YES];
             [[UserModel instance:NO] archive];
             
+            NSString* message = [NSString stringWithFormat:@"Welcome %@.", user];
+            
             UIAlertView *alert = [[UIAlertView alloc]
                                   initWithTitle: @"Logged In"
-                                  message:@""
+                                  message:message
                                   delegate: nil
                                   cancelButtonTitle:@"OK"
                                   otherButtonTitles:nil];

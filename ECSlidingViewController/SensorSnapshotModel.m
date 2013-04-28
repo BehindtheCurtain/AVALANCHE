@@ -37,7 +37,22 @@
 {
     NSMutableString* xml = [[NSMutableString alloc] init];
     [xml appendFormat:@"\t\t\t\t\t<time>%lld</time>\n", (long long)([self.timeStamp timeIntervalSince1970] * 1000)];
-    [xml appendFormat:@"\t\t\t\t\t<data>%d</data>\n", self.sensorData];
+    if([self.sensorType isEqualToString:@"Pressure"])
+    {
+        double data = self.sensorData;
+        data /= 10;
+        [xml appendFormat:@"\t\t\t\t\t<data>%.1f</data>\n", data];
+    }
+    else if([self.sensorType isEqualToString:@"AirFuel"])
+    {
+        double data = self.sensorData;
+        data /= 100;
+        [xml appendFormat:@"\t\t\t\t\t<data>%.2f</data>\n", data];
+    }
+    else
+    {
+        [xml appendFormat:@"\t\t\t\t\t<data>%d</data>\n", self.sensorData];
+    }
     
     return xml;
     /*

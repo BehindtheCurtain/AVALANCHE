@@ -57,9 +57,40 @@ static const int DEFAULT_NUM_SENSORS = 12;
     [xml appendFormat:@"\t\t\t<transform>%d</transform>\n", self.transformConstant];
     [xml appendFormat:@"\t\t\t<sensorID>%d</sensorID>\n", self.sensorID];
     [xml appendFormat:@"\t\t\t<active>%d</active>\n", self.isActive];
-    [xml appendFormat:@"\t\t\t<min>%d</min>\n", self.min];
-    [xml appendFormat:@"\t\t\t<max>%d</max>\n", self.max];
-    [xml appendFormat:@"\t\t\t<average>%d</average>\n", self.average];
+    
+    if([self.sensorType isEqualToString:@"Pressure"])
+    {
+        double minimum = self.min;
+        double maximum = self.max;
+        double avg = self.average;
+        
+        minimum /= 10;
+        maximum /= 10;
+        avg /= 10;
+        [xml appendFormat:@"\t\t\t<min>%.1f</min>\n", minimum];
+        [xml appendFormat:@"\t\t\t<max>%.1f</max>\n", maximum];
+        [xml appendFormat:@"\t\t\t<average>%.1f</average>\n", avg];
+    }
+    else if([self.sensorType isEqualToString:@"AirFuel"])
+    {
+        double minimum = self.min;
+        double maximum = self.max;
+        double avg = self.average;
+        
+        minimum /= 100;
+        maximum /= 100;
+        avg /= 100;
+        [xml appendFormat:@"\t\t\t<min>%.2f</min>\n", minimum];
+        [xml appendFormat:@"\t\t\t<max>%.2f</max>\n", maximum];
+        [xml appendFormat:@"\t\t\t<average>%.2f</average>\n", avg];
+    }
+    else
+    {
+        [xml appendFormat:@"\t\t\t<min>%d</min>\n", self.min];
+        [xml appendFormat:@"\t\t\t<max>%d</max>\n", self.max];
+        [xml appendFormat:@"\t\t\t<average>%d</average>\n", self.average];
+    }
+
     [xml appendString:@"\t\t\t<snapshots>\n"];
     
     int index = 0;

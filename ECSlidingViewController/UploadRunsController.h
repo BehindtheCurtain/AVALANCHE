@@ -18,4 +18,6 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)revealMenu:(id)sender;
 
+@property (retain) RunModel* runModel;
+
 @end

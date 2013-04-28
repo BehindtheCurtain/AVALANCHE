@@ -93,6 +93,15 @@
         [[[RunListModel instance:NO] runList] addObject:run];
         
         [[NSFileManager defaultManager] createFileAtPath:filePath contents:[xml dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
+        
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle: @"Success"
+                              message: @"Run Downloaded."
+                              delegate: nil
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:nil];
+        
+        [alert show];
     }
 }
 
@@ -116,8 +125,14 @@
 
 - (void)requestFailed:(ASIHTTPRequest *)request
 {
-    NSError *error = [request error];
-    NSLog(@"%@", error);
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle: @"Failure"
+                          message: @"Cannot download run."
+                          delegate: nil
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil];
+    
+    [alert show];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -188,7 +203,7 @@
         
         [request setPostBody:postBody];
         [request setRequestMethod:@"POST"];
-        [request setTimeOutSeconds:120];
+        [request setTimeOutSeconds:60];
         [request setDelegate:self];
         [request startAsynchronous];
     }

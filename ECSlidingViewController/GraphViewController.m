@@ -10,11 +10,34 @@
 
 @implementation GraphViewController
 @synthesize customWebView;
+@synthesize filepath;
+@synthesize sensor;
+@synthesize label;
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Release any cached data, images, etc that aren't in use.
+}
+
+- (id)init
+{
+    if(self = [super init])
+    {
+        self.filepath = [[NSString alloc] init];
+        self.label = [[NSString alloc] init];
+        self.sensor = [[NSString alloc] init];
+    }
+    
+    return self;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    NSString* chartString = [NSString stringWithFormat:@"buildChart('%@', '%@', '%@')", self.filepath, self.sensor, self.label];
+    [customWebView stringByEvaluatingJavaScriptFromString:chartString];
 }
 
 - (void)viewDidLoad
@@ -54,10 +77,6 @@
     [super viewWillAppear:animated];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
 
 - (void)viewWillDisappear:(BOOL)animated
 {
@@ -73,11 +92,6 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-}
-
-- (IBAction)alertBox:(id)sender
-{
-    [customWebView stringByEvaluatingJavaScriptFromString:@"buildChart('temp2.xml', 'EGT 1', 'Temp °F')"];
 }
 
 @end

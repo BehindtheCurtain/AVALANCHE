@@ -86,6 +86,7 @@
 		748D4A861724BAE000407F32 /* libASIHTTPRequestsim.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 748D4A841724BAE000407F32 /* libASIHTTPRequestsim.a */; };
 		748D4A891725D06600407F32 /* ServerConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748D4A881725D06500407F32 /* ServerConfigController.m */; };
 		748D4A8D1725D16200407F32 /* NetworkConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 748D4A8C1725D16200407F32 /* NetworkConfigModel.m */; };
+		749F7174172DB42F00CD6F3B /* SensorSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 749F7173172DB42F00CD6F3B /* SensorSelectController.m */; };
 		749FE1F517184DC1005511D7 /* RunListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 749FE1F417184DC1005511D7 /* RunListModel.m */; };
 		749FE1FB171DD0AF005511D7 /* RunSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 749FE1FA171DD0AF005511D7 /* RunSelectController.m */; };
 		74D85A11170F24B90059B791 /* BLEGaugeAlarmService.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D85A10170F24B90059B791 /* BLEGaugeAlarmService.m */; };
@@ -226,6 +227,8 @@
 		749F716F172D8DFD00CD6F3B /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASINetworkQueue.h; path = ECSlidingViewController/ASINetworkQueue.h; sourceTree = SOURCE_ROOT; };
 		749F7170172D8DFD00CD6F3B /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIProgressDelegate.h; path = ECSlidingViewController/ASIProgressDelegate.h; sourceTree = SOURCE_ROOT; };
 		749F7171172D8DFD00CD6F3B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = ECSlidingViewController/Reachability.h; sourceTree = SOURCE_ROOT; };
+		749F7172172DB42F00CD6F3B /* SensorSelectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorSelectController.h; sourceTree = "<group>"; };
+		749F7173172DB42F00CD6F3B /* SensorSelectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorSelectController.m; sourceTree = "<group>"; };
 		749FE1F317184DC1005511D7 /* RunListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunListModel.h; sourceTree = "<group>"; };
 		749FE1F417184DC1005511D7 /* RunListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunListModel.m; sourceTree = "<group>"; };
 		749FE1F9171DD0AF005511D7 /* RunSelectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunSelectController.h; sourceTree = "<group>"; };
@@ -565,6 +568,8 @@
 				088BA65117172E1B002F0831 /* GraphViewController.m */,
 				749FE1F9171DD0AF005511D7 /* RunSelectController.h */,
 				749FE1FA171DD0AF005511D7 /* RunSelectController.m */,
+				749F7172172DB42F00CD6F3B /* SensorSelectController.h */,
+				749F7173172DB42F00CD6F3B /* SensorSelectController.m */,
 			);
 			name = Post;
 			sourceTree = "<group>";
@@ -726,6 +731,7 @@
 				742C43FE17299D410013AB46 /* GaugeDisplayModel.m in Sources */,
 				742C4401172C30C60013AB46 /* ServerRunsController.m in Sources */,
 				744F50A8172CB6630094D40E /* UploadRunsController.m in Sources */,
+				749F7174172DB42F00CD6F3B /* SensorSelectController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

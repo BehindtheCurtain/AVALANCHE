@@ -3,13 +3,13 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[UserModel encodeWithCoder:]:UserModel.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[UserConfigController loginAction:]:UserConfigController.m">
-      </ContextState>
-      <ContextState
          contextName = "-[ServerRunsController requestFinished:]:ServerRunsController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[RealTimeViewController createAction:]:RealTimeViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[UserModel initWithCoder:]:UserModel.m">
       </ContextState>
       <ContextState
          contextName = "+[UserModel instance:]:UserModel.m">
@@ -32,10 +32,18 @@
          contextName = "-[ServerRunsController parser:didEndElement:namespaceURI:qualifiedName:]:ServerRunsController.m">
       </ContextState>
       <ContextState
-         contextName = "-[RealTimeViewController createAction:]:RealTimeViewController.m">
+         contextName = "-[GaugeViewController setObservers]:GaugeViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "observe1">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[UserModel initWithCoder:]:UserModel.m">
+         contextName = "-[UserConfigController loginAction:]:UserConfigController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[UserModel encodeWithCoder:]:UserModel.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

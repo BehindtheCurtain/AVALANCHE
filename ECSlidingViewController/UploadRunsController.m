@@ -125,7 +125,7 @@
     [post appendData:[[NSString stringWithFormat:@"\t<password>%@</password>\n", [[UserModel instance:NO] password]] dataUsingEncoding:NSUTF8StringEncoding]];
     [post appendData:[[NSString stringWithFormat:@"</login>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
     [post appendData:[[NSString stringWithFormat:@"<?>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
-    [login setTimeOutSeconds:600];
+    [login setTimeOutSeconds:60];
     [login setPostBody:post];
     [login startSynchronous];
     
@@ -140,6 +140,7 @@
     
     if(statusCode == 202)
     {
+        self.runModel = run;
         [run setUploaded:YES];
         [self.tableView reloadData];
         
@@ -148,7 +149,7 @@
         [postBody appendData:[[fileContents stringByAppendingFormat:@"<<\n%@\n<?>\n", [[UserModel instance:NO] userName]] dataUsingEncoding:NSUTF8StringEncoding]];
         [request setPostBody:postBody];
         [request setRequestMethod:@"POST"];
-        [request setTimeOutSeconds:120];
+        [request setTimeOutSeconds:60];
         [request setDelegate:self];
         [request startAsynchronous];
     }
@@ -166,17 +167,28 @@
 
 - (void)requestFinished:(ASIHTTPRequest *)request
 {
-    // Use when fetching text data
-    NSString *responseString = [request responseString];
+    [self.runModel setUploaded:YES];
+    [self.tableView reloadData];
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle: @"Success"
+                          message: @"Run Uploaded."
+                          delegate: nil
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil];
     
-    // Use when fetching binary data
-    NSData *responseData = [request responseData];
+    [alert show];
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request
 {
-    NSError *error = [request error];
-    NSLog(@"%@", error);
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle: @"Failure"
+                          message: @"Run cannot be uploaded."
+                          delegate: nil
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil];
+    
+    [alert show];
 }
 
 - (IBAction)revealMenu:(id)sender
