@@ -24,20 +24,42 @@
 				stroke-width: 2px;
 			}
 
-			div { float: left; width: 20%; margin: 6px;}
+			#average{
+				float: left;
+				position:absolute;
+				left:10px;
+			}
+
+			#min{
+				float: left;
+				position:absolute;
+				left:120px;
+			}
+
+			#max{
+				float: left;
+				position:absolute;
+				left:220px;
+			}
+
+			#date{
+				float: left;
+				position:absolute;
+				left:320px;
+			}
 			
 		</style>
 	</head>
 	<body>
-		<div id="date">Date: </div>
 		<div id="average">Average: </div>
 		<div id="min">Min: </div>
 		<div id="max">Max: </div>
+		<div id="date">Date: </div>
 	</body>
 	<script src="d3.min.js"></script>
 	<script src="jquery-2.0.0.min.js"></script>
 	<script src="chart.js"></script>
 	<script>
-	 	buildChart("temp2.xml", "EGT 1", "Temp °F");
+	 	buildChart("temp3.xml", "PSI 3", "Temp °F");
 	</script>
 </html>
