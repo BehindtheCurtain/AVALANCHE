@@ -59,16 +59,13 @@ function buildChart(fileName, sensorName, yLabel)
 			}
 		}
 
-
 		var dateTest = new Date((d3.select(xml).selectAll("startTime")[0][0].textContent)*1000);
 
+		//Update text labels with XML data
 		$('#date').text("Date: " + dateTest.toLocaleString());
 		$('#average').text("Average: " + d3.select(xml).selectAll("sensor").select("average")[0][sensorIndex].textContent);
 		$('#min').text("Min: " + d3.select(xml).selectAll("sensor").select("min")[0][sensorIndex].textContent);
 		$('#max').text("Max: " + d3.select(xml).selectAll("sensor").select("max")[0][sensorIndex].textContent);
-
-		//console.log(d3.select(xml).selectAll("sensor").select("max")[0][sensorIndex].textContent)
-
 
 		var data = [];
 		var len = d3.select(xml).select("sensor").selectAll("snapshot").selectAll("data").length; //Number of snapshots available
@@ -77,7 +74,7 @@ function buildChart(fileName, sensorName, yLabel)
 		for (var i = 0; i < len; i = i + skip)
 		{
 			var obj = {
-				close: parseInt(d3.select(xml).selectAll("sensor").selectAll("snapshot").select("data")[sensorIndex][i].textContent),
+				close: parseFloat(d3.select(xml).selectAll("sensor").selectAll("snapshot").select("data")[sensorIndex][i].textContent),
 				date: parseInt(d3.select(xml).selectAll("sensor").selectAll("snapshot").select("time")[sensorIndex][i].textContent)
 			};
 			data.push(obj);
@@ -118,9 +115,4 @@ function buildChart(fileName, sensorName, yLabel)
 			.attr("class", "line")
 			.attr("d", line);
 	});
-}
-
-function popAlertBox()
-{
-	alert("I am an alert box!");
 }
