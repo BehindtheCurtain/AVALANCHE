@@ -8,7 +8,24 @@
 
 #import "FirstTopViewController.h"
 
+static NSMutableArray* viewArray;
+
 @implementation FirstTopViewController
+
++ (NSMutableArray*)viewArray
+{
+    if(viewArray == nil)
+    {
+        viewArray = [[NSMutableArray alloc] init];
+    }
+    
+    return viewArray;
+}
+
++ (void)setViewArray:(NSMutableArray *)views
+{
+    viewArray = views;
+}
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -29,11 +46,41 @@
     self.slidingViewController.panGesture.maximumNumberOfTouches = 2;
     
   [self.view addGestureRecognizer:self.slidingViewController.panGesture];
+  
+    [RealTimeBuilder gaugeModelFactory];
+    [BLEGaugeAlarmService instance:NO];
+    
+    [[GaugeModel instance:NO] setStartTimeStamp:[NSDate dateWithTimeIntervalSince1970:[[NSDate date] timeIntervalSince1970]]];
 }
 
 - (IBAction)revealMenu:(id)sender
 {
   [self.slidingViewController anchorTopViewTo:ECRight];
+}
+
+- (IBAction)endAction:(id)sender
+{
+    for(GaugeViewController* gaugeView in viewArray)
+    {
+        [gaugeView removeObservers];
+    }
+    
+    [RealTimeBuilder endProcessing];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+- (IBAction)startAction:(id)sender
+{
+    for(GaugeViewController* gaugeView in viewArray)
+    {
+        [gaugeView removeObservers];
+    }
+    
+    [RealTimeBuilder beginProcessing];
+    
+    for(GaugeViewController* gaugeView in viewArray)
+    {
+        [gaugeView setObservers];
+    }
 }
 
 @end

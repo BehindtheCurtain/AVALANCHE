@@ -67,8 +67,8 @@
                     [config setActive:YES];
                     [config setSensorType:Pressure];
                     [config setTransformConstant:0];
-                    [config setMaxValue: -100];
-                    [config setMinValue: 100];
+                    [config setMaxValue: 100];
+                    [config setMinValue: -100];
                     
                     [[instance configurationMap] addObject:config];
                 }

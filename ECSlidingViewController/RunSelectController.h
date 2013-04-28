@@ -12,6 +12,8 @@
 #import "ECSlidingViewController.h"
 #import "ASIHTTPRequest.h"
 #import "NetworkConfigModel.h"
+#import "UserModel.h"
+
 
 @interface RunSelectController : UITableViewController <UITableViewDelegate, UITableViewDataSource, ASIHTTPRequestDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;

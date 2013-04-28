@@ -11,9 +11,18 @@
 #import "ECSlidingViewController.h"
 #import "MenuViewController.h"
 #import "UnderRightViewController.h"
+#import "RealTimeBuilder.h"
+#import "BLEGaugeAlarmService.h"
+#import "GaugeViewController.h"
 
 @interface FirstTopViewController : UIViewController
 
 - (IBAction)revealMenu:(id)sender;
 
+- (IBAction)startAction:(id)sender;
+
+- (IBAction)endAction:(id)sender;
+
++ (NSMutableArray*)viewArray;
++ (void)setViewArray:(NSMutableArray*) views;
 @end

@@ -14,6 +14,7 @@
 @interface BLEGaugeAlarmService : NSObject <BrspDelegate, CBCentralManagerDelegate>
 
 @property (strong) Brsp* brsp;
+@property (strong) NSMutableArray* testArray;
 
 + (BLEGaugeAlarmService*)instance:(BOOL)reset;
 - (void)disconnect;

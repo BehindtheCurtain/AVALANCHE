@@ -106,18 +106,59 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
+{    
     RunModel* run = [[[RunListModel instance:NO] runList] objectAtIndex:indexPath.row];
     NSString* filePath = [run filePath];
     
     NSURL* url = [NSURL URLWithString:[[NetworkConfigModel instance:NO] httpURL]];
+    
     ASIHTTPRequest* request = [ASIHTTPRequest requestWithURL:url];
-    [request setRequestMethod:@"POST"];
-    [request setPostBodyFilePath:filePath];
-    [request setTimeOutSeconds:120];
-    [request setDelegate:self];
-    [request startAsynchronous];
+    
+    ASIHTTPRequest* login = [ASIHTTPRequest requestWithURL:url];
+    
+    [login setRequestMethod:@"POST"];
+    [login useSessionPersistence];
+    NSMutableData *post = [NSMutableData data];
+    [post appendData:[[NSString stringWithFormat:@"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [post appendData:[[NSString stringWithFormat:@"<login>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [post appendData:[[NSString stringWithFormat:@"\t<username>%@</username>\n", [[UserModel instance:NO] userName]] dataUsingEncoding:NSUTF8StringEncoding]];
+    [post appendData:[[NSString stringWithFormat:@"\t<password>%@</password>\n", [[UserModel instance:NO] password]] dataUsingEncoding:NSUTF8StringEncoding]];
+    [post appendData:[[NSString stringWithFormat:@"</login>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [post appendData:[[NSString stringWithFormat:@"<?>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [login setTimeOutSeconds:600];
+    [login setPostBody:post];
+    [login startSynchronous];
+    
+    NSError* error = [request error];
+    NSString* response = nil;
+    int statusCode = -1;
+    if (!error)
+    {
+        statusCode = [login responseStatusCode];
+        response = [login responseString];
+    }
+    
+    if(statusCode == 202)
+    {
+        NSString* fileContents = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+        NSMutableData *postBody = [NSMutableData data];
+        [postBody appendData:[[fileContents stringByAppendingFormat:@"<<\n%@\n<?>\n", [[UserModel instance:NO] userName]] dataUsingEncoding:NSUTF8StringEncoding]];
+        [request setPostBody:postBody];
+        [request setRequestMethod:@"POST"];
+        [request setTimeOutSeconds:120];
+        [request setDelegate:self];
+        [request startAsynchronous];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle: @"Please Try Again."
+                              message: @"Cannot login."
+                              delegate: nil
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 - (void)requestFinished:(ASIHTTPRequest *)request
