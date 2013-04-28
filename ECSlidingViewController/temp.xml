@@ -1,0 +1,6355 @@
+<run name="2013-04-25_01:02:21.09_PM">
+	<startTime>1366912941</startTime>
+	<endTime>1366913020</endTime>
+	<sensors>
+		<sensor name="EGT 2">
+			<type>Temperature</type>
+			<transform>0</transform>
+			<sensorID>2</sensorID>
+			<active>1</active>
+			<snapshots>
+				<snapshot id="0">
+					<time>1366912943605</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="1">
+					<time>1366912943755</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="2">
+					<time>1366912943875</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="3">
+					<time>1366912944025</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="4">
+					<time>1366912944144</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="5">
+					<time>1366912944265</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="6">
+					<time>1366912944415</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="7">
+					<time>1366912944535</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="8">
+					<time>1366912944655</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="9">
+					<time>1366912944805</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="10">
+					<time>1366912944925</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="11">
+					<time>1366912945045</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="12">
+					<time>1366912945195</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="13">
+					<time>1366912945315</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="14">
+					<time>1366912945465</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="15">
+					<time>1366912945585</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="16">
+					<time>1366912945705</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="17">
+					<time>1366912945855</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="18">
+					<time>1366912945975</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="19">
+					<time>1366912946095</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="20">
+					<time>1366912946245</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="21">
+					<time>1366912946365</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="22">
+					<time>1366912946485</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="23">
+					<time>1366912946635</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="24">
+					<time>1366912946755</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="25">
+					<time>1366912946905</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="26">
+					<time>1366912947025</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="27">
+					<time>1366912947144</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="28">
+					<time>1366912947295</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="29">
+					<time>1366912947415</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="30">
+					<time>1366912947535</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="31">
+					<time>1366912947685</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="32">
+					<time>1366912947805</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="33">
+					<time>1366912947955</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="34">
+					<time>1366912948075</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="35">
+					<time>1366912948195</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="36">
+					<time>1366912948345</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="37">
+					<time>1366912948465</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="38">
+					<time>1366912948585</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="39">
+					<time>1366912948735</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="40">
+					<time>1366912948855</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="41">
+					<time>1366912949005</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="42">
+					<time>1366912949125</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="43">
+					<time>1366912949245</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="44">
+					<time>1366912949395</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="45">
+					<time>1366912949515</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="46">
+					<time>1366912949635</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="47">
+					<time>1366912949785</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="48">
+					<time>1366912949905</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="49">
+					<time>1366912950025</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="50">
+					<time>1366912950175</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="51">
+					<time>1366912950295</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="52">
+					<time>1366912950445</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="53">
+					<time>1366912950565</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="54">
+					<time>1366912950685</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="55">
+					<time>1366912950835</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="56">
+					<time>1366912950955</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="57">
+					<time>1366912951075</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="58">
+					<time>1366912951225</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="59">
+					<time>1366912951345</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="60">
+					<time>1366912951525</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="61">
+					<time>1366912951615</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="62">
+					<time>1366912951735</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="63">
+					<time>1366912951885</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="64">
+					<time>1366912952005</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="65">
+					<time>1366912952125</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="66">
+					<time>1366912952275</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="67">
+					<time>1366912952395</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="68">
+					<time>1366912952515</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="69">
+					<time>1366912952665</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="70">
+					<time>1366912952786</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="71">
+					<time>1366912952935</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="72">
+					<time>1366912953055</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="73">
+					<time>1366912953176</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="74">
+					<time>1366912953326</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="75">
+					<time>1366912953445</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="76">
+					<time>1366912953565</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="77">
+					<time>1366912953715</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="78">
+					<time>1366912953835</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="79">
+					<time>1366912953985</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="80">
+					<time>1366912954105</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="81">
+					<time>1366912954225</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="82">
+					<time>1366912954375</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="83">
+					<time>1366912954495</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="84">
+					<time>1366912954615</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="85">
+					<time>1366912954765</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="86">
+					<time>1366912954885</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="87">
+					<time>1366912955005</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="88">
+					<time>1366912955155</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="89">
+					<time>1366912955275</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="90">
+					<time>1366912955425</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="91">
+					<time>1366912955545</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="92">
+					<time>1366912955665</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="93">
+					<time>1366912955815</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="94">
+					<time>1366912955935</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="95">
+					<time>1366912956055</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="96">
+					<time>1366912956205</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="97">
+					<time>1366912956325</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="98">
+					<time>1366912956475</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="99">
+					<time>1366912956595</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="100">
+					<time>1366912956715</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="101">
+					<time>1366912956865</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="102">
+					<time>1366912956985</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="103">
+					<time>1366912957105</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="104">
+					<time>1366912957255</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="105">
+					<time>1366912957375</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="106">
+					<time>1366912957525</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="107">
+					<time>1366912957645</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="108">
+					<time>1366912957765</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="109">
+					<time>1366912957916</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="110">
+					<time>1366912958035</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="111">
+					<time>1366912958155</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="112">
+					<time>1366912958305</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="113">
+					<time>1366912958425</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="114">
+					<time>1366912958545</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="115">
+					<time>1366912958695</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="116">
+					<time>1366912958815</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="117">
+					<time>1366912958965</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="118">
+					<time>1366912959085</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="119">
+					<time>1366912959205</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="120">
+					<time>1366912959355</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="121">
+					<time>1366912959475</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="122">
+					<time>1366912959595</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="123">
+					<time>1366912959745</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="124">
+					<time>1366912959865</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="125">
+					<time>1366912959985</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="126">
+					<time>1366912960135</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="127">
+					<time>1366912960255</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="128">
+					<time>1366912960406</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="129">
+					<time>1366912960525</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="130">
+					<time>1366912960645</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="131">
+					<time>1366912960825</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="132">
+					<time>1366912960916</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="133">
+					<time>1366912961036</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="134">
+					<time>1366912961185</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="135">
+					<time>1366912961305</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="136">
+					<time>1366912961455</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="137">
+					<time>1366912961575</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="138">
+					<time>1366912961695</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="139">
+					<time>1366912961845</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="140">
+					<time>1366912961965</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="141">
+					<time>1366912962085</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="142">
+					<time>1366912962235</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="143">
+					<time>1366912962355</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="144">
+					<time>1366912962505</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="145">
+					<time>1366912962625</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="146">
+					<time>1366912962745</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="147">
+					<time>1366912962896</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="148">
+					<time>1366912963015</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="149">
+					<time>1366912963135</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="150">
+					<time>1366912963285</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="151">
+					<time>1366912963405</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="152">
+					<time>1366912963525</time>
+					<data>81</data>
+				</snapshot>
+				<snapshot id="153">
+					<time>1366912963675</time>
+					<data>81</data>
+				</snapshot>
+				<snapshot id="154">
+					<time>1366912963795</time>
+					<data>81</data>
+				</snapshot>
+				<snapshot id="155">
+					<time>1366912963945</time>
+					<data>82</data>
+				</snapshot>
+				<snapshot id="156">
+					<time>1366912964065</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="157">
+					<time>1366912964185</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="158">
+					<time>1366912964335</time>
+					<data>85</data>
+				</snapshot>
+				<snapshot id="159">
+					<time>1366912964455</time>
+					<data>85</data>
+				</snapshot>
+				<snapshot id="160">
+					<time>1366912964576</time>
+					<data>86</data>
+				</snapshot>
+				<snapshot id="161">
+					<time>1366912964726</time>
+					<data>86</data>
+				</snapshot>
+				<snapshot id="162">
+					<time>1366912964845</time>
+					<data>86</data>
+				</snapshot>
+				<snapshot id="163">
+					<time>1366912965026</time>
+					<data>86</data>
+				</snapshot>
+				<snapshot id="164">
+					<time>1366912965115</time>
+					<data>85</data>
+				</snapshot>
+				<snapshot id="165">
+					<time>1366912965235</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="166">
+					<time>1366912965385</time>
+					<data>84</data>
+				</snapshot>
+				<snapshot id="167">
+					<time>1366912965505</time>
+					<data>83</data>
+				</snapshot>
+				<snapshot id="168">
+					<time>1366912965626</time>
+					<data>82</data>
+				</snapshot>
+				<snapshot id="169">
+					<time>1366912965776</time>
+					<data>81</data>
+				</snapshot>
+				<snapshot id="170">
+					<time>1366912965895</time>
+					<data>81</data>
+				</snapshot>
+				<snapshot id="171">
+					<time>1366912966015</time>
+					<data>81</data>
+				</snapshot>
+				<snapshot id="172">
+					<time>1366912966165</time>
+					<data>85</data>
+				</snapshot>
+				<snapshot id="173">
+					<time>1366912966286</time>
+					<data>96</data>
+				</snapshot>
+				<snapshot id="174">
+					<time>1366912966435</time>
+					<data>118</data>
+				</snapshot>
+				<snapshot id="175">
+					<time>1366912966555</time>
+					<data>138</data>
+				</snapshot>
+				<snapshot id="176">
+					<time>1366912966677</time>
+					<data>163</data>
+				</snapshot>
+				<snapshot id="177">
+					<time>1366912966826</time>
+					<data>216</data>
+				</snapshot>
+				<snapshot id="178">
+					<time>1366912966945</time>
+					<data>241</data>
+				</snapshot>
+				<snapshot id="179">
+					<time>1366912967066</time>
+					<data>265</data>
+				</snapshot>
+				<snapshot id="180">
+					<time>1366912967216</time>
+					<data>306</data>
+				</snapshot>
+				<snapshot id="181">
+					<time>1366912967336</time>
+					<data>327</data>
+				</snapshot>
+				<snapshot id="182">
+					<time>1366912967516</time>
+					<data>316</data>
+				</snapshot>
+				<snapshot id="183">
+					<time>1366912967606</time>
+					<data>332</data>
+				</snapshot>
+				<snapshot id="184">
+					<time>1366912967726</time>
+					<data>347</data>
+				</snapshot>
+				<snapshot id="185">
+					<time>1366912967876</time>
+					<data>361</data>
+				</snapshot>
+				<snapshot id="186">
+					<time>1366912967995</time>
+					<data>380</data>
+				</snapshot>
+				<snapshot id="187">
+					<time>1366912968116</time>
+					<data>392</data>
+				</snapshot>
+				<snapshot id="188">
+					<time>1366912968266</time>
+					<data>402</data>
+				</snapshot>
+				<snapshot id="189">
+					<time>1366912968386</time>
+					<data>411</data>
+				</snapshot>
+				<snapshot id="190">
+					<time>1366912968506</time>
+					<data>438</data>
+				</snapshot>
+				<snapshot id="191">
+					<time>1366912968656</time>
+					<data>448</data>
+				</snapshot>
+				<snapshot id="192">
+					<time>1366912968776</time>
+					<data>458</data>
+				</snapshot>
+				<snapshot id="193">
+					<time>1366912968926</time>
+					<data>486</data>
+				</snapshot>
+				<snapshot id="194">
+					<time>1366912969045</time>
+					<data>505</data>
+				</snapshot>
+				<snapshot id="195">
+					<time>1366912969166</time>
+					<data>526</data>
+				</snapshot>
+				<snapshot id="196">
+					<time>1366912969316</time>
+					<data>566</data>
+				</snapshot>
+				<snapshot id="197">
+					<time>1366912969436</time>
+					<data>581</data>
+				</snapshot>
+				<snapshot id="198">
+					<time>1366912969556</time>
+					<data>594</data>
+				</snapshot>
+				<snapshot id="199">
+					<time>1366912969706</time>
+					<data>627</data>
+				</snapshot>
+				<snapshot id="200">
+					<time>1366912969826</time>
+					<data>650</data>
+				</snapshot>
+				<snapshot id="201">
+					<time>1366912969976</time>
+					<data>669</data>
+				</snapshot>
+				<snapshot id="202">
+					<time>1366912970095</time>
+					<data>697</data>
+				</snapshot>
+				<snapshot id="203">
+					<time>1366912970216</time>
+					<data>709</data>
+				</snapshot>
+				<snapshot id="204">
+					<time>1366912970366</time>
+					<data>718</data>
+				</snapshot>
+				<snapshot id="205">
+					<time>1366912970486</time>
+					<data>736</data>
+				</snapshot>
+				<snapshot id="206">
+					<time>1366912970606</time>
+					<data>743</data>
+				</snapshot>
+				<snapshot id="207">
+					<time>1366912970756</time>
+					<data>754</data>
+				</snapshot>
+				<snapshot id="208">
+					<time>1366912970876</time>
+					<data>782</data>
+				</snapshot>
+				<snapshot id="209">
+					<time>1366912971026</time>
+					<data>794</data>
+				</snapshot>
+				<snapshot id="210">
+					<time>1366912971145</time>
+					<data>807</data>
+				</snapshot>
+				<snapshot id="211">
+					<time>1366912971266</time>
+					<data>820</data>
+				</snapshot>
+				<snapshot id="212">
+					<time>1366912971416</time>
+					<data>842</data>
+				</snapshot>
+				<snapshot id="213">
+					<time>1366912971536</time>
+					<data>853</data>
+				</snapshot>
+				<snapshot id="214">
+					<time>1366912971656</time>
+					<data>864</data>
+				</snapshot>
+				<snapshot id="215">
+					<time>1366912971806</time>
+					<data>888</data>
+				</snapshot>
+				<snapshot id="216">
+					<time>1366912971926</time>
+					<data>898</data>
+				</snapshot>
+				<snapshot id="217">
+					<time>1366912972046</time>
+					<data>908</data>
+				</snapshot>
+				<snapshot id="218">
+					<time>1366912972196</time>
+					<data>932</data>
+				</snapshot>
+				<snapshot id="219">
+					<time>1366912972316</time>
+					<data>945</data>
+				</snapshot>
+				<snapshot id="220">
+					<time>1366912972466</time>
+					<data>954</data>
+				</snapshot>
+				<snapshot id="221">
+					<time>1366912972586</time>
+					<data>969</data>
+				</snapshot>
+				<snapshot id="222">
+					<time>1366912972706</time>
+					<data>978</data>
+				</snapshot>
+				<snapshot id="223">
+					<time>1366912972856</time>
+					<data>990</data>
+				</snapshot>
+				<snapshot id="224">
+					<time>1366912972976</time>
+					<data>1009</data>
+				</snapshot>
+				<snapshot id="225">
+					<time>1366912973096</time>
+					<data>1014</data>
+				</snapshot>
+				<snapshot id="226">
+					<time>1366912973245</time>
+					<data>1017</data>
+				</snapshot>
+				<snapshot id="227">
+					<time>1366912973366</time>
+					<data>1023</data>
+				</snapshot>
+				<snapshot id="228">
+					<time>1366912973516</time>
+					<data>1028</data>
+				</snapshot>
+				<snapshot id="229">
+					<time>1366912973636</time>
+					<data>1031</data>
+				</snapshot>
+				<snapshot id="230">
+					<time>1366912973756</time>
+					<data>1031</data>
+				</snapshot>
+				<snapshot id="231">
+					<time>1366912973906</time>
+					<data>1030</data>
+				</snapshot>
+				<snapshot id="232">
+					<time>1366912974026</time>
+					<data>1030</data>
+				</snapshot>
+				<snapshot id="233">
+					<time>1366912974146</time>
+					<data>1029</data>
+				</snapshot>
+				<snapshot id="234">
+					<time>1366912974296</time>
+					<data>1033</data>
+				</snapshot>
+				<snapshot id="235">
+					<time>1366912974416</time>
+					<data>1039</data>
+				</snapshot>
+				<snapshot id="236">
+					<time>1366912974536</time>
+					<data>1044</data>
+				</snapshot>
+				<snapshot id="237">
+					<time>1366912974686</time>
+					<data>1044</data>
+				</snapshot>
+				<snapshot id="238">
+					<time>1366912974806</time>
+					<data>1036</data>
+				</snapshot>
+				<snapshot id="239">
+					<time>1366912974986</time>
+					<data>1026</data>
+				</snapshot>
+				<snapshot id="240">
+					<time>1366912975076</time>
+					<data>998</data>
+				</snapshot>
+				<snapshot id="241">
+					<time>1366912975196</time>
+					<data>982</data>
+				</snapshot>
+				<snapshot id="242">
+					<time>1366912975346</time>
+					<data>965</data>
+				</snapshot>
+				<snapshot id="243">
+					<time>1366912975466</time>
+					<data>930</data>
+				</snapshot>
+				<snapshot id="244">
+					<time>1366912975586</time>
+					<data>913</data>
+				</snapshot>
+				<snapshot id="245">
+					<time>1366912975736</time>
+					<data>897</data>
+				</snapshot>
+				<snapshot id="246">
+					<time>1366912975856</time>
+					<data>867</data>
+				</snapshot>
+				<snapshot id="247">
+					<time>1366912976006</time>
+					<data>853</data>
+				</snapshot>
+				<snapshot id="248">
+					<time>1366912976126</time>
+					<data>839</data>
+				</snapshot>
+				<snapshot id="249">
+					<time>1366912976246</time>
+					<data>812</data>
+				</snapshot>
+				<snapshot id="250">
+					<time>1366912976396</time>
+					<data>799</data>
+				</snapshot>
+				<snapshot id="251">
+					<time>1366912976516</time>
+					<data>786</data>
+				</snapshot>
+				<snapshot id="252">
+					<time>1366912976636</time>
+					<data>762</data>
+				</snapshot>
+				<snapshot id="253">
+					<time>1366912976786</time>
+					<data>750</data>
+				</snapshot>
+				<snapshot id="254">
+					<time>1366912976906</time>
+					<data>739</data>
+				</snapshot>
+				<snapshot id="255">
+					<time>1366912977026</time>
+					<data>728</data>
+				</snapshot>
+				<snapshot id="256">
+					<time>1366912977176</time>
+					<data>707</data>
+				</snapshot>
+				<snapshot id="257">
+					<time>1366912977296</time>
+					<data>697</data>
+				</snapshot>
+				<snapshot id="258">
+					<time>1366912977446</time>
+					<data>687</data>
+				</snapshot>
+				<snapshot id="259">
+					<time>1366912977566</time>
+					<data>668</data>
+				</snapshot>
+				<snapshot id="260">
+					<time>1366912977686</time>
+					<data>658</data>
+				</snapshot>
+				<snapshot id="261">
+					<time>1366912977836</time>
+					<data>649</data>
+				</snapshot>
+				<snapshot id="262">
+					<time>1366912977956</time>
+					<data>632</data>
+				</snapshot>
+				<snapshot id="263">
+					<time>1366912978076</time>
+					<data>623</data>
+				</snapshot>
+				<snapshot id="264">
+					<time>1366912978226</time>
+					<data>614</data>
+				</snapshot>
+				<snapshot id="265">
+					<time>1366912978346</time>
+					<data>598</data>
+				</snapshot>
+				<snapshot id="266">
+					<time>1366912978526</time>
+					<data>590</data>
+				</snapshot>
+				<snapshot id="267">
+					<time>1366912978616</time>
+					<data>582</data>
+				</snapshot>
+				<snapshot id="268">
+					<time>1366912978736</time>
+					<data>567</data>
+				</snapshot>
+				<snapshot id="269">
+					<time>1366912978886</time>
+					<data>560</data>
+				</snapshot>
+				<snapshot id="270">
+					<time>1366912979006</time>
+					<data>553</data>
+				</snapshot>
+				<snapshot id="271">
+					<time>1366912979126</time>
+					<data>539</data>
+				</snapshot>
+				<snapshot id="272">
+					<time>1366912979276</time>
+					<data>532</data>
+				</snapshot>
+				<snapshot id="273">
+					<time>1366912979396</time>
+					<data>525</data>
+				</snapshot>
+				<snapshot id="274">
+					<time>1366912979516</time>
+					<data>512</data>
+				</snapshot>
+				<snapshot id="275">
+					<time>1366912979666</time>
+					<data>506</data>
+				</snapshot>
+				<snapshot id="276">
+					<time>1366912979786</time>
+					<data>499</data>
+				</snapshot>
+				<snapshot id="277">
+					<time>1366912979966</time>
+					<data>493</data>
+				</snapshot>
+				<snapshot id="278">
+					<time>1366912980056</time>
+					<data>481</data>
+				</snapshot>
+				<snapshot id="279">
+					<time>1366912980176</time>
+					<data>476</data>
+				</snapshot>
+				<snapshot id="280">
+					<time>1366912980326</time>
+					<data>470</data>
+				</snapshot>
+				<snapshot id="281">
+					<time>1366912980446</time>
+					<data>459</data>
+				</snapshot>
+				<snapshot id="282">
+					<time>1366912980566</time>
+					<data>454</data>
+				</snapshot>
+				<snapshot id="283">
+					<time>1366912980716</time>
+					<data>449</data>
+				</snapshot>
+				<snapshot id="284">
+					<time>1366912980836</time>
+					<data>438</data>
+				</snapshot>
+				<snapshot id="285">
+					<time>1366912980986</time>
+					<data>434</data>
+				</snapshot>
+				<snapshot id="286">
+					<time>1366912981106</time>
+					<data>429</data>
+				</snapshot>
+				<snapshot id="287">
+					<time>1366912981226</time>
+					<data>419</data>
+				</snapshot>
+				<snapshot id="288">
+					<time>1366912981376</time>
+					<data>415</data>
+				</snapshot>
+				<snapshot id="289">
+					<time>1366912981496</time>
+					<data>410</data>
+				</snapshot>
+				<snapshot id="290">
+					<time>1366912981616</time>
+					<data>402</data>
+				</snapshot>
+				<snapshot id="291">
+					<time>1366912981766</time>
+					<data>398</data>
+				</snapshot>
+				<snapshot id="292">
+					<time>1366912981886</time>
+					<data>393</data>
+				</snapshot>
+				<snapshot id="293">
+					<time>1366912982006</time>
+					<data>385</data>
+				</snapshot>
+				<snapshot id="294">
+					<time>1366912982156</time>
+					<data>381</data>
+				</snapshot>
+				<snapshot id="295">
+					<time>1366912982276</time>
+					<data>377</data>
+				</snapshot>
+				<snapshot id="296">
+					<time>1366912982426</time>
+					<data>370</data>
+				</snapshot>
+				<snapshot id="297">
+					<time>1366912982546</time>
+					<data>366</data>
+				</snapshot>
+				<snapshot id="298">
+					<time>1366912982666</time>
+					<data>363</data>
+				</snapshot>
+				<snapshot id="299">
+					<time>1366912982816</time>
+					<data>359</data>
+				</snapshot>
+				<snapshot id="300">
+					<time>1366912982936</time>
+					<data>353</data>
+				</snapshot>
+				<snapshot id="301">
+					<time>1366912983056</time>
+					<data>350</data>
+				</snapshot>
+				<snapshot id="302">
+					<time>1366912983206</time>
+					<data>346</data>
+				</snapshot>
+				<snapshot id="303">
+					<time>1366912983328</time>
+					<data>340</data>
+				</snapshot>
+				<snapshot id="304">
+					<time>1366912983476</time>
+					<data>337</data>
+				</snapshot>
+				<snapshot id="305">
+					<time>1366912983596</time>
+					<data>334</data>
+				</snapshot>
+				<snapshot id="306">
+					<time>1366912983716</time>
+					<data>328</data>
+				</snapshot>
+				<snapshot id="307">
+					<time>1366912983866</time>
+					<data>325</data>
+				</snapshot>
+				<snapshot id="308">
+					<time>1366912983986</time>
+					<data>322</data>
+				</snapshot>
+				<snapshot id="309">
+					<time>1366912984106</time>
+					<data>317</data>
+				</snapshot>
+				<snapshot id="310">
+					<time>1366912984256</time>
+					<data>314</data>
+				</snapshot>
+				<snapshot id="311">
+					<time>1366912984376</time>
+					<data>311</data>
+				</snapshot>
+				<snapshot id="312">
+					<time>1366912984496</time>
+					<data>306</data>
+				</snapshot>
+				<snapshot id="313">
+					<time>1366912984646</time>
+					<data>303</data>
+				</snapshot>
+				<snapshot id="314">
+					<time>1366912984766</time>
+					<data>301</data>
+				</snapshot>
+				<snapshot id="315">
+					<time>1366912984916</time>
+					<data>296</data>
+				</snapshot>
+				<snapshot id="316">
+					<time>1366912985036</time>
+					<data>294</data>
+				</snapshot>
+				<snapshot id="317">
+					<time>1366912985156</time>
+					<data>292</data>
+				</snapshot>
+				<snapshot id="318">
+					<time>1366912985306</time>
+					<data>287</data>
+				</snapshot>
+				<snapshot id="319">
+					<time>1366912985426</time>
+					<data>285</data>
+				</snapshot>
+				<snapshot id="320">
+					<time>1366912985546</time>
+					<data>283</data>
+				</snapshot>
+				<snapshot id="321">
+					<time>1366912985696</time>
+					<data>281</data>
+				</snapshot>
+				<snapshot id="322">
+					<time>1366912985816</time>
+					<data>276</data>
+				</snapshot>
+				<snapshot id="323">
+					<time>1366912985966</time>
+					<data>274</data>
+				</snapshot>
+				<snapshot id="324">
+					<time>1366912986086</time>
+					<data>272</data>
+				</snapshot>
+				<snapshot id="325">
+					<time>1366912986206</time>
+					<data>268</data>
+				</snapshot>
+				<snapshot id="326">
+					<time>1366912986356</time>
+					<data>266</data>
+				</snapshot>
+				<snapshot id="327">
+					<time>1366912986476</time>
+					<data>264</data>
+				</snapshot>
+				<snapshot id="328">
+					<time>1366912986596</time>
+					<data>261</data>
+				</snapshot>
+				<snapshot id="329">
+					<time>1366912986746</time>
+					<data>259</data>
+				</snapshot>
+				<snapshot id="330">
+					<time>1366912986866</time>
+					<data>257</data>
+				</snapshot>
+				<snapshot id="331">
+					<time>1366912986986</time>
+					<data>253</data>
+				</snapshot>
+				<snapshot id="332">
+					<time>1366912987136</time>
+					<data>251</data>
+				</snapshot>
+				<snapshot id="333">
+					<time>1366912987256</time>
+					<data>250</data>
+				</snapshot>
+				<snapshot id="334">
+					<time>1366912987406</time>
+					<data>246</data>
+				</snapshot>
+				<snapshot id="335">
+					<time>1366912987526</time>
+					<data>245</data>
+				</snapshot>
+				<snapshot id="336">
+					<time>1366912987646</time>
+					<data>243</data>
+				</snapshot>
+				<snapshot id="337">
+					<time>1366912987796</time>
+					<data>240</data>
+				</snapshot>
+				<snapshot id="338">
+					<time>1366912987916</time>
+					<data>238</data>
+				</snapshot>
+				<snapshot id="339">
+					<time>1366912988036</time>
+					<data>236</data>
+				</snapshot>
+				<snapshot id="340">
+					<time>1366912988186</time>
+					<data>233</data>
+				</snapshot>
+				<snapshot id="341">
+					<time>1366912988307</time>
+					<data>231</data>
+				</snapshot>
+				<snapshot id="342">
+					<time>1366912988456</time>
+					<data>230</data>
+				</snapshot>
+				<snapshot id="343">
+					<time>1366912988576</time>
+					<data>229</data>
+				</snapshot>
+				<snapshot id="344">
+					<time>1366912988696</time>
+					<data>225</data>
+				</snapshot>
+				<snapshot id="345">
+					<time>1366912988846</time>
+					<data>224</data>
+				</snapshot>
+				<snapshot id="346">
+					<time>1366912988966</time>
+					<data>222</data>
+				</snapshot>
+				<snapshot id="347">
+					<time>1366912989086</time>
+					<data>220</data>
+				</snapshot>
+				<snapshot id="348">
+					<time>1366912989236</time>
+					<data>218</data>
+				</snapshot>
+				<snapshot id="349">
+					<time>1366912989356</time>
+					<data>217</data>
+				</snapshot>
+				<snapshot id="350">
+					<time>1366912989506</time>
+					<data>214</data>
+				</snapshot>
+				<snapshot id="351">
+					<time>1366912989626</time>
+					<data>213</data>
+				</snapshot>
+				<snapshot id="352">
+					<time>1366912989746</time>
+					<data>211</data>
+				</snapshot>
+				<snapshot id="353">
+					<time>1366912989896</time>
+					<data>209</data>
+				</snapshot>
+				<snapshot id="354">
+					<time>1366912990017</time>
+					<data>207</data>
+				</snapshot>
+				<snapshot id="355">
+					<time>1366912990136</time>
+					<data>206</data>
+				</snapshot>
+				<snapshot id="356">
+					<time>1366912990286</time>
+					<data>204</data>
+				</snapshot>
+				<snapshot id="357">
+					<time>1366912990406</time>
+					<data>202</data>
+				</snapshot>
+				<snapshot id="358">
+					<time>1366912990526</time>
+					<data>201</data>
+				</snapshot>
+				<snapshot id="359">
+					<time>1366912990676</time>
+					<data>199</data>
+				</snapshot>
+				<snapshot id="360">
+					<time>1366912990796</time>
+					<data>198</data>
+				</snapshot>
+				<snapshot id="361">
+					<time>1366912990977</time>
+					<data>197</data>
+				</snapshot>
+				<snapshot id="362">
+					<time>1366912991066</time>
+					<data>195</data>
+				</snapshot>
+				<snapshot id="363">
+					<time>1366912991186</time>
+					<data>194</data>
+				</snapshot>
+				<snapshot id="364">
+					<time>1366912991336</time>
+					<data>192</data>
+				</snapshot>
+				<snapshot id="365">
+					<time>1366912991457</time>
+					<data>191</data>
+				</snapshot>
+				<snapshot id="366">
+					<time>1366912991576</time>
+					<data>189</data>
+				</snapshot>
+				<snapshot id="367">
+					<time>1366912991727</time>
+					<data>188</data>
+				</snapshot>
+				<snapshot id="368">
+					<time>1366912991846</time>
+					<data>187</data>
+				</snapshot>
+				<snapshot id="369">
+					<time>1366912991996</time>
+					<data>185</data>
+				</snapshot>
+				<snapshot id="370">
+					<time>1366912992116</time>
+					<data>184</data>
+				</snapshot>
+				<snapshot id="371">
+					<time>1366912992237</time>
+					<data>183</data>
+				</snapshot>
+				<snapshot id="372">
+					<time>1366912992386</time>
+					<data>181</data>
+				</snapshot>
+				<snapshot id="373">
+					<time>1366912992507</time>
+					<data>180</data>
+				</snapshot>
+				<snapshot id="374">
+					<time>1366912992627</time>
+					<data>179</data>
+				</snapshot>
+				<snapshot id="375">
+					<time>1366912992777</time>
+					<data>178</data>
+				</snapshot>
+				<snapshot id="376">
+					<time>1366912992896</time>
+					<data>177</data>
+				</snapshot>
+				<snapshot id="377">
+					<time>1366912993017</time>
+					<data>176</data>
+				</snapshot>
+				<snapshot id="378">
+					<time>1366912993167</time>
+					<data>174</data>
+				</snapshot>
+				<snapshot id="379">
+					<time>1366912993287</time>
+					<data>173</data>
+				</snapshot>
+				<snapshot id="380">
+					<time>1366912993437</time>
+					<data>173</data>
+				</snapshot>
+				<snapshot id="381">
+					<time>1366912993557</time>
+					<data>171</data>
+				</snapshot>
+				<snapshot id="382">
+					<time>1366912993677</time>
+					<data>170</data>
+				</snapshot>
+				<snapshot id="383">
+					<time>1366912993827</time>
+					<data>170</data>
+				</snapshot>
+				<snapshot id="384">
+					<time>1366912993946</time>
+					<data>169</data>
+				</snapshot>
+				<snapshot id="385">
+					<time>1366912994067</time>
+					<data>167</data>
+				</snapshot>
+				<snapshot id="386">
+					<time>1366912994217</time>
+					<data>166</data>
+				</snapshot>
+				<snapshot id="387">
+					<time>1366912994337</time>
+					<data>166</data>
+				</snapshot>
+				<snapshot id="388">
+					<time>1366912994517</time>
+					<data>164</data>
+				</snapshot>
+				<snapshot id="389">
+					<time>1366912994607</time>
+					<data>164</data>
+				</snapshot>
+				<snapshot id="390">
+					<time>1366912994727</time>
+					<data>163</data>
+				</snapshot>
+				<snapshot id="391">
+					<time>1366912994877</time>
+					<data>162</data>
+				</snapshot>
+				<snapshot id="392">
+					<time>1366912994996</time>
+					<data>161</data>
+				</snapshot>
+				<snapshot id="393">
+					<time>1366912995117</time>
+					<data>161</data>
+				</snapshot>
+				<snapshot id="394">
+					<time>1366912995267</time>
+					<data>159</data>
+				</snapshot>
+				<snapshot id="395">
+					<time>1366912995387</time>
+					<data>159</data>
+				</snapshot>
+				<snapshot id="396">
+					<time>1366912995507</time>
+					<data>158</data>
+				</snapshot>
+				<snapshot id="397">
+					<time>1366912995657</time>
+					<data>157</data>
+				</snapshot>
+				<snapshot id="398">
+					<time>1366912995777</time>
+					<data>157</data>
+				</snapshot>
+				<snapshot id="399">
+					<time>1366912995927</time>
+					<data>156</data>
+				</snapshot>
+				<snapshot id="400">
+					<time>1366912996047</time>
+					<data>155</data>
+				</snapshot>
+				<snapshot id="401">
+					<time>1366912996167</time>
+					<data>155</data>
+				</snapshot>
+				<snapshot id="402">
+					<time>1366912996317</time>
+					<data>154</data>
+				</snapshot>
+				<snapshot id="403">
+					<time>1366912996437</time>
+					<data>153</data>
+				</snapshot>
+				<snapshot id="404">
+					<time>1366912996557</time>
+					<data>153</data>
+				</snapshot>
+				<snapshot id="405">
+					<time>1366912996707</time>
+					<data>152</data>
+				</snapshot>
+				<snapshot id="406">
+					<time>1366912996827</time>
+					<data>152</data>
+				</snapshot>
+				<snapshot id="407">
+					<time>1366912996977</time>
+					<data>151</data>
+				</snapshot>
+				<snapshot id="408">
+					<time>1366912997097</time>
+					<data>151</data>
+				</snapshot>
+				<snapshot id="409">
+					<time>1366912997217</time>
+					<data>150</data>
+				</snapshot>
+				<snapshot id="410">
+					<time>1366912997367</time>
+					<data>149</data>
+				</snapshot>
+				<snapshot id="411">
+					<time>1366912997488</time>
+					<data>149</data>
+				</snapshot>
+				<snapshot id="412">
+					<time>1366912997607</time>
+					<data>148</data>
+				</snapshot>
+				<snapshot id="413">
+					<time>1366912997757</time>
+					<data>148</data>
+				</snapshot>
+				<snapshot id="414">
+					<time>1366912997877</time>
+					<data>147</data>
+				</snapshot>
+				<snapshot id="415">
+					<time>1366912997997</time>
+					<data>147</data>
+				</snapshot>
+				<snapshot id="416">
+					<time>1366912998147</time>
+					<data>146</data>
+				</snapshot>
+				<snapshot id="417">
+					<time>1366912998267</time>
+					<data>146</data>
+				</snapshot>
+				<snapshot id="418">
+					<time>1366912998417</time>
+					<data>146</data>
+				</snapshot>
+				<snapshot id="419">
+					<time>1366912998537</time>
+					<data>145</data>
+				</snapshot>
+				<snapshot id="420">
+					<time>1366912998657</time>
+					<data>145</data>
+				</snapshot>
+				<snapshot id="421">
+					<time>1366912998807</time>
+					<data>144</data>
+				</snapshot>
+				<snapshot id="422">
+					<time>1366912998927</time>
+					<data>144</data>
+				</snapshot>
+				<snapshot id="423">
+					<time>1366912999047</time>
+					<data>143</data>
+				</snapshot>
+				<snapshot id="424">
+					<time>1366912999197</time>
+					<data>143</data>
+				</snapshot>
+				<snapshot id="425">
+					<time>1366912999317</time>
+					<data>142</data>
+				</snapshot>
+				<snapshot id="426">
+					<time>1366912999467</time>
+					<data>142</data>
+				</snapshot>
+				<snapshot id="427">
+					<time>1366912999587</time>
+					<data>142</data>
+				</snapshot>
+				<snapshot id="428">
+					<time>1366912999707</time>
+					<data>142</data>
+				</snapshot>
+				<snapshot id="429">
+					<time>1366912999857</time>
+					<data>141</data>
+				</snapshot>
+				<snapshot id="430">
+					<time>1366912999977</time>
+					<data>141</data>
+				</snapshot>
+				<snapshot id="431">
+					<time>1366913000098</time>
+					<data>141</data>
+				</snapshot>
+				<snapshot id="432">
+					<time>1366913000247</time>
+					<data>140</data>
+				</snapshot>
+				<snapshot id="433">
+					<time>1366913000367</time>
+					<data>140</data>
+				</snapshot>
+				<snapshot id="434">
+					<time>1366913000517</time>
+					<data>139</data>
+				</snapshot>
+				<snapshot id="435">
+					<time>1366913000637</time>
+					<data>140</data>
+				</snapshot>
+				<snapshot id="436">
+					<time>1366913000757</time>
+					<data>150</data>
+				</snapshot>
+				<snapshot id="437">
+					<time>1366913000907</time>
+					<data>159</data>
+				</snapshot>
+				<snapshot id="438">
+					<time>1366913001034</time>
+					<data>183</data>
+				</snapshot>
+				<snapshot id="439">
+					<time>1366913009547</time>
+					<data>390</data>
+				</snapshot>
+				<snapshot id="440">
+					<time>1366913009667</time>
+					<data>382</data>
+				</snapshot>
+				<snapshot id="441">
+					<time>1366913009817</time>
+					<data>378</data>
+				</snapshot>
+				<snapshot id="442">
+					<time>1366913009937</time>
+					<data>374</data>
+				</snapshot>
+				<snapshot id="443">
+					<time>1366913010057</time>
+					<data>366</data>
+				</snapshot>
+				<snapshot id="444">
+					<time>1366913010207</time>
+					<data>363</data>
+				</snapshot>
+				<snapshot id="445">
+					<time>1366913010327</time>
+					<data>359</data>
+				</snapshot>
+				<snapshot id="446">
+					<time>1366913010477</time>
+					<data>353</data>
+				</snapshot>
+				<snapshot id="447">
+					<time>1366913010597</time>
+					<data>350</data>
+				</snapshot>
+				<snapshot id="448">
+					<time>1366913010717</time>
+					<data>346</data>
+				</snapshot>
+				<snapshot id="449">
+					<time>1366913010867</time>
+					<data>340</data>
+				</snapshot>
+				<snapshot id="450">
+					<time>1366913010988</time>
+					<data>337</data>
+				</snapshot>
+				<snapshot id="451">
+					<time>1366913011107</time>
+					<data>334</data>
+				</snapshot>
+				<snapshot id="452">
+					<time>1366913011257</time>
+					<data>331</data>
+				</snapshot>
+				<snapshot id="453">
+					<time>1366913011377</time>
+					<data>326</data>
+				</snapshot>
+				<snapshot id="454">
+					<time>1366913011497</time>
+					<data>323</data>
+				</snapshot>
+				<snapshot id="455">
+					<time>1366913011647</time>
+					<data>321</data>
+				</snapshot>
+				<snapshot id="456">
+					<time>1366913011767</time>
+					<data>315</data>
+				</snapshot>
+				<snapshot id="457">
+					<time>1366913011917</time>
+					<data>313</data>
+				</snapshot>
+				<snapshot id="458">
+					<time>1366913012037</time>
+					<data>310</data>
+				</snapshot>
+				<snapshot id="459">
+					<time>1366913012157</time>
+					<data>305</data>
+				</snapshot>
+				<snapshot id="460">
+					<time>1366913012307</time>
+					<data>303</data>
+				</snapshot>
+				<snapshot id="461">
+					<time>1366913012427</time>
+					<data>301</data>
+				</snapshot>
+				<snapshot id="462">
+					<time>1366913012547</time>
+					<data>296</data>
+				</snapshot>
+				<snapshot id="463">
+					<time>1366913012697</time>
+					<data>294</data>
+				</snapshot>
+				<snapshot id="464">
+					<time>1366913012817</time>
+					<data>291</data>
+				</snapshot>
+				<snapshot id="465">
+					<time>1366913012967</time>
+					<data>287</data>
+				</snapshot>
+				<snapshot id="466">
+					<time>1366913013087</time>
+					<data>284</data>
+				</snapshot>
+				<snapshot id="467">
+					<time>1366913013207</time>
+					<data>282</data>
+				</snapshot>
+				<snapshot id="468">
+					<time>1366913013357</time>
+					<data>278</data>
+				</snapshot>
+				<snapshot id="469">
+					<time>1366913013477</time>
+					<data>276</data>
+				</snapshot>
+				<snapshot id="470">
+					<time>1366913013597</time>
+					<data>274</data>
+				</snapshot>
+				<snapshot id="471">
+					<time>1366913013747</time>
+					<data>270</data>
+				</snapshot>
+				<snapshot id="472">
+					<time>1366913013867</time>
+					<data>268</data>
+				</snapshot>
+				<snapshot id="473">
+					<time>1366913014017</time>
+					<data>266</data>
+				</snapshot>
+				<snapshot id="474">
+					<time>1366913014137</time>
+					<data>264</data>
+				</snapshot>
+				<snapshot id="475">
+					<time>1366913014257</time>
+					<data>260</data>
+				</snapshot>
+				<snapshot id="476">
+					<time>1366913014437</time>
+					<data>258</data>
+				</snapshot>
+				<snapshot id="477">
+					<time>1366913014527</time>
+					<data>257</data>
+				</snapshot>
+				<snapshot id="478">
+					<time>1366913014647</time>
+					<data>253</data>
+				</snapshot>
+				<snapshot id="479">
+					<time>1366913014797</time>
+					<data>251</data>
+				</snapshot>
+				<snapshot id="480">
+					<time>1366913014918</time>
+					<data>249</data>
+				</snapshot>
+				<snapshot id="481">
+					<time>1366913015037</time>
+					<data>246</data>
+				</snapshot>
+				<snapshot id="482">
+					<time>1366913015187</time>
+					<data>244</data>
+				</snapshot>
+				<snapshot id="483">
+					<time>1366913015307</time>
+					<data>242</data>
+				</snapshot>
+				<snapshot id="484">
+					<time>1366913015487</time>
+					<data>239</data>
+				</snapshot>
+				<snapshot id="485">
+					<time>1366913015577</time>
+					<data>237</data>
+				</snapshot>
+				<snapshot id="486">
+					<time>1366913015697</time>
+					<data>236</data>
+				</snapshot>
+				<snapshot id="487">
+					<time>1366913015847</time>
+					<data>233</data>
+				</snapshot>
+				<snapshot id="488">
+					<time>1366913015968</time>
+					<data>231</data>
+				</snapshot>
+				<snapshot id="489">
+					<time>1366913016087</time>
+					<data>230</data>
+				</snapshot>
+				<snapshot id="490">
+					<time>1366913016237</time>
+					<data>228</data>
+				</snapshot>
+				<snapshot id="491">
+					<time>1366913016357</time>
+					<data>226</data>
+				</snapshot>
+				<snapshot id="492">
+					<time>1366913016507</time>
+					<data>225</data>
+				</snapshot>
+				<snapshot id="493">
+					<time>1366913016627</time>
+					<data>222</data>
+				</snapshot>
+				<snapshot id="494">
+					<time>1366913016748</time>
+					<data>221</data>
+				</snapshot>
+				<snapshot id="495">
+					<time>1366913016897</time>
+					<data>220</data>
+				</snapshot>
+				<snapshot id="496">
+					<time>1366913017020</time>
+					<data>219</data>
+				</snapshot>
+				<snapshot id="497">
+					<time>1366913017138</time>
+					<data>216</data>
+				</snapshot>
+				<snapshot id="498">
+					<time>1366913017288</time>
+					<data>215</data>
+				</snapshot>
+				<snapshot id="499">
+					<time>1366913017408</time>
+					<data>214</data>
+				</snapshot>
+				<snapshot id="500">
+					<time>1366913017528</time>
+					<data>212</data>
+				</snapshot>
+				<snapshot id="501">
+					<time>1366913017678</time>
+					<data>211</data>
+				</snapshot>
+				<snapshot id="502">
+					<time>1366913017798</time>
+					<data>209</data>
+				</snapshot>
+				<snapshot id="503">
+					<time>1366913017978</time>
+					<data>207</data>
+				</snapshot>
+				<snapshot id="504">
+					<time>1366913018068</time>
+					<data>206</data>
+				</snapshot>
+				<snapshot id="505">
+					<time>1366913018188</time>
+					<data>205</data>
+				</snapshot>
+				<snapshot id="506">
+					<time>1366913018338</time>
+					<data>202</data>
+				</snapshot>
+				<snapshot id="507">
+					<time>1366913018458</time>
+					<data>201</data>
+				</snapshot>
+				<snapshot id="508">
+					<time>1366913018578</time>
+					<data>200</data>
+				</snapshot>
+				<snapshot id="509">
+					<time>1366913018728</time>
+					<data>198</data>
+				</snapshot>
+				<snapshot id="510">
+					<time>1366913018848</time>
+					<data>197</data>
+				</snapshot>
+				<snapshot id="511">
+					<time>1366913018998</time>
+					<data>196</data>
+				</snapshot>
+				<snapshot id="512">
+					<time>1366913019118</time>
+					<data>194</data>
+				</snapshot>
+				<snapshot id="513">
+					<time>1366913019238</time>
+					<data>193</data>
+				</snapshot>
+				<snapshot id="514">
+					<time>1366913019387</time>
+					<data>192</data>
+				</snapshot>
+				<snapshot id="515">
+					<time>1366913019508</time>
+					<data>190</data>
+				</snapshot>
+				<snapshot id="516">
+					<time>1366913019628</time>
+					<data>189</data>
+				</snapshot>
+				<snapshot id="517">
+					<time>1366913019778</time>
+					<data>188</data>
+				</snapshot>
+				<snapshot id="518">
+					<time>1366913019898</time>
+					<data>188</data>
+				</snapshot>
+				<snapshot id="519">
+					<time>1366913020018</time>
+					<data>186</data>
+				</snapshot>
+				<snapshot id="520">
+					<time>1366913020168</time>
+					<data>185</data>
+				</snapshot>
+				<snapshot id="521">
+					<time>1366913020287</time>
+					<data>184</data>
+				</snapshot>
+				<snapshot id="522">
+					<time>1366913020438</time>
+					<data>182</data>
+				</snapshot>
+				<snapshot id="523">
+					<time>1366913020558</time>
+					<data>181</data>
+				</snapshot>
+			</snapshots>
+		</sensor>
+		<sensor name="AFR 2">
+			<type>AirFuel</type>
+			<transform>0</transform>
+			<sensorID>2</sensorID>
+			<active>1</active>
+			<snapshots>
+			</snapshots>
+		</sensor>
+		<sensor name="PSI 3">
+			<type>Pressure</type>
+			<transform>0</transform>
+			<sensorID>3</sensorID>
+			<active>1</active>
+			<snapshots>
+			</snapshots>
+		</sensor>
+		<sensor name="EGT 3">
+			<type>Temperature</type>
+			<transform>0</transform>
+			<sensorID>3</sensorID>
+			<active>1</active>
+			<snapshots>
+				<snapshot id="0">
+					<time>1366912943605</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="1">
+					<time>1366912943755</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="2">
+					<time>1366912943875</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="3">
+					<time>1366912944025</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="4">
+					<time>1366912944144</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="5">
+					<time>1366912944265</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="6">
+					<time>1366912944415</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="7">
+					<time>1366912944535</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="8">
+					<time>1366912944655</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="9">
+					<time>1366912944805</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="10">
+					<time>1366912944925</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="11">
+					<time>1366912945045</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="12">
+					<time>1366912945195</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="13">
+					<time>1366912945315</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="14">
+					<time>1366912945465</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="15">
+					<time>1366912945585</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="16">
+					<time>1366912945705</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="17">
+					<time>1366912945855</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="18">
+					<time>1366912945975</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="19">
+					<time>1366912946095</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="20">
+					<time>1366912946245</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="21">
+					<time>1366912946365</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="22">
+					<time>1366912946485</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="23">
+					<time>1366912946635</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="24">
+					<time>1366912946755</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="25">
+					<time>1366912946905</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="26">
+					<time>1366912947025</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="27">
+					<time>1366912947144</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="28">
+					<time>1366912947295</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="29">
+					<time>1366912947415</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="30">
+					<time>1366912947535</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="31">
+					<time>1366912947685</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="32">
+					<time>1366912947805</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="33">
+					<time>1366912947955</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="34">
+					<time>1366912948075</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="35">
+					<time>1366912948195</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="36">
+					<time>1366912948345</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="37">
+					<time>1366912948465</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="38">
+					<time>1366912948585</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="39">
+					<time>1366912948735</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="40">
+					<time>1366912948855</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="41">
+					<time>1366912949005</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="42">
+					<time>1366912949125</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="43">
+					<time>1366912949245</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="44">
+					<time>1366912949395</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="45">
+					<time>1366912949515</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="46">
+					<time>1366912949635</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="47">
+					<time>1366912949785</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="48">
+					<time>1366912949905</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="49">
+					<time>1366912950025</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="50">
+					<time>1366912950175</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="51">
+					<time>1366912950295</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="52">
+					<time>1366912950445</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="53">
+					<time>1366912950565</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="54">
+					<time>1366912950685</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="55">
+					<time>1366912950835</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="56">
+					<time>1366912950955</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="57">
+					<time>1366912951075</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="58">
+					<time>1366912951225</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="59">
+					<time>1366912951345</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="60">
+					<time>1366912951525</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="61">
+					<time>1366912951615</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="62">
+					<time>1366912951735</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="63">
+					<time>1366912951885</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="64">
+					<time>1366912952005</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="65">
+					<time>1366912952125</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="66">
+					<time>1366912952275</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="67">
+					<time>1366912952395</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="68">
+					<time>1366912952515</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="69">
+					<time>1366912952665</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="70">
+					<time>1366912952786</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="71">
+					<time>1366912952935</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="72">
+					<time>1366912953055</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="73">
+					<time>1366912953176</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="74">
+					<time>1366912953326</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="75">
+					<time>1366912953445</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="76">
+					<time>1366912953565</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="77">
+					<time>1366912953715</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="78">
+					<time>1366912953835</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="79">
+					<time>1366912953985</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="80">
+					<time>1366912954105</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="81">
+					<time>1366912954225</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="82">
+					<time>1366912954375</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="83">
+					<time>1366912954495</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="84">
+					<time>1366912954615</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="85">
+					<time>1366912954765</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="86">
+					<time>1366912954885</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="87">
+					<time>1366912955005</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="88">
+					<time>1366912955155</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="89">
+					<time>1366912955275</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="90">
+					<time>1366912955425</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="91">
+					<time>1366912955545</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="92">
+					<time>1366912955665</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="93">
+					<time>1366912955815</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="94">
+					<time>1366912955935</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="95">
+					<time>1366912956055</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="96">
+					<time>1366912956205</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="97">
+					<time>1366912956325</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="98">
+					<time>1366912956475</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="99">
+					<time>1366912956595</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="100">
+					<time>1366912956715</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="101">
+					<time>1366912956865</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="102">
+					<time>1366912956985</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="103">
+					<time>1366912957105</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="104">
+					<time>1366912957255</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="105">
+					<time>1366912957375</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="106">
+					<time>1366912957525</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="107">
+					<time>1366912957645</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="108">
+					<time>1366912957765</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="109">
+					<time>1366912957916</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="110">
+					<time>1366912958035</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="111">
+					<time>1366912958155</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="112">
+					<time>1366912958305</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="113">
+					<time>1366912958425</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="114">
+					<time>1366912958545</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="115">
+					<time>1366912958695</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="116">
+					<time>1366912958815</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="117">
+					<time>1366912958965</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="118">
+					<time>1366912959085</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="119">
+					<time>1366912959205</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="120">
+					<time>1366912959355</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="121">
+					<time>1366912959475</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="122">
+					<time>1366912959595</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="123">
+					<time>1366912959745</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="124">
+					<time>1366912959865</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="125">
+					<time>1366912959985</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="126">
+					<time>1366912960135</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="127">
+					<time>1366912960255</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="128">
+					<time>1366912960406</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="129">
+					<time>1366912960525</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="130">
+					<time>1366912960645</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="131">
+					<time>1366912960825</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="132">
+					<time>1366912960916</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="133">
+					<time>1366912961036</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="134">
+					<time>1366912961185</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="135">
+					<time>1366912961305</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="136">
+					<time>1366912961455</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="137">
+					<time>1366912961575</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="138">
+					<time>1366912961695</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="139">
+					<time>1366912961845</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="140">
+					<time>1366912961965</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="141">
+					<time>1366912962085</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="142">
+					<time>1366912962235</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="143">
+					<time>1366912962355</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="144">
+					<time>1366912962505</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="145">
+					<time>1366912962625</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="146">
+					<time>1366912962745</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="147">
+					<time>1366912962896</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="148">
+					<time>1366912963015</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="149">
+					<time>1366912963135</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="150">
+					<time>1366912963285</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="151">
+					<time>1366912963405</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="152">
+					<time>1366912963525</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="153">
+					<time>1366912963675</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="154">
+					<time>1366912963795</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="155">
+					<time>1366912963945</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="156">
+					<time>1366912964065</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="157">
+					<time>1366912964185</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="158">
+					<time>1366912964335</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="159">
+					<time>1366912964455</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="160">
+					<time>1366912964576</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="161">
+					<time>1366912964726</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="162">
+					<time>1366912964845</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="163">
+					<time>1366912965026</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="164">
+					<time>1366912965115</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="165">
+					<time>1366912965235</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="166">
+					<time>1366912965385</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="167">
+					<time>1366912965505</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="168">
+					<time>1366912965626</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="169">
+					<time>1366912965776</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="170">
+					<time>1366912965895</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="171">
+					<time>1366912966015</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="172">
+					<time>1366912966165</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="173">
+					<time>1366912966286</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="174">
+					<time>1366912966435</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="175">
+					<time>1366912966555</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="176">
+					<time>1366912966677</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="177">
+					<time>1366912966826</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="178">
+					<time>1366912966945</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="179">
+					<time>1366912967066</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="180">
+					<time>1366912967216</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="181">
+					<time>1366912967336</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="182">
+					<time>1366912967516</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="183">
+					<time>1366912967606</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="184">
+					<time>1366912967726</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="185">
+					<time>1366912967876</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="186">
+					<time>1366912967995</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="187">
+					<time>1366912968116</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="188">
+					<time>1366912968266</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="189">
+					<time>1366912968386</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="190">
+					<time>1366912968506</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="191">
+					<time>1366912968656</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="192">
+					<time>1366912968776</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="193">
+					<time>1366912968926</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="194">
+					<time>1366912969045</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="195">
+					<time>1366912969166</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="196">
+					<time>1366912969316</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="197">
+					<time>1366912969436</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="198">
+					<time>1366912969556</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="199">
+					<time>1366912969706</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="200">
+					<time>1366912969826</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="201">
+					<time>1366912969976</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="202">
+					<time>1366912970095</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="203">
+					<time>1366912970216</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="204">
+					<time>1366912970366</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="205">
+					<time>1366912970486</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="206">
+					<time>1366912970606</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="207">
+					<time>1366912970756</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="208">
+					<time>1366912970876</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="209">
+					<time>1366912971026</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="210">
+					<time>1366912971145</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="211">
+					<time>1366912971266</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="212">
+					<time>1366912971416</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="213">
+					<time>1366912971536</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="214">
+					<time>1366912971656</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="215">
+					<time>1366912971806</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="216">
+					<time>1366912971926</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="217">
+					<time>1366912972046</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="218">
+					<time>1366912972196</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="219">
+					<time>1366912972316</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="220">
+					<time>1366912972466</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="221">
+					<time>1366912972586</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="222">
+					<time>1366912972706</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="223">
+					<time>1366912972856</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="224">
+					<time>1366912972976</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="225">
+					<time>1366912973096</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="226">
+					<time>1366912973245</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="227">
+					<time>1366912973366</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="228">
+					<time>1366912973516</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="229">
+					<time>1366912973636</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="230">
+					<time>1366912973756</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="231">
+					<time>1366912973906</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="232">
+					<time>1366912974026</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="233">
+					<time>1366912974146</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="234">
+					<time>1366912974296</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="235">
+					<time>1366912974416</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="236">
+					<time>1366912974536</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="237">
+					<time>1366912974686</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="238">
+					<time>1366912974806</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="239">
+					<time>1366912974986</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="240">
+					<time>1366912975076</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="241">
+					<time>1366912975196</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="242">
+					<time>1366912975346</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="243">
+					<time>1366912975466</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="244">
+					<time>1366912975586</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="245">
+					<time>1366912975736</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="246">
+					<time>1366912975856</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="247">
+					<time>1366912976006</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="248">
+					<time>1366912976126</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="249">
+					<time>1366912976246</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="250">
+					<time>1366912976396</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="251">
+					<time>1366912976516</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="252">
+					<time>1366912976636</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="253">
+					<time>1366912976786</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="254">
+					<time>1366912976906</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="255">
+					<time>1366912977026</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="256">
+					<time>1366912977176</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="257">
+					<time>1366912977296</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="258">
+					<time>1366912977446</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="259">
+					<time>1366912977566</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="260">
+					<time>1366912977686</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="261">
+					<time>1366912977836</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="262">
+					<time>1366912977956</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="263">
+					<time>1366912978076</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="264">
+					<time>1366912978226</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="265">
+					<time>1366912978346</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="266">
+					<time>1366912978526</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="267">
+					<time>1366912978616</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="268">
+					<time>1366912978736</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="269">
+					<time>1366912978886</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="270">
+					<time>1366912979006</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="271">
+					<time>1366912979126</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="272">
+					<time>1366912979276</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="273">
+					<time>1366912979396</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="274">
+					<time>1366912979516</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="275">
+					<time>1366912979666</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="276">
+					<time>1366912979786</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="277">
+					<time>1366912979966</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="278">
+					<time>1366912980056</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="279">
+					<time>1366912980176</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="280">
+					<time>1366912980326</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="281">
+					<time>1366912980446</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="282">
+					<time>1366912980566</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="283">
+					<time>1366912980716</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="284">
+					<time>1366912980836</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="285">
+					<time>1366912980986</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="286">
+					<time>1366912981106</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="287">
+					<time>1366912981226</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="288">
+					<time>1366912981376</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="289">
+					<time>1366912981496</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="290">
+					<time>1366912981616</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="291">
+					<time>1366912981766</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="292">
+					<time>1366912981886</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="293">
+					<time>1366912982006</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="294">
+					<time>1366912982156</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="295">
+					<time>1366912982276</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="296">
+					<time>1366912982426</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="297">
+					<time>1366912982546</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="298">
+					<time>1366912982666</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="299">
+					<time>1366912982816</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="300">
+					<time>1366912982936</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="301">
+					<time>1366912983056</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="302">
+					<time>1366912983206</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="303">
+					<time>1366912983328</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="304">
+					<time>1366912983476</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="305">
+					<time>1366912983596</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="306">
+					<time>1366912983716</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="307">
+					<time>1366912983866</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="308">
+					<time>1366912983986</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="309">
+					<time>1366912984106</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="310">
+					<time>1366912984256</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="311">
+					<time>1366912984376</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="312">
+					<time>1366912984496</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="313">
+					<time>1366912984646</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="314">
+					<time>1366912984766</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="315">
+					<time>1366912984916</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="316">
+					<time>1366912985036</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="317">
+					<time>1366912985156</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="318">
+					<time>1366912985306</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="319">
+					<time>1366912985426</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="320">
+					<time>1366912985546</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="321">
+					<time>1366912985696</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="322">
+					<time>1366912985816</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="323">
+					<time>1366912985966</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="324">
+					<time>1366912986086</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="325">
+					<time>1366912986206</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="326">
+					<time>1366912986356</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="327">
+					<time>1366912986476</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="328">
+					<time>1366912986596</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="329">
+					<time>1366912986746</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="330">
+					<time>1366912986866</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="331">
+					<time>1366912986986</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="332">
+					<time>1366912987136</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="333">
+					<time>1366912987256</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="334">
+					<time>1366912987406</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="335">
+					<time>1366912987526</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="336">
+					<time>1366912987646</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="337">
+					<time>1366912987796</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="338">
+					<time>1366912987916</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="339">
+					<time>1366912988036</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="340">
+					<time>1366912988186</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="341">
+					<time>1366912988307</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="342">
+					<time>1366912988456</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="343">
+					<time>1366912988576</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="344">
+					<time>1366912988696</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="345">
+					<time>1366912988846</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="346">
+					<time>1366912988966</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="347">
+					<time>1366912989086</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="348">
+					<time>1366912989236</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="349">
+					<time>1366912989356</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="350">
+					<time>1366912989506</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="351">
+					<time>1366912989626</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="352">
+					<time>1366912989746</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="353">
+					<time>1366912989896</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="354">
+					<time>1366912990017</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="355">
+					<time>1366912990136</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="356">
+					<time>1366912990286</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="357">
+					<time>1366912990406</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="358">
+					<time>1366912990526</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="359">
+					<time>1366912990676</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="360">
+					<time>1366912990796</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="361">
+					<time>1366912990977</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="362">
+					<time>1366912991066</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="363">
+					<time>1366912991186</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="364">
+					<time>1366912991336</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="365">
+					<time>1366912991457</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="366">
+					<time>1366912991576</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="367">
+					<time>1366912991727</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="368">
+					<time>1366912991846</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="369">
+					<time>1366912991996</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="370">
+					<time>1366912992116</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="371">
+					<time>1366912992237</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="372">
+					<time>1366912992386</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="373">
+					<time>1366912992507</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="374">
+					<time>1366912992627</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="375">
+					<time>1366912992777</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="376">
+					<time>1366912992896</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="377">
+					<time>1366912993017</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="378">
+					<time>1366912993167</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="379">
+					<time>1366912993287</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="380">
+					<time>1366912993437</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="381">
+					<time>1366912993557</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="382">
+					<time>1366912993677</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="383">
+					<time>1366912993827</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="384">
+					<time>1366912993946</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="385">
+					<time>1366912994067</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="386">
+					<time>1366912994217</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="387">
+					<time>1366912994337</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="388">
+					<time>1366912994517</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="389">
+					<time>1366912994607</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="390">
+					<time>1366912994727</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="391">
+					<time>1366912994877</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="392">
+					<time>1366912994996</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="393">
+					<time>1366912995117</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="394">
+					<time>1366912995267</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="395">
+					<time>1366912995387</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="396">
+					<time>1366912995507</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="397">
+					<time>1366912995657</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="398">
+					<time>1366912995777</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="399">
+					<time>1366912995927</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="400">
+					<time>1366912996047</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="401">
+					<time>1366912996167</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="402">
+					<time>1366912996317</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="403">
+					<time>1366912996437</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="404">
+					<time>1366912996557</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="405">
+					<time>1366912996707</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="406">
+					<time>1366912996827</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="407">
+					<time>1366912996977</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="408">
+					<time>1366912997097</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="409">
+					<time>1366912997217</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="410">
+					<time>1366912997367</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="411">
+					<time>1366912997488</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="412">
+					<time>1366912997607</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="413">
+					<time>1366912997757</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="414">
+					<time>1366912997877</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="415">
+					<time>1366912997997</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="416">
+					<time>1366912998147</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="417">
+					<time>1366912998267</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="418">
+					<time>1366912998417</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="419">
+					<time>1366912998537</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="420">
+					<time>1366912998657</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="421">
+					<time>1366912998807</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="422">
+					<time>1366912998927</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="423">
+					<time>1366912999047</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="424">
+					<time>1366912999197</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="425">
+					<time>1366912999317</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="426">
+					<time>1366912999467</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="427">
+					<time>1366912999587</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="428">
+					<time>1366912999707</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="429">
+					<time>1366912999857</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="430">
+					<time>1366912999977</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="431">
+					<time>1366913000098</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="432">
+					<time>1366913000247</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="433">
+					<time>1366913000367</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="434">
+					<time>1366913000517</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="435">
+					<time>1366913000637</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="436">
+					<time>1366913000757</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="437">
+					<time>1366913000907</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="438">
+					<time>1366913001034</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="439">
+					<time>1366913009547</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="440">
+					<time>1366913009667</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="441">
+					<time>1366913009817</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="442">
+					<time>1366913009937</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="443">
+					<time>1366913010057</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="444">
+					<time>1366913010207</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="445">
+					<time>1366913010327</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="446">
+					<time>1366913010477</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="447">
+					<time>1366913010597</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="448">
+					<time>1366913010717</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="449">
+					<time>1366913010867</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="450">
+					<time>1366913010988</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="451">
+					<time>1366913011107</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="452">
+					<time>1366913011257</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="453">
+					<time>1366913011377</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="454">
+					<time>1366913011497</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="455">
+					<time>1366913011647</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="456">
+					<time>1366913011767</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="457">
+					<time>1366913011917</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="458">
+					<time>1366913012037</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="459">
+					<time>1366913012157</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="460">
+					<time>1366913012307</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="461">
+					<time>1366913012427</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="462">
+					<time>1366913012547</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="463">
+					<time>1366913012697</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="464">
+					<time>1366913012817</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="465">
+					<time>1366913012967</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="466">
+					<time>1366913013087</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="467">
+					<time>1366913013207</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="468">
+					<time>1366913013357</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="469">
+					<time>1366913013477</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="470">
+					<time>1366913013597</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="471">
+					<time>1366913013747</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="472">
+					<time>1366913013867</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="473">
+					<time>1366913014017</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="474">
+					<time>1366913014137</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="475">
+					<time>1366913014257</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="476">
+					<time>1366913014437</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="477">
+					<time>1366913014527</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="478">
+					<time>1366913014647</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="479">
+					<time>1366913014797</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="480">
+					<time>1366913014918</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="481">
+					<time>1366913015037</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="482">
+					<time>1366913015187</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="483">
+					<time>1366913015307</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="484">
+					<time>1366913015487</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="485">
+					<time>1366913015577</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="486">
+					<time>1366913015697</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="487">
+					<time>1366913015847</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="488">
+					<time>1366913015968</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="489">
+					<time>1366913016087</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="490">
+					<time>1366913016237</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="491">
+					<time>1366913016357</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="492">
+					<time>1366913016507</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="493">
+					<time>1366913016627</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="494">
+					<time>1366913016748</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="495">
+					<time>1366913016897</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="496">
+					<time>1366913017020</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="497">
+					<time>1366913017138</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="498">
+					<time>1366913017288</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="499">
+					<time>1366913017408</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="500">
+					<time>1366913017528</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="501">
+					<time>1366913017678</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="502">
+					<time>1366913017798</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="503">
+					<time>1366913017978</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="504">
+					<time>1366913018068</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="505">
+					<time>1366913018188</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="506">
+					<time>1366913018338</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="507">
+					<time>1366913018458</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="508">
+					<time>1366913018578</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="509">
+					<time>1366913018728</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="510">
+					<time>1366913018848</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="511">
+					<time>1366913018998</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="512">
+					<time>1366913019118</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="513">
+					<time>1366913019238</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="514">
+					<time>1366913019387</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="515">
+					<time>1366913019508</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="516">
+					<time>1366913019628</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="517">
+					<time>1366913019778</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="518">
+					<time>1366913019898</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="519">
+					<time>1366913020018</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="520">
+					<time>1366913020168</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="521">
+					<time>1366913020287</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="522">
+					<time>1366913020438</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="523">
+					<time>1366913020558</time>
+					<data>76</data>
+				</snapshot>
+			</snapshots>
+		</sensor>
+		<sensor name="EGT 4">
+			<type>Temperature</type>
+			<transform>0</transform>
+			<sensorID>4</sensorID>
+			<active>1</active>
+			<snapshots>
+				<snapshot id="0">
+					<time>1366912943605</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="1">
+					<time>1366912943755</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="2">
+					<time>1366912943875</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="3">
+					<time>1366912944025</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="4">
+					<time>1366912944144</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="5">
+					<time>1366912944265</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="6">
+					<time>1366912944415</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="7">
+					<time>1366912944535</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="8">
+					<time>1366912944655</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="9">
+					<time>1366912944805</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="10">
+					<time>1366912944925</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="11">
+					<time>1366912945045</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="12">
+					<time>1366912945195</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="13">
+					<time>1366912945315</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="14">
+					<time>1366912945465</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="15">
+					<time>1366912945585</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="16">
+					<time>1366912945705</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="17">
+					<time>1366912945855</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="18">
+					<time>1366912945975</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="19">
+					<time>1366912946095</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="20">
+					<time>1366912946245</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="21">
+					<time>1366912946365</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="22">
+					<time>1366912946485</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="23">
+					<time>1366912946635</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="24">
+					<time>1366912946755</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="25">
+					<time>1366912946905</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="26">
+					<time>1366912947025</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="27">
+					<time>1366912947144</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="28">
+					<time>1366912947295</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="29">
+					<time>1366912947415</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="30">
+					<time>1366912947535</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="31">
+					<time>1366912947685</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="32">
+					<time>1366912947805</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="33">
+					<time>1366912947955</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="34">
+					<time>1366912948075</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="35">
+					<time>1366912948195</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="36">
+					<time>1366912948345</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="37">
+					<time>1366912948465</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="38">
+					<time>1366912948585</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="39">
+					<time>1366912948735</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="40">
+					<time>1366912948855</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="41">
+					<time>1366912949005</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="42">
+					<time>1366912949125</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="43">
+					<time>1366912949245</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="44">
+					<time>1366912949395</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="45">
+					<time>1366912949515</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="46">
+					<time>1366912949635</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="47">
+					<time>1366912949785</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="48">
+					<time>1366912949905</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="49">
+					<time>1366912950025</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="50">
+					<time>1366912950175</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="51">
+					<time>1366912950295</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="52">
+					<time>1366912950445</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="53">
+					<time>1366912950565</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="54">
+					<time>1366912950685</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="55">
+					<time>1366912950835</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="56">
+					<time>1366912950955</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="57">
+					<time>1366912951075</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="58">
+					<time>1366912951225</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="59">
+					<time>1366912951345</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="60">
+					<time>1366912951525</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="61">
+					<time>1366912951615</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="62">
+					<time>1366912951735</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="63">
+					<time>1366912951885</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="64">
+					<time>1366912952005</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="65">
+					<time>1366912952125</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="66">
+					<time>1366912952275</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="67">
+					<time>1366912952395</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="68">
+					<time>1366912952515</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="69">
+					<time>1366912952665</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="70">
+					<time>1366912952786</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="71">
+					<time>1366912952935</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="72">
+					<time>1366912953055</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="73">
+					<time>1366912953176</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="74">
+					<time>1366912953326</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="75">
+					<time>1366912953445</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="76">
+					<time>1366912953565</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="77">
+					<time>1366912953715</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="78">
+					<time>1366912953835</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="79">
+					<time>1366912953985</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="80">
+					<time>1366912954105</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="81">
+					<time>1366912954225</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="82">
+					<time>1366912954375</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="83">
+					<time>1366912954495</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="84">
+					<time>1366912954615</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="85">
+					<time>1366912954765</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="86">
+					<time>1366912954885</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="87">
+					<time>1366912955005</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="88">
+					<time>1366912955155</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="89">
+					<time>1366912955275</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="90">
+					<time>1366912955425</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="91">
+					<time>1366912955545</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="92">
+					<time>1366912955665</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="93">
+					<time>1366912955815</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="94">
+					<time>1366912955935</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="95">
+					<time>1366912956055</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="96">
+					<time>1366912956205</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="97">
+					<time>1366912956325</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="98">
+					<time>1366912956475</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="99">
+					<time>1366912956595</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="100">
+					<time>1366912956715</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="101">
+					<time>1366912956865</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="102">
+					<time>1366912956985</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="103">
+					<time>1366912957105</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="104">
+					<time>1366912957255</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="105">
+					<time>1366912957375</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="106">
+					<time>1366912957525</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="107">
+					<time>1366912957645</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="108">
+					<time>1366912957765</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="109">
+					<time>1366912957916</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="110">
+					<time>1366912958035</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="111">
+					<time>1366912958155</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="112">
+					<time>1366912958305</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="113">
+					<time>1366912958425</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="114">
+					<time>1366912958545</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="115">
+					<time>1366912958695</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="116">
+					<time>1366912958815</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="117">
+					<time>1366912958965</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="118">
+					<time>1366912959085</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="119">
+					<time>1366912959205</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="120">
+					<time>1366912959355</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="121">
+					<time>1366912959475</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="122">
+					<time>1366912959595</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="123">
+					<time>1366912959745</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="124">
+					<time>1366912959865</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="125">
+					<time>1366912959985</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="126">
+					<time>1366912960135</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="127">
+					<time>1366912960255</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="128">
+					<time>1366912960406</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="129">
+					<time>1366912960525</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="130">
+					<time>1366912960645</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="131">
+					<time>1366912960825</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="132">
+					<time>1366912960916</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="133">
+					<time>1366912961036</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="134">
+					<time>1366912961185</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="135">
+					<time>1366912961305</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="136">
+					<time>1366912961455</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="137">
+					<time>1366912961575</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="138">
+					<time>1366912961695</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="139">
+					<time>1366912961845</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="140">
+					<time>1366912961965</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="141">
+					<time>1366912962085</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="142">
+					<time>1366912962235</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="143">
+					<time>1366912962355</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="144">
+					<time>1366912962505</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="145">
+					<time>1366912962625</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="146">
+					<time>1366912962745</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="147">
+					<time>1366912962896</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="148">
+					<time>1366912963015</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="149">
+					<time>1366912963135</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="150">
+					<time>1366912963285</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="151">
+					<time>1366912963405</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="152">
+					<time>1366912963525</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="153">
+					<time>1366912963675</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="154">
+					<time>1366912963795</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="155">
+					<time>1366912963945</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="156">
+					<time>1366912964065</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="157">
+					<time>1366912964185</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="158">
+					<time>1366912964335</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="159">
+					<time>1366912964455</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="160">
+					<time>1366912964576</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="161">
+					<time>1366912964726</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="162">
+					<time>1366912964845</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="163">
+					<time>1366912965115</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="164">
+					<time>1366912965235</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="165">
+					<time>1366912965385</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="166">
+					<time>1366912965505</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="167">
+					<time>1366912965626</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="168">
+					<time>1366912965776</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="169">
+					<time>1366912965895</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="170">
+					<time>1366912966015</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="171">
+					<time>1366912966165</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="172">
+					<time>1366912966286</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="173">
+					<time>1366912966435</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="174">
+					<time>1366912966555</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="175">
+					<time>1366912966677</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="176">
+					<time>1366912966826</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="177">
+					<time>1366912966945</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="178">
+					<time>1366912967066</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="179">
+					<time>1366912967216</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="180">
+					<time>1366912967336</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="181">
+					<time>1366912967516</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="182">
+					<time>1366912967606</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="183">
+					<time>1366912967726</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="184">
+					<time>1366912967876</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="185">
+					<time>1366912967995</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="186">
+					<time>1366912968116</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="187">
+					<time>1366912968266</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="188">
+					<time>1366912968386</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="189">
+					<time>1366912968506</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="190">
+					<time>1366912968656</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="191">
+					<time>1366912968776</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="192">
+					<time>1366912968926</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="193">
+					<time>1366912969045</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="194">
+					<time>1366912969166</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="195">
+					<time>1366912969316</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="196">
+					<time>1366912969436</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="197">
+					<time>1366912969556</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="198">
+					<time>1366912969706</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="199">
+					<time>1366912969826</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="200">
+					<time>1366912969976</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="201">
+					<time>1366912970095</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="202">
+					<time>1366912970216</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="203">
+					<time>1366912970366</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="204">
+					<time>1366912970486</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="205">
+					<time>1366912970606</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="206">
+					<time>1366912970756</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="207">
+					<time>1366912970876</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="208">
+					<time>1366912971026</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="209">
+					<time>1366912971145</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="210">
+					<time>1366912971266</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="211">
+					<time>1366912971416</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="212">
+					<time>1366912971536</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="213">
+					<time>1366912971656</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="214">
+					<time>1366912971806</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="215">
+					<time>1366912971926</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="216">
+					<time>1366912972046</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="217">
+					<time>1366912972196</time>
+					<data>76</data>
+				</snapshot>
+				<snapshot id="218">
+					<time>1366912972316</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="219">
+					<time>1366912972466</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="220">
+					<time>1366912972586</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="221">
+					<time>1366912972706</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="222">
+					<time>1366912972856</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="223">
+					<time>1366912972976</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="224">
+					<time>1366912973096</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="225">
+					<time>1366912973245</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="226">
+					<time>1366912973366</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="227">
+					<time>1366912973516</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="228">
+					<time>1366912973636</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="229">
+					<time>1366912973756</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="230">
+					<time>1366912973906</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="231">
+					<time>1366912974026</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="232">
+					<time>1366912974146</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="233">
+					<time>1366912974296</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="234">
+					<time>1366912974416</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="235">
+					<time>1366912974536</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="236">
+					<time>1366912974686</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="237">
+					<time>1366912974806</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="238">
+					<time>1366912974986</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="239">
+					<time>1366912975076</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="240">
+					<time>1366912975196</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="241">
+					<time>1366912975346</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="242">
+					<time>1366912975466</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="243">
+					<time>1366912975586</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="244">
+					<time>1366912975736</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="245">
+					<time>1366912975856</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="246">
+					<time>1366912976006</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="247">
+					<time>1366912976126</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="248">
+					<time>1366912976246</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="249">
+					<time>1366912976396</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="250">
+					<time>1366912976516</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="251">
+					<time>1366912976636</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="252">
+					<time>1366912976786</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="253">
+					<time>1366912976906</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="254">
+					<time>1366912977026</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="255">
+					<time>1366912977176</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="256">
+					<time>1366912977296</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="257">
+					<time>1366912977446</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="258">
+					<time>1366912977566</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="259">
+					<time>1366912977686</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="260">
+					<time>1366912977836</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="261">
+					<time>1366912977956</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="262">
+					<time>1366912978076</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="263">
+					<time>1366912978226</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="264">
+					<time>1366912978346</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="265">
+					<time>1366912978526</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="266">
+					<time>1366912978616</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="267">
+					<time>1366912978736</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="268">
+					<time>1366912978886</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="269">
+					<time>1366912979006</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="270">
+					<time>1366912979126</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="271">
+					<time>1366912979276</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="272">
+					<time>1366912979396</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="273">
+					<time>1366912979516</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="274">
+					<time>1366912979666</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="275">
+					<time>1366912979786</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="276">
+					<time>1366912979966</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="277">
+					<time>1366912980056</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="278">
+					<time>1366912980176</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="279">
+					<time>1366912980326</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="280">
+					<time>1366912980446</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="281">
+					<time>1366912980566</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="282">
+					<time>1366912980716</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="283">
+					<time>1366912980836</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="284">
+					<time>1366912980986</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="285">
+					<time>1366912981106</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="286">
+					<time>1366912981226</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="287">
+					<time>1366912981376</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="288">
+					<time>1366912981496</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="289">
+					<time>1366912981616</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="290">
+					<time>1366912981766</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="291">
+					<time>1366912981886</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="292">
+					<time>1366912982006</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="293">
+					<time>1366912982156</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="294">
+					<time>1366912982276</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="295">
+					<time>1366912982426</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="296">
+					<time>1366912982546</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="297">
+					<time>1366912982666</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="298">
+					<time>1366912982816</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="299">
+					<time>1366912982936</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="300">
+					<time>1366912983056</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="301">
+					<time>1366912983206</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="302">
+					<time>1366912983328</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="303">
+					<time>1366912983476</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="304">
+					<time>1366912983596</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="305">
+					<time>1366912983716</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="306">
+					<time>1366912983866</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="307">
+					<time>1366912983986</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="308">
+					<time>1366912984106</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="309">
+					<time>1366912984256</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="310">
+					<time>1366912984376</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="311">
+					<time>1366912984496</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="312">
+					<time>1366912984646</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="313">
+					<time>1366912984766</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="314">
+					<time>1366912984916</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="315">
+					<time>1366912985036</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="316">
+					<time>1366912985156</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="317">
+					<time>1366912985306</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="318">
+					<time>1366912985426</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="319">
+					<time>1366912985546</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="320">
+					<time>1366912985696</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="321">
+					<time>1366912985816</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="322">
+					<time>1366912985966</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="323">
+					<time>1366912986086</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="324">
+					<time>1366912986206</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="325">
+					<time>1366912986356</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="326">
+					<time>1366912986476</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="327">
+					<time>1366912986596</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="328">
+					<time>1366912986746</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="329">
+					<time>1366912986866</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="330">
+					<time>1366912986986</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="331">
+					<time>1366912987136</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="332">
+					<time>1366912987256</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="333">
+					<time>1366912987406</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="334">
+					<time>1366912987526</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="335">
+					<time>1366912987646</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="336">
+					<time>1366912987796</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="337">
+					<time>1366912987916</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="338">
+					<time>1366912988036</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="339">
+					<time>1366912988186</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="340">
+					<time>1366912988307</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="341">
+					<time>1366912988456</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="342">
+					<time>1366912988576</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="343">
+					<time>1366912988696</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="344">
+					<time>1366912988846</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="345">
+					<time>1366912988966</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="346">
+					<time>1366912989086</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="347">
+					<time>1366912989236</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="348">
+					<time>1366912989356</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="349">
+					<time>1366912989506</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="350">
+					<time>1366912989626</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="351">
+					<time>1366912989746</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="352">
+					<time>1366912989896</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="353">
+					<time>1366912990017</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="354">
+					<time>1366912990136</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="355">
+					<time>1366912990286</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="356">
+					<time>1366912990406</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="357">
+					<time>1366912990526</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="358">
+					<time>1366912990676</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="359">
+					<time>1366912990796</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="360">
+					<time>1366912990977</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="361">
+					<time>1366912991066</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="362">
+					<time>1366912991186</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="363">
+					<time>1366912991336</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="364">
+					<time>1366912991457</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="365">
+					<time>1366912991576</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="366">
+					<time>1366912991727</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="367">
+					<time>1366912991846</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="368">
+					<time>1366912991996</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="369">
+					<time>1366912992116</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="370">
+					<time>1366912992237</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="371">
+					<time>1366912992386</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="372">
+					<time>1366912992507</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="373">
+					<time>1366912992627</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="374">
+					<time>1366912992777</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="375">
+					<time>1366912992896</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="376">
+					<time>1366912993017</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="377">
+					<time>1366912993167</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="378">
+					<time>1366912993287</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="379">
+					<time>1366912993437</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="380">
+					<time>1366912993557</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="381">
+					<time>1366912993677</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="382">
+					<time>1366912993827</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="383">
+					<time>1366912993946</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="384">
+					<time>1366912994067</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="385">
+					<time>1366912994217</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="386">
+					<time>1366912994337</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="387">
+					<time>1366912994517</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="388">
+					<time>1366912994607</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="389">
+					<time>1366912994727</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="390">
+					<time>1366912994877</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="391">
+					<time>1366912994996</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="392">
+					<time>1366912995117</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="393">
+					<time>1366912995267</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="394">
+					<time>1366912995387</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="395">
+					<time>1366912995507</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="396">
+					<time>1366912995657</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="397">
+					<time>1366912995777</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="398">
+					<time>1366912995927</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="399">
+					<time>1366912996047</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="400">
+					<time>1366912996167</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="401">
+					<time>1366912996317</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="402">
+					<time>1366912996437</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="403">
+					<time>1366912996557</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="404">
+					<time>1366912996707</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="405">
+					<time>1366912996827</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="406">
+					<time>1366912996977</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="407">
+					<time>1366912997097</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="408">
+					<time>1366912997217</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="409">
+					<time>1366912997367</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="410">
+					<time>1366912997488</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="411">
+					<time>1366912997607</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="412">
+					<time>1366912997757</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="413">
+					<time>1366912997877</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="414">
+					<time>1366912997997</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="415">
+					<time>1366912998147</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="416">
+					<time>1366912998267</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="417">
+					<time>1366912998417</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="418">
+					<time>1366912998537</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="419">
+					<time>1366912998657</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="420">
+					<time>1366912998807</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="421">
+					<time>1366912998927</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="422">
+					<time>1366912999047</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="423">
+					<time>1366912999197</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="424">
+					<time>1366912999317</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="425">
+					<time>1366912999467</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="426">
+					<time>1366912999587</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="427">
+					<time>1366912999707</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="428">
+					<time>1366912999857</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="429">
+					<time>1366912999977</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="430">
+					<time>1366913000098</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="431">
+					<time>1366913000247</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="432">
+					<time>1366913000367</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="433">
+					<time>1366913000517</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="434">
+					<time>1366913000637</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="435">
+					<time>1366913000757</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="436">
+					<time>1366913000907</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="437">
+					<time>1366913001034</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="438">
+					<time>1366913009547</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="439">
+					<time>1366913009667</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="440">
+					<time>1366913009817</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="441">
+					<time>1366913009937</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="442">
+					<time>1366913010057</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="443">
+					<time>1366913010207</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="444">
+					<time>1366913010327</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="445">
+					<time>1366913010477</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="446">
+					<time>1366913010597</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="447">
+					<time>1366913010717</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="448">
+					<time>1366913010867</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="449">
+					<time>1366913010988</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="450">
+					<time>1366913011107</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="451">
+					<time>1366913011257</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="452">
+					<time>1366913011377</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="453">
+					<time>1366913011497</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="454">
+					<time>1366913011647</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="455">
+					<time>1366913011767</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="456">
+					<time>1366913011917</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="457">
+					<time>1366913012037</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="458">
+					<time>1366913012157</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="459">
+					<time>1366913012307</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="460">
+					<time>1366913012427</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="461">
+					<time>1366913012547</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="462">
+					<time>1366913012697</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="463">
+					<time>1366913012817</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="464">
+					<time>1366913012967</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="465">
+					<time>1366913013087</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="466">
+					<time>1366913013207</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="467">
+					<time>1366913013357</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="468">
+					<time>1366913013477</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="469">
+					<time>1366913013597</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="470">
+					<time>1366913013747</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="471">
+					<time>1366913013867</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="472">
+					<time>1366913014017</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="473">
+					<time>1366913014137</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="474">
+					<time>1366913014257</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="475">
+					<time>1366913014437</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="476">
+					<time>1366913014527</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="477">
+					<time>1366913014647</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="478">
+					<time>1366913014797</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="479">
+					<time>1366913014918</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="480">
+					<time>1366913015037</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="481">
+					<time>1366913015187</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="482">
+					<time>1366913015307</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="483">
+					<time>1366913015487</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="484">
+					<time>1366913015577</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="485">
+					<time>1366913015697</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="486">
+					<time>1366913015847</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="487">
+					<time>1366913015968</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="488">
+					<time>1366913016087</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="489">
+					<time>1366913016237</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="490">
+					<time>1366913016357</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="491">
+					<time>1366913016507</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="492">
+					<time>1366913016627</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="493">
+					<time>1366913016748</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="494">
+					<time>1366913016897</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="495">
+					<time>1366913017020</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="496">
+					<time>1366913017138</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="497">
+					<time>1366913017288</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="498">
+					<time>1366913017408</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="499">
+					<time>1366913017528</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="500">
+					<time>1366913017678</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="501">
+					<time>1366913017798</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="502">
+					<time>1366913017978</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="503">
+					<time>1366913018068</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="504">
+					<time>1366913018188</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="505">
+					<time>1366913018338</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="506">
+					<time>1366913018458</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="507">
+					<time>1366913018578</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="508">
+					<time>1366913018728</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="509">
+					<time>1366913018848</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="510">
+					<time>1366913018998</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="511">
+					<time>1366913019118</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="512">
+					<time>1366913019238</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="513">
+					<time>1366913019387</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="514">
+					<time>1366913019508</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="515">
+					<time>1366913019628</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="516">
+					<time>1366913019778</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="517">
+					<time>1366913019898</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="518">
+					<time>1366913020018</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="519">
+					<time>1366913020168</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="520">
+					<time>1366913020287</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="521">
+					<time>1366913020438</time>
+					<data>77</data>
+				</snapshot>
+				<snapshot id="522">
+					<time>1366913020558</time>
+					<data>77</data>
+				</snapshot>
+			</snapshots>
+		</sensor>
+		<sensor name="RPM 3">
+			<type>RPM</type>
+			<transform>0</transform>
+			<sensorID>3</sensorID>
+			<active>1</active>
+			<snapshots>
+			</snapshots>
+		</sensor>
+		<sensor name="PSI 1">
+			<type>Pressure</type>
+			<transform>0</transform>
+			<sensorID>1</sensorID>
+			<active>1</active>
+			<snapshots>
+			</snapshots>
+		</sensor>
+		<sensor name="RPM 2">
+			<type>RPM</type>
+			<transform>0</transform>
+			<sensorID>2</sensorID>
+			<active>1</active>
+			<snapshots>
+			</snapshots>
+		</sensor>
+	</sensors>
+</run>
+

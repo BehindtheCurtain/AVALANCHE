@@ -109,6 +109,7 @@
     
     // Flush "NEW".
     [[self brsp] flushInputBuffer:3];
+    [[self brsp] flushInputBuffer:4];
     
     UInt8* messageIDArray = (UInt8*)[[[self brsp] readBytes:1] bytes];
     UInt8 messageID = messageIDArray[0];

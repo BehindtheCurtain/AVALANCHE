@@ -78,23 +78,51 @@ static void * const temp4Context = (void*)&temp4Context;
     
     if(context == temp1Context)
     {
-        [firstGoalBar setPercent:[snapshot sensorData]/25 animated:NO];
-        [firstGoalBar setCustomText:[NSString stringWithFormat:@"%.u °F", [snapshot sensorData]]];
+        if([snapshot sensorData] == 5930) //Check for Error Value
+        {
+            [firstGoalBar setCustomText:[NSString stringWithFormat:@"Error"]];
+        }
+        else
+        {
+            [firstGoalBar setPercent:[snapshot sensorData]/25 animated:NO];
+            [firstGoalBar setCustomText:[NSString stringWithFormat:@"%.u °F", [snapshot sensorData]]];
+        }
     }
     else if(context == temp2Context)
     {
-        [secondGoalBar setPercent:[snapshot sensorData]/25 animated:NO];
-        [secondGoalBar setCustomText:[NSString stringWithFormat:@"%.u °F", [snapshot sensorData]]];
+        if([snapshot sensorData] == 5930) //Check for Error Value
+        {
+            [secondGoalBar setCustomText:[NSString stringWithFormat:@"Error"]];
+        }
+        else
+        {
+            [secondGoalBar setPercent:[snapshot sensorData]/25 animated:NO];
+            [secondGoalBar setCustomText:[NSString stringWithFormat:@"%.u °F", [snapshot sensorData]]];
+        }
     }
     else if(context == temp3Context)
     {
-        [thirdGoalBar setPercent:[snapshot sensorData]/25 animated:NO];
-        [thirdGoalBar setCustomText:[NSString stringWithFormat:@"%.u °F", [snapshot sensorData]]];
+        if([snapshot sensorData] == 5930) //Check for Error Value
+        {
+            [thirdGoalBar setCustomText:[NSString stringWithFormat:@"Error"]];
+        }
+        else
+        {
+            [thirdGoalBar setPercent:[snapshot sensorData]/25 animated:NO];
+            [thirdGoalBar setCustomText:[NSString stringWithFormat:@"%.u °F", [snapshot sensorData]]];
+        }
     }
     else if(context == temp4Context)
     {
-        [fourthGoalBar setPercent:[snapshot sensorData]/25 animated:NO];
-        [fourthGoalBar setCustomText:[NSString stringWithFormat:@"%.u °F", [snapshot sensorData]]];
+        if([snapshot sensorData] == 5930) //Check for Error Value
+        {
+            [fourthGoalBar setCustomText:[NSString stringWithFormat:@"Error"]];
+        }
+        else
+        {
+            [fourthGoalBar setPercent:[snapshot sensorData]/25 animated:NO];
+            [fourthGoalBar setCustomText:[NSString stringWithFormat:@"%.u °F", [snapshot sensorData]]];
+        }
     }
 }
 
