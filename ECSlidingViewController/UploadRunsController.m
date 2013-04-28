@@ -44,7 +44,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
 {
-    int runNum = [[[RunListModel instance:NO] runNames] count];
+    RunListModel* runListModel = [RunListModel instance:NO];
+    int runNum = [[runListModel notUploadedRunNames] count];
     
     return  runNum;
 }
@@ -141,7 +142,6 @@
     if(statusCode == 202)
     {
         self.runModel = run;
-        [run setUploaded:YES];
         [self.tableView reloadData];
         
         NSString* fileContents = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];

@@ -207,6 +207,17 @@
         [request setDelegate:self];
         [request startAsynchronous];
     }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle: @"Alert"
+                              message: @"Run already downloaded."
+                              delegate: nil
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:nil];
+        
+        [alert show];
+    }
 }
 
 - (IBAction)revealMenu:(id)sender

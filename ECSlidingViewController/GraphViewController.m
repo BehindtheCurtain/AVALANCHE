@@ -43,6 +43,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.navigationItem.title = sensor;
+    
     /*
      NSString *httpSource = @"http://designwoop.com/";
      NSURL *fullUrl = [NSURL URLWithString:httpSource];
@@ -55,11 +58,12 @@
 //    [customWebView loadHTMLString:htmlString baseURL:nil];
     
     // Get the path of the resource file
+    
     NSString* path = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"];
     // Convert it to the NSURL
     NSURL* address = [NSURL fileURLWithPath:path];
     // Create a request to the resource
-    NSURLRequest* request = [NSURLRequest requestWithURL:address] ;
+    NSURLRequest* request = [NSURLRequest requestWithURL:address];
     // Load the resource using the request
     [customWebView loadRequest:request];
 }

@@ -21,7 +21,7 @@
 #import "ConfigurationModelMap.h"
 
 
-@interface GaugeViewController : UIViewController
+@interface GaugeViewController : UIViewController //<UIPickerViewDataSource, UIPickerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet KDGoalBar *firstGoalBar;
 @property (weak, nonatomic) IBOutlet KDGoalBar *secondGoalBar;
