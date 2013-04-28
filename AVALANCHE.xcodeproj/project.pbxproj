@@ -68,6 +68,7 @@
 		742C43FB172733610013AB46 /* brsp_simulator1_0_1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 742C43F9172733610013AB46 /* brsp_simulator1_0_1.a */; };
 		742C43FE17299D410013AB46 /* GaugeDisplayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 742C43FD17299D400013AB46 /* GaugeDisplayModel.m */; };
 		742C4401172C30C60013AB46 /* ServerRunsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742C4400172C30C60013AB46 /* ServerRunsController.m */; };
+		744F50A8172CB6630094D40E /* UploadRunsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 744F50A7172CB6630094D40E /* UploadRunsController.m */; };
 		746178E616EBCDF80007FE56 /* ConfigurationModelMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178DF16EBCDF70007FE56 /* ConfigurationModelMap.m */; };
 		746178E816EBCDF80007FE56 /* SensorAggregateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178E316EBCDF70007FE56 /* SensorAggregateModel.m */; };
 		746178E916EBCDF80007FE56 /* SensorSnapshotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178E516EBCDF80007FE56 /* SensorSnapshotModel.m */; };
@@ -178,6 +179,8 @@
 		742C43FD17299D400013AB46 /* GaugeDisplayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaugeDisplayModel.m; sourceTree = "<group>"; };
 		742C43FF172C30C60013AB46 /* ServerRunsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerRunsController.h; sourceTree = "<group>"; };
 		742C4400172C30C60013AB46 /* ServerRunsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerRunsController.m; sourceTree = "<group>"; };
+		744F50A6172CB6630094D40E /* UploadRunsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadRunsController.h; sourceTree = "<group>"; };
+		744F50A7172CB6630094D40E /* UploadRunsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadRunsController.m; sourceTree = "<group>"; };
 		746178DE16EBCDF70007FE56 /* ConfigurationModelMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationModelMap.h; sourceTree = "<group>"; };
 		746178DF16EBCDF70007FE56 /* ConfigurationModelMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationModelMap.m; sourceTree = "<group>"; };
 		746178E016EBCDF70007FE56 /* RealTimeBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealTimeBuilder.h; sourceTree = "<group>"; };
@@ -419,6 +422,8 @@
 				748D4A881725D06500407F32 /* ServerConfigController.m */,
 				742C43FF172C30C60013AB46 /* ServerRunsController.h */,
 				742C4400172C30C60013AB46 /* ServerRunsController.m */,
+				744F50A6172CB6630094D40E /* UploadRunsController.h */,
+				744F50A7172CB6630094D40E /* UploadRunsController.m */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -712,6 +717,7 @@
 				748D4A8D1725D16200407F32 /* NetworkConfigModel.m in Sources */,
 				742C43FE17299D410013AB46 /* GaugeDisplayModel.m in Sources */,
 				742C4401172C30C60013AB46 /* ServerRunsController.m in Sources */,
+				744F50A8172CB6630094D40E /* UploadRunsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -43,6 +43,48 @@
             </objects>
             <point key="canvasLocation" x="-500" y="-295"/>
         </scene>
+        <!--Upload Runs Controller-->
+        <scene sceneID="arH-0N-Dxq">
+            <objects>
+                <tableViewController id="Qna-qX-wJV" customClass="UploadRunsController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Vcc-5P-Y99">
+                        <rect key="frame" x="0.0" y="64" width="568" height="256"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="DQn-et-IFH">
+                                <rect key="frame" x="0.0" y="22" width="568" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="568" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Qna-qX-wJV" id="XKB-1s-Ty1"/>
+                            <outlet property="delegate" destination="Qna-qX-wJV" id="YrF-WB-Lv5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="CIV-OX-iWc">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="FhJ-7q-Wuz">
+                            <connections>
+                                <action selector="revealMenu:" destination="Qna-qX-wJV" id="Ikw-rn-JCJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="tableView" destination="Vcc-5P-Y99" id="igZ-x5-ei4"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OUJ-yq-BUT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="897" y="-1753"/>
+        </scene>
         <!--Third Top View Controller - Help-->
         <scene sceneID="jdT-tJ-z4E">
             <objects>
@@ -292,6 +334,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Usd-Ez-TTw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="903" y="-830"/>
+        </scene>
+        <!--Navigation Top View Controller-->
+        <scene sceneID="HXu-lo-hIv">
+            <objects>
+                <navigationController storyboardIdentifier="Upload RunsTop" definesPresentationContext="YES" id="Uio-5Q-Qe3" customClass="NavigationTopViewController" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gz7-Vj-Tq0">
+                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Qna-qX-wJV" kind="relationship" relationship="rootViewController" id="VFR-4n-yd5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oZX-h5-skv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="217" y="-1753"/>
         </scene>
         <!--Navigation Top View Controller - HelpTop-->
         <scene sceneID="c7w-qT-ors">
@@ -1211,150 +1271,6 @@
             <point key="canvasLocation" x="1675" y="-830"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="AddSensorController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddSensorController.h"/>
-            <relationships>
-                <relationship kind="action" name="hidePicker:"/>
-                <relationship kind="action" name="save:"/>
-                <relationship kind="action" name="showPicker:"/>
-                <relationship kind="outlet" name="activeSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="saveButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="sensorDismissButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="sensorIDField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="sensorNameField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="sensorPickerNavBar" candidateClass="UIToolbar"/>
-                <relationship kind="outlet" name="sensorTypeButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="sensorTypePicker" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="transformConstantField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="CustomPagerViewController" superclassName="PagerViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomPagerViewController.h"/>
-        </class>
-        <class className="ECSlidingViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ECSlidingViewController.h"/>
-        </class>
-        <class className="FirstTopViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstTopViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="endAction:"/>
-                <relationship kind="action" name="revealMenu:"/>
-                <relationship kind="action" name="startAction:"/>
-            </relationships>
-        </class>
-        <class className="GaugeViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GaugeViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="firstGoalBar" candidateClass="KDGoalBar"/>
-                <relationship kind="outlet" name="fourthGoalBar" candidateClass="KDGoalBar"/>
-                <relationship kind="outlet" name="secondGoalBar" candidateClass="KDGoalBar"/>
-                <relationship kind="outlet" name="sensorLabel1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sensorLabel2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sensorLabel3" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sensorLabel4" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="thirdGoalBar" candidateClass="KDGoalBar"/>
-            </relationships>
-        </class>
-        <class className="GraphViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="alertBox:"/>
-                <relationship kind="outlet" name="customWebView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="InitialSlidingViewController" superclassName="ECSlidingViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InitialSlidingViewController.h"/>
-        </class>
-        <class className="KDGoalBar" superclassName="UIControl">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/KDGoalBar.h"/>
-        </class>
-        <class className="MenuViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
-        </class>
-        <class className="NavigationTopViewController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NavigationTopViewController.h"/>
-        </class>
-        <class className="PagerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PagerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="changePage:"/>
-                <relationship kind="outlet" name="pageControl" candidateClass="UIPageControl"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-        <class className="RunSelectController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RunSelectController.h"/>
-            <relationships>
-                <relationship kind="action" name="revealMenu:"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="SampleTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SampleTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="revealMenu:"/>
-            </relationships>
-        </class>
-        <class className="ScanController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ScanController.h"/>
-            <relationships>
-                <relationship kind="action" name="revealMenu:"/>
-                <relationship kind="action" name="startScanButton:"/>
-                <relationship kind="action" name="stopScanButton:"/>
-                <relationship kind="outlet" name="_deviceTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="_scanButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="SensorConfigViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SensorConfigViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="activeSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="maxValueField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="minValueField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="sensorNameField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="transformConstantField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="SensorTableController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SensorTableController.h"/>
-            <relationships>
-                <relationship kind="action" name="resetAction:"/>
-                <relationship kind="outlet" name="resetButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="ServerConfigController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ServerConfigController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="ipField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="ServerRunsController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ServerRunsController.h"/>
-            <relationships>
-                <relationship kind="action" name="revealMenu:"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="ThirdTopViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ThirdTopViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="revealMenu:"/>
-            </relationships>
-        </class>
-        <class className="UserConfigController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserConfigController.h"/>
-            <relationships>
-                <relationship kind="action" name="createAction:"/>
-                <relationship kind="action" name="loginAction:"/>
-                <relationship kind="outlet" name="createButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="userNameField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

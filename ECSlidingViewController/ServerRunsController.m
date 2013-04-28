@@ -165,20 +165,33 @@
     
     ASIHTTPRequest* request = [ASIHTTPRequest requestWithURL:url];
     
-    NSMutableData* postBody = [NSMutableData data];
-    [postBody appendData:[[NSString stringWithFormat:@"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
-    [postBody appendData:[[NSString stringWithFormat:@"<download>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
-    [postBody appendData:[[NSString stringWithFormat:@"\t<runname>%@</runname>\n", [self runName]] dataUsingEncoding:NSUTF8StringEncoding]];
-    [postBody appendData:[[NSString stringWithFormat:@"\t<username>%@</username>\n", [[UserModel instance:NO] userName]] dataUsingEncoding:NSUTF8StringEncoding]];
-    [postBody appendData:[[NSString stringWithFormat:@"\t<password>%@</password>\n", [[UserModel instance:NO] password]] dataUsingEncoding:NSUTF8StringEncoding]];
-    [postBody appendData:[[NSString stringWithFormat:@"</download>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
-    [postBody appendData:[[NSString stringWithFormat:@"<?>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    BOOL downloaded = NO;
     
-    [request setPostBody:postBody];
-    [request setRequestMethod:@"POST"];
-    [request setTimeOutSeconds:120];
-    [request setDelegate:self];
-    [request startAsynchronous];
+    for(NSString* name in [[RunListModel instance:NO] runNames])
+    {
+        if([self.runName isEqualToString:name])
+        {
+            downloaded = YES;
+        }
+    }
+    
+    if(!downloaded)
+    {
+        NSMutableData* postBody = [NSMutableData data];
+        [postBody appendData:[[NSString stringWithFormat:@"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+        [postBody appendData:[[NSString stringWithFormat:@"<download>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+        [postBody appendData:[[NSString stringWithFormat:@"\t<runname>%@</runname>\n", [self runName]] dataUsingEncoding:NSUTF8StringEncoding]];
+        [postBody appendData:[[NSString stringWithFormat:@"\t<username>%@</username>\n", [[UserModel instance:NO] userName]] dataUsingEncoding:NSUTF8StringEncoding]];
+        [postBody appendData:[[NSString stringWithFormat:@"\t<password>%@</password>\n", [[UserModel instance:NO] password]] dataUsingEncoding:NSUTF8StringEncoding]];
+        [postBody appendData:[[NSString stringWithFormat:@"</download>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+        [postBody appendData:[[NSString stringWithFormat:@"<?>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+        
+        [request setPostBody:postBody];
+        [request setRequestMethod:@"POST"];
+        [request setTimeOutSeconds:120];
+        [request setDelegate:self];
+        [request startAsynchronous];
+    }
 }
 
 - (IBAction)revealMenu:(id)sender
