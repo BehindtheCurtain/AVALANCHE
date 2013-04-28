@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
-#import "ConnectionController.h"
 #import "Brsp.h"
 
 @interface ScanController : UIViewController <UITableViewDelegate, UITableViewDataSource, CBCentralManagerDelegate> {
