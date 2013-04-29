@@ -93,7 +93,7 @@ static void * const sensor4Context = (void*)&sensor4Context;
         [aggregate4 addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:sensor4Context];
     }
     
-    //[self.gaugeDisplays archive:self.page];
+    [self.gaugeDisplays archive:self.page];
 }
 
 - (void)removeObservers

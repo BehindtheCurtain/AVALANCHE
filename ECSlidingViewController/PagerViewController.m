@@ -16,6 +16,8 @@
 
 int currentPage = 0;
 
+static int pageWatch;
+
 @implementation PagerViewController
 
 @synthesize scrollView;
@@ -88,6 +90,9 @@ int currentPage = 0;
 	}
 	
 	self.pageControl.currentPage = currentPage;
+    
+    pageWatch = self.pageControl.currentPage;
+    
 	_page = currentPage;
 	[self.pageControl setNumberOfPages:[self.childViewControllers count]];
 	
@@ -167,6 +172,7 @@ int currentPage = 0;
 		[self.scrollView scrollRectToVisible:frame animated:YES];
 		
 		self.pageControl.currentPage = _page - 1;
+        pageWatch = self.pageControl.currentPage;
 		// Set the boolean used when scrolls originate from the UIPageControl. See scrollViewDidScroll: above.
 		_pageControlUsed = YES;
 	}
@@ -188,6 +194,7 @@ int currentPage = 0;
 		[self.scrollView scrollRectToVisible:frame animated:YES];
 		
 		self.pageControl.currentPage = _page + 1;
+        pageWatch = self.pageControl.currentPage;
 		// Set the boolean used when scrolls originate from the UIPageControl. See scrollViewDidScroll: above.
 		_pageControlUsed = YES;
 	}
@@ -242,6 +249,7 @@ int currentPage = 0;
 		[oldViewController viewWillDisappear:YES];
 		[newViewController viewWillAppear:YES];
 		self.pageControl.currentPage = page;
+        pageWatch = self.pageControl.currentPage;
 		[oldViewController viewDidDisappear:YES];
 		[newViewController viewDidAppear:YES];
 		_page = page;
@@ -256,6 +264,11 @@ int currentPage = 0;
 // At the end of scroll animation, reset the boolean used when scrolls originate from the UIPageControl
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     _pageControlUsed = NO;
+}
+
++ (int)pageWatch
+{
+    return pageWatch;
 }
 
 @end

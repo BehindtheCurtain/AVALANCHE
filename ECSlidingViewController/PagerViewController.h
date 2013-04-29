@@ -17,4 +17,6 @@
 - (void)previousPage;
 - (void)nextPage;
 
++ (int)pageWatch;
+
 @end

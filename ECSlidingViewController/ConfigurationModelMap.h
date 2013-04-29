@@ -17,6 +17,8 @@
 + (ConfigurationModelMap*)instance:(BOOL)reset;
 - (void)archive;
 - (NSArray*)sensorNames;
+- (NSMutableDictionary*)nameMapping;
+- (NSMutableDictionary*)keyMapping;
 
 
 @end

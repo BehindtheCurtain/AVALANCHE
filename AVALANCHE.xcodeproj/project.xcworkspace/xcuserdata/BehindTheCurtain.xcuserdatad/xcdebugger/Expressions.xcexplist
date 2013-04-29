@@ -3,19 +3,34 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "-[ServerRunsController parserDidEndDocument:]:ServerRunsController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[UserModel encodeWithCoder:]:UserModel.m">
+      </ContextState>
+      <ContextState
+         contextName = "+[UserModel instance:]:UserModel.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ServerRunsController parser:didEndElement:namespaceURI:qualifiedName:]:ServerRunsController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[GaugeDisplayModel initwithPage:]:GaugeDisplayModel.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[CustomPagerViewController viewDidLoad]:CustomPagerViewController.m">
+      </ContextState>
+      <ContextState
          contextName = "-[ServerRunsController requestFinished:]:ServerRunsController.m">
       </ContextState>
       <ContextState
          contextName = "-[RealTimeViewController createAction:]:RealTimeViewController.m">
       </ContextState>
       <ContextState
-         contextName = "-[UserModel initWithCoder:]:UserModel.m">
-      </ContextState>
-      <ContextState
-         contextName = "+[UserModel instance:]:UserModel.m">
-      </ContextState>
-      <ContextState
          contextName = "+[NetworkConfigModel instance:]:NetworkConfigModel.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[UserConfigController loginAction:]:UserConfigController.m">
       </ContextState>
       <ContextState
          contextName = "+[RealTimeBuilder snapshotCreation:withMessageType:withTimeStamp:]:RealTimeBuilder.m">
@@ -26,24 +41,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[ServerRunsController parserDidEndDocument:]:ServerRunsController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[ServerRunsController parser:didEndElement:namespaceURI:qualifiedName:]:ServerRunsController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[GaugeViewController setObservers]:GaugeViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "observe1">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[UserConfigController loginAction:]:UserConfigController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[UserModel encodeWithCoder:]:UserModel.m">
+         contextName = "-[UserModel initWithCoder:]:UserModel.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>
