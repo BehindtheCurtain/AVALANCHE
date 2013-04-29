@@ -149,4 +149,34 @@
     return names;
 }
 
+- (NSMutableDictionary*)nameMapping
+{
+    NSMutableDictionary* nameMapping = [NSMutableDictionary dictionary];
+    
+    for(ConfigurationModel* configuration in configurationMap)
+    {
+        NSString* name = [configuration name];
+        NSString* key = [[configuration getType] stringByAppendingFormat:@"%d", [configuration sensorID]];
+        
+        [nameMapping setValue:key forKey:name];
+    }
+    
+    return nameMapping;
+}
+
+- (NSMutableDictionary*)keyMapping
+{
+    NSMutableDictionary* keyMapping = [NSMutableDictionary dictionary];
+    
+    for(ConfigurationModel* configuration in configurationMap)
+    {
+        NSString* name = [configuration name];
+        NSString* key = [[configuration getType] stringByAppendingFormat:@"%d", [configuration sensorID]];
+        
+        [keyMapping setValue:name forKey:key];
+    }
+    
+    return keyMapping;
+}
+
 @end

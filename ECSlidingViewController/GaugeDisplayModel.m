@@ -55,7 +55,44 @@
     NSUserDefaults* currentDefaults = [NSUserDefaults standardUserDefaults];
     NSData* data = [currentDefaults objectForKey:pageKey];
     NSMutableDictionary* rootObject = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-    return [rootObject valueForKey:pageKey];
+    
+    GaugeDisplayModel* gauge = [rootObject valueForKey:pageKey];
+    
+    if(gauge == nil)
+    {
+        gauge = [[GaugeDisplayModel alloc] init];
+        switch(page)
+        {
+            case 1:
+            {
+                [[gauge sensors] addObject:@"Temperature1"];
+                [[gauge sensors] addObject:@"Temperature2"];
+                [[gauge sensors] addObject:@"Temperature3"];
+                [[gauge sensors] addObject:@"Temperature4"];
+                break;
+            }
+            case 2:
+            {
+                [[gauge sensors] addObject:@"Pressure1"];
+                [[gauge sensors] addObject:@"Pressure2"];
+                [[gauge sensors] addObject:@"Pressure3"];
+                [[gauge sensors] addObject:@"AirFuel1"];
+                break;
+            }
+            case 3:
+            {
+                [[gauge sensors] addObject:@"RPM1"];
+                [[gauge sensors] addObject:@"RPM2"];
+                [[gauge sensors] addObject:@"RPM3"];
+                [[gauge sensors] addObject:@"AirFuel2"];
+                break;
+            }
+        }
+        
+        [gauge archive:page];
+    }
+    
+    return gauge;
 }
 
 

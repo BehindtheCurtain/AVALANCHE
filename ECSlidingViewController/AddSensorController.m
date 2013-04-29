@@ -9,7 +9,7 @@
 #import "AddSensorController.h"
 #import "ConfigurationModel.h"
 
-@interface AddSensorController () <UITextFieldDelegate, UIActionSheetDelegate>
+@interface AddSensorController ()
 
 @end
 

@@ -349,7 +349,7 @@
         <!--Navigation Top View Controller-->
         <scene sceneID="HXu-lo-hIv">
             <objects>
-                <navigationController storyboardIdentifier="Upload RunsTop" definesPresentationContext="YES" id="Uio-5Q-Qe3" customClass="NavigationTopViewController" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Upload RunTop" definesPresentationContext="YES" id="Uio-5Q-Qe3" customClass="NavigationTopViewController" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gz7-Vj-Tq0">
@@ -803,7 +803,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="TsF-5V-tPf" kind="embed" id="9Bl-Q1-xYb"/>
+                                    <segue destination="TsF-5V-tPf" kind="embed" id="5VG-Gz-a8G"/>
                                 </connections>
                             </containerView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="RiR-6A-ZU0">
@@ -823,9 +823,32 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <pickerView hidden="YES" contentMode="scaleToFill" id="orK-hK-tQA">
+                                <rect key="frame" x="0.0" y="42" width="568" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fYD-9N-EQW" id="Fp3-3T-LoI"/>
+                                    <outlet property="delegate" destination="fYD-9N-EQW" id="D09-fo-nBt"/>
+                                </connections>
+                            </pickerView>
+                            <toolbar hidden="YES" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="right" id="qaU-Oo-xmL">
+                                <rect key="frame" x="0.0" y="-2" width="568" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="done" id="qtp-Pi-Edr">
+                                        <connections>
+                                            <action selector="dismissAction:" destination="fYD-9N-EQW" id="eYT-8d-XpQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="vjm-gO-wt9" appends="YES" id="Blk-a9-ov0"/>
+                        </connections>
                     </view>
                     <toolbarItems>
                         <barButtonItem systemItem="play" id="W7B-5C-rAB">
@@ -850,8 +873,18 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="picker" destination="orK-hK-tQA" id="wzz-EA-3eG"/>
+                        <outlet property="pickerBar" destination="qaU-Oo-xmL" id="Bkj-6X-kVb"/>
+                        <outlet property="twoTap" destination="vjm-gO-wt9" id="xkQ-ic-vCc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="opW-8m-5uU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="vjm-gO-wt9">
+                    <connections>
+                        <action selector="twoTapAction:" destination="fYD-9N-EQW" id="S3a-Xm-Sj9"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1571" y="-295"/>
         </scene>
@@ -939,16 +972,16 @@
         <!--Custom Pager View Controller-->
         <scene sceneID="Paa-Qc-EHx">
             <objects>
-                <viewController storyboardIdentifier="" id="TsF-5V-tPf" customClass="CustomPagerViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="pager" id="TsF-5V-tPf" customClass="CustomPagerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8m8-vN-Hg6">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="212"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="2Qw-HH-TYq">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="172"/>
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="183"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="CUB-pr-FBI">
+                            <pageControl opaque="NO" tag="1000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="CUB-pr-FBI">
                                 <rect key="frame" x="0.0" y="176" width="568" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="pageIndicatorTintColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -970,84 +1003,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RyC-4Z-a6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2227" y="-215"/>
-        </scene>
-        <!--Gauge View Controller - View 2-->
-        <scene sceneID="lj7-MJ-sKe">
-            <objects>
-                <viewController storyboardIdentifier="View2" title="View 2" id="cQU-vZ-dWe" customClass="GaugeViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="B7l-HN-8mr">
-                        <rect key="frame" x="0.0" y="20" width="568" height="300"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" id="teL-GG-ewY" customClass="KDGoalBar">
-                                <rect key="frame" x="32" y="20" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="hvN-ZO-rbb" customClass="KDGoalBar">
-                                <rect key="frame" x="160" y="20" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="wah-Md-X9S" customClass="KDGoalBar">
-                                <rect key="frame" x="288" y="20" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="h3j-iF-cF7" customClass="KDGoalBar">
-                                <rect key="frame" x="416" y="20" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sensor 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6yh-62-68H">
-                                <rect key="frame" x="58" y="148" width="69" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sensor 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dci-hj-GeG">
-                                <rect key="frame" x="186" y="148" width="69" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sensor 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U11-fP-Xz9">
-                                <rect key="frame" x="314" y="148" width="69" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sensor 4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3g9-H7-5NG">
-                                <rect key="frame" x="442" y="148" width="69" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    </view>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <connections>
-                        <outlet property="firstGoalBar" destination="teL-GG-ewY" id="MHM-gh-sRc"/>
-                        <outlet property="fourthGoalBar" destination="h3j-iF-cF7" id="eJE-Yj-53L"/>
-                        <outlet property="secondGoalBar" destination="hvN-ZO-rbb" id="Hna-bg-TLJ"/>
-                        <outlet property="sensorLabel1" destination="6yh-62-68H" id="ekg-QD-vf2"/>
-                        <outlet property="sensorLabel2" destination="dci-hj-GeG" id="qpr-ug-mBf"/>
-                        <outlet property="sensorLabel3" destination="U11-fP-Xz9" id="IY3-8M-veu"/>
-                        <outlet property="sensorLabel4" destination="3g9-H7-5NG" id="Mz8-vi-ZO9"/>
-                        <outlet property="thirdGoalBar" destination="wah-Md-X9S" id="z4u-Rx-cPf"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R5c-hW-gQc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2876" y="162"/>
+            <point key="canvasLocation" x="2227" y="-295"/>
         </scene>
         <!--Initial Sliding View Controller-->
         <scene sceneID="OC6-i3-9aC">
@@ -1066,114 +1022,10 @@
             </objects>
             <point key="canvasLocation" x="-1200" y="-295"/>
         </scene>
-        <!--Gauge View Controller - View3-->
-        <scene sceneID="rKK-JE-Bbu">
-            <objects>
-                <viewController storyboardIdentifier="View3" title="View3" id="LTG-3l-SiP" customClass="GaugeViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="S0M-pE-5vu">
-                        <rect key="frame" x="0.0" y="20" width="568" height="300"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" id="ey1-md-Y9a" customClass="KDGoalBar">
-                                <rect key="frame" x="32" y="20" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="Bwc-Dt-Nla" customClass="KDGoalBar">
-                                <rect key="frame" x="160" y="20" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="gtg-53-vSp" customClass="KDGoalBar">
-                                <rect key="frame" x="288" y="20" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="zar-D9-Ogg" customClass="KDGoalBar">
-                                <rect key="frame" x="416" y="20" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ycX-Kj-BcF">
-                                <rect key="frame" x="93" y="148" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="24"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RHm-0v-Luh">
-                                <rect key="frame" x="220" y="148" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="24"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u1f-44-pHF">
-                                <rect key="frame" x="349" y="148" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="24"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ECc-hd-2Ko">
-                                <rect key="frame" x="476" y="148" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="24"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sensor 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6kz-ep-xh2">
-                                <rect key="frame" x="58" y="148" width="69" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sensor 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ou9-ls-Aqq">
-                                <rect key="frame" x="186" y="148" width="69" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sensor 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nCX-j4-hCX">
-                                <rect key="frame" x="314" y="148" width="69" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sensor 4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1rj-we-yq1">
-                                <rect key="frame" x="442" y="148" width="69" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <connections>
-                        <outlet property="firstGoalBar" destination="ey1-md-Y9a" id="lXY-J8-0a2"/>
-                        <outlet property="fourthGoalBar" destination="zar-D9-Ogg" id="jA8-t5-ZA4"/>
-                        <outlet property="secondGoalBar" destination="Bwc-Dt-Nla" id="ydk-Lk-bpi"/>
-                        <outlet property="sensorLabel1" destination="6kz-ep-xh2" id="aIb-4f-PBC"/>
-                        <outlet property="sensorLabel2" destination="ou9-ls-Aqq" id="Jv8-1t-LHD"/>
-                        <outlet property="sensorLabel3" destination="nCX-j4-hCX" id="jum-zm-P8E"/>
-                        <outlet property="sensorLabel4" destination="1rj-we-yq1" id="Z4M-2k-Y6N"/>
-                        <outlet property="thirdGoalBar" destination="gtg-53-vSp" id="pS6-ki-g4u"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lkT-Gk-kiG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3526" y="162"/>
-        </scene>
-        <!--Gauge View Controller - View 1-->
+        <!--Gauge View Controller - gaugeView-->
         <scene sceneID="AAk-3D-V7G">
             <objects>
-                <viewController storyboardIdentifier="View1" title="View 1" id="7ej-iW-en9" customClass="GaugeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gaugeView" title="gaugeView" id="7ej-iW-en9" customClass="GaugeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h1b-dI-m3z">
                         <rect key="frame" x="0.0" y="20" width="568" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1198,28 +1050,28 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sensor 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kOF-Zc-0dT">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sensor 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kOF-Zc-0dT">
                                 <rect key="frame" x="56" y="148" width="69" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sensor 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WGT-7z-yjt">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sensor 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WGT-7z-yjt">
                                 <rect key="frame" x="184" y="148" width="69" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sensor 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HFz-xd-ySO">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sensor 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HFz-xd-ySO">
                                 <rect key="frame" x="312" y="148" width="69" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sensor 4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u6W-vG-I2e">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sensor 4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u6W-vG-I2e">
                                 <rect key="frame" x="440" y="148" width="69" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1310,161 +1162,6 @@
             <point key="canvasLocation" x="1571" y="-830"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="AddSensorController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddSensorController.h"/>
-            <relationships>
-                <relationship kind="action" name="hidePicker:"/>
-                <relationship kind="action" name="save:"/>
-                <relationship kind="action" name="showPicker:"/>
-                <relationship kind="outlet" name="activeSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="saveButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="sensorDismissButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="sensorIDField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="sensorNameField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="sensorPickerNavBar" candidateClass="UIToolbar"/>
-                <relationship kind="outlet" name="sensorTypeButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="sensorTypePicker" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="transformConstantField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="CustomPagerViewController" superclassName="PagerViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomPagerViewController.h"/>
-        </class>
-        <class className="ECSlidingViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ECSlidingViewController.h"/>
-        </class>
-        <class className="FirstTopViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstTopViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="endAction:"/>
-                <relationship kind="action" name="revealMenu:"/>
-                <relationship kind="action" name="startAction:"/>
-            </relationships>
-        </class>
-        <class className="GaugeViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GaugeViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="firstGoalBar" candidateClass="KDGoalBar"/>
-                <relationship kind="outlet" name="fourthGoalBar" candidateClass="KDGoalBar"/>
-                <relationship kind="outlet" name="secondGoalBar" candidateClass="KDGoalBar"/>
-                <relationship kind="outlet" name="sensorLabel1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sensorLabel2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sensorLabel3" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sensorLabel4" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="thirdGoalBar" candidateClass="KDGoalBar"/>
-            </relationships>
-        </class>
-        <class className="GraphViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="customWebView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="InitialSlidingViewController" superclassName="ECSlidingViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InitialSlidingViewController.h"/>
-        </class>
-        <class className="KDGoalBar" superclassName="UIControl">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/KDGoalBar.h"/>
-        </class>
-        <class className="MenuViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
-        </class>
-        <class className="NavigationTopViewController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NavigationTopViewController.h"/>
-        </class>
-        <class className="PagerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PagerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="changePage:"/>
-                <relationship kind="outlet" name="pageControl" candidateClass="UIPageControl"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-        <class className="RunSelectController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RunSelectController.h"/>
-            <relationships>
-                <relationship kind="action" name="revealMenu:"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="SampleTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SampleTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="revealMenu:"/>
-            </relationships>
-        </class>
-        <class className="ScanController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ScanController.h"/>
-            <relationships>
-                <relationship kind="action" name="revealMenu:"/>
-                <relationship kind="action" name="startScanButton:"/>
-                <relationship kind="action" name="stopScanButton:"/>
-                <relationship kind="outlet" name="_deviceTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="_scanButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="SensorConfigViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SensorConfigViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="activeSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="maxValueField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="minValueField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="sensorNameField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="transformConstantField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="SensorSelectController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SensorSelectController.h"/>
-        </class>
-        <class className="SensorTableController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SensorTableController.h"/>
-            <relationships>
-                <relationship kind="action" name="resetAction:"/>
-                <relationship kind="outlet" name="resetButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="ServerConfigController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ServerConfigController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="ipField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="ServerRunsController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ServerRunsController.h"/>
-            <relationships>
-                <relationship kind="action" name="revealMenu:"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="ThirdTopViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ThirdTopViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="revealMenu:"/>
-            </relationships>
-        </class>
-        <class className="UploadRunsController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UploadRunsController.h"/>
-            <relationships>
-                <relationship kind="action" name="revealMenu:"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="UserConfigController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserConfigController.h"/>
-            <relationships>
-                <relationship kind="action" name="changeAction:"/>
-                <relationship kind="action" name="createAction:"/>
-                <relationship kind="action" name="loginAction:"/>
-                <relationship kind="outlet" name="changeButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="createButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="userNameField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

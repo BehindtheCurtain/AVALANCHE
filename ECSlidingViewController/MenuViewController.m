@@ -17,7 +17,7 @@
 
 - (void)awakeFromNib
 {
-    self.menuItems = [NSArray arrayWithObjects:@"Live Run", @"Post Run", @"Download Run", @"Upload Runs", @"Help", @"Configuration", nil];
+    self.menuItems = [NSArray arrayWithObjects:@"Live Run", @"Post Run", @"Download Run", @"Upload Run", @"Help", @"Configuration", nil];
 }
 
 - (void)viewDidLoad
