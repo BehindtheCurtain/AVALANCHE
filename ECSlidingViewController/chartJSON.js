@@ -57,7 +57,6 @@ function buildChart(fileName, sensorName, yLabel)
 				sensorIndex = i;
 			}
 		}
-		console.log(sensorIndex);
 
 	 	//Update text labels with json data
 	 	var dateTest = new Date((json.run.startTime)*1000);
@@ -116,4 +115,16 @@ function buildChart(fileName, sensorName, yLabel)
 			.attr("class", "line")
 			.attr("d", line);
 	});
+}
+
+function getParameterByName(name)
+{
+  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+  var regexS = "[\\?&]" + name + "=([^&#]*)";
+  var regex = new RegExp(regexS);
+  var results = regex.exec(window.location.search);
+  if(results == null)
+    return "";
+  else
+    return decodeURIComponent(results[1].replace(/\+/g, " "));
 }

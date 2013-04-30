@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		080634C81730735E00D32899 /* chartJSON.js in Sources */ = {isa = PBXBuildFile; fileRef = 080634C61730735E00D32899 /* chartJSON.js */; };
-		080634C91730735E00D32899 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 080634C71730735E00D32899 /* index.html */; };
+		080634D4173085BB00D32899 /* chartJSON.js in Sources */ = {isa = PBXBuildFile; fileRef = 080634D2173085BB00D32899 /* chartJSON.js */; };
+		080634D5173085BB00D32899 /* indexJSON.html in Resources */ = {isa = PBXBuildFile; fileRef = 080634D3173085BB00D32899 /* indexJSON.html */; };
 		0808054717174454007D6996 /* d3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 0808054617174454007D6996 /* d3.min.js */; };
 		08089F3116E6A90C00EBA435 /* CustomPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08089F2D16E6A90C00EBA435 /* CustomPagerViewController.m */; };
 		08089F3316E6A90C00EBA435 /* PagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08089F3016E6A90C00EBA435 /* PagerViewController.m */; };
@@ -89,8 +89,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		080634C61730735E00D32899 /* chartJSON.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = chartJSON.js; sourceTree = "<group>"; };
-		080634C71730735E00D32899 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		080634D2173085BB00D32899 /* chartJSON.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = chartJSON.js; sourceTree = "<group>"; };
+		080634D3173085BB00D32899 /* indexJSON.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = indexJSON.html; sourceTree = "<group>"; };
 		0808054617174454007D6996 /* d3.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.min.js; sourceTree = "<group>"; };
 		08089F2C16E6A90C00EBA435 /* CustomPagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPagerViewController.h; sourceTree = "<group>"; };
 		08089F2D16E6A90C00EBA435 /* CustomPagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPagerViewController.m; sourceTree = "<group>"; };
@@ -258,8 +258,8 @@
 		088BA65317172F46002F0831 /* public_html */ = {
 			isa = PBXGroup;
 			children = (
-				080634C61730735E00D32899 /* chartJSON.js */,
-				080634C71730735E00D32899 /* index.html */,
+				080634D2173085BB00D32899 /* chartJSON.js */,
+				080634D3173085BB00D32899 /* indexJSON.html */,
 				0883F5B017249C5A0072D952 /* jquery-2.0.0.min.js */,
 				0808054617174454007D6996 /* d3.min.js */,
 			);
@@ -663,7 +663,7 @@
 				089EC776171DE1E1004A76EC /* graph_year@2x.png in Resources */,
 				08E4538F1720728E00F8CA6A /* circle_outline_120.png in Resources */,
 				08E45391172084F300F8CA6A /* circle_outline_pressed_120.png in Resources */,
-				080634C91730735E00D32899 /* index.html in Resources */,
+				080634D5173085BB00D32899 /* indexJSON.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,7 +715,7 @@
 				742C4401172C30C60013AB46 /* ServerRunsController.m in Sources */,
 				744F50A8172CB6630094D40E /* UploadRunsController.m in Sources */,
 				749F7174172DB42F00CD6F3B /* SensorSelectController.m in Sources */,
-				080634C81730735E00D32899 /* chartJSON.js in Sources */,
+				080634D4173085BB00D32899 /* chartJSON.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
