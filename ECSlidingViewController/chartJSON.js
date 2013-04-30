@@ -1,5 +1,5 @@
-//fileName: name of XML file
-//sensorName: exact name of sesnor within XML doc
+//fileName: name of json file
+//sensorName: exact name of sesnor within json doc
 //sensorType: type of sensor to be charted
 
 function buildChart(fileName, sensorName, yLabel)
@@ -43,39 +43,40 @@ function buildChart(fileName, sensorName, yLabel)
 		.append("g")
 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-	d3.xml(fileName, function (xml)
+	d3.json(fileName, function (json)
 	{
-		//Total number of sensors in the XMl file
-		var sensorCount = d3.select(xml).select("sensors").selectAll("sensor")[0].length;
-		//Input sensor index in the XML file
+		//Number of sensors in the XML file
+		var sensorCount = json.run.sensors.sensor.length;
 		var sensorIndex = -1;
 
-		//Find the input sensor location in the given XML file
+		//Find the input sensor location in the given json file
 		for(var i = 0; i < sensorCount; i++)
 		{
-			if(d3.select(xml).selectAll("sensor")[0][i].getAttribute("name") == sensorName)
+			if(json.run.sensors.sensor[i].name == sensorName)
 			{
 				sensorIndex = i;
 			}
 		}
+		console.log(sensorIndex);
 
-		var dateTest = new Date((d3.select(xml).selectAll("startTime")[0][0].textContent)*1000);
-
-		//Update text labels with XML data
+	 	//Update text labels with json data
+	 	var dateTest = new Date((json.run.startTime)*1000);
 		$('#date').text("Date: " + dateTest.toLocaleString());
-		$('#average').text("Average: " + d3.select(xml).selectAll("sensor").select("average")[0][sensorIndex].textContent);
-		$('#min').text("Min: " + d3.select(xml).selectAll("sensor").select("min")[0][sensorIndex].textContent);
-		$('#max').text("Max: " + d3.select(xml).selectAll("sensor").select("max")[0][sensorIndex].textContent);
+		$('#average').text("Average: " + json.run.sensors.sensor[sensorIndex].average);
+		$('#min').text("Min: " + json.run.sensors.sensor[sensorIndex].min);
+		$('#max').text("Max: " + json.run.sensors.sensor[sensorIndex].max);
+
+
+		//Total number of snapshots for the selected sensor in the json file
+		var len = json.run.sensors.sensor[sensorIndex].snapshots.snapshot.length;
 
 		var data = [];
-		var len = d3.select(xml).select("sensor").selectAll("snapshot").selectAll("data").length; //Number of snapshots available
-		var skip = Math.round(len / 100); //Ensure that only 100 points are graphed
 
-		for (var i = 0; i < len; i = i + skip)
+		for (var i = 0; i < len; i = i+1)
 		{
 			var obj = {
-				close: parseFloat(d3.select(xml).selectAll("sensor").selectAll("snapshot").select("data")[sensorIndex][i].textContent),
-				date: parseInt(d3.select(xml).selectAll("sensor").selectAll("snapshot").select("time")[sensorIndex][i].textContent)
+				close: json.run.sensors.sensor[sensorIndex].snapshots.snapshot[i].data,
+				date: json.run.sensors.sensor[sensorIndex].snapshots.snapshot[i].time
 			};
 			data.push(obj);
 		}
