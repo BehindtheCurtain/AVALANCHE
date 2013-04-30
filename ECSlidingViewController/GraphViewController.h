@@ -15,4 +15,6 @@
 @property (retain) NSString* sensor;
 @property (retain) NSString* label;
 
+- (void)commonInit;
+
 @end

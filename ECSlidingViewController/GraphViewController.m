@@ -36,6 +36,7 @@
 {
     [super viewDidAppear:animated];
     
+
     NSString* chartString = [NSString stringWithFormat:@"buildChart('%@', '%@', '%@')", self.filepath, self.sensor, self.label];
     [customWebView stringByEvaluatingJavaScriptFromString:chartString];
 }
@@ -65,6 +66,7 @@
     // Create a request to the resource
     NSURLRequest* request = [NSURLRequest requestWithURL:address];
     // Load the resource using the request
+    
     [customWebView loadRequest:request];
 }
 
