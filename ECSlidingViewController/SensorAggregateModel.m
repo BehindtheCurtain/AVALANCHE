@@ -101,7 +101,7 @@ static const int DEFAULT_NUM_SENSORS = 12;
     {
         
         [json appendFormat:@"\t\t\t\t\t\t\t{\n"];
-        [json appendFormat:@"\t\t\t\t\t\t\t\t\"id\": \"%d\"\n", index];
+        [json appendFormat:@"\t\t\t\t\t\t\t\t\"id\": \"%d\",\n", index];
         [json appendString:[snapshot serialize]];
         if(index < [snapshots count] -1)
         {

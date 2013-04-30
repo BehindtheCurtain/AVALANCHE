@@ -35,10 +35,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
 
-    NSString* chartString = [NSString stringWithFormat:@"buildChart('%@', '%@', '%@')", self.filepath, self.sensor, self.label];
-    [customWebView stringByEvaluatingJavaScriptFromString:chartString];
 }
 
 - (void)viewDidLoad
@@ -61,8 +58,14 @@
     // Get the path of the resource file
     
     NSString* path = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"];
+    
+    self.sensor = [self.sensor stringByReplacingOccurrencesOfString:@" " withString:@"\%20"];
+    self.label = [self.label stringByReplacingOccurrencesOfString:@" " withString:@"\%20"];
+    
+    NSString* urlString = [path stringByAppendingFormat:@"?file=%@&sensor=%@&label=%@", self.filepath, self.sensor, self.label];
+    
     // Convert it to the NSURL
-    NSURL* address = [NSURL fileURLWithPath:path];
+    NSURL* address = [NSURL fileURLWithPath:urlString];
     // Create a request to the resource
     NSURLRequest* request = [NSURLRequest requestWithURL:address];
     // Load the resource using the request
