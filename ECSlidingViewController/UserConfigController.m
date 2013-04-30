@@ -77,10 +77,8 @@
     [postBody appendData:[[NSString stringWithFormat:@"</login>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
     [postBody appendData:[[NSString stringWithFormat:@"<?>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
     [request setTimeOutSeconds:60];
-    [request setPassword:password];
-    [request setUsername:user];
+    [request addRequestHeader:@"Content-Type" value:@"text/xml"];
     [request setPostBody:postBody];
-    [request setValidatesSecureCertificate:NO];
     [request startSynchronous];
     
     NSError* error = [request error];
@@ -154,6 +152,7 @@
     [postBody appendData:[[NSString stringWithFormat:@"\t<newpassword>%@</newpassword>\n", password] dataUsingEncoding:NSUTF8StringEncoding]];
     [postBody appendData:[[NSString stringWithFormat:@"</change>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
     [postBody appendData:[[NSString stringWithFormat:@"<?>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [request addRequestHeader:@"Content-Type" value:@"text/xml"];
     [request setTimeOutSeconds:60];
     [request setPassword:password];
     [request setUsername:user];
@@ -229,6 +228,7 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
         NSURL* url = [NSURL URLWithString:[[NetworkConfigModel instance:NO] httpURL]];
         ASIHTTPRequest* request = [ASIHTTPRequest requestWithURL:url];
         [request setRequestMethod:@"POST"];
+        [request addRequestHeader:@"Content-Type" value:@"text/xml"];
         
         NSMutableData *postBody = [NSMutableData data];
         [postBody appendData:[[NSString stringWithFormat:@"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"] dataUsingEncoding:NSUTF8StringEncoding]];

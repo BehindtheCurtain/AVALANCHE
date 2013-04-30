@@ -116,49 +116,31 @@
     self.selectedRun = run;
     NSString* filePath = [run filePath];
     
-    NSString* xml = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+        
+    NSString* json = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     
-    NSData* xmlData = [xml dataUsingEncoding:NSUTF8StringEncoding];
+    NSData* jsonData = [json dataUsingEncoding:NSUTF8StringEncoding];
     
-    NSXMLParser* parser = [[NSXMLParser alloc] initWithData:xmlData];
-    [parser setDelegate:self];
-    [parser parse];
-
-}
-
-- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
-{
-    if([elementName isEqualToString:@"sensor"])
+    NSMutableDictionary* jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
+    NSMutableDictionary* runDict = [jsonDict valueForKey:@"run"];
+    NSMutableDictionary* sensorsDict = [runDict valueForKey:@"sensors"];
+    NSMutableDictionary* sensor = [sensorsDict valueForKey:@"sensor"];
+    
+    for(NSMutableDictionary* sensorDict in sensor)
     {
-        [self setLastSensor:[attributeDict valueForKey:@"name"]];
-        [self.sensors addObject:[attributeDict valueForKey:@"name"]];
+        NSString* name = [sensorDict valueForKey:@"name"];
+        NSString* typeName = [sensorDict valueForKey:@"type"];
+        
+        [self.sensors addObject:name];
+        [self.typeDict setValue:typeName forKey:name];
     }
-}
-
-- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
-{
-    [self setType:string];
-}
-         
- - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
-{
-    if([elementName isEqualToString:@"type"])
-    {
-        [self.typeDict setValue:[self type] forKey:[self lastSensor]];
-    }
-}
-
-- (void)parserDidEndDocument:(NSXMLParser *)parser
-{
+    
     [self.sensors sortUsingSelector:@selector(caseInsensitiveCompare:)];
     SensorSelectController* sensorSelect = [self.storyboard instantiateViewControllerWithIdentifier:@"sensorSelect"];
     [sensorSelect setRun:[self selectedRun]];
     [sensorSelect setSensors:[self sensors]];
     [sensorSelect setTypeDict:[self typeDict]];
-    
-    
-    
-    
+
     [self.navigationController pushViewController:sensorSelect animated:YES];
 }
 

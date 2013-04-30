@@ -16,7 +16,7 @@
 #import "SensorSelectController.h"
 
 
-@interface RunSelectController : UITableViewController <UITableViewDelegate, UITableViewDataSource, NSXMLParserDelegate>
+@interface RunSelectController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (retain) NSMutableArray* sensors;
 @property (retain) NSMutableDictionary* typeDict;

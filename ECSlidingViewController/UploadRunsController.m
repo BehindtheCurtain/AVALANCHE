@@ -118,6 +118,7 @@
     ASIHTTPRequest* login = [ASIHTTPRequest requestWithURL:url];
     
     [login setRequestMethod:@"POST"];
+    [login addRequestHeader:@"Content-Type" value:@"text/xml"];
     [login useSessionPersistence];
     NSMutableData *post = [NSMutableData data];
     [post appendData:[[NSString stringWithFormat:@"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
@@ -146,8 +147,11 @@
         
         NSString* fileContents = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
         NSMutableData *postBody = [NSMutableData data];
-        [postBody appendData:[[fileContents stringByAppendingFormat:@"<<\n%@\n<?>\n", [[UserModel instance:NO] userName]] dataUsingEncoding:NSUTF8StringEncoding]];
+        [postBody appendData:[@"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" dataUsingEncoding:NSUTF8StringEncoding]];
+        [postBody appendData:[@"<run>\n" dataUsingEncoding:NSUTF8StringEncoding]];
+        [postBody appendData:[[fileContents stringByAppendingFormat:@"<\run>\n<<\n%@\n<?>\n", [[UserModel instance:NO] userName]] dataUsingEncoding:NSUTF8StringEncoding]];
         [request setPostBody:postBody];
+        [request addRequestHeader:@"Content-Type" value:@"text/xml"];
         [request setRequestMethod:@"POST"];
         [request setTimeOutSeconds:60];
         [request setDelegate:self];
