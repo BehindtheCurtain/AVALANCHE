@@ -35,39 +35,26 @@
 
 -(NSString*) serialize
 {
-    NSMutableString* xml = [[NSMutableString alloc] init];
-    [xml appendFormat:@"\t\t\t\t\t<time>%lld</time>\n", (long long)([self.timeStamp timeIntervalSince1970] * 1000)];
+    NSMutableString* json = [[NSMutableString alloc] init];
+    [json appendFormat:@"\t\t\t\t\t\t\t\t\"time\": \"%lld\",\n", (long long)([self.timeStamp timeIntervalSince1970] * 1000)];
     if([self.sensorType isEqualToString:@"Pressure"])
     {
         double data = self.sensorData;
         data /= 10;
-        [xml appendFormat:@"\t\t\t\t\t<data>%.1f</data>\n", data];
+        [json appendFormat:@"\t\t\t\t\t\t\t\t\"data\": \"%.1f\"\n", data];
     }
     else if([self.sensorType isEqualToString:@"AirFuel"])
     {
         double data = self.sensorData;
         data /= 100;
-        [xml appendFormat:@"\t\t\t\t\t<data>%.2f</data>\n", data];
+        [json appendFormat:@"\t\t\t\t\t\t\t\t\"data\": \"%.2f\"\n", data];
     }
     else
     {
-        [xml appendFormat:@"\t\t\t\t\t<data>%d</data>\n", self.sensorData];
+        [json appendFormat:@"\t\t\t\t\t\t\t\t\"data\": \"%df\"\n", self.sensorData];
     }
     
-    return xml;
-    /*
-    NSDateFormatter* df = [[NSDateFormatter alloc] init];
-    [df setDateFormat:@"yyyy-MM-dd_hh:mm:ss.SS_a"];
-    
-    NSString* time = [df stringFromDate:self.timeStamp];
-    
-    NSMutableString* data = [[NSMutableString alloc] init];
-    [data appendString:time];
-    [data appendString:@","];
-    [data appendString:[NSString stringWithFormat:@"%d", self.sensorData]];
-    
-    return [NSString stringWithString:data];
-     */
+    return json;
 }
 
 -(id) initFromDataString:(NSString*)data

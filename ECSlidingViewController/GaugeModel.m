@@ -68,25 +68,32 @@ static NSString* DELIM = @"\n";
     self.endTimeStamp = [NSDate dateWithTimeIntervalSince1970:[[NSDate date] timeIntervalSince1970]];
     
     
-    NSMutableString* xml = [[NSMutableString alloc] init];
-    [xml appendString:@"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"];
-    [xml appendFormat:@"<run name=\"%@\">\n", self.runName];
-    [xml appendFormat:@"\t<startTime>%ld</startTime>\n", (time_t)[self.startTimeStamp timeIntervalSince1970]];
-    [xml appendFormat:@"\t<endTime>%ld</endTime>\n", (time_t)[self.endTimeStamp timeIntervalSince1970]];
-    [xml appendString:@"\t<sensors>\n"];
+    NSMutableString* json = [[NSMutableString alloc] init];
+    [json appendString:@"{\n"];
+    [json appendString:@"\t\"run\": {\n"];
+    [json appendFormat:@"\t\t\"name\": \"%@\",\n", self.runName];
+    [json appendFormat:@"\t\t\"startTime\": \"%ld\",\n", (time_t)[self.startTimeStamp timeIntervalSince1970]];
+    [json appendFormat:@"\t\t\"endTime\": \"%ld\",\n", (time_t)[self.endTimeStamp timeIntervalSince1970]];
+    [json appendString:@"\t\t\"sensors\": {\n"];
+    [json appendFormat:@"\t\t\t\"sensor\": [\n"];
     
-    NSString* filePath = [runDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.xml", self.runName]];
+    NSString* filePath = [runDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.json", self.runName]];
     
     for(NSString* key in sensorAggregateModelMap)
     {
         SensorAggregateModel* sensorAggregate = [sensorAggregateModelMap objectForKey:key];
-        [xml appendString:[sensorAggregate serialize]];
+        [json appendString:[sensorAggregate serialize]];
     }
     
-    [xml appendString:@"\t</sensors>\n"];
-    [xml appendString:@"</run>\n\n"];
+    [json deleteCharactersInRange:NSMakeRange([json length]-2, 1)];
+    [json appendString:@"\n"];
     
-    [[NSFileManager defaultManager] createFileAtPath:filePath contents:[xml dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
+    [json appendFormat:@"\t\t\t]\n"];
+    [json appendString:@"\t\t}\n"];
+    [json appendString:@"\t}\n"];
+    [json appendString:@"}\n\n"];
+    
+    [[NSFileManager defaultManager] createFileAtPath:filePath contents:[json dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
     
     RunModel* run = [[RunModel alloc] init];
     

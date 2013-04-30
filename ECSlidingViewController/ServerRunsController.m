@@ -52,6 +52,7 @@
     [postBody appendData:[[NSString stringWithFormat:@"</query>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
     [postBody appendData:[[NSString stringWithFormat:@"<?>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
     
+    [request addRequestHeader:@"Content-Type" value:@"text/xml"];
     [request setPostBody:postBody];
     [request setTimeOutSeconds:60];
     [request setDelegate:self];
@@ -202,6 +203,7 @@
         [postBody appendData:[[NSString stringWithFormat:@"<?>\n"] dataUsingEncoding:NSUTF8StringEncoding]];
         
         [request setPostBody:postBody];
+        [request addRequestHeader:@"Content-Type" value:@"text/xml"];
         [request setRequestMethod:@"POST"];
         [request setTimeOutSeconds:60];
         [request setDelegate:self];

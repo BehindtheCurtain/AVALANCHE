@@ -57,7 +57,15 @@ static NSMutableArray* viewArray;
     [[GaugeModel instance:NO] setStartTimeStamp:[NSDate dateWithTimeIntervalSince1970:[[NSDate date] timeIntervalSince1970]]];
 }
 
-
+- (void)viewWillDisappear:(BOOL)animated
+{
+    for(GaugeViewController* gaugeView in viewArray)
+    {
+        [gaugeView removeObservers];
+    }
+    
+    [[BLEGaugeAlarmService instance:NO] disconnect];
+}
 
 
 - (IBAction)twoTapAction:(id)sender
@@ -97,11 +105,6 @@ static NSMutableArray* viewArray;
 
 - (IBAction)endAction:(id)sender
 {
-    for(GaugeViewController* gaugeView in viewArray)
-    {
-        [gaugeView removeObservers];
-    }
-    
     [RealTimeBuilder endProcessing];
     [self.navigationController popViewControllerAnimated:YES];
 }

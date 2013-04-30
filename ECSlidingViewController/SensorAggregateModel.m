@@ -51,12 +51,14 @@ static const int DEFAULT_NUM_SENSORS = 12;
 
 - (NSString*)serialize
 {
-    NSMutableString* xml = [[NSMutableString alloc] init];
-    [xml appendFormat:@"\t\t<sensor name=\"%@\">\n", self.sensorName];
-    [xml appendFormat:@"\t\t\t<type>%@</type>\n", self.sensorType];
-    [xml appendFormat:@"\t\t\t<transform>%d</transform>\n", self.transformConstant];
-    [xml appendFormat:@"\t\t\t<sensorID>%d</sensorID>\n", self.sensorID];
-    [xml appendFormat:@"\t\t\t<active>%d</active>\n", self.isActive];
+    NSMutableString* json = [[NSMutableString alloc] init];
+
+    [json appendFormat:@"\t\t\t\t{\n"];
+    [json appendFormat:@"\t\t\t\t\t\"name\": \"%@\",\n", self.sensorName];
+    [json appendFormat:@"\t\t\t\t\t\"type\": \"%@\",\n", self.sensorType];
+    [json appendFormat:@"\t\t\t\t\t\"transform\": \"%d\",\n", self.transformConstant];
+    [json appendFormat:@"\t\t\t\t\t\"sensorID\": \"%d\",\n", self.sensorID];
+    [json appendFormat:@"\t\t\t\t\t\"active\": \"%d\",\n", self.isActive];
     
     if([self.sensorType isEqualToString:@"Pressure"])
     {
@@ -67,9 +69,9 @@ static const int DEFAULT_NUM_SENSORS = 12;
         minimum /= 10;
         maximum /= 10;
         avg /= 10;
-        [xml appendFormat:@"\t\t\t<min>%.1f</min>\n", minimum];
-        [xml appendFormat:@"\t\t\t<max>%.1f</max>\n", maximum];
-        [xml appendFormat:@"\t\t\t<average>%.1f</average>\n", avg];
+        [json appendFormat:@"\t\t\t\t\t\"min\": \"%.1f\",\n", minimum];
+        [json appendFormat:@"\t\t\t\t\t\"max\": \"%.1f\",\n", maximum];
+        [json appendFormat:@"\t\t\t\t\t\"average\": \"%.1f\",\n", avg];
     }
     else if([self.sensorType isEqualToString:@"AirFuel"])
     {
@@ -80,32 +82,43 @@ static const int DEFAULT_NUM_SENSORS = 12;
         minimum /= 100;
         maximum /= 100;
         avg /= 100;
-        [xml appendFormat:@"\t\t\t<min>%.2f</min>\n", minimum];
-        [xml appendFormat:@"\t\t\t<max>%.2f</max>\n", maximum];
-        [xml appendFormat:@"\t\t\t<average>%.2f</average>\n", avg];
+        [json appendFormat:@"\t\t\t\t\t\"min\": \"%.2f\",\n", minimum];
+        [json appendFormat:@"\t\t\t\t\t\"max\": \"%.2f\",\n", maximum];
+        [json appendFormat:@"\t\t\t\t\t\"average\": \"%.2f\",\n", avg];
     }
     else
     {
-        [xml appendFormat:@"\t\t\t<min>%d</min>\n", self.min];
-        [xml appendFormat:@"\t\t\t<max>%d</max>\n", self.max];
-        [xml appendFormat:@"\t\t\t<average>%d</average>\n", self.average];
+        [json appendFormat:@"\t\t\t\t\t\"min\": \"%d\",\n", self.min];
+        [json appendFormat:@"\t\t\t\t\t\"max\": \"%d\",\n", self.max];
+        [json appendFormat:@"\t\t\t\t\t\"average\": \"%d\",\n", self.average];
     }
 
-    [xml appendString:@"\t\t\t<snapshots>\n"];
+    [json appendString:@"\t\t\t\t\t\"snapshots\": {\n"];
+    [json appendFormat:@"\t\t\t\t\t\t\"snapshot\": [\n"];
     
     int index = 0;
     for(SensorSnapshotModel* snapshot in snapshots)
     {
-        [xml appendFormat:@"\t\t\t\t<snapshot id=\"%d\">\n", index];
-        [xml appendString:[snapshot serialize]];
-        [xml appendString:@"\t\t\t\t</snapshot>\n"];
+        
+        [json appendFormat:@"\t\t\t\t\t\t\t{\n"];
+        [json appendFormat:@"\t\t\t\t\t\t\t\t\"id\": \"%d\"\n", index];
+        [json appendString:[snapshot serialize]];
+        if(index < [snapshots count] -1)
+        {
+            [json appendFormat:@"\t\t\t\t\t\t\t},\n"];
+        }
+        else
+        {
+            [json appendFormat:@"\t\t\t\t\t\t\t}\n"];
+        }
         index++;
     }
     
-    [xml appendString:@"\t\t\t</snapshots>\n"];
-    [xml appendString:@"\t\t</sensor>\n"];
+    [json appendFormat:@"\t\t\t\t\t\t]\n"];
+    [json appendFormat:@"\t\t\t\t\t}\n"];
+    [json appendFormat:@"\t\t\t\t},\n"];
     
-    return xml;
+    return json;
 }
 
 -(id) initFromFile:(NSString*)file
