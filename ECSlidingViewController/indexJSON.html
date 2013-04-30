@@ -60,6 +60,10 @@
 	<script src="jquery-2.0.0.min.js"></script>
 	<script src="chartJSON.js"></script>
 	<script>
-//	 	buildChart("temp5.json", "EGT 2", "Temp °F");
+		var fileName =  getParameterByName('file');
+		var sensorName =  getParameterByName('sensor');
+		var yLabel =  getParameterByName('label');
+
+		buildChart(fileName, sensorName, yLabel);
 	</script>
 </html>
