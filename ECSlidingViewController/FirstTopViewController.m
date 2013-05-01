@@ -145,8 +145,6 @@ static NSMutableArray* viewArray;
 {
     GaugeViewController* gauge = [viewArray objectAtIndex:self.page];
     
-    NSArray* names = [[ConfigurationModelMap instance:NO] sensorNames];
-    
     NSString* key = [[[gauge gaugeDisplays] sensors] objectAtIndex:self.sensorIndex];
     
     NSString* name = [[[ConfigurationModelMap instance:NO] keyMapping] objectForKey:key];

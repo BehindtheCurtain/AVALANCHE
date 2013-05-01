@@ -12,21 +12,20 @@
 #import "ASIHTTPRequest.h"
 #import "NetworkConfigModel.h"
 
-@interface UserConfigController : UIViewController <UITextFieldDelegate, UIActionSheetDelegate, ASIHTTPRequestDelegate, UIAlertViewDelegate>
+@interface UserConfigController : UITableViewController <UITextFieldDelegate, UIActionSheetDelegate, ASIHTTPRequestDelegate, UIAlertViewDelegate, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *userNameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 
+@property (weak, nonatomic) IBOutlet UITableViewCell *create;
+@property (weak, nonatomic) IBOutlet UITableViewCell *change;
+@property (weak, nonatomic) IBOutlet UITableViewCell *login;
 
-@property (weak, nonatomic) IBOutlet UIButton *createButton;
-@property (weak, nonatomic) IBOutlet UIButton *loginButton;
-@property (weak, nonatomic) IBOutlet UIButton *changeButton;
+- (void)loginAction;
 
-- (IBAction)loginAction:(id)sender;
+- (void)createAction;
 
-- (IBAction)createAction:(id)sender;
-
-- (IBAction)changeAction:(id)sender;
+- (void)changeAction;
 
 - (NSString*)salt;
 

@@ -10,27 +10,27 @@
 #import "ConfigurationModel.h"
 #import "ConfigurationModelMap.h"
 
-@interface AddSensorController : UIViewController <UITextFieldDelegate, UIActionSheetDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
+@interface AddSensorController : UITableViewController <UITextFieldDelegate, UIActionSheetDelegate, UITableViewDelegate>
 {
 }
 
 @property (weak, nonatomic) IBOutlet UITextField *sensorNameField;
 @property (weak, nonatomic) IBOutlet UITextField *transformConstantField;
 @property (weak, nonatomic) IBOutlet UITextField *sensorIDField;
+@property (weak, nonatomic) IBOutlet UITextField *maxValueField;
+@property (weak, nonatomic) IBOutlet UITextField *minValueField;
 @property (weak, nonatomic) IBOutlet UISwitch *activeSwitch;
 
-@property (weak, nonatomic) IBOutlet UIButton *saveButton;
-@property (weak, nonatomic) IBOutlet UIButton *sensorTypeButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *sensorDismissButton;
-@property (weak, nonatomic) IBOutlet UIToolbar *sensorPickerNavBar;
-@property (weak, nonatomic) IBOutlet UIPickerView *sensorTypePicker;
 
 @property (nonatomic,copy) NSString *sensorType;
-@property(nonatomic, strong) NSArray *arrStatus;
 
-- (IBAction)showPicker:(id)sender;
-- (IBAction)hidePicker:(id)sender;
+@property (weak, nonatomic) IBOutlet UITableViewCell *temperature;
+@property (weak, nonatomic) IBOutlet UITableViewCell *pressure;
+@property (weak, nonatomic) IBOutlet UITableViewCell *rpm;
+@property (weak, nonatomic) IBOutlet UITableViewCell *airFuel;
+
 
 - (IBAction)save:(id)sender;
 @end

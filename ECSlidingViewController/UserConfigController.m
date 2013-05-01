@@ -59,7 +59,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)loginAction:(id)sender
+- (void)loginAction
 {
     NSString* user = self.userNameField.text;
     NSString* password = self.passwordField.text;
@@ -125,7 +125,7 @@
     }
 }
 
-- (IBAction)createAction:(id)sender
+- (void)createAction
 {
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Create New Account" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Create" otherButtonTitles:nil, nil];
     
@@ -134,7 +134,7 @@
     [super viewDidLoad];
 }
 
-- (IBAction)changeAction:(id)sender
+- (void)changeAction
 {
     NSString* user = self.userNameField.text;
     NSString* password = self.passwordField.text;
@@ -319,6 +319,24 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
     ret = [ret stringByReplacingOccurrencesOfString:@">" withString:@""];
     
     return ret;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    if(cell == self.create)
+    {
+        [self createAction];
+    }
+    else if(cell == self.change)
+    {
+        [self changeAction];
+    }
+    else if(cell == self.login)
+    {
+        [self loginAction];
+    }
 }
 
 @end

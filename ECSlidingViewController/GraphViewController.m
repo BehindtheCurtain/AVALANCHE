@@ -57,17 +57,20 @@
     
     // Get the path of the resource file
     
-    NSString* path = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"];
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"indexJSON" ofType:@"html"];
     
-    self.sensor = [self.sensor stringByReplacingOccurrencesOfString:@" " withString:@"\%20"];
-    self.label = [self.label stringByReplacingOccurrencesOfString:@" " withString:@"\%20"];
+    NSURL* absolute = [NSURL fileURLWithPath:path];
     
-    NSString* urlString = [path stringByAppendingFormat:@"?file=%@&sensor=%@&label=%@", self.filepath, self.sensor, self.label];
+    NSMutableString* querySensor = [[NSMutableString alloc] init];
+    [querySensor appendString:[self.sensor stringByReplacingOccurrencesOfString:@" " withString:@"\%20"]];
     
-    // Convert it to the NSURL
-    NSURL* address = [NSURL fileURLWithPath:urlString];
+    
+    NSString* parameters = [NSString stringWithFormat:@"?file=%@&sensor=%@&label=%@", self.filepath, querySensor, self.label];
+    
+    NSURL* final = [NSURL URLWithString:parameters relativeToURL:absolute];
+
     // Create a request to the resource
-    NSURLRequest* request = [NSURLRequest requestWithURL:address];
+    NSURLRequest* request = [NSURLRequest requestWithURL:final cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:(NSTimeInterval)10.0 ];
     // Load the resource using the request
     
     [customWebView loadRequest:request];
@@ -84,6 +87,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    
 }
 
 

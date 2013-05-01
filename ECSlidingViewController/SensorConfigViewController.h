@@ -10,7 +10,7 @@
 #import "ConfigurationModel.h"
 #import "ConfigurationModelMap.h"
 
-@interface SensorConfigViewController : UIViewController <UITextFieldDelegate>
+@interface SensorConfigViewController : UITableViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *sensorNameField;
 @property (weak, nonatomic) IBOutlet UITextField *transformConstantField;
