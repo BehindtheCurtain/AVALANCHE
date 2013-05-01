@@ -51,7 +51,7 @@
     }
     else
     {
-        [json appendFormat:@"\t\t\t\t\t\t\t\t\"data\": \"%df\"\n", self.sensorData];
+        [json appendFormat:@"\t\t\t\t\t\t\t\t\"data\": \"%d\"\n", self.sensorData];
     }
     
     return json;
