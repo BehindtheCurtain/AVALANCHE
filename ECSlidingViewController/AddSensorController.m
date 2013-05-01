@@ -29,8 +29,8 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"Add Sensor";
+    self.sensorType = @"Temperature";
     
-    self.arrStatus = [[NSArray alloc] initWithObjects:@"Temperature", @"Oxygen", @"Pressure", @"Voltage", @"RPM", @"PulseCount", @"AirFuel", nil];
     
 	// Do any additional setup after loading the view.
 }
@@ -55,6 +55,14 @@
     {
         [self.sensorIDField resignFirstResponder];
     }
+    else if(textField == self.maxValueField && [self.maxValueField isFirstResponder])
+    {
+        [self.maxValueField resignFirstResponder];
+    }
+    else if(textField == self.minValueField && [self.minValueField isFirstResponder])
+    {
+        [self.minValueField resignFirstResponder];
+    }
     
     return NO;
 }
@@ -72,6 +80,50 @@
     
     [super viewDidLoad];
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    if(cell == self.temperature)
+    {
+        self.temperature.accessoryType = UITableViewCellAccessoryCheckmark;
+        self.pressure.accessoryType = UITableViewCellAccessoryNone;
+        self.rpm.accessoryType = UITableViewCellAccessoryNone;
+        self.airFuel.accessoryType = UITableViewCellAccessoryNone;
+        
+        self.sensorType = @"Temperature";
+    }
+    else if(cell == self.pressure)
+    {
+        self.temperature.accessoryType = UITableViewCellAccessoryNone;
+        self.pressure.accessoryType = UITableViewCellAccessoryCheckmark;
+        self.rpm.accessoryType = UITableViewCellAccessoryNone;
+        self.airFuel.accessoryType = UITableViewCellAccessoryNone;
+        
+        self.sensorType = @"Pressure";
+    }
+    else if(cell == self.rpm)
+    {
+        self.temperature.accessoryType = UITableViewCellAccessoryNone;
+        self.pressure.accessoryType = UITableViewCellAccessoryNone;
+        self.rpm.accessoryType = UITableViewCellAccessoryCheckmark;
+        self.airFuel.accessoryType = UITableViewCellAccessoryNone;
+    
+        self.sensorType = @"RPM";
+    }
+    else if(cell == self.airFuel)
+    {
+        self.temperature.accessoryType = UITableViewCellAccessoryNone;
+        self.pressure.accessoryType = UITableViewCellAccessoryNone;
+        self.rpm.accessoryType = UITableViewCellAccessoryNone;
+        self.airFuel.accessoryType = UITableViewCellAccessoryCheckmark;
+    
+        self.sensorType = @"AirFuel";
+    }
+}
+
+
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
@@ -113,57 +165,99 @@
             [configuration setSensorID:1];
         }
         
-        // Sensor Type
-        switch([self.sensorTypePicker selectedRowInComponent:0])
+        if([self.sensorType isEqualToString:@"Temperature"])
         {
-            case 0:
+            [configuration setSensorType:Temperature];
+            
+            if([self.maxValueField.text length] != 0)
             {
-                [configuration setSensorType:Temperature];
+                [configuration setMaxValue:[self.maxValueField.text intValue]];
+            }
+            else
+            {
                 [configuration setMaxValue:2501];
+            }
+            
+            if([self.minValueField.text length] != 0)
+            {
+                [configuration setMinValue:[self.minValueField.text intValue]];
+            }
+            else
+            {
                 [configuration setMinValue:-346];
-                break;
             }
-            case 1:
+        }
+        
+        else if([self.sensorType isEqualToString:@"Pressure"])
+        {
+            [configuration setSensorType:Pressure];
+            
+            if([self.maxValueField.text length] != 0)
             {
-                [configuration setSensorType:Oxygen];
-                [configuration setMaxValue:0];
-                [configuration setMinValue:100];
-                break;
+                [configuration setMaxValue:[self.maxValueField.text intValue]];
             }
-            case 2:
+            else
             {
-                [configuration setSensorType:Pressure];
-                [configuration setMaxValue:-100];
-                [configuration setMinValue:100];
-                break;
+                [configuration setMaxValue:100];
             }
-            case 3:
+            
+            if([self.minValueField.text length] != 0)
             {
-                [configuration setSensorType:Voltage];
-                [configuration setMaxValue:0];
-                [configuration setMinValue:5];
-                break;
+                [configuration setMinValue:[self.minValueField.text intValue]];
             }
-            case 4:
+            else
             {
-                [configuration setSensorType:RPM];
+                [configuration setMinValue:-100];
+            }
+        }
+        
+        else if([self.sensorType isEqualToString:@"RPM"])
+        {
+            [configuration setSensorType:RPM];
+            
+            if([self.maxValueField.text length] != 0)
+            {
+                [configuration setMaxValue:[self.maxValueField.text intValue]];
+            }
+            else
+            {
                 [configuration setMaxValue:8400];
-                [configuration setMinValue:0];
-                break;
             }
-            case 5:
+            
+            if([self.minValueField.text length] != 0)
             {
-                [configuration setSensorType:PulseCount];
-                [configuration setMaxValue:65535];
-                [configuration setMinValue:0];
-                break;
+                [configuration setMinValue:[self.minValueField.text intValue]];
             }
-            case 6:
+            else
             {
-                [configuration setSensorType:AirFuel];
+                [configuration setMinValue:0];
+            }
+        }
+        
+        else if([self.sensorType isEqualToString:@"AirFuel"])
+        {
+            [configuration setSensorType:AirFuel];
+            
+            if([self.maxValueField.text length] != 0)
+            {
+                double max = [self.maxValueField.text doubleValue];
+                max *= 100;
+                [configuration setMaxValue:(int)max];
+            }
+            else
+            {
                 [configuration setMaxValue:14875];
-                [configuration setMinValue:712];
-                break;
+            }
+            
+            if([self.minValueField.text length] != 0)
+            {
+                double min = [self.minValueField.text doubleValue];
+                min *= 100;
+                [configuration setMinValue:(int)min];
+            }
+            else
+            {
+                [configuration setMinValue:-712];
             }
         }
         
@@ -175,36 +269,6 @@
         
         [self.navigationController popViewControllerAnimated:YES];
     }
-}
-
-//SensorTypePicker Config
--(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
-    //One column
-    return 1;
-}
--(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
-    //set number of rows
-    return self.arrStatus.count;
-}
--(NSString *)pickerView:(UIPickerView *)e titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    //set item per row
-    return [self.arrStatus objectAtIndex:row];
-}
-
-
-//Show sensor type picker
--(IBAction)showPicker:(id)sender{
-    self.sensorTypePicker.hidden = NO;
-    self.sensorPickerNavBar.hidden = NO;
-}
-
-//Hide sensor type picker
--(IBAction)hidePicker:(id)sender{
-    self.sensorTypePicker.hidden = YES;
-    self.sensorPickerNavBar.hidden = YES;
 }
 
 @end

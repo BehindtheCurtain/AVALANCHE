@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		080634D4173085BB00D32899 /* chartJSON.js in Sources */ = {isa = PBXBuildFile; fileRef = 080634D2173085BB00D32899 /* chartJSON.js */; };
 		080634D5173085BB00D32899 /* indexJSON.html in Resources */ = {isa = PBXBuildFile; fileRef = 080634D3173085BB00D32899 /* indexJSON.html */; };
 		0808054717174454007D6996 /* d3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 0808054617174454007D6996 /* d3.min.js */; };
 		08089F3116E6A90C00EBA435 /* CustomPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08089F2D16E6A90C00EBA435 /* CustomPagerViewController.m */; };
@@ -66,6 +65,7 @@
 		742C43FB172733610013AB46 /* brsp_simulator1_0_1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 742C43F9172733610013AB46 /* brsp_simulator1_0_1.a */; };
 		742C43FE17299D410013AB46 /* GaugeDisplayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 742C43FD17299D400013AB46 /* GaugeDisplayModel.m */; };
 		742C4401172C30C60013AB46 /* ServerRunsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742C4400172C30C60013AB46 /* ServerRunsController.m */; };
+		7441CF5317308DFD0045581F /* chartJSON.js in Resources */ = {isa = PBXBuildFile; fileRef = 080634D2173085BB00D32899 /* chartJSON.js */; };
 		744F50A8172CB6630094D40E /* UploadRunsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 744F50A7172CB6630094D40E /* UploadRunsController.m */; };
 		746178E616EBCDF80007FE56 /* ConfigurationModelMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178DF16EBCDF70007FE56 /* ConfigurationModelMap.m */; };
 		746178E816EBCDF80007FE56 /* SensorAggregateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 746178E316EBCDF70007FE56 /* SensorAggregateModel.m */; };
@@ -642,6 +642,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7441CF5317308DFD0045581F /* chartJSON.js in Resources */,
 				0883F5B117249C5A0072D952 /* jquery-2.0.0.min.js in Resources */,
 				0808054717174454007D6996 /* d3.min.js in Resources */,
 				2750E77B14CDB0DF007727A0 /* InfoPlist.strings in Resources */,
@@ -715,7 +716,6 @@
 				742C4401172C30C60013AB46 /* ServerRunsController.m in Sources */,
 				744F50A8172CB6630094D40E /* UploadRunsController.m in Sources */,
 				749F7174172DB42F00CD6F3B /* SensorSelectController.m in Sources */,
-				080634D4173085BB00D32899 /* chartJSON.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

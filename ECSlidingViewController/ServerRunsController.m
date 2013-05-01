@@ -80,11 +80,9 @@
     }
     else if(response == 201)
     {
-        NSRange index = [responseString rangeOfString:@"<?xml"];
-        NSString *xml = [responseString substringFromIndex:index.location];
         NSString* applicationDocumentsDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
         NSString* runDirectory = [applicationDocumentsDir stringByAppendingPathComponent:@"runs"];
-        NSString* filePath = [runDirectory stringByAppendingFormat:@"%@.xml", [self runName]];
+        NSString* filePath = [runDirectory stringByAppendingFormat:@"%@.json", [self runName]];
         
         RunModel* run = [[RunModel alloc] init];
         [run setRunName:[self runName]];
@@ -93,7 +91,7 @@
         
         [[[RunListModel instance:NO] runList] addObject:run];
         
-        [[NSFileManager defaultManager] createFileAtPath:filePath contents:[xml dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
+        [[NSFileManager defaultManager] createFileAtPath:filePath contents:[responseString dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
         
         UIAlertView *alert = [[UIAlertView alloc]
                               initWithTitle: @"Success"

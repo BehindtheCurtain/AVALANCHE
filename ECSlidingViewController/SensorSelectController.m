@@ -112,7 +112,7 @@
     
     if([type isEqualToString:@"Temperature"])
     {
-        [graph setLabel:@"Temp °F"];
+        [graph setLabel:@"Temp\%20F"];
     }
     else if([type isEqualToString:@"Pressure"])
     {
@@ -124,7 +124,7 @@
     }
     else if([type isEqualToString:@"AirFuel"])
     {
-        [graph setLabel:@"Air fuel %"];
+        [graph setLabel:@"Air\%20Fuel\%20Percent"];
     }
     
     [self.navigationController pushViewController:graph animated:YES];

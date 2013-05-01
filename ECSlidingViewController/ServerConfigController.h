@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "NetworkConfigModel.h"
 
-@interface ServerConfigController : UIViewController <UITextFieldDelegate>
+@interface ServerConfigController : UITableViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *ipField;
 
 @end

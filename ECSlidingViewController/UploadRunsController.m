@@ -145,13 +145,19 @@
         self.runModel = run;
         [self.tableView reloadData];
         
+        NSString* runString = [NSString stringWithFormat:@"++\n%@\n", [self.runModel runName]];
+        NSString* userString = [NSString stringWithFormat:@"<<\n%@\n", [[UserModel instance:NO] userName]];
+        NSString* escape = @"<?>\n";
+        
         NSString* fileContents = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
         NSMutableData *postBody = [NSMutableData data];
-        [postBody appendData:[@"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" dataUsingEncoding:NSUTF8StringEncoding]];
-        [postBody appendData:[@"<run>\n" dataUsingEncoding:NSUTF8StringEncoding]];
-        [postBody appendData:[[fileContents stringByAppendingFormat:@"<\run>\n<<\n%@\n<?>\n", [[UserModel instance:NO] userName]] dataUsingEncoding:NSUTF8StringEncoding]];
+        [postBody appendData:[@"json\n" dataUsingEncoding:NSUTF8StringEncoding]];
+        [postBody appendData:[fileContents dataUsingEncoding:NSUTF8StringEncoding]];
+        [postBody appendData:[userString dataUsingEncoding:NSUTF8StringEncoding]];
+        [postBody appendData:[runString dataUsingEncoding:NSUTF8StringEncoding]];
+        [postBody appendData:[escape dataUsingEncoding:NSUTF8StringEncoding]];
         [request setPostBody:postBody];
-        [request addRequestHeader:@"Content-Type" value:@"text/xml"];
+        [request addRequestHeader:@"Content-Type" value:@"application/json"];
         [request setRequestMethod:@"POST"];
         [request setTimeOutSeconds:60];
         [request setDelegate:self];
