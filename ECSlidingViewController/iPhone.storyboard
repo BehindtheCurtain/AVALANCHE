@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="H2v-Ob-DhD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="H2v-Ob-DhD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -1221,14 +1221,14 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" id="9hH-zK-YgO">
-                                <rect key="frame" x="10" y="8" width="338" height="58"/>
+                                <rect key="frame" x="10" y="8" width="354" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Welcome to Avalanche!">
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="26" name="Futura-Medium"/>
+                                            <font key="NSFont" size="30" name="Futura-Medium"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
@@ -1249,7 +1249,6 @@
         <!--View Controller - Help Page 2-->
         <scene sceneID="78X-oi-MZM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0Gc-Oh-wUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="helpView2" title="Help Page 2" id="EaJ-hK-GDF" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VzE-Nt-Rxq">
                         <rect key="frame" x="0.0" y="64" width="568" height="256"/>
@@ -1276,11 +1275,11 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" id="bjr-el-Uog">
-                                <rect key="frame" x="97" y="164" width="348" height="57"/>
+                                <rect key="frame" x="80" y="158" width="365" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="In Real Time View, single-finger swipe left or right to select different swap views.">
+                                    <fragment content="In Real Time View, single-finger swipe left or right to select different customizable views.">
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="17" name="Futura-Medium"/>
@@ -1292,7 +1291,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Swipe_Right.png" id="ObZ-RU-IqX">
-                                <rect key="frame" x="434" y="121" width="128" height="128"/>
+                                <rect key="frame" x="434" y="116" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -1302,6 +1301,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Gc-Oh-wUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2834" y="-1286"/>
         </scene>
@@ -1376,20 +1376,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="18I-R3-9R7">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="256"/>
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="236"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <pageControl opaque="NO" tag="1000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="vCL-Ku-Vq0">
-                                        <rect key="frame" x="0.0" y="220" width="568" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="pageIndicatorTintColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="currentPageIndicatorTintColor" red="0.34684434730000002" green="0.51326869819999998" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <action selector="changePage:" destination="5mp-3Z-dtG" eventType="valueChanged" id="c35-1c-fEk"/>
-                                        </connections>
-                                    </pageControl>
-                                </subviews>
                             </scrollView>
+                            <pageControl opaque="NO" tag="1000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" id="vCL-Ku-Vq0">
+                                <rect key="frame" x="0.0" y="233" width="568" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.34684434730000002" green="0.51326869819999998" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changePage:" destination="5mp-3Z-dtG" eventType="valueChanged" id="c35-1c-fEk"/>
+                                </connections>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="0.2588235438" green="0.47058826679999999" blue="0.82745105029999999" alpha="1" colorSpace="deviceRGB"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
