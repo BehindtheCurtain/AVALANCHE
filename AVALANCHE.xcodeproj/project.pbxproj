@@ -9,6 +9,37 @@
 /* Begin PBXBuildFile section */
 		080634D4173085BB00D32899 /* chartJSON.js in Sources */ = {isa = PBXBuildFile; fileRef = 080634D2173085BB00D32899 /* chartJSON.js */; };
 		080634D5173085BB00D32899 /* indexJSON.html in Resources */ = {isa = PBXBuildFile; fileRef = 080634D3173085BB00D32899 /* indexJSON.html */; };
+		080634D81730AA1E00D32899 /* HelpPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 080634D71730AA1E00D32899 /* HelpPagerViewController.m */; };
+		080635351730BF5C00D32899 /* 2x_Double_Tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 080635171730BF5C00D32899 /* 2x_Double_Tap.png */; };
+		080635361730BF5C00D32899 /* 2x_Hold_Timer.png in Resources */ = {isa = PBXBuildFile; fileRef = 080635181730BF5C00D32899 /* 2x_Hold_Timer.png */; };
+		080635371730BF5C00D32899 /* 2x_Press_Hold.png in Resources */ = {isa = PBXBuildFile; fileRef = 080635191730BF5C00D32899 /* 2x_Press_Hold.png */; };
+		080635381730BF5C00D32899 /* 2x_Rotate_Left.png in Resources */ = {isa = PBXBuildFile; fileRef = 0806351A1730BF5C00D32899 /* 2x_Rotate_Left.png */; };
+		080635391730BF5C00D32899 /* 2x_Rotate_Right.png in Resources */ = {isa = PBXBuildFile; fileRef = 0806351B1730BF5C00D32899 /* 2x_Rotate_Right.png */; };
+		0806353A1730BF5C00D32899 /* 2x_Swipe_Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 0806351C1730BF5C00D32899 /* 2x_Swipe_Down.png */; };
+		0806353B1730BF5C00D32899 /* 2x_Swipe_Left.png in Resources */ = {isa = PBXBuildFile; fileRef = 0806351D1730BF5C00D32899 /* 2x_Swipe_Left.png */; };
+		0806353C1730BF5C00D32899 /* 2x_Swipe_Right.png in Resources */ = {isa = PBXBuildFile; fileRef = 0806351E1730BF5C00D32899 /* 2x_Swipe_Right.png */; };
+		0806353D1730BF5C00D32899 /* 2x_Swipe_Up.png in Resources */ = {isa = PBXBuildFile; fileRef = 0806351F1730BF5C00D32899 /* 2x_Swipe_Up.png */; };
+		0806353E1730BF5C00D32899 /* 2x_Tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 080635201730BF5C00D32899 /* 2x_Tap.png */; };
+		0806353F1730BF5C00D32899 /* 3x_Swipe_Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 080635211730BF5C00D32899 /* 3x_Swipe_Down.png */; };
+		080635401730BF5C00D32899 /* 3x_Swipe_Left.png in Resources */ = {isa = PBXBuildFile; fileRef = 080635221730BF5C00D32899 /* 3x_Swipe_Left.png */; };
+		080635411730BF5C00D32899 /* 3x_Swipe_Right.png in Resources */ = {isa = PBXBuildFile; fileRef = 080635231730BF5C00D32899 /* 3x_Swipe_Right.png */; };
+		080635421730BF5C00D32899 /* 3x_Swipe_Up.png in Resources */ = {isa = PBXBuildFile; fileRef = 080635241730BF5C00D32899 /* 3x_Swipe_Up.png */; };
+		080635431730BF5C00D32899 /* 4x_Swipe_Left.png in Resources */ = {isa = PBXBuildFile; fileRef = 080635251730BF5C00D32899 /* 4x_Swipe_Left.png */; };
+		080635441730BF5C00D32899 /* 4x_Swipe_Right.png in Resources */ = {isa = PBXBuildFile; fileRef = 080635261730BF5C00D32899 /* 4x_Swipe_Right.png */; };
+		080635451730BF5C00D32899 /* 5x_Pinch.png in Resources */ = {isa = PBXBuildFile; fileRef = 080635271730BF5C00D32899 /* 5x_Pinch.png */; };
+		080635461730BF5C00D32899 /* 5x_Roatate_Left.png in Resources */ = {isa = PBXBuildFile; fileRef = 080635281730BF5C00D32899 /* 5x_Roatate_Left.png */; };
+		080635471730BF5C00D32899 /* 5x_Rotate_Right.png in Resources */ = {isa = PBXBuildFile; fileRef = 080635291730BF5C00D32899 /* 5x_Rotate_Right.png */; };
+		080635481730BF5C00D32899 /* 5x_Spread.png in Resources */ = {isa = PBXBuildFile; fileRef = 0806352A1730BF5C00D32899 /* 5x_Spread.png */; };
+		080635491730BF5C00D32899 /* Double_Tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 0806352B1730BF5C00D32899 /* Double_Tap.png */; };
+		0806354A1730BF5C00D32899 /* Hold_Timer.png in Resources */ = {isa = PBXBuildFile; fileRef = 0806352C1730BF5C00D32899 /* Hold_Timer.png */; };
+		0806354B1730BF5C00D32899 /* Pinch.png in Resources */ = {isa = PBXBuildFile; fileRef = 0806352D1730BF5C00D32899 /* Pinch.png */; };
+		0806354C1730BF5C00D32899 /* Press_Hold.png in Resources */ = {isa = PBXBuildFile; fileRef = 0806352E1730BF5C00D32899 /* Press_Hold.png */; };
+		0806354D1730BF5C00D32899 /* Single_Tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 0806352F1730BF5C00D32899 /* Single_Tap.png */; };
+		0806354E1730BF5C00D32899 /* Spread.png in Resources */ = {isa = PBXBuildFile; fileRef = 080635301730BF5C00D32899 /* Spread.png */; };
+		0806354F1730BF5C00D32899 /* Swipe_Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 080635311730BF5C00D32899 /* Swipe_Down.png */; };
+		080635501730BF5C00D32899 /* Swipe_Left.png in Resources */ = {isa = PBXBuildFile; fileRef = 080635321730BF5C00D32899 /* Swipe_Left.png */; };
+		080635511730BF5C00D32899 /* Swipe_Right.png in Resources */ = {isa = PBXBuildFile; fileRef = 080635331730BF5C00D32899 /* Swipe_Right.png */; };
+		080635521730BF5C00D32899 /* Swipe_Up.png in Resources */ = {isa = PBXBuildFile; fileRef = 080635341730BF5C00D32899 /* Swipe_Up.png */; };
 		0808054717174454007D6996 /* d3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 0808054617174454007D6996 /* d3.min.js */; };
 		08089F3116E6A90C00EBA435 /* CustomPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08089F2D16E6A90C00EBA435 /* CustomPagerViewController.m */; };
 		08089F3316E6A90C00EBA435 /* PagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08089F3016E6A90C00EBA435 /* PagerViewController.m */; };
@@ -91,6 +122,38 @@
 /* Begin PBXFileReference section */
 		080634D2173085BB00D32899 /* chartJSON.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = chartJSON.js; sourceTree = "<group>"; };
 		080634D3173085BB00D32899 /* indexJSON.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = indexJSON.html; sourceTree = "<group>"; };
+		080634D61730AA1E00D32899 /* HelpPagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpPagerViewController.h; sourceTree = "<group>"; };
+		080634D71730AA1E00D32899 /* HelpPagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpPagerViewController.m; sourceTree = "<group>"; };
+		080635171730BF5C00D32899 /* 2x_Double_Tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2x_Double_Tap.png; sourceTree = "<group>"; };
+		080635181730BF5C00D32899 /* 2x_Hold_Timer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2x_Hold_Timer.png; sourceTree = "<group>"; };
+		080635191730BF5C00D32899 /* 2x_Press_Hold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2x_Press_Hold.png; sourceTree = "<group>"; };
+		0806351A1730BF5C00D32899 /* 2x_Rotate_Left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2x_Rotate_Left.png; sourceTree = "<group>"; };
+		0806351B1730BF5C00D32899 /* 2x_Rotate_Right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2x_Rotate_Right.png; sourceTree = "<group>"; };
+		0806351C1730BF5C00D32899 /* 2x_Swipe_Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2x_Swipe_Down.png; sourceTree = "<group>"; };
+		0806351D1730BF5C00D32899 /* 2x_Swipe_Left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2x_Swipe_Left.png; sourceTree = "<group>"; };
+		0806351E1730BF5C00D32899 /* 2x_Swipe_Right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2x_Swipe_Right.png; sourceTree = "<group>"; };
+		0806351F1730BF5C00D32899 /* 2x_Swipe_Up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2x_Swipe_Up.png; sourceTree = "<group>"; };
+		080635201730BF5C00D32899 /* 2x_Tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2x_Tap.png; sourceTree = "<group>"; };
+		080635211730BF5C00D32899 /* 3x_Swipe_Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3x_Swipe_Down.png; sourceTree = "<group>"; };
+		080635221730BF5C00D32899 /* 3x_Swipe_Left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3x_Swipe_Left.png; sourceTree = "<group>"; };
+		080635231730BF5C00D32899 /* 3x_Swipe_Right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3x_Swipe_Right.png; sourceTree = "<group>"; };
+		080635241730BF5C00D32899 /* 3x_Swipe_Up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3x_Swipe_Up.png; sourceTree = "<group>"; };
+		080635251730BF5C00D32899 /* 4x_Swipe_Left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4x_Swipe_Left.png; sourceTree = "<group>"; };
+		080635261730BF5C00D32899 /* 4x_Swipe_Right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4x_Swipe_Right.png; sourceTree = "<group>"; };
+		080635271730BF5C00D32899 /* 5x_Pinch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5x_Pinch.png; sourceTree = "<group>"; };
+		080635281730BF5C00D32899 /* 5x_Roatate_Left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5x_Roatate_Left.png; sourceTree = "<group>"; };
+		080635291730BF5C00D32899 /* 5x_Rotate_Right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5x_Rotate_Right.png; sourceTree = "<group>"; };
+		0806352A1730BF5C00D32899 /* 5x_Spread.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5x_Spread.png; sourceTree = "<group>"; };
+		0806352B1730BF5C00D32899 /* Double_Tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Double_Tap.png; sourceTree = "<group>"; };
+		0806352C1730BF5C00D32899 /* Hold_Timer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hold_Timer.png; sourceTree = "<group>"; };
+		0806352D1730BF5C00D32899 /* Pinch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pinch.png; sourceTree = "<group>"; };
+		0806352E1730BF5C00D32899 /* Press_Hold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Press_Hold.png; sourceTree = "<group>"; };
+		0806352F1730BF5C00D32899 /* Single_Tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Single_Tap.png; sourceTree = "<group>"; };
+		080635301730BF5C00D32899 /* Spread.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spread.png; sourceTree = "<group>"; };
+		080635311730BF5C00D32899 /* Swipe_Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Swipe_Down.png; sourceTree = "<group>"; };
+		080635321730BF5C00D32899 /* Swipe_Left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Swipe_Left.png; sourceTree = "<group>"; };
+		080635331730BF5C00D32899 /* Swipe_Right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Swipe_Right.png; sourceTree = "<group>"; };
+		080635341730BF5C00D32899 /* Swipe_Up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Swipe_Up.png; sourceTree = "<group>"; };
 		0808054617174454007D6996 /* d3.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.min.js; sourceTree = "<group>"; };
 		08089F2C16E6A90C00EBA435 /* CustomPagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPagerViewController.h; sourceTree = "<group>"; };
 		08089F2D16E6A90C00EBA435 /* CustomPagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPagerViewController.m; sourceTree = "<group>"; };
@@ -255,6 +318,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		080634D91730B33100D32899 /* Help Menu Gesture Icons */ = {
+			isa = PBXGroup;
+			children = (
+				080635161730BF5C00D32899 /* 256 */,
+			);
+			name = "Help Menu Gesture Icons";
+			sourceTree = "<group>";
+		};
+		080635161730BF5C00D32899 /* 256 */ = {
+			isa = PBXGroup;
+			children = (
+				080635171730BF5C00D32899 /* 2x_Double_Tap.png */,
+				080635181730BF5C00D32899 /* 2x_Hold_Timer.png */,
+				080635191730BF5C00D32899 /* 2x_Press_Hold.png */,
+				0806351A1730BF5C00D32899 /* 2x_Rotate_Left.png */,
+				0806351B1730BF5C00D32899 /* 2x_Rotate_Right.png */,
+				0806351C1730BF5C00D32899 /* 2x_Swipe_Down.png */,
+				0806351D1730BF5C00D32899 /* 2x_Swipe_Left.png */,
+				0806351E1730BF5C00D32899 /* 2x_Swipe_Right.png */,
+				0806351F1730BF5C00D32899 /* 2x_Swipe_Up.png */,
+				080635201730BF5C00D32899 /* 2x_Tap.png */,
+				080635211730BF5C00D32899 /* 3x_Swipe_Down.png */,
+				080635221730BF5C00D32899 /* 3x_Swipe_Left.png */,
+				080635231730BF5C00D32899 /* 3x_Swipe_Right.png */,
+				080635241730BF5C00D32899 /* 3x_Swipe_Up.png */,
+				080635251730BF5C00D32899 /* 4x_Swipe_Left.png */,
+				080635261730BF5C00D32899 /* 4x_Swipe_Right.png */,
+				080635271730BF5C00D32899 /* 5x_Pinch.png */,
+				080635281730BF5C00D32899 /* 5x_Roatate_Left.png */,
+				080635291730BF5C00D32899 /* 5x_Rotate_Right.png */,
+				0806352A1730BF5C00D32899 /* 5x_Spread.png */,
+				0806352B1730BF5C00D32899 /* Double_Tap.png */,
+				0806352C1730BF5C00D32899 /* Hold_Timer.png */,
+				0806352D1730BF5C00D32899 /* Pinch.png */,
+				0806352E1730BF5C00D32899 /* Press_Hold.png */,
+				0806352F1730BF5C00D32899 /* Single_Tap.png */,
+				080635301730BF5C00D32899 /* Spread.png */,
+				080635311730BF5C00D32899 /* Swipe_Down.png */,
+				080635321730BF5C00D32899 /* Swipe_Left.png */,
+				080635331730BF5C00D32899 /* Swipe_Right.png */,
+				080635341730BF5C00D32899 /* Swipe_Up.png */,
+			);
+			path = 256;
+			sourceTree = "<group>";
+		};
 		088BA65317172F46002F0831 /* public_html */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +421,7 @@
 		2750E76114CDB0DF007727A0 = {
 			isa = PBXGroup;
 			children = (
+				080634D91730B33100D32899 /* Help Menu Gesture Icons */,
 				7428C470170A26E70013A04E /* Icon@2x.png */,
 				7428C46E170A26DA0013A04E /* Icon.png */,
 				08A2AF2016E69C6A00065D0C /* Default-568h@2x.png */,
@@ -574,6 +683,8 @@
 		74D85A12170F26500059B791 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				080634D61730AA1E00D32899 /* HelpPagerViewController.h */,
+				080634D71730AA1E00D32899 /* HelpPagerViewController.m */,
 				089EC75D171DE1C1004A76EC /* KDCustom */,
 				089EC75C171DE1B3004A76EC /* Sound */,
 				27FC94DE14D0C14E0000B18C /* InitialSlidingViewController.h */,
@@ -664,6 +775,36 @@
 				08E4538F1720728E00F8CA6A /* circle_outline_120.png in Resources */,
 				08E45391172084F300F8CA6A /* circle_outline_pressed_120.png in Resources */,
 				080634D5173085BB00D32899 /* indexJSON.html in Resources */,
+				080635351730BF5C00D32899 /* 2x_Double_Tap.png in Resources */,
+				080635361730BF5C00D32899 /* 2x_Hold_Timer.png in Resources */,
+				080635371730BF5C00D32899 /* 2x_Press_Hold.png in Resources */,
+				080635381730BF5C00D32899 /* 2x_Rotate_Left.png in Resources */,
+				080635391730BF5C00D32899 /* 2x_Rotate_Right.png in Resources */,
+				0806353A1730BF5C00D32899 /* 2x_Swipe_Down.png in Resources */,
+				0806353B1730BF5C00D32899 /* 2x_Swipe_Left.png in Resources */,
+				0806353C1730BF5C00D32899 /* 2x_Swipe_Right.png in Resources */,
+				0806353D1730BF5C00D32899 /* 2x_Swipe_Up.png in Resources */,
+				0806353E1730BF5C00D32899 /* 2x_Tap.png in Resources */,
+				0806353F1730BF5C00D32899 /* 3x_Swipe_Down.png in Resources */,
+				080635401730BF5C00D32899 /* 3x_Swipe_Left.png in Resources */,
+				080635411730BF5C00D32899 /* 3x_Swipe_Right.png in Resources */,
+				080635421730BF5C00D32899 /* 3x_Swipe_Up.png in Resources */,
+				080635431730BF5C00D32899 /* 4x_Swipe_Left.png in Resources */,
+				080635441730BF5C00D32899 /* 4x_Swipe_Right.png in Resources */,
+				080635451730BF5C00D32899 /* 5x_Pinch.png in Resources */,
+				080635461730BF5C00D32899 /* 5x_Roatate_Left.png in Resources */,
+				080635471730BF5C00D32899 /* 5x_Rotate_Right.png in Resources */,
+				080635481730BF5C00D32899 /* 5x_Spread.png in Resources */,
+				080635491730BF5C00D32899 /* Double_Tap.png in Resources */,
+				0806354A1730BF5C00D32899 /* Hold_Timer.png in Resources */,
+				0806354B1730BF5C00D32899 /* Pinch.png in Resources */,
+				0806354C1730BF5C00D32899 /* Press_Hold.png in Resources */,
+				0806354D1730BF5C00D32899 /* Single_Tap.png in Resources */,
+				0806354E1730BF5C00D32899 /* Spread.png in Resources */,
+				0806354F1730BF5C00D32899 /* Swipe_Down.png in Resources */,
+				080635501730BF5C00D32899 /* Swipe_Left.png in Resources */,
+				080635511730BF5C00D32899 /* Swipe_Right.png in Resources */,
+				080635521730BF5C00D32899 /* Swipe_Up.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,6 +857,7 @@
 				744F50A8172CB6630094D40E /* UploadRunsController.m in Sources */,
 				749F7174172DB42F00CD6F3B /* SensorSelectController.m in Sources */,
 				080634D4173085BB00D32899 /* chartJSON.js in Sources */,
+				080634D81730AA1E00D32899 /* HelpPagerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
