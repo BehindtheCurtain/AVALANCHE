@@ -195,7 +195,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="User Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TSh-tf-YXx">
-                                                    <rect key="frame" x="20" y="11" width="86" height="21"/>
+                                                    <rect key="frame" x="20" y="11" width="95" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -222,7 +222,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cMP-1l-B2Q">
-                                                    <rect key="frame" x="20" y="11" width="75" height="21"/>
+                                                    <rect key="frame" x="20" y="11" width="96" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -941,7 +941,7 @@
                                                     </connections>
                                                 </textField>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Transform Constant" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fan-cF-v0J">
-                                                    <rect key="frame" x="20" y="10" width="151" height="21"/>
+                                                    <rect key="frame" x="20" y="10" width="172" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1000,7 +1000,7 @@
                                                     </connections>
                                                 </textField>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Maximum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XX7-2y-FKl">
-                                                    <rect key="frame" x="20" y="11" width="74" height="21"/>
+                                                    <rect key="frame" x="20" y="11" width="91" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1738,11 +1738,8 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UserConfigController.h"/>
             <relationships>
                 <relationship kind="outlet" name="change" candidateClass="UITableViewCell"/>
-                <relationship kind="outlet" name="changeButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="create" candidateClass="UITableViewCell"/>
-                <relationship kind="outlet" name="createButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="login" candidateClass="UITableViewCell"/>
-                <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="userNameField" candidateClass="UITextField"/>
             </relationships>
