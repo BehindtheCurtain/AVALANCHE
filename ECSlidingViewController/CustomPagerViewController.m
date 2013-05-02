@@ -23,7 +23,6 @@
     GaugeViewController* gaugePage2 = [self.storyboard instantiateViewControllerWithIdentifier:@"gaugeView"];
     GaugeViewController* gaugePage3 = [self.storyboard instantiateViewControllerWithIdentifier:@"gaugeView"];
     
-    
     [gaugePage1 setPage:1];
     [gaugePage2 setPage:2];
     [gaugePage3 setPage:3];

@@ -749,7 +749,6 @@
 				742C4401172C30C60013AB46 /* ServerRunsController.m in Sources */,
 				744F50A8172CB6630094D40E /* UploadRunsController.m in Sources */,
 				749F7174172DB42F00CD6F3B /* SensorSelectController.m in Sources */,
-				080634D4173085BB00D32899 /* chartJSON.js in Sources */,
 				080634D81730AA1E00D32899 /* HelpPagerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
