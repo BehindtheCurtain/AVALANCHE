@@ -145,7 +145,7 @@ static BOOL processing = NO;
     {
         transformedData = sensorData * 18; // Sensor value off of CAN BUS is degrees celcius * 10
         transformedData += 50;
-        transformedData /= 100;
+        transformedData /= 100; 
         transformedData += 32;
     }
     else if([sensorType isEqualToString:@"Pressure"])

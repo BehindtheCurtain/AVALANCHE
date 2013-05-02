@@ -45,6 +45,7 @@ static const int DEFAULT_NUM_SENSORS = 12;
 	self.sensorType = type;
 	self.sensorID = ID;
 	self.isActive = active;
+    self.transformConstant = transform;
 	
 	return self;
 }

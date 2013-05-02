@@ -25,6 +25,7 @@ static void * const sensor4Context = (void*)&sensor4Context;
 
 @synthesize page;
 @synthesize gaugeDisplays;
+@synthesize observe;
 
 - (void)viewDidLoad
 {
@@ -91,6 +92,8 @@ static void * const sensor4Context = (void*)&sensor4Context;
         [aggregate2 addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:sensor2Context];
         [aggregate3 addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:sensor3Context];
         [aggregate4 addObserver:self forKeyPath:@"snapshots" options:NSKeyValueObservingOptionNew context:sensor4Context];
+        
+        [self setObserve:YES];
     }
     
     [self.gaugeDisplays archive:self.page];
@@ -105,204 +108,214 @@ static void * const sensor4Context = (void*)&sensor4Context;
         NSString* observe2 = [[self.gaugeDisplays sensors] objectAtIndex:1];
         NSString* observe3 = [[self.gaugeDisplays sensors] objectAtIndex:2];
         NSString* observe4 = [[self.gaugeDisplays sensors] objectAtIndex:3];
+        
+        SensorAggregateModel* aggregate1 = [[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:observe1];
+        SensorAggregateModel* aggregate2 = [[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:observe2];
+        SensorAggregateModel* aggregate3 = [[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:observe3];
+        SensorAggregateModel* aggregate4 = [[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:observe4];
 
-        [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:observe1] removeObserver:self forKeyPath:@"snapshots"];
-        [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:observe2] removeObserver:self forKeyPath:@"snapshots"];
-        [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:observe3] removeObserver:self forKeyPath:@"snapshots"];
-        [[[[GaugeModel instance:NO] sensorAggregateModelMap] objectForKey:observe4] removeObserver:self forKeyPath:@"snapshots"];
+        [aggregate1 removeObserver:self forKeyPath:@"snapshots"];
+        [aggregate2 removeObserver:self forKeyPath:@"snapshots"];
+        [aggregate3 removeObserver:self forKeyPath:@"snapshots"];
+        [aggregate4 removeObserver:self forKeyPath:@"snapshots"];
+        
+        [self setObserve:NO];
     }
 }
 
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    NSIndexSet* set = [change objectForKey:NSKeyValueChangeIndexesKey];
-    SensorSnapshotModel* snapshot = [[object snapshots] objectAtIndex:[set firstIndex]];
-    KDGoalBar* current = nil;
-    NSString* key = nil;
-    
-    if(context == sensor1Context)
+    if(self.observe)
     {
-        current = firstGoalBar;
-        key = [[self.gaugeDisplays sensors] objectAtIndex:0];
+        NSIndexSet* set = [change objectForKey:NSKeyValueChangeIndexesKey];
+        SensorSnapshotModel* snapshot = [[object snapshots] objectAtIndex:[set firstIndex]];
+        KDGoalBar* current = nil;
+        NSString* key = nil;
         
-    }
-    else if(context == sensor2Context)
-    {
-        current = secondGoalBar;
-        key = [[self.gaugeDisplays sensors] objectAtIndex:1];
-    }
-    else if(context == sensor3Context)
-    {
-        current = thirdGoalBar;
-        key = [[self.gaugeDisplays sensors] objectAtIndex:2];
-    }
-    else if(context == sensor4Context)
-    {
-        current = fourthGoalBar;
-        key = [[self.gaugeDisplays sensors] objectAtIndex:3];
-    }
-    
-    int high = [object warningHigh];
-    int low = [object warningLow];
-    
-    if([key rangeOfString:@"Temperature"].location != NSNotFound)
-    {
-        int sensorData = [snapshot sensorData];
-        double percent = sensorData;
-        if(sensorData >= 0)
+        if(context == sensor1Context)
         {
-            percent /= high;
-            percent *= 100;
+            current = firstGoalBar;
+            key = [[self.gaugeDisplays sensors] objectAtIndex:0];
             
-            if(percent <= 60)
-            {
-                [current setBarColor:[UIColor greenColor]];
-            }
-            else if(percent <= 80)
-            {
-                [current setBarColor:[UIColor orangeColor]];
-            }
-            else
-            {
-                [current setBarColor:[UIColor redColor]];
-            }
         }
-        else
+        else if(context == sensor2Context)
         {
-            percent /= low;
-            percent *= 100;
-            
-            
-            if(percent <= 80)
-            {
-                [current setBarColor:[UIColor cyanColor]];
-            }
-            else
-            {
-                [current setBarColor:[UIColor redColor]];
-            }
-            
-            percent *= -1;
+            current = secondGoalBar;
+            key = [[self.gaugeDisplays sensors] objectAtIndex:1];
+        }
+        else if(context == sensor3Context)
+        {
+            current = thirdGoalBar;
+            key = [[self.gaugeDisplays sensors] objectAtIndex:2];
+        }
+        else if(context == sensor4Context)
+        {
+            current = fourthGoalBar;
+            key = [[self.gaugeDisplays sensors] objectAtIndex:3];
         }
         
-        [current setPercent:percent animated:NO];
-        [current setCustomText:[NSString stringWithFormat:@"%u °F", sensorData]];
-    }
-    else if([key rangeOfString:@"Pressure"].location != NSNotFound)
-    {
-        int sensorData = [snapshot sensorData];
-        double percent = sensorData;
-        if(sensorData >= 0)
-        {
-            percent /= (high * 10);
-            percent *= 100;
-            
-            if(percent <= 60)
-            {
-                [current setBarColor:[UIColor greenColor]];
-            }
-            else if(percent <= 80)
-            {
-                [current setBarColor:[UIColor orangeColor]];
-            }
-            else
-            {
-                [current setBarColor:[UIColor redColor]];
-            }
-        }
-        else
-        {
-            percent /= low;
-            percent *= 100;
-            
-            
-            if(percent <= 80)
-            {
-                [current setBarColor:[UIColor cyanColor]];
-            }
-            else
-            {
-                [current setBarColor:[UIColor redColor]];
-            }
-        }
+        int high = [object warningHigh];
+        int low = [object warningLow];
         
-        double data = sensorData;
-        data /= 10;
-        [current setPercent:percent animated:NO];
-        [current setCustomText:[NSString stringWithFormat:@"%.1f PSI", data]];
-    }
-    else if([key rangeOfString:@"RPM"].location != NSNotFound)
-    {
+        if([key rangeOfString:@"Temperature"].location != NSNotFound)
+        {
+            int sensorData = [snapshot sensorData];
+            double percent = sensorData;
+            if(sensorData >= 0)
+            {
+                percent /= high;
+                percent *= 100;
+                
+                if(percent <= 60)
+                {
+                    [current setBarColor:[UIColor greenColor]];
+                }
+                else if(percent <= 80)
+                {
+                    [current setBarColor:[UIColor orangeColor]];
+                }
+                else
+                {
+                    [current setBarColor:[UIColor redColor]];
+                }
+            }
+            else
+            {
+                percent /= low;
+                percent *= 100;
+                
+                
+                if(percent <= 80)
+                {
+                    [current setBarColor:[UIColor cyanColor]];
+                }
+                else
+                {
+                    [current setBarColor:[UIColor redColor]];
+                }
+                
+                percent *= -1;
+            }
+            
+            [current setPercent:percent animated:NO];
+            [current setCustomText:[NSString stringWithFormat:@"%u °F", sensorData]];
+        }
+        else if([key rangeOfString:@"Pressure"].location != NSNotFound)
+        {
+            int sensorData = [snapshot sensorData];
+            double percent = sensorData;
+            if(sensorData >= 0)
+            {
+                percent /= (high * 10);
+                percent *= 100;
+                
+                if(percent <= 60)
+                {
+                    [current setBarColor:[UIColor greenColor]];
+                }
+                else if(percent <= 80)
+                {
+                    [current setBarColor:[UIColor orangeColor]];
+                }
+                else
+                {
+                    [current setBarColor:[UIColor redColor]];
+                }
+            }
+            else
+            {
+                percent /= low;
+                percent *= 100;
+                
+                
+                if(percent <= 80)
+                {
+                    [current setBarColor:[UIColor cyanColor]];
+                }
+                else
+                {
+                    [current setBarColor:[UIColor redColor]];
+                }
+            }
+            
+            double data = sensorData;
+            data /= 10;
+            [current setPercent:percent animated:NO];
+            [current setCustomText:[NSString stringWithFormat:@"%.1f PSI", data]];
+        }
+        else if([key rangeOfString:@"RPM"].location != NSNotFound)
+        {
 
-        int sensorData = [snapshot sensorData];
-        double percent = sensorData;
-        if(sensorData >= 0)
-        {
-            percent /= high;
-            percent *= 100;
+            int sensorData = [snapshot sensorData];
+            double percent = sensorData;
+            if(sensorData >= 0)
+            {
+                percent /= high;
+                percent *= 100;
+                
+                if(percent <= 60)
+                {
+                    [current setBarColor:[UIColor greenColor]];
+                }
+                else if(percent <= 80)
+                {
+                    [current setBarColor:[UIColor orangeColor]];
+                }
+                else
+                {
+                    [current setBarColor:[UIColor redColor]];
+                }
+            }
             
-            if(percent <= 60)
-            {
-                [current setBarColor:[UIColor greenColor]];
-            }
-            else if(percent <= 80)
-            {
-                [current setBarColor:[UIColor orangeColor]];
-            }
-            else
-            {
-                [current setBarColor:[UIColor redColor]];
-            }
+            [current setPercent:percent animated:NO];
+            [current setCustomText:[NSString stringWithFormat:@"%u", sensorData]];
         }
-        
-        [current setPercent:percent animated:NO];
-        [current setCustomText:[NSString stringWithFormat:@"%u", sensorData]];
-    }
-    else if([key rangeOfString:@"AirFuel"].location != NSNotFound)
-    {
+        else if([key rangeOfString:@"AirFuel"].location != NSNotFound)
+        {
 
-        int sensorData = [snapshot sensorData];
-        double percent = sensorData;
-        if(sensorData >= 0)
-        {
-            percent /= high;
-            percent *= 100;
-            
-            if(percent <= 60)
+            int sensorData = [snapshot sensorData];
+            double percent = sensorData;
+            if(sensorData >= 0)
             {
-                [current setBarColor:[UIColor greenColor]];
-            }
-            else if(percent <= 80)
-            {
-                [current setBarColor:[UIColor orangeColor]];
-            }
-            else
-            {
-                [current setBarColor:[UIColor redColor]];
-            }
-        }
-        else
-        {
-            percent /= low;
-            percent *= 100;
-            
-            
-            if(percent <= 80)
-            {
-                [current setBarColor:[UIColor cyanColor]];
+                percent /= high;
+                percent *= 100;
+                
+                if(percent <= 60)
+                {
+                    [current setBarColor:[UIColor greenColor]];
+                }
+                else if(percent <= 80)
+                {
+                    [current setBarColor:[UIColor orangeColor]];
+                }
+                else
+                {
+                    [current setBarColor:[UIColor redColor]];
+                }
             }
             else
             {
-                [current setBarColor:[UIColor redColor]];
+                percent /= low;
+                percent *= 100;
+                
+                
+                if(percent <= 80)
+                {
+                    [current setBarColor:[UIColor cyanColor]];
+                }
+                else
+                {
+                    [current setBarColor:[UIColor redColor]];
+                }
+                
             }
             
+            double data = sensorData;
+            data /= 100;
+            [current setPercent:percent animated:NO];
+            [current setCustomText:[NSString stringWithFormat:@"%.2f %%", data]];
         }
-        
-        double data = sensorData;
-        data /= 100;
-        [current setPercent:percent animated:NO];
-        [current setCustomText:[NSString stringWithFormat:@"%.2f %%", data]];
     }
 }
 

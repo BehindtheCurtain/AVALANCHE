@@ -33,7 +33,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *sensorLabel3;
 @property (weak, nonatomic) IBOutlet UILabel *sensorLabel4;
 
-
+@property (assign) BOOL observe;
 @property (assign) int page;
 @property (retain) GaugeDisplayModel* gaugeDisplays;
 

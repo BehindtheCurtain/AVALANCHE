@@ -39,6 +39,7 @@
     
     [[FirstTopViewController viewArray] addObject:gaugePage1];
     [[FirstTopViewController viewArray] addObject:gaugePage2];
+    [[FirstTopViewController viewArray] addObject:gaugePage3];
 }
 
 @end
