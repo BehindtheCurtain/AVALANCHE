@@ -52,7 +52,7 @@ static NSMutableArray* viewArray;
      
   
     [RealTimeBuilder gaugeModelFactory];
-    [BLEGaugeAlarmService instance:NO];
+    [BLEGaugeAlarmService instance:YES];
     
     [[GaugeModel instance:NO] setStartTimeStamp:[NSDate dateWithTimeIntervalSince1970:[[NSDate date] timeIntervalSince1970]]];
 }

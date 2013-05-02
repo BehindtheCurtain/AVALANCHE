@@ -101,7 +101,7 @@ static void * const sensor4Context = (void*)&sensor4Context;
 
 - (void)removeObservers
 {
-    if(self.gaugeDisplays != nil)
+    if(self.gaugeDisplays != nil && self.observe)
     {
 
         NSString* observe1 = [[self.gaugeDisplays sensors] objectAtIndex:0];

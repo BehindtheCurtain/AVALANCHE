@@ -108,6 +108,8 @@
 
 - (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error
 {
+    [[AppDelegate app].cbCentral cancelPeripheralConnection:[AppDelegate app].activePeripheral];
+    [[AppDelegate app] setActivePeripheral:[[CBPeripheral alloc] init]];
     [self.brsp close];
 }
 

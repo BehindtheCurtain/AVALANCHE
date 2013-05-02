@@ -42,6 +42,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    [self.deviceTableView reloadData];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
